@@ -10,11 +10,15 @@ export default function Pagination({ totalPages }) {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const currentPage = Number(searchParams.get('page') || 1)
+  const query = searchParams.get('query') || ''
 
   const handlePageClick = (pageNumber) => {
     // Set the new page parameter and trigger navigation
     const params = new URLSearchParams(searchParams)
     params.set('page', pageNumber.toString())
+    if (query) {
+      params.set('query', query) // Ensure the query is preserved
+    }
     return `${pathname}?${params.toString()}`
   }
 

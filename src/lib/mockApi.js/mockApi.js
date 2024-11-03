@@ -41,7 +41,7 @@ export async function getUserSalary(id) {
 // }
 
 // Consolidated function to get all user details with pagination
-export async function getUserFullDetails(page = 1, limit = 10) {
+export async function getUserFullDetails(page = 1, limit = 10, query = '') {
   // Fetch basic user information
   const usersData = await getUsers()
   const jobInfo = await getUsersJobInfo()
@@ -60,15 +60,27 @@ export async function getUserFullDetails(page = 1, limit = 10) {
     }
   })
 
-  // Apply pagination
+  // Apply filtering based on the query
+  const filteredData = fullUserData.filter((user) => {
+    const searchString = query.toLowerCase()
+    return (
+      user.FirstName.toLowerCase().includes(searchString) ||
+      user.LastName.toLowerCase().includes(searchString) ||
+      user.Email.toLowerCase().includes(searchString) ||
+      user.JobTitle.toLowerCase().includes(searchString) ||
+      user.Department.toLowerCase().includes(searchString)
+    )
+  })
+
+  // Apply pagination to the filtered data
   const startIndex = (page - 1) * limit
-  const paginatedData = fullUserData.slice(startIndex, startIndex + limit)
+  const paginatedData = filteredData.slice(startIndex, startIndex + limit)
 
   return {
     data: paginatedData,
     currentPage: page,
-    totalPages: Math.ceil(fullUserData.length / limit),
-    totalUsers: fullUserData.length,
+    totalPages: Math.ceil(filteredData.length / limit),
+    totalUsers: filteredData.length,
   }
 }
 
