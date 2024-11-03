@@ -123,10 +123,37 @@ async function getDepartmentInfo(department = null) {
   return result
 }
 
-// Example Usage
-getDepartmentInfo().then(console.log) // Get info for all departments
-getDepartmentInfo('Support').then(console.log) // Get info for 'Support' department
+export async function getTotalBudget() {
+  const salaries = await getUsersSalary()
 
+  // Calculate total budget by summing all Salary fields
+  const totalBudget = salaries.reduce((sum, salary) => sum + salary.Salary, 0)
+
+  return totalBudget
+}
+
+export async function getTotalUsers() {
+  const users = await getUsers()
+  return users.length
+}
+
+export async function getTotalActiveUsers() {
+  const users = await getUsers()
+  const activeUsers = users.filter((user) => user.Active.toLowerCase() === 'true')
+  return activeUsers.length
+}
+
+export async function getTotalInactiveUsers() {
+  const users = await getUsers()
+  const inactiveUsers = users.filter((user) => user.Active.toLowerCase() === 'false')
+  return inactiveUsers.length
+}
+
+/*
+----Example Usage
+    getDepartmentInfo().then(console.log) // Get info for all departments
+    getDepartmentInfo('Support').then(console.log) // Get info for 'Support' department
+*/
 // Mock db calls
 async function getUsersJobInfo() {
   return userJobInfo

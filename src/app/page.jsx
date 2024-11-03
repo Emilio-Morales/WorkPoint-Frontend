@@ -6,6 +6,8 @@ import { Heading, Subheading } from '@/components/ui/heading'
 import { Input, InputGroup } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { getTotalActiveUsers, getTotalBudget, getTotalInactiveUsers, getTotalUsers } from '@/lib/mockApi.js/mockApi'
+import { formatCurrency } from '@/lib/utils'
 import { MagnifyingGlassIcon } from '@heroicons/react/16/solid'
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' // Use env
@@ -18,15 +20,24 @@ async function fetchUsers(page = 1, limit = 10) {
   return data
 }
 
-export function Stat({ title, value, change }) {
+export function Stat({ title, value, badgeType, formattedRate, subText }) {
   return (
     <div>
       <Divider />
       <div className="mt-6 text-lg/6 font-medium sm:text-sm/6">{title}</div>
       <div className="mt-3 text-3xl/8 font-semibold sm:text-2xl/8">{value}</div>
       <div className="mt-3 text-sm/6 sm:text-xs/6">
-        <Badge color={change.startsWith('+') ? 'lime' : 'pink'}>{change}</Badge>{' '}
-        <span className="text-zinc-500">from last week</span>
+        {badgeType && (
+          <>
+            <Badge color={badgeType === 'positive' ? 'lime' : 'pink'}>{formattedRate}</Badge>{' '}
+            <span className="text-zinc-500">of total users</span>
+          </>
+        )}
+        {subText && (
+          <>
+            <span className="text-zinc-500">{subText}</span>
+          </>
+        )}
       </div>
     </div>
   )
@@ -40,6 +51,17 @@ export default async function Home({ searchParams }) {
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
   const usersInfo = await fetchUsers(page, 10)
   const users = usersInfo.data
+
+  // Fetch Stats Data
+  const [totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers] = await Promise.all([
+    getTotalBudget(),
+    getTotalUsers(),
+    getTotalActiveUsers(),
+    getTotalInactiveUsers(),
+  ])
+
+  const activeUsersRate = calculateRate(totalUsers, totalActiveUsers)
+  const inactiveUsersRate = calculateRate(totalUsers, totalInactiveUsers)
 
   return (
     <>
@@ -56,10 +78,20 @@ export default async function Home({ searchParams }) {
         </div> */}
       </div>
       <div className="mt-4 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
-        <Stat title="Total revenue" value="$2.6M" change="+4.5%" />
-        <Stat title="Average order value" value="$455" change="-0.5%" />
-        <Stat title="Tickets sold" value="5,888" change="+4.5%" />
-        <Stat title="Pageviews" value="823,067" change="+21.2%" />
+        <Stat title="Total budget" value={formatCurrency(totalBudget)} subText="Allocated across all departments" />
+        <Stat title="Total Users" value={totalUsers} subText="All registered employees" />
+        <Stat
+          title="Total Active Users"
+          value={totalActiveUsers}
+          badgeType="positive"
+          formattedRate={`${activeUsersRate}%`}
+        />
+        <Stat
+          title="Total Inactive Users"
+          value={totalInactiveUsers}
+          badgeType="negative"
+          formattedRate={`${inactiveUsersRate}%`}
+        />
       </div>
       <Subheading className="mt-14">Users</Subheading>
       <div className="flex flex-wrap items-end justify-between gap-4">
@@ -133,4 +165,12 @@ function isActive(userActive) {
   } else {
     return 'Inactive'
   }
+}
+
+function calculateRate(totalUsers, usersInCategory) {
+  if (totalUsers === 0) return 0 // Avoid division by zero
+
+  // Calculate and round to 1 decimal place, ensuring it is a number
+  const rate = (usersInCategory / totalUsers) * 100
+  return Number((Math.round(rate * 10) / 10).toFixed(1))
 }
