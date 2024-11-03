@@ -1,5 +1,6 @@
 'use client'
 
+import ThemeToggle from '@/components/ThemeToggle'
 import { Avatar } from '@/components/ui/avatar'
 import {
   Dropdown,
@@ -41,6 +42,7 @@ import {
   Square2StackIcon,
   TicketIcon,
 } from '@heroicons/react/20/solid'
+
 import { usePathname } from 'next/navigation'
 
 function AccountDropdownMenu({ anchor }) {
@@ -154,6 +156,9 @@ export function ApplicationLayout({ events, children }) {
                 <QuestionMarkCircleIcon />
                 <SidebarLabel>Support</SidebarLabel>
               </SidebarItem>
+              {/* <SidebarItem> */}
+              <ThemeToggle />
+              {/* </SidebarItem> */}
               <SidebarItem href="#">
                 <SparklesIcon />
                 <SidebarLabel>Changelog</SidebarLabel>

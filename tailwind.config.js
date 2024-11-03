@@ -11,6 +11,7 @@ const config = {
       },
     },
   },
+  darkMode: 'selector',
   plugins: [],
 }
 /** @type {import('tailwindcss').Config} */

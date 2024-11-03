@@ -119,7 +119,7 @@ export const SidebarItem = forwardRef(function SidebarItem(
       ) : (
         <Headless.Button
           {...props}
-          className={clsx('cursor-default', classes)}
+          className={clsx('cursor-default', classes, { '!hover:cursor-pointer !cursor-pointer': props.hoverPointer })}
           data-current={current ? 'true' : undefined}
           ref={ref}
         >

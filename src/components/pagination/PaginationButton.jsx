@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 const PaginationButton = ({ isActive, href, pageIdx, buttonIdx, pageCount }) => {
   const activePage =
-    'inline-flex items-center border-t-2 px-4 pt-4 text-sm font-semibold border-slate-900 text-slate-950'
+    'inline-flex items-center border-t-2 px-4 pt-4 text-sm font-semibold border-slate-900 text-slate-950 dark:border-white dark:text-white'
   const inactivePage =
-    'inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-semibold text-gray-500'
+    'inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-semibold text-zinc-500'
 
   const buttonStyle = isActive ? activePage : inactivePage
 
