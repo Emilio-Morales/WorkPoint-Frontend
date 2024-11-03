@@ -17,27 +17,59 @@ export async function getUserSalary(id) {
   return (await getUsersSalary()).find((userSalary) => userSalary.id.toString() === id)
 }
 
-// Function to get all user details including job info and salary
-export async function getUserFullDetails() {
-  // Fetch data from the mock databases
-  const users = await getUsers()
-  const jobs = await getUsersJobInfo()
-  const salaries = await getUsersSalary()
+// // Function to get all user details including job info and salary
+// export async function getUserFullDetails() {
+//   // Fetch data from the mock databases
+//   const users = await getUsers()
+//   const jobs = await getUsersJobInfo()
+//   const salaries = await getUsersSalary()
 
-  // Merge user data with job and salary information
-  const fullUserData = users.map((user) => {
-    const jobInfo = jobs.find((job) => job.UserId === user.UserId)
-    const salaryInfo = salaries.find((salary) => salary.UserId === user.UserId)
+//   // Merge user data with job and salary information
+//   const fullUserData = users.map((user) => {
+//     const jobInfo = jobs.find((job) => job.UserId === user.UserId)
+//     const salaryInfo = salaries.find((salary) => salary.UserId === user.UserId)
+
+//     return {
+//       ...user,
+//       JobTitle: jobInfo ? jobInfo.JobTitle : 'N/A',
+//       Department: jobInfo ? jobInfo.Department : 'N/A',
+//       Salary: salaryInfo ? salaryInfo.Salary : 'N/A',
+//     }
+//   })
+
+//   return fullUserData
+// }
+
+// Consolidated function to get all user details with pagination
+export async function getUserFullDetails(page = 1, limit = 10) {
+  // Fetch basic user information
+  const usersData = await getUsers()
+  const jobInfo = await getUsersJobInfo()
+  const salaryInfo = await getUsersSalary()
+
+  // Join user data with job and salary info
+  const fullUserData = usersData.map((user) => {
+    const job = jobInfo.find((job) => job.UserId === user.UserId)
+    const salary = salaryInfo.find((salary) => salary.UserId === user.UserId)
 
     return {
       ...user,
-      JobTitle: jobInfo ? jobInfo.JobTitle : 'N/A',
-      Department: jobInfo ? jobInfo.Department : 'N/A',
-      Salary: salaryInfo ? salaryInfo.Salary : 'N/A',
+      JobTitle: job ? job.JobTitle : 'N/A',
+      Department: job ? job.Department : 'N/A',
+      Salary: salary ? salary.Salary : 'N/A',
     }
   })
 
-  return fullUserData
+  // Apply pagination
+  const startIndex = (page - 1) * limit
+  const paginatedData = fullUserData.slice(startIndex, startIndex + limit)
+
+  return {
+    data: paginatedData,
+    currentPage: page,
+    totalPages: Math.ceil(fullUserData.length / limit),
+    totalUsers: fullUserData.length,
+  }
 }
 
 // Function to get department info

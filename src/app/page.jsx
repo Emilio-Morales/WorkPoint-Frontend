@@ -1,3 +1,4 @@
+import Pagination from '@/components/pagination/Pagination'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Divider } from '@/components/ui/divider'
@@ -5,8 +6,17 @@ import { Heading, Subheading } from '@/components/ui/heading'
 import { Input, InputGroup } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { getUserFullDetails } from '@/lib/mockApi.js/mockApi'
 import { MagnifyingGlassIcon } from '@heroicons/react/16/solid'
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' // Use env
+async function fetchUsers(page = 1, limit = 10) {
+  const res = await fetch(`${baseUrl}/api/users?page=${page}&limit=${limit}`, {
+    cache: 'no-store', // Ensures fresh data every time
+  })
+  const data = await res.json()
+  console.log('data:', data)
+  return data
+}
 
 export function Stat({ title, value, change }) {
   return (
@@ -22,10 +32,14 @@ export function Stat({ title, value, change }) {
   )
 }
 
-export default async function Home() {
+export default async function Home({ searchParams }) {
   // let orders = await getRecentOrders()
-  let users = await getUserFullDetails()
-  let firstUsers = users.slice(0, 10)
+  // let users = await getUserFullDetails()
+  // let firstUsers = users.slice(0, 10)
+
+  const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
+  const usersInfo = await fetchUsers(page, 10)
+  const users = usersInfo.data
 
   return (
     <>
@@ -74,38 +88,41 @@ export default async function Home() {
         </div>
         <Button>Create user</Button>
       </div>
-      <Table className="mt-4 [--gutter:theme(spacing.6)] lg:[--gutter:theme(spacing.10)]">
-        <TableHead>
-          <TableRow>
-            <TableHeader>Name</TableHeader>
-            <TableHeader>Email</TableHeader>
-            <TableHeader>Job Title</TableHeader>
-            <TableHeader>Department</TableHeader>
-            <TableHeader className={'text-left'}>Active</TableHeader>
-            {/* <TableHeader>Amount</TableHeader> */}
-            {/* <TableHeader>Amount</TableHeader> */}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {firstUsers.map((user) => (
-            <TableRow key={user.id} href={user.id} title={`user #${user.id}`}>
-              <TableCell>{user.FirstName + ' ' + user.LastName}</TableCell>
-              <TableCell className="text-zinc-500">{user.Email}</TableCell>
-              <TableCell>{user.JobTitle}</TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <span>{user.Department}</span>
-                </div>
-              </TableCell>
-              <TableCell className={'text-left'}>
-                <Badge color={user.Active === 'TRUE' ? 'lime' : 'pink'}>{isActive(user.Active)}</Badge>
-              </TableCell>
-              {/* <TableCell>US{user.amount.usd}</TableCell> */}
-              {/* <TableCell>US{user.amount.usd}</TableCell> */}
+      <div className="">
+        <Table className="mt-4 [--gutter:theme(spacing.6)] lg:[--gutter:theme(spacing.10)]">
+          <TableHead>
+            <TableRow>
+              <TableHeader>Name</TableHeader>
+              <TableHeader>Email</TableHeader>
+              <TableHeader>Job Title</TableHeader>
+              <TableHeader>Department</TableHeader>
+              <TableHeader className={'text-left'}>Active</TableHeader>
+              {/* <TableHeader>Amount</TableHeader> */}
+              {/* <TableHeader>Amount</TableHeader> */}
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHead>
+          <TableBody>
+            {users.map((user) => (
+              <TableRow key={user.id} href={user.id} title={`user #${user.id}`}>
+                <TableCell>{user.FirstName + ' ' + user.LastName}</TableCell>
+                <TableCell className="text-zinc-500">{user.Email}</TableCell>
+                <TableCell>{user.JobTitle}</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <span>{user.Department}</span>
+                  </div>
+                </TableCell>
+                <TableCell className={'text-left'}>
+                  <Badge color={user.Active === 'TRUE' ? 'lime' : 'pink'}>{isActive(user.Active)}</Badge>
+                </TableCell>
+                {/* <TableCell>US{user.amount.usd}</TableCell> */}
+                {/* <TableCell>US{user.amount.usd}</TableCell> */}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+      <Pagination totalPages={usersInfo.totalPages} />
     </>
   )
 }
