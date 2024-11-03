@@ -28,7 +28,7 @@ const PaginationButton = ({ isActive, href, pageIdx, buttonIdx, pageCount }) => 
         break
 
       case 2:
-        if (pageIdx + 1 >= pageCount - 3) {
+        if (pageIdx >= pageCount - 3) {
           pageContent = pageCount - 4
           onClickPageIdx = pageContent
         } else if (pageIdx > 4) {
@@ -41,7 +41,7 @@ const PaginationButton = ({ isActive, href, pageIdx, buttonIdx, pageCount }) => 
         break
 
       case 3:
-        if (pageIdx + 1 >= pageCount - 3) {
+        if (pageIdx >= pageCount - 3) {
           pageContent = pageCount - 3
           onClickPageIdx = pageContent
         } else if (pageIdx > 4) {
@@ -54,7 +54,7 @@ const PaginationButton = ({ isActive, href, pageIdx, buttonIdx, pageCount }) => 
         break
 
       case 4:
-        if (pageIdx + 1 >= pageCount - 3) {
+        if (pageIdx >= pageCount - 3) {
           pageContent = pageCount - 2
           onClickPageIdx = pageContent
         } else if (pageIdx > 4) {
@@ -67,7 +67,7 @@ const PaginationButton = ({ isActive, href, pageIdx, buttonIdx, pageCount }) => 
         break
 
       case 5:
-        if (pageIdx + 1 >= pageCount - 3) {
+        if (pageIdx >= pageCount - 3) {
           pageContent = pageCount - 1
         } else {
           pageContent = '...'
