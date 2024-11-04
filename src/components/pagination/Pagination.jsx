@@ -84,7 +84,7 @@ export default function Pagination({ totalPages }) {
           <PaginationButton
             key={i}
             pageIdx={i}
-            isActive={currentPage === i}
+            isActive={currentPage === i + 1}
             href={handlePageClick}
             buttonIdx={i}
             pageCount={totalPages}

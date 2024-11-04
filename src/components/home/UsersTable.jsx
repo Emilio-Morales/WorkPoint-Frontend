@@ -1,4 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { isActive } from '@/lib/utils'
 import { Badge } from '../ui/badge'
 const UsersTable = ({ users }) => {
   return (
@@ -17,7 +18,7 @@ const UsersTable = ({ users }) => {
         </TableHead>
         <TableBody>
           {users.map((user) => (
-            <TableRow key={user.id} href={user.id} title={`user #${user.id}`}>
+            <TableRow key={user.id} href={`/users/${user.UserId}`} title={`user #${user.id}`}>
               <TableCell>{user.FirstName + ' ' + user.LastName}</TableCell>
               <TableCell className="text-zinc-500">{user.Email}</TableCell>
               <TableCell>{user.JobTitle}</TableCell>
@@ -40,11 +41,3 @@ const UsersTable = ({ users }) => {
 }
 
 export default UsersTable
-
-function isActive(userActive) {
-  if (userActive === 'TRUE') {
-    return 'Active'
-  } else {
-    return 'Inactive'
-  }
-}

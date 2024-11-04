@@ -6,8 +6,8 @@ import Providers from './providers'
 
 export const metadata = {
   title: {
-    template: '%s - Catalyst',
-    default: 'Catalyst',
+    template: '%s - WorkPoint',
+    default: 'WorkPoint',
   },
   description: '',
 }

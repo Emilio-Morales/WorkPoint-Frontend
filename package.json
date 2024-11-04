@@ -9,8 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^2.1.6",
+    "@headlessui/tailwindcss": "^0.2.1",
     "@heroicons/react": "^2.1.3",
+    "@mui/material": "^6.1.6",
+    "@mui/x-charts": "^7.22.1",
+    "@remixicon/react": "^4.5.0",
+    "@tremor/react": "^3.18.3",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.6",
     "next": "14.2.3",
@@ -20,6 +27,7 @@
     "use-debounce": "^10.0.4"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",

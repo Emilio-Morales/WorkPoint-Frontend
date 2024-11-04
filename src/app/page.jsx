@@ -53,7 +53,7 @@ export function Stat({ title, value, badgeType, formattedRate, subText }) {
 
 export default async function Home({ searchParams }) {
   // let orders = await getRecentOrders()
-  // let users = await getUserFullDetails()
+  // let users = await getUsersFullDetails()
   // let firstUsers = users.slice(0, 10)
 
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1

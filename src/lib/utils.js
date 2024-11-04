@@ -10,3 +10,11 @@ export const formatCurrency = (amount) => {
     maximumFractionDigits: 2,
   })
 }
+
+export function isActive(userActive) {
+  if (userActive === 'TRUE') {
+    return 'Active'
+  } else {
+    return 'Inactive'
+  }
+}

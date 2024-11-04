@@ -1,6 +1,6 @@
 // app/api/users/route.js
 
-import { getUserFullDetails } from '@/lib/mockApi.js/mockApi'
+import { getUsersFullDetails } from '@/lib/mockApi.js/mockApi'
 import { NextResponse } from 'next/server'
 
 export async function GET(req) {
@@ -9,8 +9,8 @@ export async function GET(req) {
   const limit = parseInt(searchParams.get('limit') || '10', 10)
   const query = searchParams.get('query') || '' // Get the query from search params
 
-  // Pass the query to `getUserFullDetails` for filtering
-  const paginatedData = await getUserFullDetails(page, limit, query)
+  // Pass the query to `getUsersFullDetails` for filtering
+  const paginatedData = await getUsersFullDetails(page, limit, query)
 
   return NextResponse.json(paginatedData)
 }

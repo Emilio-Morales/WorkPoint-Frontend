@@ -94,7 +94,7 @@ export function ApplicationLayout({ events, children }) {
             <Dropdown>
               <DropdownButton as={SidebarItem}>
                 <Avatar src="/teams/catalyst.svg" />
-                <SidebarLabel>Catalyst</SidebarLabel>
+                <SidebarLabel>WorkPoint</SidebarLabel>
                 <ChevronDownIcon />
               </DropdownButton>
               <DropdownMenu className="min-w-80 lg:min-w-64" anchor="bottom start">
@@ -105,7 +105,7 @@ export function ApplicationLayout({ events, children }) {
                 <DropdownDivider />
                 <DropdownItem href="#">
                   <Avatar slot="icon" src="/teams/catalyst.svg" />
-                  <DropdownLabel>Catalyst</DropdownLabel>
+                  <DropdownLabel>WorkPoint</DropdownLabel>
                 </DropdownItem>
                 <DropdownItem href="#">
                   <Avatar slot="icon" initials="BE" className="bg-purple-500 text-white" />
@@ -128,11 +128,11 @@ export function ApplicationLayout({ events, children }) {
               </SidebarItem>
               <SidebarItem href="/events" current={pathname.startsWith('/events')}>
                 <Square2StackIcon />
-                <SidebarLabel>Events</SidebarLabel>
+                <SidebarLabel>Departments</SidebarLabel>
               </SidebarItem>
               <SidebarItem href="/orders" current={pathname.startsWith('/orders')}>
                 <TicketIcon />
-                <SidebarLabel>Orders</SidebarLabel>
+                <SidebarLabel>Metrics</SidebarLabel>
               </SidebarItem>
               <SidebarItem href="/settings" current={pathname.startsWith('/settings')}>
                 <Cog6ToothIcon />
@@ -141,7 +141,7 @@ export function ApplicationLayout({ events, children }) {
             </SidebarSection>
 
             <SidebarSection className="max-lg:hidden">
-              <SidebarHeading>Upcoming Events</SidebarHeading>
+              <SidebarHeading>Most Active Departments</SidebarHeading>
               {events.map((event) => (
                 <SidebarItem key={event.id} href={event.url}>
                   {event.name}

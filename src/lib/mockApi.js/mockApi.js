@@ -6,42 +6,39 @@ export async function getUsers() {
 }
 
 export async function getUser(id) {
-  return (await getUsers()).find((user) => user.id.toString() === id)
+  return (await getUsers()).find((user) => user.UserId.toString() === id)
 }
 
 export async function getUserJobInfo(id) {
-  return (await getUserJobInfo()).find((userJobInfo) => userJobInfo.id.toString() === id)
+  return (await getUsersJobInfo()).find((userJobInfo) => userJobInfo.UserId.toString() === id)
 }
 
 export async function getUserSalary(id) {
-  return (await getUsersSalary()).find((userSalary) => userSalary.id.toString() === id)
+  return (await getUsersSalary()).find((userSalary) => userSalary.UserId.toString() === id)
 }
 
-// // Function to get all user details including job info and salary
-// export async function getUserFullDetails() {
-//   // Fetch data from the mock databases
-//   const users = await getUsers()
-//   const jobs = await getUsersJobInfo()
-//   const salaries = await getUsersSalary()
+export async function getUserFullDetails(userId) {
+  // Get the user's basic info, job info, and salary using the existing helper functions
+  const user = await getUser(userId)
+  const jobInfo = await getUserJobInfo(userId)
+  const salaryInfo = await getUserSalary(userId)
 
-//   // Merge user data with job and salary information
-//   const fullUserData = users.map((user) => {
-//     const jobInfo = jobs.find((job) => job.UserId === user.UserId)
-//     const salaryInfo = salaries.find((salary) => salary.UserId === user.UserId)
+  if (!user) {
+    // Return null or an appropriate message if the user is not found
+    return null
+  }
 
-//     return {
-//       ...user,
-//       JobTitle: jobInfo ? jobInfo.JobTitle : 'N/A',
-//       Department: jobInfo ? jobInfo.Department : 'N/A',
-//       Salary: salaryInfo ? salaryInfo.Salary : 'N/A',
-//     }
-//   })
-
-//   return fullUserData
-// }
+  // Return the combined details for the specific user
+  return {
+    ...user,
+    JobTitle: jobInfo ? jobInfo.JobTitle : 'N/A',
+    Department: jobInfo ? jobInfo.Department : 'N/A',
+    Salary: salaryInfo ? salaryInfo.Salary : 'N/A',
+  }
+}
 
 // Consolidated function to get all user details with pagination
-export async function getUserFullDetails(page = 1, limit = 10, query = '') {
+export async function getUsersFullDetails(page = 1, limit = 10, query = '') {
   // Fetch basic user information
   const usersData = await getUsers()
   const jobInfo = await getUsersJobInfo()
@@ -85,7 +82,7 @@ export async function getUserFullDetails(page = 1, limit = 10, query = '') {
 }
 
 // Function to get department info
-async function getDepartmentInfo(department = null) {
+export async function getDepartmentInfo(department = null) {
   // Join userJobInfo with userSalary on UserId
   const userJobInfo = await getUsersJobInfo()
   const userSalary = await getUsersSalary()
