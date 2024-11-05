@@ -1,8 +1,17 @@
 import { Badge } from '@/components/ui/badge'
 import SalaryChart from './SalaryChart'
 import SalaryComparisonGauge from './SalaryComparisonGauge'
+import SalaryShareChart from './SalaryShareChart'
+import SalarySharePie from './SalarySharePie'
 
-export default function BentoGrid2({ user, minSalary, maxSalary, avgSalary, companyAverageSalary }) {
+export default function BentoGrid2({
+  user,
+  minSalary,
+  maxSalary,
+  avgSalary,
+  companyAverageSalary,
+  departmentTotalSalary,
+}) {
   const salaryDifference = user.Salary - companyAverageSalary
 
   return (
@@ -44,40 +53,50 @@ export default function BentoGrid2({ user, minSalary, maxSalary, avgSalary, comp
             </Badge>
           </div>
           <SalaryComparisonGauge companyAverageSalary={companyAverageSalary} userSalary={user.Salary} />
-          {/* <img
-            alt=""
-            src="https://tailwindui.com/plus/img/component-images/bento-02-integrations.png"
-            className="h-80 object-cover object-center"
-          /> */}
         </div>
       </div>
       <div className="flex p-px lg:col-span-3 xl:col-span-2">
-        <div className="overflow-hidden rounded-lg bg-gray-800 ring-1 ring-white/15">
-          <img
-            alt=""
-            src="https://tailwindui.com/plus/img/component-images/bento-02-security.png"
-            className="h-80 object-cover object-center"
-          />
-          <div className="p-10">
-            <h3 className="text-sm/4 font-semibold text-gray-400">Security</h3>
-            <p className="mt-2 text-lg font-medium tracking-tight text-white">Advanced access control</p>
-            <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.
+        <div className="w-full overflow-hidden rounded-lg border border-zinc-950/5 dark:border-white/10">
+          <div className="px-8 pb-1 pt-10">
+            <h3 className="text-sm/4 font-semibold text-zinc-500 dark:text-zinc-400">Department Budget Allocation</h3>
+            <p className="mt-2 text-lg font-medium tracking-tight text-zinc-950 dark:text-white">
+              Budget Share for {user.FirstName} {user.LastName}
             </p>
+            <p className="mt-2 max-w-lg text-sm/6 text-zinc-500 dark:text-zinc-400">
+              See how much of the {user.Department} department's salary budget is allocated to {user.FirstName}'s
+              compensation.
+            </p>
+          </div>
+          <div className="mx-auto mb-9 h-44 w-full max-w-80 p-4">
+            <SalaryShareChart
+              departmentTotalSalary={departmentTotalSalary}
+              userSalary={user.Salary}
+              userFirstName={user.FirstName}
+            />
+          </div>
+          <div className="flex h-full max-h-36 flex-col justify-center px-8 pb-10">
+            <SalarySharePie
+              userSalary={user.Salary}
+              departmentTotalSalary={departmentTotalSalary}
+              userFirstName={user.FirstName}
+              userDepartment={user.Department}
+            />
           </div>
         </div>
       </div>
       <div className="flex p-px lg:col-span-6 xl:col-span-4">
-        <div className="w-full overflow-hidden rounded-lg bg-gray-800 ring-1 ring-white/15">
+        <div className="w-full overflow-hidden rounded-lg border border-zinc-950/5 dark:border-white/10">
           <img
             alt=""
             src="https://tailwindui.com/plus/img/component-images/bento-02-performance.png"
             className="h-80 object-cover object-left"
           />
           <div className="p-10">
-            <h3 className="text-sm/4 font-semibold text-gray-400">Performance</h3>
-            <p className="mt-2 text-lg font-medium tracking-tight text-white">Lightning-fast builds</p>
-            <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
+            <h3 className="text-sm/4 font-semibold text-zinc-500 dark:text-zinc-400">Performance</h3>
+            <p className="mt-2 text-lg font-medium tracking-tight text-zinc-950 dark:text-white">
+              Lightning-fast builds
+            </p>
+            <p className="mt-2 max-w-lg text-sm/6 text-zinc-500 dark:text-zinc-400">
               Sed congue eros non finibus molestie. Vestibulum euismod augue vel commodo vulputate. Maecenas at augue
               sed elit dictum vulputate.
             </p>

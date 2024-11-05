@@ -152,6 +152,7 @@ export default async function User({ params }) {
           maxSalary={departmentInfo.MaxSalaryInDepartment}
           avgSalary={departmentInfo.AverageSalaryInDepartment}
           companyAverageSalary={companyAverageSalary}
+          departmentTotalSalary={departmentInfo.TotalSalaryPaidToDepartment}
           user={user}
         />
         <DescriptionList>
