@@ -6,15 +6,8 @@ const SalaryComparisonGauge = ({ userSalary, companyAverageSalary }) => {
   const { theme } = useTheme()
   const isDarkMode = theme === 'dark'
 
-  // const percentageOfAverage = (userSalary / companyAverageSalary) * 100;
-  const percentageOfAverage = 120
-
-  const gaugeColor =
-    percentageOfAverage < 90
-      ? 'red' // Below average
-      : percentageOfAverage <= 110
-        ? 'orange' // Near average
-        : 'green' // Above average
+  const percentageOfAverage = (userSalary / companyAverageSalary) * 100
+  // const percentageOfAverage = 120
 
   return (
     <div className="mx-auto h-full max-h-80 w-full max-w-80 p-2">
@@ -35,14 +28,14 @@ const SalaryComparisonGauge = ({ userSalary, companyAverageSalary }) => {
             // Target the <tspan> inside the valueText to make sure the style actually applies
             '& tspan': {
               fontSize: 40,
-              fill: isDarkMode ? '#d1d5db' : '#374151', // Ensure color change applies here
+              fill: isDarkMode ? '#d1d5db' : '#09090b', // Ensure color change applies here
             },
           },
           [`& .${gaugeClasses.valueArc}`]: {
-            fill: gaugeColor, // The color of the arc displaying the value
+            fill: isDarkMode ? '#78716c  ' : '#a8a29e  ', // The color of the arc displaying the value
           },
           [`& .${gaugeClasses.referenceArc}`]: {
-            fill: isDarkMode ? '#4b5563' : '#e5e7eb', // The color of the arc displaying the range
+            fill: isDarkMode ? '#27272a' : '#e4e4e7', // The color of the arc displaying the range
           },
         }}
       />

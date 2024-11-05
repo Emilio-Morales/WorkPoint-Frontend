@@ -32,7 +32,18 @@ export default async function User({ params }) {
   let departmentData = await getDepartmentInfo(user.Department)
   let departmentInfo = departmentData[0]
 
-  console.log('deparmentInfo:', departmentInfo)
+  const companyInfo = await getDepartmentInfo()
+
+  // Calculate company-wide average salary
+  let totalSalary = 0
+  let totalEmployeeCount = 0
+
+  companyInfo.forEach((dept) => {
+    totalSalary += dept.TotalSalaryPaidToDepartment || 0
+    totalEmployeeCount += dept.Count || 0
+  })
+
+  const companyAverageSalary = totalEmployeeCount > 0 ? totalSalary / totalEmployeeCount : 0
 
   if (!user) {
     notFound()
@@ -40,30 +51,29 @@ export default async function User({ params }) {
 
   const userStatus = isActive(user.Active)
   const userFullName = `${user.FirstName} ${user.LastName}`
-  let userSalaryColor = ''
 
-  const rendersalaryBadge = () => {
-    let userSalaryDifference = user.Salary - departmentInfo.AverageSalaryInDepartment
-    let content = ''
-    if (userSalaryDifference < 0) {
-      userSalaryDifference = userSalaryDifference * -1
+  // const rendersalaryBadge = () => {
+  //   let userSalaryDifference = user.Salary - departmentInfo.AverageSalaryInDepartment
+  //   let content = ''
+  //   if (userSalaryDifference < 0) {
+  //     userSalaryDifference = userSalaryDifference * -1
 
-      userSalaryDifference = formatCurrency(userSalaryDifference)
-      content = `${userSalaryDifference} below the department average`
-      userSalaryColor = 'red'
-      return <Badge color="red">{content}</Badge>
-    } else if (userSalaryDifference > 0) {
-      userSalaryColor = 'green'
-      userSalaryDifference = formatCurrency(userSalaryDifference)
-      content = `${userSalaryDifference} above the department average`
-      return <Badge color="green">{content}</Badge>
-    } else {
-      userSalaryColor = 'yellow'
-      userSalaryDifference = formatCurrency(userSalaryDifference)
-      content = `${userSalaryDifference} matches the department average`
-      return <Badge color="yellow">{content}</Badge>
-    }
-  }
+  //     userSalaryDifference = formatCurrency(userSalaryDifference)
+  //     content = `${userSalaryDifference} below the department average`
+  //     userSalaryColor = 'red'
+  //     return <Badge color="red">{content}</Badge>
+  //   } else if (userSalaryDifference > 0) {
+  //     userSalaryColor = 'green'
+  //     userSalaryDifference = formatCurrency(userSalaryDifference)
+  //     content = `${userSalaryDifference} above the department average`
+  //     return <Badge color="green">{content}</Badge>
+  //   } else {
+  //     userSalaryColor = 'yellow'
+  //     userSalaryDifference = formatCurrency(userSalaryDifference)
+  //     content = `${userSalaryDifference} matches the department average`
+  //     return <Badge color="yellow">{content}</Badge>
+  //   }
+  // }
 
   return (
     <>
@@ -136,12 +146,13 @@ export default async function User({ params }) {
         <Divider className="mt-4" />
         {/* <BentoGrid1 /> */}
         {/* <BentoGrid3 /> */}
+
         <BentoGrid2
           minSalary={departmentInfo.MinSalaryInDepartment}
           maxSalary={departmentInfo.MaxSalaryInDepartment}
           avgSalary={departmentInfo.AverageSalaryInDepartment}
-          userSalary={user.Salary}
-          department={user.Department}
+          companyAverageSalary={companyAverageSalary}
+          user={user}
         />
         <DescriptionList>
           <DescriptionTerm>Employee Salary vs Department Average</DescriptionTerm>

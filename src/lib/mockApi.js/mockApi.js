@@ -126,6 +126,7 @@ export async function getDepartmentInfo(department = null) {
       MinSalaryInDepartment: stats.MinSalary,
       MaxSalaryInDepartment: stats.MaxSalary,
       TotalSalaryPaidToDepartment: stats.TotalSalary,
+      Count: stats.Count,
     }
   })
 
