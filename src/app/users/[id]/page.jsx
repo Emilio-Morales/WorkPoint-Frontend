@@ -155,11 +155,11 @@ export default async function User({ params }) {
           departmentTotalSalary={departmentInfo.TotalSalaryPaidToDepartment}
           user={user}
         />
-        <DescriptionList>
+        {/* <DescriptionList>
           <DescriptionTerm>Employee Salary vs Department Average</DescriptionTerm>
-          <DescriptionDetails>
-            {/* border border-red-500 */}
-            {/* <div className="flex flex-col">
+          <DescriptionDetails> */}
+        {/* border border-red-500 */}
+        {/* <div className="flex flex-col">
               <div>{rendersalaryBadge()}</div>
               <SalaryChart
                 minSalary={departmentInfo.MinSalaryInDepartment}
@@ -170,8 +170,8 @@ export default async function User({ params }) {
                 userSalaryColor={userSalaryColor}
               />
             </div> */}
-          </DescriptionDetails>
-          {/* <DescriptionTerm>Card number</DescriptionTerm>
+        {/* </DescriptionDetails> */}
+        {/* <DescriptionTerm>Card number</DescriptionTerm>
           <DescriptionDetails>•••• {order.payment.card.number}</DescriptionDetails>
           <DescriptionTerm>Card type</DescriptionTerm>
           <DescriptionDetails>{order.payment.card.type}</DescriptionDetails>
@@ -194,7 +194,7 @@ export default async function User({ params }) {
           <DescriptionDetails>
             <Badge color="lime">Passed successfully</Badge>
           </DescriptionDetails> */}
-        </DescriptionList>
+        {/* </DescriptionList> */}
       </div>
     </>
   )

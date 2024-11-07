@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge'
 import SalaryChart from './SalaryChart'
 import SalaryComparisonGauge from './SalaryComparisonGauge'
+import SalaryQuartileChart from './SalaryQuartileChart'
 import SalaryShareChart from './SalaryShareChart'
 import SalarySharePie from './SalarySharePie'
 
@@ -13,7 +14,6 @@ export default function BentoGrid2({
   departmentTotalSalary,
 }) {
   const salaryDifference = user.Salary - companyAverageSalary
-
   return (
     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
       <div className="flex p-px lg:col-span-6 xl:col-span-4">
@@ -86,21 +86,17 @@ export default function BentoGrid2({
       </div>
       <div className="flex p-px lg:col-span-6 xl:col-span-4">
         <div className="w-full overflow-hidden rounded-lg border border-zinc-950/5 dark:border-white/10">
-          <img
-            alt=""
-            src="https://tailwindui.com/plus/img/component-images/bento-02-performance.png"
-            className="h-80 object-cover object-left"
-          />
-          <div className="p-10">
-            <h3 className="text-sm/4 font-semibold text-zinc-500 dark:text-zinc-400">Performance</h3>
+          <div className="px-8 py-10">
+            <h3 className="text-sm/4 font-semibold text-zinc-500 dark:text-zinc-400">Salary Quartile Position</h3>
             <p className="mt-2 text-lg font-medium tracking-tight text-zinc-950 dark:text-white">
-              Lightning-fast builds
+              Quartile Standing for {user.FirstName} {user.LastName} in {user.Department}
             </p>
             <p className="mt-2 max-w-lg text-sm/6 text-zinc-500 dark:text-zinc-400">
-              Sed congue eros non finibus molestie. Vestibulum euismod augue vel commodo vulputate. Maecenas at augue
-              sed elit dictum vulputate.
+              Identify the salary quartile that {user.FirstName} falls into within the {user.Department} department.
             </p>
           </div>
+
+          <SalaryQuartileChart userSalary={user.Salary} minSalary={minSalary} maxSalary={maxSalary} />
         </div>
       </div>
     </div>

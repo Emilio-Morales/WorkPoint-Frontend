@@ -35,12 +35,12 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/16/solid'
 import {
+  BuildingOffice2Icon,
   Cog6ToothIcon,
   HomeIcon,
+  PresentationChartLineIcon,
   QuestionMarkCircleIcon,
   SparklesIcon,
-  Square2StackIcon,
-  TicketIcon,
 } from '@heroicons/react/20/solid'
 
 import { usePathname } from 'next/navigation'
@@ -127,11 +127,11 @@ export function ApplicationLayout({ events, children }) {
                 <SidebarLabel>Home</SidebarLabel>
               </SidebarItem>
               <SidebarItem href="/events" current={pathname.startsWith('/events')}>
-                <Square2StackIcon />
+                <BuildingOffice2Icon />
                 <SidebarLabel>Departments</SidebarLabel>
               </SidebarItem>
               <SidebarItem href="/orders" current={pathname.startsWith('/orders')}>
-                <TicketIcon />
+                <PresentationChartLineIcon />
                 <SidebarLabel>Metrics</SidebarLabel>
               </SidebarItem>
               <SidebarItem href="/settings" current={pathname.startsWith('/settings')}>
