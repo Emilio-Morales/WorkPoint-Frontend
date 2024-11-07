@@ -86,11 +86,13 @@ export async function getDepartmentInfo(department = null) {
   // Join userJobInfo with userSalary on UserId
   const userJobInfo = await getUsersJobInfo()
   const userSalary = await getUsersSalary()
+  const userActivityInfo = await getUsers()
 
   const joinedData = userJobInfo
     .map((job) => {
       const salaryInfo = userSalary.find((salary) => salary.UserId === job.UserId)
-      return salaryInfo ? { ...job, Salary: salaryInfo.Salary } : null
+      const activityInfo = userActivityInfo.find((user) => user.UserId === job.UserId)
+      return salaryInfo && activityInfo ? { ...job, Salary: salaryInfo.Salary, Active: activityInfo.Active } : null
     })
     .filter((item) => item !== null)
 
@@ -108,6 +110,7 @@ export async function getDepartmentInfo(department = null) {
         MinSalary: item.Salary,
         MaxSalary: item.Salary,
         Count: 0,
+        ActiveCount: 0, // Adding the count of active users.
       }
     }
 
@@ -116,6 +119,9 @@ export async function getDepartmentInfo(department = null) {
     stats.MinSalary = Math.min(stats.MinSalary, item.Salary)
     stats.MaxSalary = Math.max(stats.MaxSalary, item.Salary)
     stats.Count += 1
+    if (item.Active === 'TRUE') {
+      stats.ActiveCount += 1 // Increment active user count.
+    }
   })
 
   // Calculate average salary and format the result
@@ -127,6 +133,7 @@ export async function getDepartmentInfo(department = null) {
       MaxSalaryInDepartment: stats.MaxSalary,
       TotalSalaryPaidToDepartment: stats.TotalSalary,
       Count: stats.Count,
+      ActiveCount: stats.ActiveCount,
     }
   })
 
