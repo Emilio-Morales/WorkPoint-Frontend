@@ -166,6 +166,70 @@ export async function getTotalInactiveUsers() {
   return inactiveUsers.length
 }
 
+export async function getUsersInDepartment(departmentName, page = 1, limit = 10, query = '') {
+  // Fetch basic user information
+  const usersData = await getUsers()
+  const jobInfo = await getUsersJobInfo()
+  const salaryInfo = await getUsersSalary()
+
+  // Join user data with job and salary info
+  const fullUserData = usersData.map((user) => {
+    const job = jobInfo.find((job) => job.UserId === user.UserId)
+    const salary = salaryInfo.find((salary) => salary.UserId === user.UserId)
+
+    return {
+      ...user,
+      JobTitle: job ? job.JobTitle : 'N/A',
+      Department: job ? job.Department : 'N/A',
+      Salary: salary ? salary.Salary : 'N/A',
+    }
+  })
+
+  // Filter users by department
+  const filteredByDepartment = fullUserData.filter(
+    (user) => user.Department.toLowerCase() === departmentName.toLowerCase()
+  )
+
+  // Apply filtering based on the query if provided
+  const filteredData = query
+    ? filteredByDepartment.filter((user) => {
+        const searchString = query.toLowerCase()
+        return (
+          user.FirstName.toLowerCase().includes(searchString) ||
+          user.LastName.toLowerCase().includes(searchString) ||
+          user.Email.toLowerCase().includes(searchString) ||
+          user.JobTitle.toLowerCase().includes(searchString)
+        )
+      })
+    : filteredByDepartment
+
+  // Calculate total salary for active and inactive users
+  let activeSalaryTotal = 0
+  let inactiveSalaryTotal = 0
+
+  filteredByDepartment.forEach((user) => {
+    if (user.Active === 'TRUE') {
+      activeSalaryTotal += user.Salary
+    } else if (user.Active === 'FALSE') {
+      inactiveSalaryTotal += user.Salary
+    }
+  })
+
+  // Apply pagination to the filtered data
+  const startIndex = (page - 1) * limit
+  const paginatedData = filteredData.slice(startIndex, startIndex + limit)
+
+  // Return the result in the same format as getUsersFullDetails
+  return {
+    data: paginatedData,
+    currentPage: page,
+    totalPages: Math.ceil(filteredData.length / limit),
+    totalUsers: filteredData.length,
+    totalActiveSalary: activeSalaryTotal,
+    totalInactiveSalary: inactiveSalaryTotal,
+  }
+}
+
 /*
 ----Example Usage
     getDepartmentInfo().then(console.log) // Get info for all departments

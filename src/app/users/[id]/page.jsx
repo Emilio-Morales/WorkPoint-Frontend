@@ -6,6 +6,7 @@ import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/componen
 import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
 import { Link } from '@/components/ui/link'
+import { TextLink } from '@/components/ui/text'
 import { getDepartmentInfo, getUserFullDetails } from '@/lib/mockApi.js/mockApi'
 import { formatCurrency, isActive } from '@/lib/utils'
 import { BanknotesIcon, BriefcaseIcon, BuildingOffice2Icon, ChevronLeftIcon } from '@heroicons/react/16/solid'
@@ -52,29 +53,6 @@ export default async function User({ params }) {
   const userStatus = isActive(user.Active)
   const userFullName = `${user.FirstName} ${user.LastName}`
 
-  // const rendersalaryBadge = () => {
-  //   let userSalaryDifference = user.Salary - departmentInfo.AverageSalaryInDepartment
-  //   let content = ''
-  //   if (userSalaryDifference < 0) {
-  //     userSalaryDifference = userSalaryDifference * -1
-
-  //     userSalaryDifference = formatCurrency(userSalaryDifference)
-  //     content = `${userSalaryDifference} below the department average`
-  //     userSalaryColor = 'red'
-  //     return <Badge color="red">{content}</Badge>
-  //   } else if (userSalaryDifference > 0) {
-  //     userSalaryColor = 'green'
-  //     userSalaryDifference = formatCurrency(userSalaryDifference)
-  //     content = `${userSalaryDifference} above the department average`
-  //     return <Badge color="green">{content}</Badge>
-  //   } else {
-  //     userSalaryColor = 'yellow'
-  //     userSalaryDifference = formatCurrency(userSalaryDifference)
-  //     content = `${userSalaryDifference} matches the department average`
-  //     return <Badge color="yellow">{content}</Badge>
-  //   }
-  // }
-
   return (
     <>
       <div className="max-lg:hidden">
@@ -105,11 +83,14 @@ export default async function User({ params }) {
                 </span> */}
               </span>
             </span>
-            <span className="flex items-center gap-3 text-base/6 text-zinc-950 sm:text-sm/6 dark:text-white">
+            <Link
+              className="flex items-center gap-3 text-base/6 text-zinc-950 sm:text-sm/6 dark:text-white"
+              href={`/departments/${encodeURIComponent(user.Department)}`}
+            >
               <BuildingOffice2Icon className="size-4 shrink-0 fill-zinc-400 dark:fill-zinc-500" />
               {/* <span>{order.date}</span> */}
               <span>{user.Department}</span>
-            </span>
+            </Link>
           </div>
           <div className="flex gap-4">
             <DeleteUser outline>Delete</DeleteUser>
@@ -131,8 +112,12 @@ export default async function User({ params }) {
               <span>{order.event.name}</span>
             </Link> */}
           </DescriptionDetails>
+
           <DescriptionTerm>Department</DescriptionTerm>
-          <DescriptionDetails>{user.Department}</DescriptionDetails>
+          <DescriptionDetails>
+            <TextLink href={`/departments/${encodeURIComponent(user.Department)}`}>{user.Department}</TextLink>
+          </DescriptionDetails>
+
           <DescriptionTerm>Email</DescriptionTerm>
           <DescriptionDetails>{user.Email}</DescriptionDetails>
           {/* <DescriptionTerm>Fee</DescriptionTerm> */}

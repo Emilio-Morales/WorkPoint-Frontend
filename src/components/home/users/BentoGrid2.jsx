@@ -24,7 +24,7 @@ export default function BentoGrid2({
               Salary Standing for {user.FirstName} {user.LastName} in {user.Department}
             </p>
             <p className="mt-2 max-w-lg text-sm/6 text-zinc-500 dark:text-zinc-400">
-              Compare {user.FirstName}’s salary to the department average, minimum, and maximum
+              Compare {user.FirstName}’s salary to the department average, minimum, and maximum.
             </p>
           </div>
 

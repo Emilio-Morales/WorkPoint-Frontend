@@ -6,47 +6,19 @@ import { Input, InputGroup } from '@/components/ui/input'
 import { Link } from '@/components/ui/link'
 import { Select } from '@/components/ui/select'
 import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
-import { formatCurrency } from '@/lib/utils'
+import { departmentIcons, formatCurrency } from '@/lib/utils'
 import { EllipsisVerticalIcon, MagnifyingGlassIcon } from '@heroicons/react/16/solid'
-import {
-  ArrowTrendingUpIcon,
-  BeakerIcon,
-  BookOpenIcon,
-  CogIcon,
-  CreditCardIcon,
-  CurrencyDollarIcon,
-  FolderIcon,
-  PhoneArrowDownLeftIcon,
-  ScaleIcon,
-  ShieldCheckIcon,
-  TagIcon,
-  UserGroupIcon,
-} from '@heroicons/react/20/solid'
 
 export const metadata = {
-  title: 'Events',
+  title: 'Departments',
 }
 
-export default async function Events() {
+export default async function Departments() {
   // let events = await getEvents()
   let departments = await getDepartmentInfo()
-  console.log('data: ', departments)
+  // console.log('data: ', departments)
 
   // dark:text-zinc-500???
-  const departmentIcons = {
-    Services: <ShieldCheckIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    Support: <PhoneArrowDownLeftIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    Accounting: <CreditCardIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    'Product Management': <FolderIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    Sales: <CurrencyDollarIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    'Research and Development': <BeakerIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    Training: <BookOpenIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    Legal: <ScaleIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    'Human Resources': <UserGroupIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    'Business Development': <ArrowTrendingUpIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    Marketing: <TagIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-    Engineering: <CogIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
-  }
 
   /******************************************
     {
@@ -73,27 +45,6 @@ export default async function Events() {
         Active: 'FALSE',
     },
 ******************************************/
-
-  const events = [
-    {
-      id: 1000,
-      name: 'Services',
-      url: '/events/1000',
-      date: 'May 20, 2024',
-      time: '10 PM',
-      location: 'Harmony Theater, Winnipeg, MB',
-      totalRevenue: '$102,552',
-      totalRevenueChange: '+3.2%',
-      ticketsAvailable: 500,
-      ticketsSold: 350,
-      ticketsSoldChange: '+8.1%',
-      pageViews: '24,300',
-      pageViewsChange: '-0.75%',
-      status: 'On Sale',
-      imgUrl: '/events/bear-hug.jpg',
-      thumbUrl: '/events/bear-hug-thumb.jpg',
-    },
-  ]
 
   // {
   //   Department: 'Accounting',
@@ -127,62 +78,60 @@ export default async function Events() {
         </div>
       </div>
       <ul className="mt-10">
-        {departments.map((department, index) => (
-          <>
-            <li key={department.Department + index}>
-              <Divider soft={index > 0} />
-              <div className="flex items-center justify-between">
-                <div key={department.Department + index} className="flex gap-6 py-6">
-                  <div className="w-32 shrink-0">
-                    {/* <ActiveUsersPieChart /> */}
-                    <div className="w-32 shrink-0 rounded-lg border border-zinc-950/5 dark:border-white/10">
-                      {departmentIcons[department.Department]}
+        {departments.map((department, index) => {
+          const departmentHref = encodeURIComponent(department.Department)
+          return (
+            <>
+              <li key={department.Department + index}>
+                <Divider soft={index > 0} />
+                <div className="flex items-center justify-between">
+                  <div key={department.Department + index} className="flex gap-6 py-6">
+                    <div className="w-32 shrink-0">
+                      {/* <ActiveUsersPieChart /> */}
+                      <div className="w-32 shrink-0 rounded-lg border border-zinc-950/5 bg-zinc-100 dark:border-white/10 dark:bg-zinc-950">
+                        {departmentIcons[department.Department]}
+                      </div>
+                    </div>
+                    <div className="space-y-1.5">
+                      <div className="text-base/6 font-semibold">
+                        <Link href={`/departments/${departmentHref}`}>{department.Department}</Link>
+                      </div>
+                      <div className="text-xs/6 text-zinc-500">
+                        Total Allocated Budget: {formatCurrency(department.TotalSalaryPaidToDepartment)}
+                      </div>
+                      <div className="text-xs/6 text-zinc-600">
+                        {/* Total Allocated Budget: $1,980,000 */}
+                        {department.ActiveCount}/{department.Count} active users
+                      </div>
                     </div>
                   </div>
-                  {/* <div className="w-32 shrink-0">
-                    <Link href={event.url} aria-hidden="true">
-                      <img className="aspect-[3/2] rounded-lg shadow" src={event.imgUrl} alt="" />
-                    </Link>
-                  </div> */}
-                  <div className="space-y-1.5">
-                    <div className="text-base/6 font-semibold">
-                      <Link href={`/departments/${department.Department}`}>{department.Department}</Link>
-                    </div>
-                    <div className="text-xs/6 text-zinc-500">
-                      Total Allocated Budget: {formatCurrency(department.TotalSalaryPaidToDepartment)}
-                    </div>
-                    <div className="text-xs/6 text-zinc-600">
-                      {/* Total Allocated Budget: $1,980,000 */}
-                      {department.ActiveCount}/{department.Count} active users
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  {department.ActiveCount > department.Count - department.ActiveCount ? (
-                    <Badge className="max-sm:hidden" color="lime">
-                      Healthy Budget Allocation
-                    </Badge>
-                  ) : (
-                    <Badge className="max-sm:hidden" color="pink">
-                      Budget Needs Attention
-                    </Badge>
-                  )}
+                  <div className="flex items-center gap-4">
+                    {department.ActiveCount > department.Count - department.ActiveCount ? (
+                      <Badge className="max-sm:hidden" color="lime">
+                        Healthy Budget Allocation
+                      </Badge>
+                    ) : (
+                      <Badge className="max-sm:hidden" color="pink">
+                        Budget Needs Attention
+                      </Badge>
+                    )}
 
-                  <Dropdown>
-                    <DropdownButton plain aria-label="More options">
-                      <EllipsisVerticalIcon />
-                    </DropdownButton>
-                    <DropdownMenu anchor="bottom end">
-                      <DropdownItem href={`/departments/${department.Department}`}>View</DropdownItem>
-                      <DropdownItem>Edit</DropdownItem>
-                      <DropdownItem>Delete</DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
+                    <Dropdown>
+                      <DropdownButton plain aria-label="More options">
+                        <EllipsisVerticalIcon />
+                      </DropdownButton>
+                      <DropdownMenu anchor="bottom end">
+                        <DropdownItem href={`/departments/${departmentHref}`}>View</DropdownItem>
+                        <DropdownItem>Edit</DropdownItem>
+                        <DropdownItem>Delete</DropdownItem>
+                      </DropdownMenu>
+                    </Dropdown>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </>
-        ))}
+              </li>
+            </>
+          )
+        })}
       </ul>
     </>
   )
