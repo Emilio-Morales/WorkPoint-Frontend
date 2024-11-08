@@ -60,7 +60,7 @@ function Stat({ title, value, badgeType, formattedRate, subText }) {
         {badgeType && (
           <>
             <Badge color={badgeType === 'positive' ? 'lime' : 'pink'}>{formattedRate}</Badge>{' '}
-            <span className="text-zinc-500">of total users</span>
+            <span className="text-zinc-500">of total employees</span>
           </>
         )}
         {subText && (
@@ -180,7 +180,7 @@ export default async function Department({ params, searchParams }) {
                   Sort by name
                 </option>
                 <option value="date" className="">
-                  Sort by department
+                  Sort by salary
                 </option>
                 <option value="status" className="">
                   Sort by active

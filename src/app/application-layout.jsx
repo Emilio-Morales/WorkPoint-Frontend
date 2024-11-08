@@ -1,5 +1,5 @@
-'use client'
-
+import ApplicationLayoutHeader from '@/components/application-layout/ApplicationLayoutHeader'
+import ApplicationLayoutSidebarLinks from '@/components/application-layout/ApplicationLayoutSidebarLinks'
 import ThemeToggle from '@/components/ThemeToggle'
 import { Avatar } from '@/components/ui/avatar'
 import {
@@ -15,7 +15,6 @@ import {
   Sidebar,
   SidebarBody,
   SidebarFooter,
-  SidebarHeader,
   SidebarHeading,
   SidebarItem,
   SidebarLabel,
@@ -23,27 +22,16 @@ import {
   SidebarSpacer,
 } from '@/components/ui/sidebar'
 import { SidebarLayout } from '@/components/ui/sidebar-layout'
+import { getTopSalaryAllocatingDepartments } from '@/lib/mockApi.js/mockApi'
 
 import {
   ArrowRightStartOnRectangleIcon,
-  ChevronDownIcon,
   ChevronUpIcon,
-  Cog8ToothIcon,
   LightBulbIcon,
-  PlusIcon,
   ShieldCheckIcon,
   UserCircleIcon,
 } from '@heroicons/react/16/solid'
-import {
-  BuildingOffice2Icon,
-  Cog6ToothIcon,
-  HomeIcon,
-  PresentationChartLineIcon,
-  QuestionMarkCircleIcon,
-  SparklesIcon,
-} from '@heroicons/react/20/solid'
-
-import { usePathname } from 'next/navigation'
+import { QuestionMarkCircleIcon, SparklesIcon } from '@heroicons/react/20/solid'
 
 function AccountDropdownMenu({ anchor }) {
   return (
@@ -70,8 +58,9 @@ function AccountDropdownMenu({ anchor }) {
   )
 }
 
-export function ApplicationLayout({ events, children }) {
-  let pathname = usePathname()
+export async function ApplicationLayout({ events, children }) {
+  const topDepartments = await getTopSalaryAllocatingDepartments()
+  console.log('top departments:', topDepartments)
 
   return (
     <SidebarLayout
@@ -90,61 +79,14 @@ export function ApplicationLayout({ events, children }) {
       }
       sidebar={
         <Sidebar>
-          <SidebarHeader>
-            <Dropdown>
-              <DropdownButton as={SidebarItem}>
-                <Avatar src="/teams/catalyst.svg" />
-                <SidebarLabel>WorkPoint</SidebarLabel>
-                <ChevronDownIcon />
-              </DropdownButton>
-              <DropdownMenu className="min-w-80 lg:min-w-64" anchor="bottom start">
-                <DropdownItem href="/settings">
-                  <Cog8ToothIcon />
-                  <DropdownLabel>Settings</DropdownLabel>
-                </DropdownItem>
-                <DropdownDivider />
-                <DropdownItem href="#">
-                  <Avatar slot="icon" src="/teams/catalyst.svg" />
-                  <DropdownLabel>WorkPoint</DropdownLabel>
-                </DropdownItem>
-                <DropdownItem href="#">
-                  <Avatar slot="icon" initials="BE" className="bg-purple-500 text-white" />
-                  <DropdownLabel>Big Events</DropdownLabel>
-                </DropdownItem>
-                <DropdownDivider />
-                <DropdownItem href="#">
-                  <PlusIcon />
-                  <DropdownLabel>New team&hellip;</DropdownLabel>
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </SidebarHeader>
-
+          <ApplicationLayoutHeader />
           <SidebarBody>
-            <SidebarSection>
-              <SidebarItem href="/" current={pathname === '/'}>
-                <HomeIcon />
-                <SidebarLabel>Home</SidebarLabel>
-              </SidebarItem>
-              <SidebarItem href="/departments" current={pathname.startsWith('/departments')}>
-                <BuildingOffice2Icon />
-                <SidebarLabel>Departments</SidebarLabel>
-              </SidebarItem>
-              <SidebarItem href="/orders" current={pathname.startsWith('/orders')}>
-                <PresentationChartLineIcon />
-                <SidebarLabel>Metrics</SidebarLabel>
-              </SidebarItem>
-              <SidebarItem href="/settings" current={pathname.startsWith('/settings')}>
-                <Cog6ToothIcon />
-                <SidebarLabel>Settings</SidebarLabel>
-              </SidebarItem>
-            </SidebarSection>
-
+            <ApplicationLayoutSidebarLinks />
             <SidebarSection className="max-lg:hidden">
-              <SidebarHeading>Most Active Departments</SidebarHeading>
-              {events.map((event) => (
-                <SidebarItem key={event.id} href={event.url}>
-                  {event.name}
+              <SidebarHeading>Departments with Largest Budgets</SidebarHeading>
+              {topDepartments.map((department, index) => (
+                <SidebarItem key={department.Department + index} href={`/departments/${department.Department}`}>
+                  {department.Department}
                 </SidebarItem>
               ))}
             </SidebarSection>

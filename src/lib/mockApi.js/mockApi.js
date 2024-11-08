@@ -230,6 +230,34 @@ export async function getUsersInDepartment(departmentName, page = 1, limit = 10,
   }
 }
 
+export async function getTopSalaryAllocatingDepartments(limit = 4) {
+  // Fetch user job and salary information
+  const jobInfo = await getUsersJobInfo()
+  const salaryInfo = await getUsersSalary()
+
+  // Create a department salary map
+  const departmentSalaryMap = {}
+
+  jobInfo.forEach((job) => {
+    const userSalary = salaryInfo.find((salary) => salary.UserId === job.UserId)?.Salary || 0
+
+    if (!departmentSalaryMap[job.Department]) {
+      departmentSalaryMap[job.Department] = {
+        Department: job.Department,
+        TotalSalary: 0,
+      }
+    }
+
+    departmentSalaryMap[job.Department].TotalSalary += userSalary
+  })
+
+  // Convert the department map to an array and sort by TotalSalary in descending order
+  const sortedDepartments = Object.values(departmentSalaryMap).sort((a, b) => b.TotalSalary - a.TotalSalary)
+
+  // Return the top departments based on the limit
+  return sortedDepartments.slice(0, limit)
+}
+
 /*
 ----Example Usage
     getDepartmentInfo().then(console.log) // Get info for all departments
