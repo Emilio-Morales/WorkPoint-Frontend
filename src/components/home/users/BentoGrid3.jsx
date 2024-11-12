@@ -1,25 +1,36 @@
+import StatCard from '@/components/metrics/TestGraph'
+
 export default function BentoGrid3() {
   return (
     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-      <div className="relative lg:col-span-2">
-        <div className="absolute inset-px rounded-lg bg-white lg:rounded-bl-[2rem]" />
-        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
-          <img
+      <div className="relative lg:col-span-3 xl:col-span-2">
+        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+        <div className="relative flex h-fit flex-col overflow-hidden">
+          {/* <img
             alt=""
             src="https://tailwindui.com/plus/img/component-images/bento-01-speed.png"
             className="h-80 object-cover object-left"
-          />
-          <div className="p-10 pt-4">
+            /> */}
+          {/* <div className="p-10 pt-4">
             <h3 className="text-sm/4 font-semibold text-indigo-600">Speed</h3>
             <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">Built for power users</p>
             <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
               Sed congue eros non finibus molestie. Vestibulum euismod augue.
             </p>
-          </div>
+          </div> */}
+          {/* title, value, interval, trend, data */}
+          <StatCard
+            title="Employees Joined"
+            value="23k"
+            interval="Last year"
+            trend="up"
+            data={[200, 24, 220, 260, 240, 380, 100, 240, 280, 240, 300, 340]}
+          />
+          {/* <EmployeesJoinedLineGraph /> */}
         </div>
-        <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]" />
+        {/* <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]" /> */}
       </div>
-      <div className="relative lg:col-span-2">
+      <div className="relative lg:col-span-3 xl:col-span-2">
         <div className="absolute inset-px rounded-lg bg-white" />
         <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
           <img
@@ -37,7 +48,7 @@ export default function BentoGrid3() {
         </div>
         <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" />
       </div>
-      <div className="relative lg:col-span-2">
+      <div className="relative lg:col-span-3 xl:col-span-2">
         <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]" />
         <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
           <img

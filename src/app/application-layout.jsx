@@ -2,14 +2,7 @@ import ApplicationLayoutHeader from '@/components/application-layout/Application
 import ApplicationLayoutSidebarLinks from '@/components/application-layout/ApplicationLayoutSidebarLinks'
 import ThemeToggle from '@/components/ThemeToggle'
 import { Avatar } from '@/components/ui/avatar'
-import {
-  Dropdown,
-  DropdownButton,
-  DropdownDivider,
-  DropdownItem,
-  DropdownLabel,
-  DropdownMenu,
-} from '@/components/ui/dropdown'
+import { Dropdown, DropdownButton, DropdownItem, DropdownLabel, DropdownMenu } from '@/components/ui/dropdown'
 import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/ui/navbar'
 import {
   Sidebar,
@@ -24,19 +17,13 @@ import {
 import { SidebarLayout } from '@/components/ui/sidebar-layout'
 import { getTopSalaryAllocatingDepartments } from '@/lib/mockApi.js/mockApi'
 
-import {
-  ArrowRightStartOnRectangleIcon,
-  ChevronUpIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  UserCircleIcon,
-} from '@heroicons/react/16/solid'
+import { ArrowRightStartOnRectangleIcon, ChevronUpIcon } from '@heroicons/react/16/solid'
 import { QuestionMarkCircleIcon, SparklesIcon } from '@heroicons/react/20/solid'
 
 function AccountDropdownMenu({ anchor }) {
   return (
     <DropdownMenu className="min-w-64" anchor={anchor}>
-      <DropdownItem href="#">
+      {/* <DropdownItem href="#">
         <UserCircleIcon />
         <DropdownLabel>My account</DropdownLabel>
       </DropdownItem>
@@ -49,7 +36,7 @@ function AccountDropdownMenu({ anchor }) {
         <LightBulbIcon />
         <DropdownLabel>Share feedback</DropdownLabel>
       </DropdownItem>
-      <DropdownDivider />
+      <DropdownDivider /> */}
       <DropdownItem href="#">
         <ArrowRightStartOnRectangleIcon />
         <DropdownLabel>Sign out</DropdownLabel>

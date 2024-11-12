@@ -1,11 +1,13 @@
 /******************************************
     {
-        UserId: 1,
-        FirstName: 'Albertina',
-        LastName: "O'Finan",
-        Email: 'aofinan0@blogspot.com',
-        Gender: 'Female',
-        Active: 'FALSE',
+      "UserId": 1,
+      "FirstName": "Albertina",
+      "LastName": "O'Finan",
+      "Email": "aofinan0@blogspot.com",
+      "Gender": "Female",
+      "Active": "FALSE",
+      "DateHired": "2022-06-14",
+      "DateExited": "2022-11-27"
     },
 ******************************************/
 export const users = [
@@ -16,6 +18,8 @@ export const users = [
     Email: 'aofinan0@blogspot.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-06-14',
+    DateExited: '2022-11-27',
   },
   {
     UserId: 2,
@@ -24,6 +28,8 @@ export const users = [
     Email: 'flaidler1@over-blog.com',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2020-05-11',
+    DateExited: null,
   },
   {
     UserId: 3,
@@ -32,6 +38,8 @@ export const users = [
     Email: 'fwynn2@redcross.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-04-30',
+    DateExited: '2024-05-15',
   },
   {
     UserId: 4,
@@ -40,6 +48,8 @@ export const users = [
     Email: 'brodda3@columbia.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-07-28',
+    DateExited: null,
   },
   {
     UserId: 5,
@@ -48,6 +58,8 @@ export const users = [
     Email: 'cpack4@answers.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-02-19',
+    DateExited: '2024-08-09',
   },
   {
     UserId: 6,
@@ -56,6 +68,8 @@ export const users = [
     Email: 'mclother5@nifty.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-06-14',
+    DateExited: '2022-12-11',
   },
   {
     UserId: 7,
@@ -64,6 +78,8 @@ export const users = [
     Email: 'agillott6@barnesandnoble.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-22',
+    DateExited: '2024-11-12',
   },
   {
     UserId: 8,
@@ -72,6 +88,8 @@ export const users = [
     Email: 'tvines7@cloudflare.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-07-01',
+    DateExited: null,
   },
   {
     UserId: 9,
@@ -80,6 +98,8 @@ export const users = [
     Email: 'hnicholl8@amazonaws.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-11-20',
+    DateExited: null,
   },
   {
     UserId: 10,
@@ -88,6 +108,8 @@ export const users = [
     Email: 'etilston9@cbc.ca',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-12-21',
+    DateExited: '2024-04-23',
   },
   {
     UserId: 11,
@@ -96,6 +118,8 @@ export const users = [
     Email: 'soaklanda@flickr.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-07-22',
+    DateExited: null,
   },
   {
     UserId: 12,
@@ -104,6 +128,8 @@ export const users = [
     Email: 'vperkisb@typepad.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-08-09',
+    DateExited: null,
   },
   {
     UserId: 13,
@@ -112,6 +138,8 @@ export const users = [
     Email: 'spaschkec@chronoengine.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-08-25',
+    DateExited: '2024-05-23',
   },
   {
     UserId: 14,
@@ -120,6 +148,8 @@ export const users = [
     Email: 'ssproulsd@businessinsider.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-12-18',
+    DateExited: null,
   },
   {
     UserId: 15,
@@ -128,6 +158,8 @@ export const users = [
     Email: 'ldimeoe@economist.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-01-22',
+    DateExited: null,
   },
   {
     UserId: 16,
@@ -136,6 +168,8 @@ export const users = [
     Email: 'rgrissf@fema.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-06-06',
+    DateExited: null,
   },
   {
     UserId: 17,
@@ -144,6 +178,8 @@ export const users = [
     Email: 'aledingtong@bandcamp.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-10-06',
+    DateExited: '2022-04-10',
   },
   {
     UserId: 18,
@@ -152,6 +188,8 @@ export const users = [
     Email: 'dsuddockh@wired.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-10-12',
+    DateExited: null,
   },
   {
     UserId: 19,
@@ -160,6 +198,8 @@ export const users = [
     Email: 'gmoremani@godaddy.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-08-29',
+    DateExited: '2024-10-08',
   },
   {
     UserId: 20,
@@ -168,6 +208,8 @@ export const users = [
     Email: 'bcronkshawj@webeden.co.uk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-09-08',
+    DateExited: null,
   },
   {
     UserId: 21,
@@ -176,6 +218,8 @@ export const users = [
     Email: 'jmacgaughiek@altervista.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-11-06',
+    DateExited: '2024-11-04',
   },
   {
     UserId: 22,
@@ -184,6 +228,8 @@ export const users = [
     Email: 'kitzkovskyl@zimbio.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-04-15',
+    DateExited: '2024-05-24',
   },
   {
     UserId: 23,
@@ -192,6 +238,8 @@ export const users = [
     Email: 'cadenotm@edublogs.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-10-07',
+    DateExited: '2023-11-29',
   },
   {
     UserId: 24,
@@ -200,6 +248,8 @@ export const users = [
     Email: 'cshaddockn@geocities.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-01-29',
+    DateExited: null,
   },
   {
     UserId: 25,
@@ -208,6 +258,8 @@ export const users = [
     Email: 'bbaudassoo@reddit.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-15',
+    DateExited: null,
   },
   {
     UserId: 26,
@@ -216,6 +268,8 @@ export const users = [
     Email: 'cfowleyp@sogou.com',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2024-09-08',
+    DateExited: '2024-11-03',
   },
   {
     UserId: 27,
@@ -224,6 +278,8 @@ export const users = [
     Email: 'mcorderoq@chron.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-01-06',
+    DateExited: null,
   },
   {
     UserId: 28,
@@ -232,6 +288,8 @@ export const users = [
     Email: 'ebentor@wisc.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-01-20',
+    DateExited: null,
   },
   {
     UserId: 29,
@@ -240,6 +298,8 @@ export const users = [
     Email: 'wellwells@storify.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-07-09',
+    DateExited: null,
   },
   {
     UserId: 30,
@@ -248,6 +308,8 @@ export const users = [
     Email: 'kscartht@tmall.com',
     Gender: 'Genderqueer',
     Active: 'TRUE',
+    DateHired: '2023-10-05',
+    DateExited: null,
   },
   {
     UserId: 31,
@@ -256,6 +318,8 @@ export const users = [
     Email: 'ttrenchardu@earthlink.net',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-11-14',
+    DateExited: null,
   },
   {
     UserId: 32,
@@ -264,6 +328,8 @@ export const users = [
     Email: 'lannakinv@slideshare.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-02-20',
+    DateExited: null,
   },
   {
     UserId: 33,
@@ -272,6 +338,8 @@ export const users = [
     Email: 'dwattsw@usatoday.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-10-19',
+    DateExited: null,
   },
   {
     UserId: 34,
@@ -280,6 +348,8 @@ export const users = [
     Email: 'mbourdicex@webs.com',
     Gender: 'Polygender',
     Active: 'FALSE',
+    DateHired: '2022-11-15',
+    DateExited: '2023-07-31',
   },
   {
     UserId: 35,
@@ -288,6 +358,8 @@ export const users = [
     Email: 'aromany@indiegogo.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-10-14',
+    DateExited: '2024-10-30',
   },
   {
     UserId: 36,
@@ -296,6 +368,8 @@ export const users = [
     Email: 'mgrayshanz@jimdo.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-02-02',
+    DateExited: '2022-05-01',
   },
   {
     UserId: 37,
@@ -304,6 +378,8 @@ export const users = [
     Email: 'adawdry10@icq.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-05-20',
+    DateExited: null,
   },
   {
     UserId: 38,
@@ -312,6 +388,8 @@ export const users = [
     Email: 'rbontine11@vimeo.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-10-19',
+    DateExited: '2021-08-28',
   },
   {
     UserId: 39,
@@ -320,6 +398,8 @@ export const users = [
     Email: 'erist12@constantcontact.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-07-17',
+    DateExited: '2024-04-25',
   },
   {
     UserId: 40,
@@ -328,6 +408,8 @@ export const users = [
     Email: 'jridgley13@businessweek.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-12-18',
+    DateExited: null,
   },
   {
     UserId: 41,
@@ -336,6 +418,8 @@ export const users = [
     Email: 'mcarlsen14@smugmug.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-03-12',
+    DateExited: '2024-04-26',
   },
   {
     UserId: 42,
@@ -344,6 +428,8 @@ export const users = [
     Email: 'ethornewill15@adobe.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-04-14',
+    DateExited: null,
   },
   {
     UserId: 43,
@@ -352,6 +438,8 @@ export const users = [
     Email: 'esoane16@sphinn.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-12-05',
+    DateExited: null,
   },
   {
     UserId: 44,
@@ -360,6 +448,8 @@ export const users = [
     Email: 'ncrandon17@themeforest.net',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-04',
+    DateExited: '2022-10-31',
   },
   {
     UserId: 45,
@@ -368,6 +458,8 @@ export const users = [
     Email: 'nrooson18@tuttocitta.it',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-12-02',
+    DateExited: '2024-07-12',
   },
   {
     UserId: 46,
@@ -376,6 +468,8 @@ export const users = [
     Email: 'dacton19@typepad.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-09-15',
+    DateExited: '2022-07-19',
   },
   {
     UserId: 47,
@@ -384,6 +478,8 @@ export const users = [
     Email: 'dpendlebury1a@angelfire.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-04-25',
+    DateExited: '2024-10-22',
   },
   {
     UserId: 48,
@@ -392,6 +488,8 @@ export const users = [
     Email: 'agladebeck1b@economist.com',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2021-08-28',
+    DateExited: null,
   },
   {
     UserId: 49,
@@ -400,6 +498,8 @@ export const users = [
     Email: 'kmollison1c@spiegel.de',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-05-06',
+    DateExited: null,
   },
   {
     UserId: 50,
@@ -408,6 +508,8 @@ export const users = [
     Email: 'gbarkworth1d@mayoclinic.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-05-08',
+    DateExited: '2020-09-22',
   },
   {
     UserId: 51,
@@ -416,6 +518,8 @@ export const users = [
     Email: 'ifernanando1e@miitbeian.gov.cn',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-10-17',
+    DateExited: null,
   },
   {
     UserId: 52,
@@ -424,6 +528,8 @@ export const users = [
     Email: 'ogookes1f@macromedia.com',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2020-10-03',
+    DateExited: null,
   },
   {
     UserId: 53,
@@ -432,6 +538,8 @@ export const users = [
     Email: 'rjune1g@wiley.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-04',
+    DateExited: '2023-09-18',
   },
   {
     UserId: 54,
@@ -440,6 +548,8 @@ export const users = [
     Email: 'vfoulks1h@tinyurl.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-07-19',
+    DateExited: null,
   },
   {
     UserId: 55,
@@ -448,6 +558,8 @@ export const users = [
     Email: 'acuppleditch1i@ucla.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-28',
+    DateExited: null,
   },
   {
     UserId: 56,
@@ -456,6 +568,8 @@ export const users = [
     Email: 'cconen1j@so-net.ne.jp',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-06-16',
+    DateExited: '2024-02-11',
   },
   {
     UserId: 57,
@@ -464,6 +578,8 @@ export const users = [
     Email: 'sburgh1k@rambler.ru',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-08-01',
+    DateExited: null,
   },
   {
     UserId: 58,
@@ -472,6 +588,8 @@ export const users = [
     Email: 'rdaniele1l@ihg.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-06-09',
+    DateExited: null,
   },
   {
     UserId: 59,
@@ -480,6 +598,8 @@ export const users = [
     Email: 'mmacgille1m@privacy.gov.au',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-10-27',
+    DateExited: '2023-04-25',
   },
   {
     UserId: 60,
@@ -488,6 +608,8 @@ export const users = [
     Email: 'jinns1n@state.gov',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2020-09-07',
+    DateExited: null,
   },
   {
     UserId: 61,
@@ -496,6 +618,8 @@ export const users = [
     Email: 'mgodbald1o@squidoo.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-05-30',
+    DateExited: '2021-04-18',
   },
   {
     UserId: 62,
@@ -504,6 +628,8 @@ export const users = [
     Email: 'wvenny1p@istockphoto.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-02-09',
+    DateExited: null,
   },
   {
     UserId: 63,
@@ -512,6 +638,8 @@ export const users = [
     Email: 'dmarkey1q@delicious.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-23',
+    DateExited: null,
   },
   {
     UserId: 64,
@@ -520,6 +648,8 @@ export const users = [
     Email: 'smcgaugey1r@eventbrite.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-04-03',
+    DateExited: null,
   },
   {
     UserId: 65,
@@ -528,6 +658,8 @@ export const users = [
     Email: 'ecavey1s@stanford.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-04-18',
+    DateExited: null,
   },
   {
     UserId: 66,
@@ -536,6 +668,8 @@ export const users = [
     Email: 'aharrald1t@disqus.com',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2020-10-29',
+    DateExited: null,
   },
   {
     UserId: 67,
@@ -544,6 +678,8 @@ export const users = [
     Email: 'rpratt1u@springer.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-07-14',
+    DateExited: '2024-07-19',
   },
   {
     UserId: 68,
@@ -552,6 +688,8 @@ export const users = [
     Email: 'fliversedge1v@delicious.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-02-28',
+    DateExited: '2024-07-03',
   },
   {
     UserId: 69,
@@ -560,6 +698,8 @@ export const users = [
     Email: 'dmcconnal1w@weather.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-10-31',
+    DateExited: '2024-08-07',
   },
   {
     UserId: 70,
@@ -568,6 +708,8 @@ export const users = [
     Email: 'bguise1x@foxnews.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-08-24',
+    DateExited: '2023-01-05',
   },
   {
     UserId: 71,
@@ -576,6 +718,8 @@ export const users = [
     Email: 'aretter1y@foxnews.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-12-05',
+    DateExited: null,
   },
   {
     UserId: 72,
@@ -584,6 +728,8 @@ export const users = [
     Email: 'tguisot1z@e-recht24.de',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2023-09-27',
+    DateExited: null,
   },
   {
     UserId: 73,
@@ -592,6 +738,8 @@ export const users = [
     Email: 'aseath20@slate.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-04-01',
+    DateExited: '2024-07-08',
   },
   {
     UserId: 74,
@@ -600,6 +748,8 @@ export const users = [
     Email: 'kbrambell21@com.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-12-22',
+    DateExited: null,
   },
   {
     UserId: 75,
@@ -608,6 +758,8 @@ export const users = [
     Email: 'ntarr22@google.com.hk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-02-13',
+    DateExited: null,
   },
   {
     UserId: 76,
@@ -616,6 +768,8 @@ export const users = [
     Email: 'cglancy23@arizona.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-11-05',
+    DateExited: '2022-01-15',
   },
   {
     UserId: 77,
@@ -624,6 +778,8 @@ export const users = [
     Email: 'choyt24@wix.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-04-05',
+    DateExited: null,
   },
   {
     UserId: 78,
@@ -632,6 +788,8 @@ export const users = [
     Email: 'amontford25@example.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-05-19',
+    DateExited: '2024-04-18',
   },
   {
     UserId: 79,
@@ -640,6 +798,8 @@ export const users = [
     Email: 'ajakubczyk26@xing.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-02-26',
+    DateExited: null,
   },
   {
     UserId: 80,
@@ -648,6 +808,8 @@ export const users = [
     Email: 'mflorez27@multiply.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-09-20',
+    DateExited: null,
   },
   {
     UserId: 81,
@@ -656,6 +818,8 @@ export const users = [
     Email: 'lbrigstock28@liveinternet.ru',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-01-14',
+    DateExited: '2023-05-06',
   },
   {
     UserId: 82,
@@ -664,6 +828,8 @@ export const users = [
     Email: 'kpancoust29@dropbox.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-06-06',
+    DateExited: null,
   },
   {
     UserId: 83,
@@ -672,6 +838,8 @@ export const users = [
     Email: 'denticknap2a@jigsy.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-04-26',
+    DateExited: null,
   },
   {
     UserId: 84,
@@ -680,6 +848,8 @@ export const users = [
     Email: 'akinchin2b@narod.ru',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-12',
+    DateExited: '2024-05-19',
   },
   {
     UserId: 85,
@@ -688,6 +858,8 @@ export const users = [
     Email: 'hsutterby2c@economist.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-04-18',
+    DateExited: '2023-07-07',
   },
   {
     UserId: 86,
@@ -696,6 +868,8 @@ export const users = [
     Email: 'ecordoba2d@amazon.co.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-03-17',
+    DateExited: null,
   },
   {
     UserId: 87,
@@ -704,6 +878,8 @@ export const users = [
     Email: 'wsimister2e@etsy.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-06-20',
+    DateExited: '2024-08-19',
   },
   {
     UserId: 88,
@@ -712,6 +888,8 @@ export const users = [
     Email: 'cgatley2f@cornell.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-20',
+    DateExited: '2024-02-09',
   },
   {
     UserId: 89,
@@ -720,6 +898,8 @@ export const users = [
     Email: 'ajozwicki2g@hatena.ne.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-06-28',
+    DateExited: null,
   },
   {
     UserId: 90,
@@ -728,6 +908,8 @@ export const users = [
     Email: 'uclampton2h@prweb.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-28',
+    DateExited: null,
   },
   {
     UserId: 91,
@@ -736,6 +918,8 @@ export const users = [
     Email: 'zjulyan2i@earthlink.net',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-16',
+    DateExited: '2024-07-04',
   },
   {
     UserId: 92,
@@ -744,6 +928,8 @@ export const users = [
     Email: 'ldisbrow2j@sbwire.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-09-04',
+    DateExited: null,
   },
   {
     UserId: 93,
@@ -752,6 +938,8 @@ export const users = [
     Email: 'aspellessy2k@nationalgeographic.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2022-04-16',
+    DateExited: '2022-09-09',
   },
   {
     UserId: 94,
@@ -760,6 +948,8 @@ export const users = [
     Email: 'fbedward2l@weather.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-03-04',
+    DateExited: null,
   },
   {
     UserId: 95,
@@ -768,6 +958,8 @@ export const users = [
     Email: 'hbenet2m@yale.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-10-17',
+    DateExited: '2024-10-30',
   },
   {
     UserId: 96,
@@ -776,6 +968,8 @@ export const users = [
     Email: 'nbenzi2n@ucoz.ru',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-10-02',
+    DateExited: null,
   },
   {
     UserId: 97,
@@ -784,6 +978,8 @@ export const users = [
     Email: 'bboughtwood2o@oaic.gov.au',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2021-06-04',
+    DateExited: '2024-05-17',
   },
   {
     UserId: 98,
@@ -792,6 +988,8 @@ export const users = [
     Email: 'cstud2p@acquirethisname.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-01-30',
+    DateExited: null,
   },
   {
     UserId: 99,
@@ -800,6 +998,8 @@ export const users = [
     Email: 'njirusek2q@sciencedaily.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-11-14',
+    DateExited: null,
   },
   {
     UserId: 100,
@@ -808,6 +1008,8 @@ export const users = [
     Email: 'myurenev2r@springer.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2022-12-11',
+    DateExited: '2024-05-18',
   },
   {
     UserId: 101,
@@ -816,6 +1018,8 @@ export const users = [
     Email: 'pridler2s@pinterest.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-02-16',
+    DateExited: '2024-09-13',
   },
   {
     UserId: 102,
@@ -824,6 +1028,8 @@ export const users = [
     Email: 'cdruitt2t@ca.gov',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-11-12',
+    DateExited: '2024-11-12',
   },
   {
     UserId: 103,
@@ -832,6 +1038,8 @@ export const users = [
     Email: 'waldham2u@mashable.com',
     Gender: 'Bigender',
     Active: 'FALSE',
+    DateHired: '2024-02-11',
+    DateExited: '2024-05-19',
   },
   {
     UserId: 104,
@@ -840,6 +1048,8 @@ export const users = [
     Email: 'arollo2v@aboutads.info',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-11-26',
+    DateExited: '2021-04-04',
   },
   {
     UserId: 105,
@@ -848,6 +1058,8 @@ export const users = [
     Email: 'istrut2w@usa.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-09-09',
+    DateExited: '2023-06-05',
   },
   {
     UserId: 106,
@@ -856,6 +1068,8 @@ export const users = [
     Email: 'mdefries2x@yahoo.co.jp',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-06-06',
+    DateExited: '2021-11-30',
   },
   {
     UserId: 107,
@@ -864,6 +1078,8 @@ export const users = [
     Email: 'stinman2y@sakura.ne.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-10-14',
+    DateExited: '2024-07-12',
   },
   {
     UserId: 108,
@@ -872,6 +1088,8 @@ export const users = [
     Email: 'rmongain2z@scribd.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-04-28',
+    DateExited: '2023-12-09',
   },
   {
     UserId: 109,
@@ -880,6 +1098,8 @@ export const users = [
     Email: 'amargrem30@mapy.cz',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-10-24',
+    DateExited: '2022-05-30',
   },
   {
     UserId: 110,
@@ -888,6 +1108,8 @@ export const users = [
     Email: 'bwoodcock31@va.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-03-21',
+    DateExited: null,
   },
   {
     UserId: 111,
@@ -896,6 +1118,8 @@ export const users = [
     Email: 'skeddle32@smugmug.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-10-27',
+    DateExited: null,
   },
   {
     UserId: 112,
@@ -904,6 +1128,8 @@ export const users = [
     Email: 'sfahey33@guardian.co.uk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-08-29',
+    DateExited: null,
   },
   {
     UserId: 113,
@@ -912,6 +1138,8 @@ export const users = [
     Email: 'myurin34@hibu.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-05-13',
+    DateExited: '2022-05-20',
   },
   {
     UserId: 114,
@@ -920,6 +1148,8 @@ export const users = [
     Email: 'nleyband35@so-net.ne.jp',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2020-12-20',
+    DateExited: null,
   },
   {
     UserId: 115,
@@ -928,6 +1158,8 @@ export const users = [
     Email: 'dseger36@cnet.com',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2023-09-28',
+    DateExited: null,
   },
   {
     UserId: 116,
@@ -936,6 +1168,8 @@ export const users = [
     Email: 'yluna37@telegraph.co.uk',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-07-14',
+    DateExited: '2021-05-20',
   },
   {
     UserId: 117,
@@ -944,6 +1178,8 @@ export const users = [
     Email: 'mastman38@bing.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-02-15',
+    DateExited: null,
   },
   {
     UserId: 118,
@@ -952,6 +1188,8 @@ export const users = [
     Email: 'carpe39@bbc.co.uk',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-08-10',
+    DateExited: '2024-10-24',
   },
   {
     UserId: 119,
@@ -960,6 +1198,8 @@ export const users = [
     Email: 'epither3a@flavors.me',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-01-23',
+    DateExited: '2024-02-26',
   },
   {
     UserId: 120,
@@ -968,6 +1208,8 @@ export const users = [
     Email: 'dcolegrove3b@google.cn',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-02-17',
+    DateExited: null,
   },
   {
     UserId: 121,
@@ -976,6 +1218,8 @@ export const users = [
     Email: 'mleimster3c@eepurl.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-08-27',
+    DateExited: '2024-07-25',
   },
   {
     UserId: 122,
@@ -984,6 +1228,8 @@ export const users = [
     Email: 'gmortel3d@privacy.gov.au',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-11-06',
+    DateExited: '2022-12-26',
   },
   {
     UserId: 123,
@@ -992,6 +1238,8 @@ export const users = [
     Email: 'jswitzer3e@angelfire.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-11-22',
+    DateExited: '2023-01-05',
   },
   {
     UserId: 124,
@@ -1000,6 +1248,8 @@ export const users = [
     Email: 'tdudderidge3f@dailymail.co.uk',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-07-20',
+    DateExited: '2023-11-15',
   },
   {
     UserId: 125,
@@ -1008,6 +1258,8 @@ export const users = [
     Email: 'jagneau3g@dailymail.co.uk',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-05-29',
+    DateExited: '2024-06-09',
   },
   {
     UserId: 126,
@@ -1016,6 +1268,8 @@ export const users = [
     Email: 'ypickerin3h@dagondesign.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-03-07',
+    DateExited: '2024-03-02',
   },
   {
     UserId: 127,
@@ -1024,6 +1278,8 @@ export const users = [
     Email: 'ecaisley3i@parallels.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-10-10',
+    DateExited: '2023-10-27',
   },
   {
     UserId: 128,
@@ -1032,6 +1288,8 @@ export const users = [
     Email: 'hjennison3j@oakley.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-08-20',
+    DateExited: '2023-11-13',
   },
   {
     UserId: 129,
@@ -1040,6 +1298,8 @@ export const users = [
     Email: 'cbrewett3k@studiopress.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-04-21',
+    DateExited: null,
   },
   {
     UserId: 130,
@@ -1048,6 +1308,8 @@ export const users = [
     Email: 'eroelofsen3l@studiopress.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-06-22',
+    DateExited: null,
   },
   {
     UserId: 131,
@@ -1056,6 +1318,8 @@ export const users = [
     Email: 'bkemmet3m@psu.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-01-02',
+    DateExited: '2020-10-02',
   },
   {
     UserId: 132,
@@ -1064,6 +1328,8 @@ export const users = [
     Email: 'ebyas3n@angelfire.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-03-26',
+    DateExited: null,
   },
   {
     UserId: 133,
@@ -1072,6 +1338,8 @@ export const users = [
     Email: 'apadwick3o@slideshare.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-05-08',
+    DateExited: null,
   },
   {
     UserId: 134,
@@ -1080,6 +1348,8 @@ export const users = [
     Email: 'vpoulden3p@vk.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-01-17',
+    DateExited: null,
   },
   {
     UserId: 135,
@@ -1088,6 +1358,8 @@ export const users = [
     Email: 'ekleinplac3q@opera.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-06-25',
+    DateExited: '2023-07-16',
   },
   {
     UserId: 136,
@@ -1096,6 +1368,8 @@ export const users = [
     Email: 'yunderhill3r@businessweek.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-05-04',
+    DateExited: '2022-12-02',
   },
   {
     UserId: 137,
@@ -1104,6 +1378,8 @@ export const users = [
     Email: 'mmanhood3s@cbsnews.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-27',
+    DateExited: null,
   },
   {
     UserId: 138,
@@ -1112,6 +1388,8 @@ export const users = [
     Email: 'eclemens3t@hp.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-09-16',
+    DateExited: null,
   },
   {
     UserId: 139,
@@ -1120,6 +1398,8 @@ export const users = [
     Email: 'ilaite3u@usatoday.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-11-13',
+    DateExited: null,
   },
   {
     UserId: 140,
@@ -1128,6 +1408,8 @@ export const users = [
     Email: 'jlempel3v@mashable.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-10-10',
+    DateExited: null,
   },
   {
     UserId: 141,
@@ -1136,6 +1418,8 @@ export const users = [
     Email: 'mjaszczak3w@wikispaces.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-12-16',
+    DateExited: '2024-01-19',
   },
   {
     UserId: 142,
@@ -1144,6 +1428,8 @@ export const users = [
     Email: 'cohederscoll3x@goo.ne.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-03-27',
+    DateExited: '2024-04-27',
   },
   {
     UserId: 143,
@@ -1152,6 +1438,8 @@ export const users = [
     Email: 'ibuscher3y@360.cn',
     Gender: 'Polygender',
     Active: 'FALSE',
+    DateHired: '2022-02-13',
+    DateExited: '2023-09-02',
   },
   {
     UserId: 144,
@@ -1160,6 +1448,8 @@ export const users = [
     Email: 'lshwalbe3z@delicious.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-01-08',
+    DateExited: '2022-07-08',
   },
   {
     UserId: 145,
@@ -1168,6 +1458,8 @@ export const users = [
     Email: 'mgillease40@spotify.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-03-01',
+    DateExited: '2022-04-23',
   },
   {
     UserId: 146,
@@ -1176,6 +1468,8 @@ export const users = [
     Email: 'aaujouanet41@techcrunch.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-09-25',
+    DateExited: '2024-05-17',
   },
   {
     UserId: 147,
@@ -1184,6 +1478,8 @@ export const users = [
     Email: 'rfeare42@digg.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-09-05',
+    DateExited: '2021-09-05',
   },
   {
     UserId: 148,
@@ -1192,6 +1488,8 @@ export const users = [
     Email: 'kbuckthorp43@google.ca',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-31',
+    DateExited: '2024-07-31',
   },
   {
     UserId: 149,
@@ -1200,6 +1498,8 @@ export const users = [
     Email: 'vshillabeare44@bing.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-06',
+    DateExited: null,
   },
   {
     UserId: 150,
@@ -1208,6 +1508,8 @@ export const users = [
     Email: 'amaccolm45@google.de',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-02-08',
+    DateExited: '2022-08-20',
   },
   {
     UserId: 151,
@@ -1216,6 +1518,8 @@ export const users = [
     Email: 'sshuttell46@vimeo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-03-19',
+    DateExited: null,
   },
   {
     UserId: 152,
@@ -1224,6 +1528,8 @@ export const users = [
     Email: 'aflippelli47@epa.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-03-24',
+    DateExited: '2024-06-29',
   },
   {
     UserId: 153,
@@ -1232,6 +1538,8 @@ export const users = [
     Email: 'lhaizelden48@sitemeter.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-06-16',
+    DateExited: '2023-08-26',
   },
   {
     UserId: 154,
@@ -1240,6 +1548,8 @@ export const users = [
     Email: 'scrake49@hatena.ne.jp',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2021-12-17',
+    DateExited: null,
   },
   {
     UserId: 155,
@@ -1248,6 +1558,8 @@ export const users = [
     Email: 'pscobie4a@eepurl.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-12-24',
+    DateExited: null,
   },
   {
     UserId: 156,
@@ -1256,6 +1568,8 @@ export const users = [
     Email: 'fcroxford4b@scientificamerican.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-06-07',
+    DateExited: null,
   },
   {
     UserId: 157,
@@ -1264,6 +1578,8 @@ export const users = [
     Email: 'ccoale4c@shareasale.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-07-25',
+    DateExited: '2021-10-24',
   },
   {
     UserId: 158,
@@ -1272,6 +1588,8 @@ export const users = [
     Email: 'siliffe4d@pagesperso-orange.fr',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-12-29',
+    DateExited: '2024-02-02',
   },
   {
     UserId: 159,
@@ -1280,6 +1598,8 @@ export const users = [
     Email: 'kpesak4e@time.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-09-10',
+    DateExited: null,
   },
   {
     UserId: 160,
@@ -1288,6 +1608,8 @@ export const users = [
     Email: 'jmorrill4f@howstuffworks.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-10-07',
+    DateExited: null,
   },
   {
     UserId: 161,
@@ -1296,6 +1618,8 @@ export const users = [
     Email: 'bphoenix4g@sina.com.cn',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-10-29',
+    DateExited: null,
   },
   {
     UserId: 162,
@@ -1304,6 +1628,8 @@ export const users = [
     Email: 'rnell4h@free.fr',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-08',
+    DateExited: '2024-09-25',
   },
   {
     UserId: 163,
@@ -1312,6 +1638,8 @@ export const users = [
     Email: 'rschubbert4i@amazonaws.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-08-08',
+    DateExited: null,
   },
   {
     UserId: 164,
@@ -1320,6 +1648,8 @@ export const users = [
     Email: 'wkaufman4j@acquirethisname.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-04-17',
+    DateExited: null,
   },
   {
     UserId: 165,
@@ -1328,6 +1658,8 @@ export const users = [
     Email: 'cpostians4k@indiatimes.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-11-02',
+    DateExited: '2024-02-03',
   },
   {
     UserId: 166,
@@ -1336,6 +1668,8 @@ export const users = [
     Email: 'zmaffiotti4l@clickbank.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-04-23',
+    DateExited: null,
   },
   {
     UserId: 167,
@@ -1344,6 +1678,8 @@ export const users = [
     Email: 'lhounsham4m@aol.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-05-16',
+    DateExited: '2024-06-23',
   },
   {
     UserId: 168,
@@ -1352,6 +1688,8 @@ export const users = [
     Email: 'ccosely4n@blogger.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-09-24',
+    DateExited: '2023-04-28',
   },
   {
     UserId: 169,
@@ -1360,6 +1698,8 @@ export const users = [
     Email: 'mlampet4o@ezinearticles.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-09-08',
+    DateExited: '2023-11-27',
   },
   {
     UserId: 170,
@@ -1368,6 +1708,8 @@ export const users = [
     Email: 'egronaller4p@nationalgeographic.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-07-30',
+    DateExited: null,
   },
   {
     UserId: 171,
@@ -1376,6 +1718,8 @@ export const users = [
     Email: 'omelmore4q@blogtalkradio.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-03-17',
+    DateExited: '2024-03-07',
   },
   {
     UserId: 172,
@@ -1384,6 +1728,8 @@ export const users = [
     Email: 'arabb4r@pcworld.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-09-30',
+    DateExited: '2024-10-28',
   },
   {
     UserId: 173,
@@ -1392,6 +1738,8 @@ export const users = [
     Email: 'rkubiczek4s@shop-pro.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-04-19',
+    DateExited: null,
   },
   {
     UserId: 174,
@@ -1400,6 +1748,8 @@ export const users = [
     Email: 'lboykett4t@dion.ne.jp',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2020-12-08',
+    DateExited: '2024-08-04',
   },
   {
     UserId: 175,
@@ -1408,6 +1758,8 @@ export const users = [
     Email: 'ahayball4u@facebook.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-02-23',
+    DateExited: '2024-06-03',
   },
   {
     UserId: 176,
@@ -1416,6 +1768,8 @@ export const users = [
     Email: 'dhaysey4v@ucla.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-23',
+    DateExited: null,
   },
   {
     UserId: 177,
@@ -1424,6 +1778,8 @@ export const users = [
     Email: 'nfullard4w@baidu.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-01-08',
+    DateExited: '2023-08-22',
   },
   {
     UserId: 178,
@@ -1432,6 +1788,8 @@ export const users = [
     Email: 'cbedle4x@jugem.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-04-27',
+    DateExited: null,
   },
   {
     UserId: 179,
@@ -1440,6 +1798,8 @@ export const users = [
     Email: 'datchly4y@blinklist.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-04-06',
+    DateExited: '2024-04-10',
   },
   {
     UserId: 180,
@@ -1448,6 +1808,8 @@ export const users = [
     Email: 'ldahl4z@psu.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-10-25',
+    DateExited: null,
   },
   {
     UserId: 181,
@@ -1456,6 +1818,8 @@ export const users = [
     Email: 'esomerfield50@tinypic.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-01-15',
+    DateExited: null,
   },
   {
     UserId: 182,
@@ -1464,6 +1828,8 @@ export const users = [
     Email: 'bwitch51@lulu.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-04-23',
+    DateExited: '2023-03-20',
   },
   {
     UserId: 183,
@@ -1472,6 +1838,8 @@ export const users = [
     Email: 'ikemme52@cnbc.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-05-10',
+    DateExited: '2024-10-05',
   },
   {
     UserId: 184,
@@ -1480,6 +1848,8 @@ export const users = [
     Email: 'hmonksfield53@blogs.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-12-19',
+    DateExited: '2021-09-27',
   },
   {
     UserId: 185,
@@ -1488,6 +1858,8 @@ export const users = [
     Email: 'nwoolis54@ihg.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-02-21',
+    DateExited: null,
   },
   {
     UserId: 186,
@@ -1496,6 +1868,8 @@ export const users = [
     Email: 'wbloxsum55@github.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-09-05',
+    DateExited: null,
   },
   {
     UserId: 187,
@@ -1504,6 +1878,8 @@ export const users = [
     Email: 'lweymont56@cdc.gov',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-04-05',
+    DateExited: '2024-09-26',
   },
   {
     UserId: 188,
@@ -1512,6 +1888,8 @@ export const users = [
     Email: 'bputtan57@umn.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-07-09',
+    DateExited: '2024-08-02',
   },
   {
     UserId: 189,
@@ -1520,6 +1898,8 @@ export const users = [
     Email: 'ucumbers58@phpbb.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-12-04',
+    DateExited: null,
   },
   {
     UserId: 190,
@@ -1528,6 +1908,8 @@ export const users = [
     Email: 'mhuckerbe59@trellian.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-04-14',
+    DateExited: '2024-03-08',
   },
   {
     UserId: 191,
@@ -1536,6 +1918,8 @@ export const users = [
     Email: 'gwilne5a@sina.com.cn',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-01-12',
+    DateExited: null,
   },
   {
     UserId: 192,
@@ -1544,6 +1928,8 @@ export const users = [
     Email: 'skelson5b@fc2.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-10-30',
+    DateExited: null,
   },
   {
     UserId: 193,
@@ -1552,6 +1938,8 @@ export const users = [
     Email: 'npryde5c@usgs.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-08-08',
+    DateExited: null,
   },
   {
     UserId: 194,
@@ -1560,6 +1948,8 @@ export const users = [
     Email: 'wodonnell5d@cyberchimps.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-02-28',
+    DateExited: null,
   },
   {
     UserId: 195,
@@ -1568,6 +1958,8 @@ export const users = [
     Email: 'legginton5e@mapy.cz',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-02-16',
+    DateExited: null,
   },
   {
     UserId: 196,
@@ -1576,6 +1968,8 @@ export const users = [
     Email: 'tsayle5f@prnewswire.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-03',
+    DateExited: '2024-10-13',
   },
   {
     UserId: 197,
@@ -1584,6 +1978,8 @@ export const users = [
     Email: 'bshoveller5g@flavors.me',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-09',
+    DateExited: '2024-05-11',
   },
   {
     UserId: 198,
@@ -1592,6 +1988,8 @@ export const users = [
     Email: 'mrouf5h@163.com',
     Gender: 'Non-binary',
     Active: 'FALSE',
+    DateHired: '2023-04-17',
+    DateExited: '2024-09-21',
   },
   {
     UserId: 199,
@@ -1600,6 +1998,8 @@ export const users = [
     Email: 'hburgne5i@weibo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-07-30',
+    DateExited: null,
   },
   {
     UserId: 200,
@@ -1608,6 +2008,8 @@ export const users = [
     Email: 'mmortell5j@ted.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-12-15',
+    DateExited: null,
   },
   {
     UserId: 201,
@@ -1616,6 +2018,8 @@ export const users = [
     Email: 'tgrunder5k@sohu.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-07-19',
+    DateExited: null,
   },
   {
     UserId: 202,
@@ -1624,6 +2028,8 @@ export const users = [
     Email: 'scattow5l@surveymonkey.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-06-04',
+    DateExited: null,
   },
   {
     UserId: 203,
@@ -1632,6 +2038,8 @@ export const users = [
     Email: 'blatan5m@ask.com',
     Gender: 'Non-binary',
     Active: 'FALSE',
+    DateHired: '2022-02-15',
+    DateExited: '2024-04-15',
   },
   {
     UserId: 204,
@@ -1640,6 +2048,8 @@ export const users = [
     Email: 'ilangeley5n@spiegel.de',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-07-03',
+    DateExited: null,
   },
   {
     UserId: 205,
@@ -1648,6 +2058,8 @@ export const users = [
     Email: 'skehoe5o@merriam-webster.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-09-01',
+    DateExited: '2023-06-26',
   },
   {
     UserId: 206,
@@ -1656,6 +2068,8 @@ export const users = [
     Email: 'sdacke5p@wiley.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-07-27',
+    DateExited: null,
   },
   {
     UserId: 207,
@@ -1664,6 +2078,8 @@ export const users = [
     Email: 'eyesichev5q@samsung.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-04-28',
+    DateExited: '2023-06-05',
   },
   {
     UserId: 208,
@@ -1672,6 +2088,8 @@ export const users = [
     Email: 'dgallichan5r@gravatar.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-07',
+    DateExited: null,
   },
   {
     UserId: 209,
@@ -1680,6 +2098,8 @@ export const users = [
     Email: 'mbruce5s@narod.ru',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2023-07-15',
+    DateExited: '2024-08-04',
   },
   {
     UserId: 210,
@@ -1688,6 +2108,8 @@ export const users = [
     Email: 'mtruin5t@economist.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-04-18',
+    DateExited: null,
   },
   {
     UserId: 211,
@@ -1696,6 +2118,8 @@ export const users = [
     Email: 'jbiers5u@dedecms.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-11',
+    DateExited: null,
   },
   {
     UserId: 212,
@@ -1704,6 +2128,8 @@ export const users = [
     Email: 'cpenvarne5v@ocn.ne.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-08-03',
+    DateExited: '2022-01-24',
   },
   {
     UserId: 213,
@@ -1712,6 +2138,8 @@ export const users = [
     Email: 'wfannin5w@dyndns.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-04-09',
+    DateExited: null,
   },
   {
     UserId: 214,
@@ -1720,6 +2148,8 @@ export const users = [
     Email: 'amagnus5x@icio.us',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-03-30',
+    DateExited: null,
   },
   {
     UserId: 215,
@@ -1728,6 +2158,8 @@ export const users = [
     Email: 'bmccoy5y@loc.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-12-17',
+    DateExited: null,
   },
   {
     UserId: 216,
@@ -1736,6 +2168,8 @@ export const users = [
     Email: 'tlambirth5z@senate.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-07-15',
+    DateExited: null,
   },
   {
     UserId: 217,
@@ -1744,6 +2178,8 @@ export const users = [
     Email: 'bmccloughlin60@hexun.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-12-08',
+    DateExited: '2023-07-20',
   },
   {
     UserId: 218,
@@ -1752,6 +2188,8 @@ export const users = [
     Email: 'dmapis61@tripadvisor.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-10-17',
+    DateExited: '2023-12-16',
   },
   {
     UserId: 219,
@@ -1760,6 +2198,8 @@ export const users = [
     Email: 'fzoellner62@yale.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-05-13',
+    DateExited: null,
   },
   {
     UserId: 220,
@@ -1768,6 +2208,8 @@ export const users = [
     Email: 'bgratton63@cloudflare.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-06',
+    DateExited: '2024-07-10',
   },
   {
     UserId: 221,
@@ -1776,6 +2218,8 @@ export const users = [
     Email: 'abiffen64@amazon.com',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2024-01-24',
+    DateExited: '2024-10-29',
   },
   {
     UserId: 222,
@@ -1784,6 +2228,8 @@ export const users = [
     Email: 'wjahns65@ning.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-03-27',
+    DateExited: '2024-07-21',
   },
   {
     UserId: 223,
@@ -1792,6 +2238,8 @@ export const users = [
     Email: 'rpeterkin66@digg.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-17',
+    DateExited: '2022-05-27',
   },
   {
     UserId: 224,
@@ -1800,6 +2248,8 @@ export const users = [
     Email: 'jheld67@bloglovin.com',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2024-10-25',
+    DateExited: null,
   },
   {
     UserId: 225,
@@ -1808,6 +2258,8 @@ export const users = [
     Email: 'gknowlman68@github.io',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-05-22',
+    DateExited: '2023-10-21',
   },
   {
     UserId: 226,
@@ -1816,6 +2268,8 @@ export const users = [
     Email: 'oescoffrey69@marriott.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-12-17',
+    DateExited: '2024-06-16',
   },
   {
     UserId: 227,
@@ -1824,6 +2278,8 @@ export const users = [
     Email: 'rleathard6a@nasa.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-07-13',
+    DateExited: null,
   },
   {
     UserId: 228,
@@ -1832,6 +2288,8 @@ export const users = [
     Email: 'ehockey6b@slideshare.net',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-27',
+    DateExited: null,
   },
   {
     UserId: 229,
@@ -1840,6 +2298,8 @@ export const users = [
     Email: 'amatzke6c@oakley.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-06-21',
+    DateExited: '2020-09-15',
   },
   {
     UserId: 230,
@@ -1848,6 +2308,8 @@ export const users = [
     Email: 'twilcher6d@zdnet.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-08-19',
+    DateExited: null,
   },
   {
     UserId: 231,
@@ -1856,6 +2318,8 @@ export const users = [
     Email: 'kgianuzzi6e@jiathis.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-02-17',
+    DateExited: null,
   },
   {
     UserId: 232,
@@ -1864,6 +2328,8 @@ export const users = [
     Email: 'edurrad6f@cbc.ca',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-01-31',
+    DateExited: null,
   },
   {
     UserId: 233,
@@ -1872,6 +2338,8 @@ export const users = [
     Email: 'awillars6g@wikia.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-11-21',
+    DateExited: '2023-10-23',
   },
   {
     UserId: 234,
@@ -1880,6 +2348,8 @@ export const users = [
     Email: 'abenadette6h@google.com.au',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-11-23',
+    DateExited: '2022-11-02',
   },
   {
     UserId: 235,
@@ -1888,6 +2358,8 @@ export const users = [
     Email: 'hqualtro6i@angelfire.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-05-06',
+    DateExited: '2023-08-07',
   },
   {
     UserId: 236,
@@ -1896,6 +2368,8 @@ export const users = [
     Email: 'mduffer6j@flavors.me',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-02-03',
+    DateExited: '2021-06-20',
   },
   {
     UserId: 237,
@@ -1904,6 +2378,8 @@ export const users = [
     Email: 'lmish6k@skype.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-15',
+    DateExited: '2024-06-21',
   },
   {
     UserId: 238,
@@ -1912,6 +2388,8 @@ export const users = [
     Email: 'sshilito6l@sourceforge.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-27',
+    DateExited: null,
   },
   {
     UserId: 239,
@@ -1920,6 +2398,8 @@ export const users = [
     Email: 'sert6m@accuweather.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-09-27',
+    DateExited: '2022-01-26',
   },
   {
     UserId: 240,
@@ -1928,6 +2408,8 @@ export const users = [
     Email: 'gzmitrichenko6n@jalbum.net',
     Gender: 'Bigender',
     Active: 'FALSE',
+    DateHired: '2023-01-22',
+    DateExited: '2024-04-02',
   },
   {
     UserId: 241,
@@ -1936,6 +2418,8 @@ export const users = [
     Email: 'lboswood6o@so-net.ne.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-04-01',
+    DateExited: null,
   },
   {
     UserId: 242,
@@ -1944,6 +2428,8 @@ export const users = [
     Email: 'clandre6p@hubpages.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-11-10',
+    DateExited: '2024-11-12',
   },
   {
     UserId: 243,
@@ -1952,6 +2438,8 @@ export const users = [
     Email: 'sblucher6q@digg.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-05-13',
+    DateExited: '2023-12-07',
   },
   {
     UserId: 244,
@@ -1960,6 +2448,8 @@ export const users = [
     Email: 'rsummerskill6r@telegraph.co.uk',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-04-23',
+    DateExited: '2021-04-27',
   },
   {
     UserId: 245,
@@ -1968,6 +2458,8 @@ export const users = [
     Email: 'mrandlesome6s@sina.com.cn',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-08-24',
+    DateExited: null,
   },
   {
     UserId: 246,
@@ -1976,6 +2468,8 @@ export const users = [
     Email: 'cdyhouse6t@github.io',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-07-20',
+    DateExited: null,
   },
   {
     UserId: 247,
@@ -1984,6 +2478,8 @@ export const users = [
     Email: 'truperti6u@omniture.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-01-17',
+    DateExited: '2024-05-17',
   },
   {
     UserId: 248,
@@ -1992,6 +2488,8 @@ export const users = [
     Email: 'rjerzak6v@time.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-07',
+    DateExited: null,
   },
   {
     UserId: 249,
@@ -2000,6 +2498,8 @@ export const users = [
     Email: 'sullyatt6w@ftc.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-09-07',
+    DateExited: '2021-08-12',
   },
   {
     UserId: 250,
@@ -2008,6 +2508,8 @@ export const users = [
     Email: 'vmockett6x@whitehouse.gov',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-12-18',
+    DateExited: '2024-10-16',
   },
   {
     UserId: 251,
@@ -2016,6 +2518,8 @@ export const users = [
     Email: 'mcribbott6y@163.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-01',
+    DateExited: '2023-02-16',
   },
   {
     UserId: 252,
@@ -2024,6 +2528,8 @@ export const users = [
     Email: 'sletch6z@lulu.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-03-27',
+    DateExited: '2023-03-31',
   },
   {
     UserId: 253,
@@ -2032,6 +2538,8 @@ export const users = [
     Email: 'bpycock70@cargocollective.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-11-28',
+    DateExited: '2022-10-04',
   },
   {
     UserId: 254,
@@ -2040,6 +2548,8 @@ export const users = [
     Email: 'cgorling71@nps.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-06-20',
+    DateExited: null,
   },
   {
     UserId: 255,
@@ -2048,6 +2558,8 @@ export const users = [
     Email: 'fcastagnasso72@discuz.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-10-19',
+    DateExited: null,
   },
   {
     UserId: 256,
@@ -2056,6 +2568,8 @@ export const users = [
     Email: 'sbrookhouse73@apple.com',
     Gender: 'Bigender',
     Active: 'FALSE',
+    DateHired: '2023-03-31',
+    DateExited: '2023-11-08',
   },
   {
     UserId: 257,
@@ -2064,6 +2578,8 @@ export const users = [
     Email: 'zcrocket74@multiply.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-06-13',
+    DateExited: '2024-10-25',
   },
   {
     UserId: 258,
@@ -2072,6 +2588,8 @@ export const users = [
     Email: 'dcockhill75@facebook.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-02-08',
+    DateExited: '2020-03-01',
   },
   {
     UserId: 259,
@@ -2080,6 +2598,8 @@ export const users = [
     Email: 'tshillaker76@meetup.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-20',
+    DateExited: null,
   },
   {
     UserId: 260,
@@ -2088,6 +2608,8 @@ export const users = [
     Email: 'kpyke77@eventbrite.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-01-10',
+    DateExited: null,
   },
   {
     UserId: 261,
@@ -2096,6 +2618,8 @@ export const users = [
     Email: 'vassel78@addthis.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-10-03',
+    DateExited: null,
   },
   {
     UserId: 262,
@@ -2104,6 +2628,8 @@ export const users = [
     Email: 'mbeloe79@discovery.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-10-02',
+    DateExited: null,
   },
   {
     UserId: 263,
@@ -2112,6 +2638,8 @@ export const users = [
     Email: 'tsimounet7a@shutterfly.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-07-17',
+    DateExited: null,
   },
   {
     UserId: 264,
@@ -2120,6 +2648,8 @@ export const users = [
     Email: 'rwell7b@loc.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-08-17',
+    DateExited: null,
   },
   {
     UserId: 265,
@@ -2128,6 +2658,8 @@ export const users = [
     Email: 'peverex7c@ask.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-08-19',
+    DateExited: null,
   },
   {
     UserId: 266,
@@ -2136,6 +2668,8 @@ export const users = [
     Email: 'mrash7d@vkontakte.ru',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-03-26',
+    DateExited: '2024-04-05',
   },
   {
     UserId: 267,
@@ -2144,6 +2678,8 @@ export const users = [
     Email: 'skopec7e@unesco.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-02-21',
+    DateExited: null,
   },
   {
     UserId: 268,
@@ -2152,6 +2688,8 @@ export const users = [
     Email: 'calessandrelli7f@redcross.org',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2023-07-27',
+    DateExited: null,
   },
   {
     UserId: 269,
@@ -2160,6 +2698,8 @@ export const users = [
     Email: 'jsearjeant7g@devhub.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-09-12',
+    DateExited: null,
   },
   {
     UserId: 270,
@@ -2168,6 +2708,8 @@ export const users = [
     Email: 'gvanbaaren7h@omniture.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-12-12',
+    DateExited: null,
   },
   {
     UserId: 271,
@@ -2176,6 +2718,8 @@ export const users = [
     Email: 'kpenton7i@yellowbook.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-03',
+    DateExited: null,
   },
   {
     UserId: 272,
@@ -2184,6 +2728,8 @@ export const users = [
     Email: 'cchat7j@com.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-08-01',
+    DateExited: null,
   },
   {
     UserId: 273,
@@ -2192,6 +2738,8 @@ export const users = [
     Email: 'wdaingerfield7k@bloomberg.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-02-09',
+    DateExited: null,
   },
   {
     UserId: 274,
@@ -2200,6 +2748,8 @@ export const users = [
     Email: 'mhegel7l@istockphoto.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-11-24',
+    DateExited: '2024-04-04',
   },
   {
     UserId: 275,
@@ -2208,6 +2758,8 @@ export const users = [
     Email: 'dwanne7m@mozilla.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-22',
+    DateExited: '2024-03-05',
   },
   {
     UserId: 276,
@@ -2216,6 +2768,8 @@ export const users = [
     Email: 'gbosche7n@wisc.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-12-30',
+    DateExited: '2024-07-04',
   },
   {
     UserId: 277,
@@ -2224,6 +2778,8 @@ export const users = [
     Email: 'rgreer7o@whitehouse.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-05-06',
+    DateExited: null,
   },
   {
     UserId: 278,
@@ -2232,6 +2788,8 @@ export const users = [
     Email: 'obossingham7p@answers.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-04-25',
+    DateExited: null,
   },
   {
     UserId: 279,
@@ -2240,6 +2798,8 @@ export const users = [
     Email: 'rbianco7q@nih.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-09-09',
+    DateExited: null,
   },
   {
     UserId: 280,
@@ -2248,6 +2808,8 @@ export const users = [
     Email: 'mcubbon7r@diigo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-09-01',
+    DateExited: null,
   },
   {
     UserId: 281,
@@ -2256,6 +2818,8 @@ export const users = [
     Email: 'mmatei7s@odnoklassniki.ru',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-01-09',
+    DateExited: '2022-06-08',
   },
   {
     UserId: 282,
@@ -2264,6 +2828,8 @@ export const users = [
     Email: 'creding7t@marketwatch.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-03-17',
+    DateExited: null,
   },
   {
     UserId: 283,
@@ -2272,6 +2838,8 @@ export const users = [
     Email: 'mhaquard7u@webs.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-09-11',
+    DateExited: null,
   },
   {
     UserId: 284,
@@ -2280,6 +2848,8 @@ export const users = [
     Email: 'wsnawdon7v@dmoz.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-04-07',
+    DateExited: null,
   },
   {
     UserId: 285,
@@ -2288,6 +2858,8 @@ export const users = [
     Email: 'ymcpeck7w@woothemes.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-02-20',
+    DateExited: null,
   },
   {
     UserId: 286,
@@ -2296,6 +2868,8 @@ export const users = [
     Email: 'cdowrey7x@dot.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-04-16',
+    DateExited: null,
   },
   {
     UserId: 287,
@@ -2304,6 +2878,8 @@ export const users = [
     Email: 'dpyrah7y@dailymail.co.uk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-01-24',
+    DateExited: null,
   },
   {
     UserId: 288,
@@ -2312,6 +2888,8 @@ export const users = [
     Email: 'rgoodricke7z@purevolume.com',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2021-11-20',
+    DateExited: null,
   },
   {
     UserId: 289,
@@ -2320,6 +2898,8 @@ export const users = [
     Email: 'wbaldoni80@omniture.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-08-12',
+    DateExited: '2023-08-19',
   },
   {
     UserId: 290,
@@ -2328,6 +2908,8 @@ export const users = [
     Email: 'qbartolic81@mayoclinic.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-04-19',
+    DateExited: '2024-07-01',
   },
   {
     UserId: 291,
@@ -2336,6 +2918,8 @@ export const users = [
     Email: 'hvivians82@sogou.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-05-29',
+    DateExited: null,
   },
   {
     UserId: 292,
@@ -2344,6 +2928,8 @@ export const users = [
     Email: 'snormansell83@51.la',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-11-12',
+    DateExited: '2024-11-12',
   },
   {
     UserId: 293,
@@ -2352,6 +2938,8 @@ export const users = [
     Email: 'lmannock84@meetup.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-29',
+    DateExited: '2023-12-25',
   },
   {
     UserId: 294,
@@ -2360,6 +2948,8 @@ export const users = [
     Email: 'jissacson85@patch.com',
     Gender: 'Genderfluid',
     Active: 'TRUE',
+    DateHired: '2022-06-19',
+    DateExited: null,
   },
   {
     UserId: 295,
@@ -2368,6 +2958,8 @@ export const users = [
     Email: 'wwroe86@woothemes.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-09-06',
+    DateExited: '2023-02-06',
   },
   {
     UserId: 296,
@@ -2376,6 +2968,8 @@ export const users = [
     Email: 'bfratson87@icq.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-02-26',
+    DateExited: '2022-10-15',
   },
   {
     UserId: 297,
@@ -2384,6 +2978,8 @@ export const users = [
     Email: 'isouthern88@dot.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-08-25',
+    DateExited: '2024-10-11',
   },
   {
     UserId: 298,
@@ -2392,6 +2988,8 @@ export const users = [
     Email: 'tguidetti89@indiegogo.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-09-08',
+    DateExited: '2024-01-14',
   },
   {
     UserId: 299,
@@ -2400,6 +2998,8 @@ export const users = [
     Email: 'dblagden8a@uiuc.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-02-06',
+    DateExited: null,
   },
   {
     UserId: 300,
@@ -2408,6 +3008,8 @@ export const users = [
     Email: 'rthompsett8b@theatlantic.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-07-19',
+    DateExited: null,
   },
   {
     UserId: 301,
@@ -2416,6 +3018,8 @@ export const users = [
     Email: 'syegorev8c@microsoft.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-06-07',
+    DateExited: null,
   },
   {
     UserId: 302,
@@ -2424,6 +3028,8 @@ export const users = [
     Email: 'wfilon8d@army.mil',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-05-31',
+    DateExited: '2023-07-14',
   },
   {
     UserId: 303,
@@ -2432,6 +3038,8 @@ export const users = [
     Email: 'rthomason8e@dmoz.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-01-11',
+    DateExited: '2024-02-13',
   },
   {
     UserId: 304,
@@ -2440,6 +3048,8 @@ export const users = [
     Email: 'dlyttle8f@amazon.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-04-12',
+    DateExited: null,
   },
   {
     UserId: 305,
@@ -2448,6 +3058,8 @@ export const users = [
     Email: 'bhancox8g@cam.ac.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-07-28',
+    DateExited: null,
   },
   {
     UserId: 306,
@@ -2456,6 +3068,8 @@ export const users = [
     Email: 'apember8h@jimdo.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-02-22',
+    DateExited: null,
   },
   {
     UserId: 307,
@@ -2464,6 +3078,8 @@ export const users = [
     Email: 'wcollyer8i@reuters.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-08-31',
+    DateExited: null,
   },
   {
     UserId: 308,
@@ -2472,6 +3088,8 @@ export const users = [
     Email: 'cklainman8j@i2i.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-12-15',
+    DateExited: '2024-04-03',
   },
   {
     UserId: 309,
@@ -2480,6 +3098,8 @@ export const users = [
     Email: 'zduffitt8k@wordpress.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-09-09',
+    DateExited: null,
   },
   {
     UserId: 310,
@@ -2488,6 +3108,8 @@ export const users = [
     Email: 'pkohnemann8l@intel.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-07-27',
+    DateExited: '2024-10-16',
   },
   {
     UserId: 311,
@@ -2496,6 +3118,8 @@ export const users = [
     Email: 'channigan8m@oakley.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-01-22',
+    DateExited: '2022-04-17',
   },
   {
     UserId: 312,
@@ -2504,6 +3128,8 @@ export const users = [
     Email: 'mgoodge8n@bigcartel.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-03-09',
+    DateExited: '2021-10-25',
   },
   {
     UserId: 313,
@@ -2512,6 +3138,8 @@ export const users = [
     Email: 'prapkins8o@cmu.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-05-12',
+    DateExited: null,
   },
   {
     UserId: 314,
@@ -2520,6 +3148,8 @@ export const users = [
     Email: 'nmactimpany8p@baidu.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-02-28',
+    DateExited: null,
   },
   {
     UserId: 315,
@@ -2528,6 +3158,8 @@ export const users = [
     Email: 'amaghull8q@sciencedaily.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-03-21',
+    DateExited: null,
   },
   {
     UserId: 316,
@@ -2536,6 +3168,8 @@ export const users = [
     Email: 'mwhylie8r@buzzfeed.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-02-26',
+    DateExited: null,
   },
   {
     UserId: 317,
@@ -2544,6 +3178,8 @@ export const users = [
     Email: 'lpegram8s@themeforest.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-02-06',
+    DateExited: null,
   },
   {
     UserId: 318,
@@ -2552,6 +3188,8 @@ export const users = [
     Email: 'astonhouse8t@surveymonkey.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-05-05',
+    DateExited: '2021-01-30',
   },
   {
     UserId: 319,
@@ -2560,6 +3198,8 @@ export const users = [
     Email: 'tdemongeot8u@opera.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-04-04',
+    DateExited: '2024-07-26',
   },
   {
     UserId: 320,
@@ -2568,6 +3208,8 @@ export const users = [
     Email: 'covise8v@angelfire.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-08-26',
+    DateExited: null,
   },
   {
     UserId: 321,
@@ -2576,6 +3218,8 @@ export const users = [
     Email: 'mpashenkov8w@yellowbook.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-10-13',
+    DateExited: null,
   },
   {
     UserId: 322,
@@ -2584,6 +3228,8 @@ export const users = [
     Email: 'mcicccitti8x@globo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-11-28',
+    DateExited: null,
   },
   {
     UserId: 323,
@@ -2592,6 +3238,8 @@ export const users = [
     Email: 'mfrohock8y@va.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-09-19',
+    DateExited: null,
   },
   {
     UserId: 324,
@@ -2600,6 +3248,8 @@ export const users = [
     Email: 'vswalough8z@dailymotion.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-06-17',
+    DateExited: '2023-11-20',
   },
   {
     UserId: 325,
@@ -2608,6 +3258,8 @@ export const users = [
     Email: 'ecolloby90@businesswire.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-31',
+    DateExited: null,
   },
   {
     UserId: 326,
@@ -2616,6 +3268,8 @@ export const users = [
     Email: 'hcavolini91@storify.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-12-13',
+    DateExited: '2023-09-20',
   },
   {
     UserId: 327,
@@ -2624,6 +3278,8 @@ export const users = [
     Email: 'drains92@statcounter.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-06-15',
+    DateExited: null,
   },
   {
     UserId: 328,
@@ -2632,6 +3288,8 @@ export const users = [
     Email: 'ogrimditch93@themeforest.net',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-04-13',
+    DateExited: null,
   },
   {
     UserId: 329,
@@ -2640,6 +3298,8 @@ export const users = [
     Email: 'bpiccard94@economist.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-11-02',
+    DateExited: null,
   },
   {
     UserId: 330,
@@ -2648,6 +3308,8 @@ export const users = [
     Email: 'aleheude95@arizona.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-09-15',
+    DateExited: '2023-12-18',
   },
   {
     UserId: 331,
@@ -2656,6 +3318,8 @@ export const users = [
     Email: 'mpiesold96@zdnet.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-12-23',
+    DateExited: null,
   },
   {
     UserId: 332,
@@ -2664,6 +3328,8 @@ export const users = [
     Email: 'rbrougham97@dailymail.co.uk',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-07-03',
+    DateExited: '2024-10-10',
   },
   {
     UserId: 333,
@@ -2672,6 +3338,8 @@ export const users = [
     Email: 'bgwillim98@gnu.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-12-28',
+    DateExited: null,
   },
   {
     UserId: 334,
@@ -2680,6 +3348,8 @@ export const users = [
     Email: 'jcowcha99@answers.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-03-14',
+    DateExited: '2023-07-25',
   },
   {
     UserId: 335,
@@ -2688,6 +3358,8 @@ export const users = [
     Email: 'gquade9a@nifty.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-03',
+    DateExited: '2024-03-02',
   },
   {
     UserId: 336,
@@ -2696,6 +3368,8 @@ export const users = [
     Email: 'adalgarno9b@reverbnation.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-18',
+    DateExited: '2022-04-06',
   },
   {
     UserId: 337,
@@ -2704,6 +3378,8 @@ export const users = [
     Email: 'pmatherson9c@themeforest.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-06-03',
+    DateExited: '2023-01-13',
   },
   {
     UserId: 338,
@@ -2712,6 +3388,8 @@ export const users = [
     Email: 'sstorek9d@plala.or.jp',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-03-03',
+    DateExited: '2022-03-11',
   },
   {
     UserId: 339,
@@ -2720,6 +3398,8 @@ export const users = [
     Email: 'rubank9e@yolasite.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-08-10',
+    DateExited: null,
   },
   {
     UserId: 340,
@@ -2728,6 +3408,8 @@ export const users = [
     Email: 'yreede9f@indiatimes.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-02-20',
+    DateExited: '2024-07-09',
   },
   {
     UserId: 341,
@@ -2736,6 +3418,8 @@ export const users = [
     Email: 'estate9g@ft.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-05-28',
+    DateExited: null,
   },
   {
     UserId: 342,
@@ -2744,6 +3428,8 @@ export const users = [
     Email: 'gfitzgilbert9h@opensource.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-05-11',
+    DateExited: null,
   },
   {
     UserId: 343,
@@ -2752,6 +3438,8 @@ export const users = [
     Email: 'wbritt9i@tiny.cc',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-07-06',
+    DateExited: '2024-10-05',
   },
   {
     UserId: 344,
@@ -2760,6 +3448,8 @@ export const users = [
     Email: 'cstollmeyer9j@lulu.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-10-17',
+    DateExited: '2023-11-04',
   },
   {
     UserId: 345,
@@ -2768,6 +3458,8 @@ export const users = [
     Email: 'dsenyard9k@marketwatch.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-03-23',
+    DateExited: '2024-05-21',
   },
   {
     UserId: 346,
@@ -2776,6 +3468,8 @@ export const users = [
     Email: 'hreis9l@wp.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-02-02',
+    DateExited: '2024-02-16',
   },
   {
     UserId: 347,
@@ -2784,6 +3478,8 @@ export const users = [
     Email: 'emance9m@cafepress.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-04-15',
+    DateExited: null,
   },
   {
     UserId: 348,
@@ -2792,6 +3488,8 @@ export const users = [
     Email: 'csearby9n@sbwire.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-05-03',
+    DateExited: '2022-06-08',
   },
   {
     UserId: 349,
@@ -2800,6 +3498,8 @@ export const users = [
     Email: 'rnuss9o@ebay.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-11-06',
+    DateExited: null,
   },
   {
     UserId: 350,
@@ -2808,6 +3508,8 @@ export const users = [
     Email: 'ctriplett9p@odnoklassniki.ru',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-13',
+    DateExited: null,
   },
   {
     UserId: 351,
@@ -2816,6 +3518,8 @@ export const users = [
     Email: 'tmalthus9q@phpbb.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-06-30',
+    DateExited: '2022-07-15',
   },
   {
     UserId: 352,
@@ -2824,6 +3528,8 @@ export const users = [
     Email: 'alanfear9r@wikia.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-06-17',
+    DateExited: '2024-11-01',
   },
   {
     UserId: 353,
@@ -2832,6 +3538,8 @@ export const users = [
     Email: 'amundle9s@accuweather.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-05-28',
+    DateExited: null,
   },
   {
     UserId: 354,
@@ -2840,6 +3548,8 @@ export const users = [
     Email: 'abaskwell9t@theguardian.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-19',
+    DateExited: '2020-11-14',
   },
   {
     UserId: 355,
@@ -2848,6 +3558,8 @@ export const users = [
     Email: 'cwhittleton9u@fema.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-25',
+    DateExited: null,
   },
   {
     UserId: 356,
@@ -2856,6 +3568,8 @@ export const users = [
     Email: 'pdongall9v@xrea.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-12-04',
+    DateExited: null,
   },
   {
     UserId: 357,
@@ -2864,6 +3578,8 @@ export const users = [
     Email: 'apotebury9w@hp.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-12-14',
+    DateExited: '2024-04-06',
   },
   {
     UserId: 358,
@@ -2872,6 +3588,8 @@ export const users = [
     Email: 'clyttle9x@elpais.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-07-09',
+    DateExited: null,
   },
   {
     UserId: 359,
@@ -2880,6 +3598,8 @@ export const users = [
     Email: 'aackred9y@gizmodo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-11-30',
+    DateExited: null,
   },
   {
     UserId: 360,
@@ -2888,6 +3608,8 @@ export const users = [
     Email: 'rfloweth9z@phpbb.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-09-02',
+    DateExited: null,
   },
   {
     UserId: 361,
@@ -2896,6 +3618,8 @@ export const users = [
     Email: 'ckiddsa0@ning.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-07-28',
+    DateExited: '2023-08-26',
   },
   {
     UserId: 362,
@@ -2904,6 +3628,8 @@ export const users = [
     Email: 'vbausa1@lycos.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-11-24',
+    DateExited: '2024-10-25',
   },
   {
     UserId: 363,
@@ -2912,6 +3638,8 @@ export const users = [
     Email: 'emowlama2@cnbc.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-12-12',
+    DateExited: '2022-11-20',
   },
   {
     UserId: 364,
@@ -2920,6 +3648,8 @@ export const users = [
     Email: 'cspitaroa3@elegantthemes.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-12-25',
+    DateExited: '2024-09-22',
   },
   {
     UserId: 365,
@@ -2928,6 +3658,8 @@ export const users = [
     Email: 'rbendaa4@cnn.com',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2024-03-17',
+    DateExited: null,
   },
   {
     UserId: 366,
@@ -2936,6 +3668,8 @@ export const users = [
     Email: 'fcornewalla5@webnode.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-05-26',
+    DateExited: '2024-10-29',
   },
   {
     UserId: 367,
@@ -2944,6 +3678,8 @@ export const users = [
     Email: 'plishmunda6@zimbio.com',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2024-09-14',
+    DateExited: null,
   },
   {
     UserId: 368,
@@ -2952,6 +3688,8 @@ export const users = [
     Email: 'kmccaughrena7@mediafire.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-10-22',
+    DateExited: null,
   },
   {
     UserId: 369,
@@ -2960,6 +3698,8 @@ export const users = [
     Email: 'gemminesa8@ihg.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-06-10',
+    DateExited: null,
   },
   {
     UserId: 370,
@@ -2968,6 +3708,8 @@ export const users = [
     Email: 'sbrunickea9@whitehouse.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-11-28',
+    DateExited: null,
   },
   {
     UserId: 371,
@@ -2976,6 +3718,8 @@ export const users = [
     Email: 'fdolbyaa@ning.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-04',
+    DateExited: null,
   },
   {
     UserId: 372,
@@ -2984,6 +3728,8 @@ export const users = [
     Email: 'ebortoliab@merriam-webster.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-10-10',
+    DateExited: null,
   },
   {
     UserId: 373,
@@ -2992,6 +3738,8 @@ export const users = [
     Email: 'lrushbyac@lulu.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-16',
+    DateExited: '2022-12-26',
   },
   {
     UserId: 374,
@@ -3000,6 +3748,8 @@ export const users = [
     Email: 'cdirrad@sciencedirect.com',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2020-03-04',
+    DateExited: null,
   },
   {
     UserId: 375,
@@ -3008,6 +3758,8 @@ export const users = [
     Email: 'sshouteae@illinois.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-01-13',
+    DateExited: '2021-02-05',
   },
   {
     UserId: 376,
@@ -3016,6 +3768,8 @@ export const users = [
     Email: 'bhardingeaf@ox.ac.uk',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-05',
+    DateExited: '2024-10-18',
   },
   {
     UserId: 377,
@@ -3024,6 +3778,8 @@ export const users = [
     Email: 'lbampkinag@ow.ly',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-02-07',
+    DateExited: '2024-07-22',
   },
   {
     UserId: 378,
@@ -3032,6 +3788,8 @@ export const users = [
     Email: 'traddonah@thetimes.co.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-06-18',
+    DateExited: null,
   },
   {
     UserId: 379,
@@ -3040,6 +3798,8 @@ export const users = [
     Email: 'sokkerai@state.tx.us',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-11-09',
+    DateExited: '2023-01-26',
   },
   {
     UserId: 380,
@@ -3048,6 +3808,8 @@ export const users = [
     Email: 'ffulmenaj@slashdot.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-11-11',
+    DateExited: '2023-09-19',
   },
   {
     UserId: 381,
@@ -3056,6 +3818,8 @@ export const users = [
     Email: 'kdelgadilloak@state.tx.us',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-02-17',
+    DateExited: null,
   },
   {
     UserId: 382,
@@ -3064,6 +3828,8 @@ export const users = [
     Email: 'gganfortheal@alexa.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-02-25',
+    DateExited: null,
   },
   {
     UserId: 383,
@@ -3072,6 +3838,8 @@ export const users = [
     Email: 'ewellsam@mtv.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-01-06',
+    DateExited: '2024-07-29',
   },
   {
     UserId: 384,
@@ -3080,6 +3848,8 @@ export const users = [
     Email: 'rannonan@pcworld.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-01-25',
+    DateExited: '2022-12-26',
   },
   {
     UserId: 385,
@@ -3088,6 +3858,8 @@ export const users = [
     Email: 'spinxtonao@usa.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-08-21',
+    DateExited: null,
   },
   {
     UserId: 386,
@@ -3096,6 +3868,8 @@ export const users = [
     Email: 'chuchotap@imgur.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-02-19',
+    DateExited: null,
   },
   {
     UserId: 387,
@@ -3104,6 +3878,8 @@ export const users = [
     Email: 'hyosifovaq@phpbb.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-10-31',
+    DateExited: null,
   },
   {
     UserId: 388,
@@ -3112,6 +3888,8 @@ export const users = [
     Email: 'bmccurlyear@vinaora.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-05-13',
+    DateExited: null,
   },
   {
     UserId: 389,
@@ -3120,6 +3898,8 @@ export const users = [
     Email: 'tamerighias@walmart.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-10-30',
+    DateExited: null,
   },
   {
     UserId: 390,
@@ -3128,6 +3908,8 @@ export const users = [
     Email: 'ghousbeyat@redcross.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-20',
+    DateExited: '2023-09-03',
   },
   {
     UserId: 391,
@@ -3136,6 +3918,8 @@ export const users = [
     Email: 'emeaau@networkadvertising.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-04-20',
+    DateExited: null,
   },
   {
     UserId: 392,
@@ -3144,6 +3928,8 @@ export const users = [
     Email: 'dpetrovykhav@hud.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-03-24',
+    DateExited: '2023-10-16',
   },
   {
     UserId: 393,
@@ -3152,6 +3938,8 @@ export const users = [
     Email: 'alangrishaw@yahoo.co.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-11-04',
+    DateExited: null,
   },
   {
     UserId: 394,
@@ -3160,6 +3948,8 @@ export const users = [
     Email: 'knevinsax@chronoengine.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-10-05',
+    DateExited: '2024-02-23',
   },
   {
     UserId: 395,
@@ -3168,6 +3958,8 @@ export const users = [
     Email: 'iledinghamay@redcross.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-04-18',
+    DateExited: null,
   },
   {
     UserId: 396,
@@ -3176,6 +3968,8 @@ export const users = [
     Email: 'rellershawaz@biblegateway.com',
     Gender: 'Genderfluid',
     Active: 'TRUE',
+    DateHired: '2022-09-18',
+    DateExited: null,
   },
   {
     UserId: 397,
@@ -3184,6 +3978,8 @@ export const users = [
     Email: 'xlerouxb0@cloudflare.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-07-20',
+    DateExited: null,
   },
   {
     UserId: 398,
@@ -3192,6 +3988,8 @@ export const users = [
     Email: 'dyakushkinb1@jigsy.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-09-30',
+    DateExited: null,
   },
   {
     UserId: 399,
@@ -3200,6 +3998,8 @@ export const users = [
     Email: 'kdulantyb2@fc2.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-01-02',
+    DateExited: '2024-10-02',
   },
   {
     UserId: 400,
@@ -3208,6 +4008,8 @@ export const users = [
     Email: 'wpykeb3@hugedomains.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-07-04',
+    DateExited: '2023-04-11',
   },
   {
     UserId: 401,
@@ -3216,6 +4018,8 @@ export const users = [
     Email: 'cdeighanb4@apple.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-12-28',
+    DateExited: '2023-05-22',
   },
   {
     UserId: 402,
@@ -3224,6 +4028,8 @@ export const users = [
     Email: 'thebdenb5@about.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-06-24',
+    DateExited: '2023-05-05',
   },
   {
     UserId: 403,
@@ -3232,6 +4038,8 @@ export const users = [
     Email: 'sbannellb6@mayoclinic.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-04-21',
+    DateExited: null,
   },
   {
     UserId: 404,
@@ -3240,6 +4048,8 @@ export const users = [
     Email: 'vridgewellb7@qq.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-03-08',
+    DateExited: '2021-12-13',
   },
   {
     UserId: 405,
@@ -3248,6 +4058,8 @@ export const users = [
     Email: 'sfarfalameevb8@odnoklassniki.ru',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-02-15',
+    DateExited: null,
   },
   {
     UserId: 406,
@@ -3256,6 +4068,8 @@ export const users = [
     Email: 'lvansalzbergerb9@techcrunch.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-08-07',
+    DateExited: null,
   },
   {
     UserId: 407,
@@ -3264,6 +4078,8 @@ export const users = [
     Email: 'ddedomenicoba@sciencedirect.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-08-03',
+    DateExited: null,
   },
   {
     UserId: 408,
@@ -3272,6 +4088,8 @@ export const users = [
     Email: 'kredemilebb@army.mil',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-11-17',
+    DateExited: null,
   },
   {
     UserId: 409,
@@ -3280,6 +4098,8 @@ export const users = [
     Email: 'epaydonbc@about.me',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-01-27',
+    DateExited: '2024-03-27',
   },
   {
     UserId: 410,
@@ -3288,6 +4108,8 @@ export const users = [
     Email: 'sallmarkbd@a8.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-03-20',
+    DateExited: '2022-04-10',
   },
   {
     UserId: 411,
@@ -3296,6 +4118,8 @@ export const users = [
     Email: 'jmolinebe@about.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-10-26',
+    DateExited: '2024-09-02',
   },
   {
     UserId: 412,
@@ -3304,6 +4128,8 @@ export const users = [
     Email: 'vdelislebf@over-blog.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-03',
+    DateExited: null,
   },
   {
     UserId: 413,
@@ -3312,6 +4138,8 @@ export const users = [
     Email: 'hlabetbg@sun.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-12-06',
+    DateExited: null,
   },
   {
     UserId: 414,
@@ -3320,6 +4148,8 @@ export const users = [
     Email: 'sbrimsbh@amazon.co.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-10-07',
+    DateExited: null,
   },
   {
     UserId: 415,
@@ -3328,6 +4158,8 @@ export const users = [
     Email: 'wfranciebi@storify.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-05-09',
+    DateExited: null,
   },
   {
     UserId: 416,
@@ -3336,6 +4168,8 @@ export const users = [
     Email: 'mcoultishbj@360.cn',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-07-13',
+    DateExited: null,
   },
   {
     UserId: 417,
@@ -3344,6 +4178,8 @@ export const users = [
     Email: 'htarrbk@illinois.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-06-09',
+    DateExited: null,
   },
   {
     UserId: 418,
@@ -3352,6 +4188,8 @@ export const users = [
     Email: 'dbirkheadbl@imdb.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-01-24',
+    DateExited: null,
   },
   {
     UserId: 419,
@@ -3360,6 +4198,8 @@ export const users = [
     Email: 'cgarmansonbm@usatoday.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-09-04',
+    DateExited: '2022-08-26',
   },
   {
     UserId: 420,
@@ -3368,6 +4208,8 @@ export const users = [
     Email: 'raugustinbn@goo.ne.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-02-15',
+    DateExited: null,
   },
   {
     UserId: 421,
@@ -3376,6 +4218,8 @@ export const users = [
     Email: 'scasleybo@prnewswire.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-28',
+    DateExited: '2023-10-18',
   },
   {
     UserId: 422,
@@ -3384,6 +4228,8 @@ export const users = [
     Email: 'cvarfalameevbp@nydailynews.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-01-21',
+    DateExited: null,
   },
   {
     UserId: 423,
@@ -3392,6 +4238,8 @@ export const users = [
     Email: 'dheninghembq@jalbum.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-06-04',
+    DateExited: '2024-06-22',
   },
   {
     UserId: 424,
@@ -3400,6 +4248,8 @@ export const users = [
     Email: 'cbattsbr@squidoo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-11-27',
+    DateExited: null,
   },
   {
     UserId: 425,
@@ -3408,6 +4258,8 @@ export const users = [
     Email: 'bmonnellybs@xrea.com',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2021-04-20',
+    DateExited: null,
   },
   {
     UserId: 426,
@@ -3416,6 +4268,8 @@ export const users = [
     Email: 'anieldbt@ameblo.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-08-06',
+    DateExited: null,
   },
   {
     UserId: 427,
@@ -3424,6 +4278,8 @@ export const users = [
     Email: 'mgilderbu@oracle.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-11-26',
+    DateExited: '2022-12-21',
   },
   {
     UserId: 428,
@@ -3432,6 +4288,8 @@ export const users = [
     Email: 'feldinbv@flickr.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-08-31',
+    DateExited: '2024-09-03',
   },
   {
     UserId: 429,
@@ -3440,6 +4298,8 @@ export const users = [
     Email: 'cbochbw@linkedin.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-09-09',
+    DateExited: '2022-08-02',
   },
   {
     UserId: 430,
@@ -3448,6 +4308,8 @@ export const users = [
     Email: 'cmallettbx@bloomberg.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-02-18',
+    DateExited: null,
   },
   {
     UserId: 431,
@@ -3456,6 +4318,8 @@ export const users = [
     Email: 'cqueenby@youku.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-07',
+    DateExited: null,
   },
   {
     UserId: 432,
@@ -3464,6 +4328,8 @@ export const users = [
     Email: 'socurrinebz@163.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-06-04',
+    DateExited: '2022-05-05',
   },
   {
     UserId: 433,
@@ -3472,6 +4338,8 @@ export const users = [
     Email: 'dmcdermottrowc0@freewebs.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-03-17',
+    DateExited: null,
   },
   {
     UserId: 434,
@@ -3480,6 +4348,8 @@ export const users = [
     Email: 'crubroec1@hc360.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-09-23',
+    DateExited: '2024-06-29',
   },
   {
     UserId: 435,
@@ -3488,6 +4358,8 @@ export const users = [
     Email: 'jdeehanc2@unicef.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-02-13',
+    DateExited: '2022-02-09',
   },
   {
     UserId: 436,
@@ -3496,6 +4368,8 @@ export const users = [
     Email: 'jlupartoc3@wired.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-10-04',
+    DateExited: null,
   },
   {
     UserId: 437,
@@ -3504,6 +4378,8 @@ export const users = [
     Email: 'ereahc4@squarespace.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-21',
+    DateExited: '2022-05-16',
   },
   {
     UserId: 438,
@@ -3512,6 +4388,8 @@ export const users = [
     Email: 'rpoznanskic5@bizjournals.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-07-30',
+    DateExited: '2023-07-24',
   },
   {
     UserId: 439,
@@ -3520,6 +4398,8 @@ export const users = [
     Email: 'mmackintoshc6@psu.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-11-29',
+    DateExited: '2022-09-24',
   },
   {
     UserId: 440,
@@ -3528,6 +4408,8 @@ export const users = [
     Email: 'sturnpennyc7@ucla.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-20',
+    DateExited: null,
   },
   {
     UserId: 441,
@@ -3536,6 +4418,8 @@ export const users = [
     Email: 'eblunnc8@ftc.gov',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-08-25',
+    DateExited: '2020-09-06',
   },
   {
     UserId: 442,
@@ -3544,6 +4428,8 @@ export const users = [
     Email: 'xarthyc9@elpais.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-11-23',
+    DateExited: null,
   },
   {
     UserId: 443,
@@ -3552,6 +4438,8 @@ export const users = [
     Email: 'tdarkinsca@wikispaces.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-02-22',
+    DateExited: null,
   },
   {
     UserId: 444,
@@ -3560,6 +4448,8 @@ export const users = [
     Email: 'ephoenixcb@rambler.ru',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-04-26',
+    DateExited: null,
   },
   {
     UserId: 445,
@@ -3568,6 +4458,8 @@ export const users = [
     Email: 'pkingsburycc@patch.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-01-27',
+    DateExited: null,
   },
   {
     UserId: 446,
@@ -3576,6 +4468,8 @@ export const users = [
     Email: 'nthorwarthcd@mail.ru',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-15',
+    DateExited: null,
   },
   {
     UserId: 447,
@@ -3584,6 +4478,8 @@ export const users = [
     Email: 'bgullce@rediff.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-10-15',
+    DateExited: null,
   },
   {
     UserId: 448,
@@ -3592,6 +4488,8 @@ export const users = [
     Email: 'jhendercf@vkontakte.ru',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-03-03',
+    DateExited: null,
   },
   {
     UserId: 449,
@@ -3600,6 +4498,8 @@ export const users = [
     Email: 'mclitheroecg@comcast.net',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-11-27',
+    DateExited: null,
   },
   {
     UserId: 450,
@@ -3608,6 +4508,8 @@ export const users = [
     Email: 'ttalch@symantec.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-04-26',
+    DateExited: '2024-09-06',
   },
   {
     UserId: 451,
@@ -3616,6 +4518,8 @@ export const users = [
     Email: 'dboardsci@mozilla.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-07-15',
+    DateExited: null,
   },
   {
     UserId: 452,
@@ -3624,6 +4528,8 @@ export const users = [
     Email: 'fbrandinocj@google.ru',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-05-02',
+    DateExited: '2022-09-18',
   },
   {
     UserId: 453,
@@ -3632,6 +4538,8 @@ export const users = [
     Email: 'akornelck@creativecommons.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-04-08',
+    DateExited: null,
   },
   {
     UserId: 454,
@@ -3640,6 +4548,8 @@ export const users = [
     Email: 'dyouenscl@exblog.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-05-10',
+    DateExited: '2023-08-09',
   },
   {
     UserId: 455,
@@ -3648,6 +4558,8 @@ export const users = [
     Email: 'coconnelcm@scribd.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-09-06',
+    DateExited: null,
   },
   {
     UserId: 456,
@@ -3656,6 +4568,8 @@ export const users = [
     Email: 'aperellicn@army.mil',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-11-20',
+    DateExited: null,
   },
   {
     UserId: 457,
@@ -3664,6 +4578,8 @@ export const users = [
     Email: 'bbeldamco@msn.com',
     Gender: 'Polygender',
     Active: 'FALSE',
+    DateHired: '2023-09-15',
+    DateExited: '2024-01-19',
   },
   {
     UserId: 458,
@@ -3672,6 +4588,8 @@ export const users = [
     Email: 'ctrudgeoncp@army.mil',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-04-28',
+    DateExited: '2022-01-06',
   },
   {
     UserId: 459,
@@ -3680,6 +4598,8 @@ export const users = [
     Email: 'bandrieucq@amazon.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-05-20',
+    DateExited: null,
   },
   {
     UserId: 460,
@@ -3688,6 +4608,8 @@ export const users = [
     Email: 'cleachcr@typepad.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-07-08',
+    DateExited: null,
   },
   {
     UserId: 461,
@@ -3696,6 +4618,8 @@ export const users = [
     Email: 'dodacs@google.com.br',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2021-12-25',
+    DateExited: '2024-08-23',
   },
   {
     UserId: 462,
@@ -3704,6 +4628,8 @@ export const users = [
     Email: 'tlindenfeldct@miibeian.gov.cn',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-09-07',
+    DateExited: null,
   },
   {
     UserId: 463,
@@ -3712,6 +4638,8 @@ export const users = [
     Email: 'aormescu@ifeng.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-02-24',
+    DateExited: null,
   },
   {
     UserId: 464,
@@ -3720,6 +4648,8 @@ export const users = [
     Email: 'wlenhamcv@infoseek.co.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-09-06',
+    DateExited: '2024-11-07',
   },
   {
     UserId: 465,
@@ -3728,6 +4658,8 @@ export const users = [
     Email: 'jpuvecw@discuz.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-02-18',
+    DateExited: null,
   },
   {
     UserId: 466,
@@ -3736,6 +4668,8 @@ export const users = [
     Email: 'wdudleycx@xrea.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-09-22',
+    DateExited: null,
   },
   {
     UserId: 467,
@@ -3744,6 +4678,8 @@ export const users = [
     Email: 'pthorneyworkcy@cdc.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-11-29',
+    DateExited: null,
   },
   {
     UserId: 468,
@@ -3752,6 +4688,8 @@ export const users = [
     Email: 'tcrowleycz@earthlink.net',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-06-05',
+    DateExited: '2024-09-22',
   },
   {
     UserId: 469,
@@ -3760,6 +4698,8 @@ export const users = [
     Email: 'dpoyled0@myspace.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-01-04',
+    DateExited: null,
   },
   {
     UserId: 470,
@@ -3768,6 +4708,8 @@ export const users = [
     Email: 'dgintyd1@wikispaces.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-07-28',
+    DateExited: null,
   },
   {
     UserId: 471,
@@ -3776,6 +4718,8 @@ export const users = [
     Email: 'babbyd2@gizmodo.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-01-06',
+    DateExited: '2024-09-02',
   },
   {
     UserId: 472,
@@ -3784,6 +4728,8 @@ export const users = [
     Email: 'vincognad3@hatena.ne.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-10-31',
+    DateExited: '2022-03-10',
   },
   {
     UserId: 473,
@@ -3792,6 +4738,8 @@ export const users = [
     Email: 'mfieldingd4@nature.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-03-26',
+    DateExited: '2020-09-11',
   },
   {
     UserId: 474,
@@ -3800,6 +4748,8 @@ export const users = [
     Email: 'wmckevanyd5@marriott.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-04-30',
+    DateExited: null,
   },
   {
     UserId: 475,
@@ -3808,6 +4758,8 @@ export const users = [
     Email: 'rhabind6@patch.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2020-06-06',
+    DateExited: '2023-06-04',
   },
   {
     UserId: 476,
@@ -3816,6 +4768,8 @@ export const users = [
     Email: 'mjaksicd7@arizona.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-18',
+    DateExited: null,
   },
   {
     UserId: 477,
@@ -3824,6 +4778,8 @@ export const users = [
     Email: 'risaacsd8@nyu.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-02-11',
+    DateExited: null,
   },
   {
     UserId: 478,
@@ -3832,6 +4788,8 @@ export const users = [
     Email: 'egravenerd9@linkedin.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-09-15',
+    DateExited: '2024-10-05',
   },
   {
     UserId: 479,
@@ -3840,6 +4798,8 @@ export const users = [
     Email: 'bravenscraftda@tiny.cc',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-07-24',
+    DateExited: null,
   },
   {
     UserId: 480,
@@ -3848,6 +4808,8 @@ export const users = [
     Email: 'hwhoolehandb@about.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-06-11',
+    DateExited: '2024-01-24',
   },
   {
     UserId: 481,
@@ -3856,6 +4818,8 @@ export const users = [
     Email: 'cgrassettdc@instagram.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-05-13',
+    DateExited: '2024-11-08',
   },
   {
     UserId: 482,
@@ -3864,6 +4828,8 @@ export const users = [
     Email: 'wantonaccidd@intel.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-06-25',
+    DateExited: '2024-10-23',
   },
   {
     UserId: 483,
@@ -3872,6 +4838,8 @@ export const users = [
     Email: 'dminocchide@amazon.co.uk',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-01-03',
+    DateExited: '2024-07-28',
   },
   {
     UserId: 484,
@@ -3880,6 +4848,8 @@ export const users = [
     Email: 'nsandaydf@cyberchimps.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-05-14',
+    DateExited: null,
   },
   {
     UserId: 485,
@@ -3888,6 +4858,8 @@ export const users = [
     Email: 'dgushdg@lulu.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-03-05',
+    DateExited: '2024-05-07',
   },
   {
     UserId: 486,
@@ -3896,6 +4868,8 @@ export const users = [
     Email: 'bhavelindh@mail.ru',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-02-06',
+    DateExited: null,
   },
   {
     UserId: 487,
@@ -3904,6 +4878,8 @@ export const users = [
     Email: 'afranktondi@harvard.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-04-12',
+    DateExited: '2024-08-29',
   },
   {
     UserId: 488,
@@ -3912,6 +4888,8 @@ export const users = [
     Email: 'bfateleydj@tamu.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-18',
+    DateExited: null,
   },
   {
     UserId: 489,
@@ -3920,6 +4898,8 @@ export const users = [
     Email: 'sebertsdk@tiny.cc',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-03-28',
+    DateExited: '2023-07-16',
   },
   {
     UserId: 490,
@@ -3928,6 +4908,8 @@ export const users = [
     Email: 'gskucedl@nasa.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-03-16',
+    DateExited: null,
   },
   {
     UserId: 491,
@@ -3936,6 +4918,8 @@ export const users = [
     Email: 'rfergussondm@psu.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-04-10',
+    DateExited: '2024-06-26',
   },
   {
     UserId: 492,
@@ -3944,6 +4928,8 @@ export const users = [
     Email: 'hgabitisdn@arstechnica.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-11-05',
+    DateExited: '2022-12-27',
   },
   {
     UserId: 493,
@@ -3952,6 +4938,8 @@ export const users = [
     Email: 'wankrettdo@nhs.uk',
     Gender: 'Bigender',
     Active: 'FALSE',
+    DateHired: '2023-05-30',
+    DateExited: '2024-08-26',
   },
   {
     UserId: 494,
@@ -3960,6 +4948,8 @@ export const users = [
     Email: 'hshadwickdp@yolasite.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-01-29',
+    DateExited: '2021-04-30',
   },
   {
     UserId: 495,
@@ -3968,6 +4958,8 @@ export const users = [
     Email: 'gbicharddq@samsung.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-06-02',
+    DateExited: '2024-09-07',
   },
   {
     UserId: 496,
@@ -3976,6 +4968,8 @@ export const users = [
     Email: 'bkitchinerdr@wikipedia.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-06-29',
+    DateExited: '2022-09-29',
   },
   {
     UserId: 497,
@@ -3984,6 +4978,8 @@ export const users = [
     Email: 'lrappds@geocities.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-12-21',
+    DateExited: null,
   },
   {
     UserId: 498,
@@ -3992,6 +4988,8 @@ export const users = [
     Email: 'bjansensdt@cdc.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-10-14',
+    DateExited: '2024-10-26',
   },
   {
     UserId: 499,
@@ -4000,6 +4998,8 @@ export const users = [
     Email: 'smckinnondu@dmoz.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-03-19',
+    DateExited: '2023-07-24',
   },
   {
     UserId: 500,
@@ -4008,6 +5008,8 @@ export const users = [
     Email: 'dwyldboredv@sitemeter.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-10-03',
+    DateExited: null,
   },
   {
     UserId: 501,
@@ -4016,6 +5018,8 @@ export const users = [
     Email: 'dquantickdw@nydailynews.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-07-09',
+    DateExited: null,
   },
   {
     UserId: 502,
@@ -4024,6 +5028,8 @@ export const users = [
     Email: 'gventhamdx@imgur.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-12-12',
+    DateExited: null,
   },
   {
     UserId: 503,
@@ -4032,6 +5038,8 @@ export const users = [
     Email: 'foldroyddy@sbwire.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-09-08',
+    DateExited: null,
   },
   {
     UserId: 504,
@@ -4040,6 +5048,8 @@ export const users = [
     Email: 'rwitheforddz@flickr.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-03-24',
+    DateExited: '2024-04-10',
   },
   {
     UserId: 505,
@@ -4048,6 +5058,8 @@ export const users = [
     Email: 'mickeringille0@jugem.jp',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-11-10',
+    DateExited: '2024-02-28',
   },
   {
     UserId: 506,
@@ -4056,6 +5068,8 @@ export const users = [
     Email: 'rbendleye1@dmoz.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-07-22',
+    DateExited: null,
   },
   {
     UserId: 507,
@@ -4064,6 +5078,8 @@ export const users = [
     Email: 'tupsalee2@devhub.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-08-26',
+    DateExited: '2022-02-19',
   },
   {
     UserId: 508,
@@ -4072,6 +5088,8 @@ export const users = [
     Email: 'lgogine3@senate.gov',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-09-19',
+    DateExited: '2021-09-30',
   },
   {
     UserId: 509,
@@ -4080,6 +5098,8 @@ export const users = [
     Email: 'gjopline4@imageshack.us',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-10-20',
+    DateExited: null,
   },
   {
     UserId: 510,
@@ -4088,6 +5108,8 @@ export const users = [
     Email: 'npetrole5@canalblog.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-06-04',
+    DateExited: '2022-11-08',
   },
   {
     UserId: 511,
@@ -4096,6 +5118,8 @@ export const users = [
     Email: 'hsantrye6@github.io',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-18',
+    DateExited: null,
   },
   {
     UserId: 512,
@@ -4104,6 +5128,8 @@ export const users = [
     Email: 'bdunckleye7@devhub.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-28',
+    DateExited: null,
   },
   {
     UserId: 513,
@@ -4112,6 +5138,8 @@ export const users = [
     Email: 'efranzmane8@slashdot.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-01-02',
+    DateExited: '2022-12-07',
   },
   {
     UserId: 514,
@@ -4120,6 +5148,8 @@ export const users = [
     Email: 'ostockdalee9@wordpress.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-10-23',
+    DateExited: null,
   },
   {
     UserId: 515,
@@ -4128,6 +5158,8 @@ export const users = [
     Email: 'rbrunsenea@yale.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-02-22',
+    DateExited: null,
   },
   {
     UserId: 516,
@@ -4136,6 +5168,8 @@ export const users = [
     Email: 'jkayneeb@ed.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-10-11',
+    DateExited: null,
   },
   {
     UserId: 517,
@@ -4144,6 +5178,8 @@ export const users = [
     Email: 'bgisburnec@alibaba.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-06-09',
+    DateExited: null,
   },
   {
     UserId: 518,
@@ -4152,6 +5188,8 @@ export const users = [
     Email: 'ccutilled@auda.org.au',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-05-23',
+    DateExited: '2023-12-31',
   },
   {
     UserId: 519,
@@ -4160,6 +5198,8 @@ export const users = [
     Email: 'zlauritzenee@wikispaces.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-02-17',
+    DateExited: '2022-04-13',
   },
   {
     UserId: 520,
@@ -4168,6 +5208,8 @@ export const users = [
     Email: 'abahikeef@scientificamerican.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-08-14',
+    DateExited: null,
   },
   {
     UserId: 521,
@@ -4176,6 +5218,8 @@ export const users = [
     Email: 'dkentoneg@behance.net',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-29',
+    DateExited: '2024-09-12',
   },
   {
     UserId: 522,
@@ -4184,6 +5228,8 @@ export const users = [
     Email: 'rriccardeh@phpbb.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-10-03',
+    DateExited: '2021-12-04',
   },
   {
     UserId: 523,
@@ -4192,6 +5238,8 @@ export const users = [
     Email: 'lfreedei@gmpg.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-12-07',
+    DateExited: null,
   },
   {
     UserId: 524,
@@ -4200,6 +5248,8 @@ export const users = [
     Email: 'jdorricottej@nsw.gov.au',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-06-01',
+    DateExited: '2024-10-19',
   },
   {
     UserId: 525,
@@ -4208,6 +5258,8 @@ export const users = [
     Email: 'cbettlesonek@behance.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-12-10',
+    DateExited: null,
   },
   {
     UserId: 526,
@@ -4216,6 +5268,8 @@ export const users = [
     Email: 'spollastrinoel@desdev.cn',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-03-24',
+    DateExited: null,
   },
   {
     UserId: 527,
@@ -4224,6 +5278,8 @@ export const users = [
     Email: 'jgallardoem@un.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-11-05',
+    DateExited: '2023-07-22',
   },
   {
     UserId: 528,
@@ -4232,6 +5288,8 @@ export const users = [
     Email: 'wbarnishen@elpais.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-10-19',
+    DateExited: null,
   },
   {
     UserId: 529,
@@ -4240,6 +5298,8 @@ export const users = [
     Email: 'fkopfereo@utexas.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-12-10',
+    DateExited: '2024-01-01',
   },
   {
     UserId: 530,
@@ -4248,6 +5308,8 @@ export const users = [
     Email: 'ltolputtep@toplist.cz',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-09-21',
+    DateExited: null,
   },
   {
     UserId: 531,
@@ -4256,6 +5318,8 @@ export const users = [
     Email: 'kcruesseq@altervista.org',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2023-01-14',
+    DateExited: null,
   },
   {
     UserId: 532,
@@ -4264,6 +5328,8 @@ export const users = [
     Email: 'jhullyer@dell.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-14',
+    DateExited: null,
   },
   {
     UserId: 533,
@@ -4272,6 +5338,8 @@ export const users = [
     Email: 'fphillippses@devhub.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-08-16',
+    DateExited: null,
   },
   {
     UserId: 534,
@@ -4280,6 +5348,8 @@ export const users = [
     Email: 'rcrowdyet@narod.ru',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-08-01',
+    DateExited: null,
   },
   {
     UserId: 535,
@@ -4288,6 +5358,8 @@ export const users = [
     Email: 'rsmeetoneu@sogou.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-06-25',
+    DateExited: '2023-10-09',
   },
   {
     UserId: 536,
@@ -4296,6 +5368,8 @@ export const users = [
     Email: 'hginnellyev@tiny.cc',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-01-20',
+    DateExited: '2023-11-14',
   },
   {
     UserId: 537,
@@ -4304,6 +5378,8 @@ export const users = [
     Email: 'kcockinew@nationalgeographic.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-09-23',
+    DateExited: null,
   },
   {
     UserId: 538,
@@ -4312,6 +5388,8 @@ export const users = [
     Email: 'kpeachmanex@comsenz.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-05-31',
+    DateExited: null,
   },
   {
     UserId: 539,
@@ -4320,6 +5398,8 @@ export const users = [
     Email: 'vdrewittey@hatena.ne.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-06-20',
+    DateExited: null,
   },
   {
     UserId: 540,
@@ -4328,6 +5408,8 @@ export const users = [
     Email: 'xshalloeez@cmu.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-10-29',
+    DateExited: null,
   },
   {
     UserId: 541,
@@ -4336,6 +5418,8 @@ export const users = [
     Email: 'rcoltf0@flavors.me',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-10-10',
+    DateExited: '2024-11-04',
   },
   {
     UserId: 542,
@@ -4344,6 +5428,8 @@ export const users = [
     Email: 'adillingerf1@jalbum.net',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2022-02-11',
+    DateExited: '2024-09-18',
   },
   {
     UserId: 543,
@@ -4352,6 +5438,8 @@ export const users = [
     Email: 'gneatf2@cocolog-nifty.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-01-21',
+    DateExited: null,
   },
   {
     UserId: 544,
@@ -4360,6 +5448,8 @@ export const users = [
     Email: 'lboodellf3@earthlink.net',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-11-12',
+    DateExited: null,
   },
   {
     UserId: 545,
@@ -4368,6 +5458,8 @@ export const users = [
     Email: 'pcootf4@sourceforge.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-12-26',
+    DateExited: '2023-09-30',
   },
   {
     UserId: 546,
@@ -4376,6 +5468,8 @@ export const users = [
     Email: 'jwaldronf5@issuu.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-03-26',
+    DateExited: null,
   },
   {
     UserId: 547,
@@ -4384,6 +5478,8 @@ export const users = [
     Email: 'bteodorskif6@scientificamerican.com',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2023-12-24',
+    DateExited: null,
   },
   {
     UserId: 548,
@@ -4392,6 +5488,8 @@ export const users = [
     Email: 'cmeneof7@answers.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-05-15',
+    DateExited: '2024-08-17',
   },
   {
     UserId: 549,
@@ -4400,6 +5498,8 @@ export const users = [
     Email: 'hrosenstengelf8@cam.ac.uk',
     Gender: 'Genderfluid',
     Active: 'TRUE',
+    DateHired: '2024-10-04',
+    DateExited: null,
   },
   {
     UserId: 550,
@@ -4408,6 +5508,8 @@ export const users = [
     Email: 'lboothjarvisf9@cdbaby.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-21',
+    DateExited: '2024-11-11',
   },
   {
     UserId: 551,
@@ -4416,6 +5518,8 @@ export const users = [
     Email: 'eeamerfa@google.ru',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-02-19',
+    DateExited: '2024-05-05',
   },
   {
     UserId: 552,
@@ -4424,6 +5528,8 @@ export const users = [
     Email: 'wshellidayfb@bigcartel.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-04-21',
+    DateExited: '2024-05-10',
   },
   {
     UserId: 553,
@@ -4432,6 +5538,8 @@ export const users = [
     Email: 'cserotfc@skyrock.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-09-27',
+    DateExited: null,
   },
   {
     UserId: 554,
@@ -4440,6 +5548,8 @@ export const users = [
     Email: 'cburwoodfd@comsenz.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-06-11',
+    DateExited: '2024-04-02',
   },
   {
     UserId: 555,
@@ -4448,6 +5558,8 @@ export const users = [
     Email: 'jkegginsfe@google.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-12-19',
+    DateExited: '2024-05-30',
   },
   {
     UserId: 556,
@@ -4456,6 +5568,8 @@ export const users = [
     Email: 'mkornff@patch.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-11-26',
+    DateExited: '2023-11-17',
   },
   {
     UserId: 557,
@@ -4464,6 +5578,8 @@ export const users = [
     Email: 'cvedyashkinfg@cnn.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-06-13',
+    DateExited: '2024-10-20',
   },
   {
     UserId: 558,
@@ -4472,6 +5588,8 @@ export const users = [
     Email: 'mdurbanfh@123-reg.co.uk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-07-30',
+    DateExited: null,
   },
   {
     UserId: 559,
@@ -4480,6 +5598,8 @@ export const users = [
     Email: 'lstickfordfi@photobucket.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-08-27',
+    DateExited: '2024-08-21',
   },
   {
     UserId: 560,
@@ -4488,6 +5608,8 @@ export const users = [
     Email: 'cmillthorpefj@ehow.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-06-18',
+    DateExited: '2021-09-10',
   },
   {
     UserId: 561,
@@ -4496,6 +5618,8 @@ export const users = [
     Email: 'kbecraftfk@ycombinator.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-11-22',
+    DateExited: '2024-10-11',
   },
   {
     UserId: 562,
@@ -4504,6 +5628,8 @@ export const users = [
     Email: 'cmahodyfl@angelfire.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-02-09',
+    DateExited: '2022-01-06',
   },
   {
     UserId: 563,
@@ -4512,6 +5638,8 @@ export const users = [
     Email: 'cdoickfm@360.cn',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-12-05',
+    DateExited: '2023-07-22',
   },
   {
     UserId: 564,
@@ -4520,6 +5648,8 @@ export const users = [
     Email: 'gdowderswellfn@weebly.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-08-08',
+    DateExited: null,
   },
   {
     UserId: 565,
@@ -4528,6 +5658,8 @@ export const users = [
     Email: 'gcarlensfo@symantec.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-01-27',
+    DateExited: '2020-10-15',
   },
   {
     UserId: 566,
@@ -4536,6 +5668,8 @@ export const users = [
     Email: 'claurensonfp@elpais.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-11-18',
+    DateExited: null,
   },
   {
     UserId: 567,
@@ -4544,6 +5678,8 @@ export const users = [
     Email: 'ccorderofq@hud.gov',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-10-06',
+    DateExited: '2020-12-11',
   },
   {
     UserId: 568,
@@ -4552,6 +5688,8 @@ export const users = [
     Email: 'sdenneyfr@cyberchimps.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-07-04',
+    DateExited: '2024-04-29',
   },
   {
     UserId: 569,
@@ -4560,6 +5698,8 @@ export const users = [
     Email: 'dperkinsonfs@naver.com',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2020-11-18',
+    DateExited: null,
   },
   {
     UserId: 570,
@@ -4568,6 +5708,8 @@ export const users = [
     Email: 'lmcgiveenft@cbc.ca',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-08-12',
+    DateExited: '2022-12-27',
   },
   {
     UserId: 571,
@@ -4576,6 +5718,8 @@ export const users = [
     Email: 'bpardifu@livejournal.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-01-04',
+    DateExited: null,
   },
   {
     UserId: 572,
@@ -4584,6 +5728,8 @@ export const users = [
     Email: 'braymentfv@imageshack.us',
     Gender: 'Genderfluid',
     Active: 'FALSE',
+    DateHired: '2020-06-26',
+    DateExited: '2022-11-18',
   },
   {
     UserId: 573,
@@ -4592,6 +5738,8 @@ export const users = [
     Email: 'groadknightfw@is.gd',
     Gender: 'Polygender',
     Active: 'FALSE',
+    DateHired: '2022-10-16',
+    DateExited: '2024-01-01',
   },
   {
     UserId: 574,
@@ -4600,6 +5748,8 @@ export const users = [
     Email: 'cschusterlfx@cbslocal.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-08-26',
+    DateExited: '2022-05-17',
   },
   {
     UserId: 575,
@@ -4608,6 +5758,8 @@ export const users = [
     Email: 'rhellwichfy@last.fm',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-08-06',
+    DateExited: null,
   },
   {
     UserId: 576,
@@ -4616,6 +5768,8 @@ export const users = [
     Email: 'oguyetfz@youku.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-07-02',
+    DateExited: null,
   },
   {
     UserId: 577,
@@ -4624,6 +5778,8 @@ export const users = [
     Email: 'cmoreinug0@clickbank.net',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-07-22',
+    DateExited: null,
   },
   {
     UserId: 578,
@@ -4632,6 +5788,8 @@ export const users = [
     Email: 'wpavlovg1@pen.io',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-18',
+    DateExited: null,
   },
   {
     UserId: 579,
@@ -4640,6 +5798,8 @@ export const users = [
     Email: 'wvannaccig2@google.it',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-01-18',
+    DateExited: null,
   },
   {
     UserId: 580,
@@ -4648,6 +5808,8 @@ export const users = [
     Email: 'zgodehardsfg3@epa.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-07-20',
+    DateExited: null,
   },
   {
     UserId: 581,
@@ -4656,6 +5818,8 @@ export const users = [
     Email: 'melving4@xing.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-03-03',
+    DateExited: null,
   },
   {
     UserId: 582,
@@ -4664,6 +5828,8 @@ export const users = [
     Email: 'rnormabellg5@arstechnica.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-12-21',
+    DateExited: null,
   },
   {
     UserId: 583,
@@ -4672,6 +5838,8 @@ export const users = [
     Email: 'rwallbankg6@cbslocal.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-01-17',
+    DateExited: null,
   },
   {
     UserId: 584,
@@ -4680,6 +5848,8 @@ export const users = [
     Email: 'lrixong7@oakley.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-10-30',
+    DateExited: null,
   },
   {
     UserId: 585,
@@ -4688,6 +5858,8 @@ export const users = [
     Email: 'mbusg8@cnn.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-09-24',
+    DateExited: null,
   },
   {
     UserId: 586,
@@ -4696,6 +5868,8 @@ export const users = [
     Email: 'swinfindineg9@biblegateway.com',
     Gender: 'Bigender',
     Active: 'FALSE',
+    DateHired: '2020-11-16',
+    DateExited: '2023-11-24',
   },
   {
     UserId: 587,
@@ -4704,6 +5878,8 @@ export const users = [
     Email: 'gspilsteadga@discuz.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-11-11',
+    DateExited: null,
   },
   {
     UserId: 588,
@@ -4712,6 +5888,8 @@ export const users = [
     Email: 'rbeckhurstgb@sina.com.cn',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-22',
+    DateExited: null,
   },
   {
     UserId: 589,
@@ -4720,6 +5898,8 @@ export const users = [
     Email: 'elyffegc@slideshare.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-04',
+    DateExited: '2024-07-25',
   },
   {
     UserId: 590,
@@ -4728,6 +5908,8 @@ export const users = [
     Email: 'lsturegd@telegraph.co.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-01-07',
+    DateExited: null,
   },
   {
     UserId: 591,
@@ -4736,6 +5918,8 @@ export const users = [
     Email: 'lmarietonge@nps.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-08',
+    DateExited: null,
   },
   {
     UserId: 592,
@@ -4744,6 +5928,8 @@ export const users = [
     Email: 'jleithgf@purevolume.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-08-06',
+    DateExited: null,
   },
   {
     UserId: 593,
@@ -4752,6 +5938,8 @@ export const users = [
     Email: 'dcurreygg@washington.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-09-30',
+    DateExited: null,
   },
   {
     UserId: 594,
@@ -4760,6 +5948,8 @@ export const users = [
     Email: 'sowthwaitegh@guardian.co.uk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-09-20',
+    DateExited: null,
   },
   {
     UserId: 595,
@@ -4768,6 +5958,8 @@ export const users = [
     Email: 'nmeasengi@webnode.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-07',
+    DateExited: '2024-10-02',
   },
   {
     UserId: 596,
@@ -4776,6 +5968,8 @@ export const users = [
     Email: 'ksayergj@weather.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-11-18',
+    DateExited: '2024-02-24',
   },
   {
     UserId: 597,
@@ -4784,6 +5978,8 @@ export const users = [
     Email: 'lisleygk@i2i.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-02-08',
+    DateExited: '2023-11-20',
   },
   {
     UserId: 598,
@@ -4792,6 +5988,8 @@ export const users = [
     Email: 'thiskeygl@oakley.com',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2023-02-12',
+    DateExited: null,
   },
   {
     UserId: 599,
@@ -4800,6 +5998,8 @@ export const users = [
     Email: 'nbrodeaugm@joomla.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-03-13',
+    DateExited: null,
   },
   {
     UserId: 600,
@@ -4808,6 +6008,8 @@ export const users = [
     Email: 'ogiacubogn@washingtonpost.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-07-03',
+    DateExited: null,
   },
   {
     UserId: 601,
@@ -4816,6 +6018,8 @@ export const users = [
     Email: 'inewallgo@icq.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-02-02',
+    DateExited: null,
   },
   {
     UserId: 602,
@@ -4824,6 +6028,8 @@ export const users = [
     Email: 'wpattinigp@cyberchimps.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-07-25',
+    DateExited: null,
   },
   {
     UserId: 603,
@@ -4832,6 +6038,8 @@ export const users = [
     Email: 'rrainygq@mozilla.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-04-14',
+    DateExited: '2024-07-06',
   },
   {
     UserId: 604,
@@ -4840,6 +6048,8 @@ export const users = [
     Email: 'btrekergr@oracle.com',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2020-04-28',
+    DateExited: '2021-03-31',
   },
   {
     UserId: 605,
@@ -4848,6 +6058,8 @@ export const users = [
     Email: 'tbassinghamgs@npr.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-08-23',
+    DateExited: null,
   },
   {
     UserId: 606,
@@ -4856,6 +6068,8 @@ export const users = [
     Email: 'oromneygt@intel.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-03-01',
+    DateExited: null,
   },
   {
     UserId: 607,
@@ -4864,6 +6078,8 @@ export const users = [
     Email: 'dpiddickgu@tmall.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-05-16',
+    DateExited: null,
   },
   {
     UserId: 608,
@@ -4872,6 +6088,8 @@ export const users = [
     Email: 'aknightsbridgegv@globo.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-01-19',
+    DateExited: '2022-06-19',
   },
   {
     UserId: 609,
@@ -4880,6 +6098,8 @@ export const users = [
     Email: 'oscaifegw@cornell.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-12',
+    DateExited: '2023-12-12',
   },
   {
     UserId: 610,
@@ -4888,6 +6108,8 @@ export const users = [
     Email: 'titzchakigx@mlb.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-17',
+    DateExited: null,
   },
   {
     UserId: 611,
@@ -4896,6 +6118,8 @@ export const users = [
     Email: 'nmockesgy@msu.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-03-28',
+    DateExited: null,
   },
   {
     UserId: 612,
@@ -4904,6 +6128,8 @@ export const users = [
     Email: 'bbarajazgz@who.int',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-08-19',
+    DateExited: '2023-12-21',
   },
   {
     UserId: 613,
@@ -4912,6 +6138,8 @@ export const users = [
     Email: 'dattenbrowh0@fda.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-06-22',
+    DateExited: '2023-04-10',
   },
   {
     UserId: 614,
@@ -4920,6 +6148,8 @@ export const users = [
     Email: 'tpauh1@dailymotion.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-08-19',
+    DateExited: null,
   },
   {
     UserId: 615,
@@ -4928,6 +6158,8 @@ export const users = [
     Email: 'tnathonh2@apple.com',
     Gender: 'Genderqueer',
     Active: 'TRUE',
+    DateHired: '2020-03-17',
+    DateExited: null,
   },
   {
     UserId: 616,
@@ -4936,6 +6168,8 @@ export const users = [
     Email: 'mlegraveh3@noaa.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-10-19',
+    DateExited: null,
   },
   {
     UserId: 617,
@@ -4944,6 +6178,8 @@ export const users = [
     Email: 'csmidmoreh4@youtu.be',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-07-20',
+    DateExited: '2024-08-04',
   },
   {
     UserId: 618,
@@ -4952,6 +6188,8 @@ export const users = [
     Email: 'hsailesh5@howstuffworks.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-02-06',
+    DateExited: '2024-10-21',
   },
   {
     UserId: 619,
@@ -4960,6 +6198,8 @@ export const users = [
     Email: 'farnaulth6@yandex.ru',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-03-07',
+    DateExited: '2023-09-02',
   },
   {
     UserId: 620,
@@ -4968,6 +6208,8 @@ export const users = [
     Email: 'vchretienh7@mit.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-09-13',
+    DateExited: '2021-01-17',
   },
   {
     UserId: 621,
@@ -4976,6 +6218,8 @@ export const users = [
     Email: 'pakriggh8@blogtalkradio.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-09-16',
+    DateExited: '2024-10-26',
   },
   {
     UserId: 622,
@@ -4984,6 +6228,8 @@ export const users = [
     Email: 'dandreash9@about.com',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2023-03-07',
+    DateExited: null,
   },
   {
     UserId: 623,
@@ -4992,6 +6238,8 @@ export const users = [
     Email: 'wlipmanha@fotki.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-11-20',
+    DateExited: '2024-05-06',
   },
   {
     UserId: 624,
@@ -5000,6 +6248,8 @@ export const users = [
     Email: 'vluchettihb@senate.gov',
     Gender: 'Genderfluid',
     Active: 'TRUE',
+    DateHired: '2020-08-12',
+    DateExited: null,
   },
   {
     UserId: 625,
@@ -5008,6 +6258,8 @@ export const users = [
     Email: 'tcawdronhc@oaic.gov.au',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-01-31',
+    DateExited: '2021-05-04',
   },
   {
     UserId: 626,
@@ -5016,6 +6268,8 @@ export const users = [
     Email: 'rlindborghd@mozilla.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-09-19',
+    DateExited: null,
   },
   {
     UserId: 627,
@@ -5024,6 +6278,8 @@ export const users = [
     Email: 'jdickhe@clickbank.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-12-03',
+    DateExited: '2024-02-24',
   },
   {
     UserId: 628,
@@ -5032,6 +6288,8 @@ export const users = [
     Email: 'ebirtshf@earthlink.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-05-18',
+    DateExited: null,
   },
   {
     UserId: 629,
@@ -5040,6 +6298,8 @@ export const users = [
     Email: 'dkittlehg@virginia.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-05-23',
+    DateExited: '2023-06-05',
   },
   {
     UserId: 630,
@@ -5048,6 +6308,8 @@ export const users = [
     Email: 'dboakhh@hibu.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-16',
+    DateExited: null,
   },
   {
     UserId: 631,
@@ -5056,6 +6318,8 @@ export const users = [
     Email: 'lmcgurkhi@creativecommons.org',
     Gender: 'Genderfluid',
     Active: 'TRUE',
+    DateHired: '2022-09-24',
+    DateExited: null,
   },
   {
     UserId: 632,
@@ -5064,6 +6328,8 @@ export const users = [
     Email: 'vwoolerhj@telegraph.co.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-08-01',
+    DateExited: null,
   },
   {
     UserId: 633,
@@ -5072,6 +6338,8 @@ export const users = [
     Email: 'dhuntingdonhk@bloglovin.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-01-05',
+    DateExited: '2021-05-02',
   },
   {
     UserId: 634,
@@ -5080,6 +6348,8 @@ export const users = [
     Email: 'ltrosdallhl@google.de',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-07-29',
+    DateExited: '2024-07-31',
   },
   {
     UserId: 635,
@@ -5088,6 +6358,8 @@ export const users = [
     Email: 'kpettiehm@yale.edu',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-08',
+    DateExited: '2022-12-28',
   },
   {
     UserId: 636,
@@ -5096,6 +6368,8 @@ export const users = [
     Email: 'jheikkinenhn@aol.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-05-23',
+    DateExited: null,
   },
   {
     UserId: 637,
@@ -5104,6 +6378,8 @@ export const users = [
     Email: 'rstirleyho@aol.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-09-02',
+    DateExited: '2022-09-28',
   },
   {
     UserId: 638,
@@ -5112,6 +6388,8 @@ export const users = [
     Email: 'cwingatehp@csmonitor.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-20',
+    DateExited: '2024-10-20',
   },
   {
     UserId: 639,
@@ -5120,6 +6398,8 @@ export const users = [
     Email: 'wherleyhq@list-manage.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-05-12',
+    DateExited: null,
   },
   {
     UserId: 640,
@@ -5128,6 +6408,8 @@ export const users = [
     Email: 'edeleahr@nhs.uk',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-06-28',
+    DateExited: '2022-08-25',
   },
   {
     UserId: 641,
@@ -5136,6 +6418,8 @@ export const users = [
     Email: 'gbendelhs@devhub.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-07-02',
+    DateExited: '2022-08-30',
   },
   {
     UserId: 642,
@@ -5144,6 +6428,8 @@ export const users = [
     Email: 'hslixbyht@google.fr',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-06-12',
+    DateExited: null,
   },
   {
     UserId: 643,
@@ -5152,6 +6438,8 @@ export const users = [
     Email: 'egillatthu@pinterest.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-03-10',
+    DateExited: null,
   },
   {
     UserId: 644,
@@ -5160,6 +6448,8 @@ export const users = [
     Email: 'pcranshawhv@google.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-02-29',
+    DateExited: null,
   },
   {
     UserId: 645,
@@ -5168,6 +6458,8 @@ export const users = [
     Email: 'cgoodleyhw@vinaora.com',
     Gender: 'Non-binary',
     Active: 'FALSE',
+    DateHired: '2023-07-22',
+    DateExited: '2024-08-25',
   },
   {
     UserId: 646,
@@ -5176,6 +6468,8 @@ export const users = [
     Email: 'eeastcourthx@ow.ly',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-02-21',
+    DateExited: null,
   },
   {
     UserId: 647,
@@ -5184,6 +6478,8 @@ export const users = [
     Email: 'jruddellhy@adobe.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-21',
+    DateExited: '2021-11-07',
   },
   {
     UserId: 648,
@@ -5192,6 +6488,8 @@ export const users = [
     Email: 'ekeymehz@baidu.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-06-25',
+    DateExited: '2022-10-28',
   },
   {
     UserId: 649,
@@ -5200,6 +6498,8 @@ export const users = [
     Email: 'emakeri0@opensource.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-02-19',
+    DateExited: '2023-12-13',
   },
   {
     UserId: 650,
@@ -5208,6 +6508,8 @@ export const users = [
     Email: 'dbirchalli1@opera.com',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2022-01-24',
+    DateExited: null,
   },
   {
     UserId: 651,
@@ -5216,6 +6518,8 @@ export const users = [
     Email: 'dpabeliki2@ucoz.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-01-19',
+    DateExited: '2023-06-16',
   },
   {
     UserId: 652,
@@ -5224,6 +6528,8 @@ export const users = [
     Email: 'spuddephatti3@blogspot.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-10-14',
+    DateExited: null,
   },
   {
     UserId: 653,
@@ -5232,6 +6538,8 @@ export const users = [
     Email: 'bmacgilmartini4@comcast.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-10-05',
+    DateExited: null,
   },
   {
     UserId: 654,
@@ -5240,6 +6548,8 @@ export const users = [
     Email: 'bauchterlonyi5@skype.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-10-10',
+    DateExited: '2024-06-25',
   },
   {
     UserId: 655,
@@ -5248,6 +6558,8 @@ export const users = [
     Email: 'mmotti6@stanford.edu',
     Gender: 'Genderfluid',
     Active: 'FALSE',
+    DateHired: '2023-07-12',
+    DateExited: '2024-09-20',
   },
   {
     UserId: 656,
@@ -5256,6 +6568,8 @@ export const users = [
     Email: 'rpeplawi7@ftc.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-11-15',
+    DateExited: null,
   },
   {
     UserId: 657,
@@ -5264,6 +6578,8 @@ export const users = [
     Email: 'mrobeiroi8@scribd.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-04-27',
+    DateExited: '2024-10-12',
   },
   {
     UserId: 658,
@@ -5272,6 +6588,8 @@ export const users = [
     Email: 'rrenfrewi9@ow.ly',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-03-31',
+    DateExited: '2022-08-21',
   },
   {
     UserId: 659,
@@ -5280,6 +6598,8 @@ export const users = [
     Email: 'gburdgeia@imdb.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-10-19',
+    DateExited: '2023-07-10',
   },
   {
     UserId: 660,
@@ -5288,6 +6608,8 @@ export const users = [
     Email: 'mcromleholmeib@stanford.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-04-30',
+    DateExited: null,
   },
   {
     UserId: 661,
@@ -5296,6 +6618,8 @@ export const users = [
     Email: 'rmitroshinovic@china.com.cn',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-17',
+    DateExited: null,
   },
   {
     UserId: 662,
@@ -5304,6 +6628,8 @@ export const users = [
     Email: 'rwelmanid@yellowpages.com',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2021-03-09',
+    DateExited: null,
   },
   {
     UserId: 663,
@@ -5312,6 +6638,8 @@ export const users = [
     Email: 'rbaughenie@example.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-07-21',
+    DateExited: null,
   },
   {
     UserId: 664,
@@ -5320,6 +6648,8 @@ export const users = [
     Email: 'effrenchbeytaghif@yellowpages.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-05-07',
+    DateExited: null,
   },
   {
     UserId: 665,
@@ -5328,6 +6658,8 @@ export const users = [
     Email: 'fharlickig@arizona.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-09-15',
+    DateExited: null,
   },
   {
     UserId: 666,
@@ -5336,6 +6668,8 @@ export const users = [
     Email: 'skeyih@jigsy.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-11-22',
+    DateExited: '2023-08-09',
   },
   {
     UserId: 667,
@@ -5344,6 +6678,8 @@ export const users = [
     Email: 'ucatlingii@phpbb.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-01-19',
+    DateExited: null,
   },
   {
     UserId: 668,
@@ -5352,6 +6688,8 @@ export const users = [
     Email: 'llockettij@wordpress.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-04-21',
+    DateExited: null,
   },
   {
     UserId: 669,
@@ -5360,6 +6698,8 @@ export const users = [
     Email: 'aibbitsonik@facebook.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-03-12',
+    DateExited: null,
   },
   {
     UserId: 670,
@@ -5368,6 +6708,8 @@ export const users = [
     Email: 'wtargeil@army.mil',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-10-01',
+    DateExited: '2023-09-13',
   },
   {
     UserId: 671,
@@ -5376,6 +6718,8 @@ export const users = [
     Email: 'atiptonim@adobe.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2024-11-12',
+    DateExited: '2024-11-12',
   },
   {
     UserId: 672,
@@ -5384,6 +6728,8 @@ export const users = [
     Email: 'ealastairin@amazonaws.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-07-25',
+    DateExited: null,
   },
   {
     UserId: 673,
@@ -5392,6 +6738,8 @@ export const users = [
     Email: 'talbuttio@globo.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-12-11',
+    DateExited: null,
   },
   {
     UserId: 674,
@@ -5400,6 +6748,8 @@ export const users = [
     Email: 'mhanwayip@telegraph.co.uk',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-07-11',
+    DateExited: '2024-08-14',
   },
   {
     UserId: 675,
@@ -5408,6 +6758,8 @@ export const users = [
     Email: 'mdalyelliq@tmall.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-04',
+    DateExited: null,
   },
   {
     UserId: 676,
@@ -5416,6 +6768,8 @@ export const users = [
     Email: 'ascrimshawir@google.es',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-08-11',
+    DateExited: '2024-10-13',
   },
   {
     UserId: 677,
@@ -5424,6 +6778,8 @@ export const users = [
     Email: 'daylenis@scribd.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-07-26',
+    DateExited: '2022-05-02',
   },
   {
     UserId: 678,
@@ -5432,6 +6788,8 @@ export const users = [
     Email: 'olawdenit@goo.ne.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-28',
+    DateExited: null,
   },
   {
     UserId: 679,
@@ -5440,6 +6798,8 @@ export const users = [
     Email: 'pbreslauiu@dyndns.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-04-01',
+    DateExited: '2024-10-03',
   },
   {
     UserId: 680,
@@ -5448,6 +6808,8 @@ export const users = [
     Email: 'vgoodridgeiv@geocities.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-01-28',
+    DateExited: null,
   },
   {
     UserId: 681,
@@ -5456,6 +6818,8 @@ export const users = [
     Email: 'atorveyiw@cdbaby.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-09',
+    DateExited: '2021-12-05',
   },
   {
     UserId: 682,
@@ -5464,6 +6828,8 @@ export const users = [
     Email: 'bcollobyix@tiny.cc',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-02-09',
+    DateExited: '2022-05-06',
   },
   {
     UserId: 683,
@@ -5472,6 +6838,8 @@ export const users = [
     Email: 'mmacgeffeniy@aol.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-08-05',
+    DateExited: null,
   },
   {
     UserId: 684,
@@ -5480,6 +6848,8 @@ export const users = [
     Email: 'gjevonsiz@mtv.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-01-03',
+    DateExited: null,
   },
   {
     UserId: 685,
@@ -5488,6 +6858,8 @@ export const users = [
     Email: 'pscholardj0@umich.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-01-27',
+    DateExited: '2023-02-18',
   },
   {
     UserId: 686,
@@ -5496,6 +6868,8 @@ export const users = [
     Email: 'dklimaszewskij1@spotify.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-10-22',
+    DateExited: '2024-05-25',
   },
   {
     UserId: 687,
@@ -5504,6 +6878,8 @@ export const users = [
     Email: 'bcrippillj2@xinhuanet.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-03-17',
+    DateExited: null,
   },
   {
     UserId: 688,
@@ -5512,6 +6888,8 @@ export const users = [
     Email: 'mbrimicombej3@ebay.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-05-13',
+    DateExited: null,
   },
   {
     UserId: 689,
@@ -5520,6 +6898,8 @@ export const users = [
     Email: 'dvasquezj4@unblog.fr',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-06-24',
+    DateExited: '2022-11-20',
   },
   {
     UserId: 690,
@@ -5528,6 +6908,8 @@ export const users = [
     Email: 'bklimaszewskij5@youku.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-07-15',
+    DateExited: '2024-01-29',
   },
   {
     UserId: 691,
@@ -5536,6 +6918,8 @@ export const users = [
     Email: 'edemchenj6@etsy.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-10-23',
+    DateExited: null,
   },
   {
     UserId: 692,
@@ -5544,6 +6928,8 @@ export const users = [
     Email: 'bbuddockj7@webmd.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-07-30',
+    DateExited: null,
   },
   {
     UserId: 693,
@@ -5552,6 +6938,8 @@ export const users = [
     Email: 'iheildj8@wp.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-07-21',
+    DateExited: null,
   },
   {
     UserId: 694,
@@ -5560,6 +6948,8 @@ export const users = [
     Email: 'acapesj9@gov.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-11-26',
+    DateExited: null,
   },
   {
     UserId: 695,
@@ -5568,6 +6958,8 @@ export const users = [
     Email: 'bginmanja@slideshare.net',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-07-13',
+    DateExited: null,
   },
   {
     UserId: 696,
@@ -5576,6 +6968,8 @@ export const users = [
     Email: 'bquinevanjb@hibu.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-02-26',
+    DateExited: null,
   },
   {
     UserId: 697,
@@ -5584,6 +6978,8 @@ export const users = [
     Email: 'ekidjc@blogs.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-08-21',
+    DateExited: null,
   },
   {
     UserId: 698,
@@ -5592,6 +6988,8 @@ export const users = [
     Email: 'acrossgrovejd@com.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-04-16',
+    DateExited: '2023-05-14',
   },
   {
     UserId: 699,
@@ -5600,6 +6998,8 @@ export const users = [
     Email: 'aruterje@eventbrite.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-01-31',
+    DateExited: null,
   },
   {
     UserId: 700,
@@ -5608,6 +7008,8 @@ export const users = [
     Email: 'ppetowjf@google.co.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-05-31',
+    DateExited: null,
   },
   {
     UserId: 701,
@@ -5616,6 +7018,8 @@ export const users = [
     Email: 'fhakonssonjg@ezinearticles.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-07-29',
+    DateExited: '2023-06-09',
   },
   {
     UserId: 702,
@@ -5624,6 +7028,8 @@ export const users = [
     Email: 'tflugerjh@vk.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-01-17',
+    DateExited: null,
   },
   {
     UserId: 703,
@@ -5632,6 +7038,8 @@ export const users = [
     Email: 'ddraytonji@ycombinator.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-07-21',
+    DateExited: null,
   },
   {
     UserId: 704,
@@ -5640,6 +7048,8 @@ export const users = [
     Email: 'ametcalfjj@goodreads.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-05-21',
+    DateExited: '2023-03-14',
   },
   {
     UserId: 705,
@@ -5648,6 +7058,8 @@ export const users = [
     Email: 'asheweryjk@nyu.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-08-20',
+    DateExited: '2022-11-04',
   },
   {
     UserId: 706,
@@ -5656,6 +7068,8 @@ export const users = [
     Email: 'hshreevejl@businessweek.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-04-25',
+    DateExited: '2020-11-18',
   },
   {
     UserId: 707,
@@ -5664,6 +7078,8 @@ export const users = [
     Email: 'coguzjm@dagondesign.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-02-19',
+    DateExited: '2023-09-29',
   },
   {
     UserId: 708,
@@ -5672,6 +7088,8 @@ export const users = [
     Email: 'sbaitmanjn@sohu.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-05-27',
+    DateExited: null,
   },
   {
     UserId: 709,
@@ -5680,6 +7098,8 @@ export const users = [
     Email: 'edewdenyjo@biblegateway.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-09-09',
+    DateExited: '2024-09-10',
   },
   {
     UserId: 710,
@@ -5688,6 +7108,8 @@ export const users = [
     Email: 'pportaljp@economist.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-05-10',
+    DateExited: '2024-03-07',
   },
   {
     UserId: 711,
@@ -5696,6 +7118,8 @@ export const users = [
     Email: 'aconachiejq@acquirethisname.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-04-04',
+    DateExited: null,
   },
   {
     UserId: 712,
@@ -5704,6 +7128,8 @@ export const users = [
     Email: 'cmarleyjr@fc2.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-02-03',
+    DateExited: null,
   },
   {
     UserId: 713,
@@ -5712,6 +7138,8 @@ export const users = [
     Email: 'rkuhnkejs@scribd.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-28',
+    DateExited: '2023-08-15',
   },
   {
     UserId: 714,
@@ -5720,6 +7148,8 @@ export const users = [
     Email: 'rkobpacjt@fastcompany.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-07-01',
+    DateExited: '2024-10-07',
   },
   {
     UserId: 715,
@@ -5728,6 +7158,8 @@ export const users = [
     Email: 'sceresaju@examiner.com',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2023-05-07',
+    DateExited: null,
   },
   {
     UserId: 716,
@@ -5736,6 +7168,8 @@ export const users = [
     Email: 'gcuthbertjv@diigo.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-02-04',
+    DateExited: '2023-09-01',
   },
   {
     UserId: 717,
@@ -5744,6 +7178,8 @@ export const users = [
     Email: 'rglowackijw@deviantart.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-09-23',
+    DateExited: null,
   },
   {
     UserId: 718,
@@ -5752,6 +7188,8 @@ export const users = [
     Email: 'cdrohunjx@goo.ne.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-01-31',
+    DateExited: null,
   },
   {
     UserId: 719,
@@ -5760,6 +7198,8 @@ export const users = [
     Email: 'askaifedingerthorpejy@etsy.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-08-25',
+    DateExited: null,
   },
   {
     UserId: 720,
@@ -5768,6 +7208,8 @@ export const users = [
     Email: 'drolesjz@4shared.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-12-27',
+    DateExited: null,
   },
   {
     UserId: 721,
@@ -5776,6 +7218,8 @@ export const users = [
     Email: 'odennesk0@eventbrite.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-06-01',
+    DateExited: null,
   },
   {
     UserId: 722,
@@ -5784,6 +7228,8 @@ export const users = [
     Email: 'mstandbrookek1@ftc.gov',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-07-08',
+    DateExited: '2024-03-13',
   },
   {
     UserId: 723,
@@ -5792,6 +7238,8 @@ export const users = [
     Email: 'amobiusk2@webmd.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-01-29',
+    DateExited: null,
   },
   {
     UserId: 724,
@@ -5800,6 +7248,8 @@ export const users = [
     Email: 'jwehdenk3@wp.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-09-16',
+    DateExited: null,
   },
   {
     UserId: 725,
@@ -5808,6 +7258,8 @@ export const users = [
     Email: 'lroek4@nsw.gov.au',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-06-17',
+    DateExited: '2024-06-11',
   },
   {
     UserId: 726,
@@ -5816,6 +7268,8 @@ export const users = [
     Email: 'mtonnerk5@livejournal.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-09-16',
+    DateExited: '2023-06-07',
   },
   {
     UserId: 727,
@@ -5824,6 +7278,8 @@ export const users = [
     Email: 'ewadwellk6@patch.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-03-04',
+    DateExited: '2024-07-12',
   },
   {
     UserId: 728,
@@ -5832,6 +7288,8 @@ export const users = [
     Email: 'gblackwayk7@yahoo.co.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-10-21',
+    DateExited: '2024-10-23',
   },
   {
     UserId: 729,
@@ -5840,6 +7298,8 @@ export const users = [
     Email: 'smarietonk8@mapquest.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-10-01',
+    DateExited: '2021-11-02',
   },
   {
     UserId: 730,
@@ -5848,6 +7308,8 @@ export const users = [
     Email: 'zderillk9@answers.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-04-26',
+    DateExited: null,
   },
   {
     UserId: 731,
@@ -5856,6 +7318,8 @@ export const users = [
     Email: 'ahubnerka@google.ru',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-05-23',
+    DateExited: null,
   },
   {
     UserId: 732,
@@ -5864,6 +7328,8 @@ export const users = [
     Email: 'abigriggkb@privacy.gov.au',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-04-02',
+    DateExited: '2022-04-18',
   },
   {
     UserId: 733,
@@ -5872,6 +7338,8 @@ export const users = [
     Email: 'agibbinskc@sun.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-04-28',
+    DateExited: null,
   },
   {
     UserId: 734,
@@ -5880,6 +7348,8 @@ export const users = [
     Email: 'bnorkettkd@cbc.ca',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2022-10-16',
+    DateExited: '2023-08-02',
   },
   {
     UserId: 735,
@@ -5888,6 +7358,8 @@ export const users = [
     Email: 'mjerratschke@mapquest.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-01-05',
+    DateExited: '2020-06-16',
   },
   {
     UserId: 736,
@@ -5896,6 +7368,8 @@ export const users = [
     Email: 'aorablekf@is.gd',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-04-18',
+    DateExited: null,
   },
   {
     UserId: 737,
@@ -5904,6 +7378,8 @@ export const users = [
     Email: 'qdecleynekg@hubpages.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-06-26',
+    DateExited: '2024-10-14',
   },
   {
     UserId: 738,
@@ -5912,6 +7388,8 @@ export const users = [
     Email: 'hmallochkh@cnet.com',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2022-02-04',
+    DateExited: null,
   },
   {
     UserId: 739,
@@ -5920,6 +7398,8 @@ export const users = [
     Email: 'mhamiltonki@va.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-29',
+    DateExited: null,
   },
   {
     UserId: 740,
@@ -5928,6 +7408,8 @@ export const users = [
     Email: 'zmccarrickkj@ibm.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2021-12-17',
+    DateExited: '2024-08-12',
   },
   {
     UserId: 741,
@@ -5936,6 +7418,8 @@ export const users = [
     Email: 'tchasteaukk@oracle.com',
     Gender: 'Genderqueer',
     Active: 'TRUE',
+    DateHired: '2023-05-10',
+    DateExited: null,
   },
   {
     UserId: 742,
@@ -5944,6 +7428,8 @@ export const users = [
     Email: 'hcritchellkl@dell.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-10-18',
+    DateExited: null,
   },
   {
     UserId: 743,
@@ -5952,6 +7438,8 @@ export const users = [
     Email: 'mscampionkm@vistaprint.com',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2022-08-16',
+    DateExited: null,
   },
   {
     UserId: 744,
@@ -5960,6 +7448,8 @@ export const users = [
     Email: 'eelwynkn@accuweather.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-10-26',
+    DateExited: null,
   },
   {
     UserId: 745,
@@ -5968,6 +7458,8 @@ export const users = [
     Email: 'jrannellsko@ebay.co.uk',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2022-08-15',
+    DateExited: '2023-06-16',
   },
   {
     UserId: 746,
@@ -5976,6 +7468,8 @@ export const users = [
     Email: 'fcordreykp@vkontakte.ru',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-11-22',
+    DateExited: '2022-10-01',
   },
   {
     UserId: 747,
@@ -5984,6 +7478,8 @@ export const users = [
     Email: 'bsnadenkq@thetimes.co.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-05-01',
+    DateExited: null,
   },
   {
     UserId: 748,
@@ -5992,6 +7488,8 @@ export const users = [
     Email: 'cmilbankkr@unblog.fr',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-02-26',
+    DateExited: '2023-03-31',
   },
   {
     UserId: 749,
@@ -6000,6 +7498,8 @@ export const users = [
     Email: 'jpinckedks@patch.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-02-24',
+    DateExited: null,
   },
   {
     UserId: 750,
@@ -6008,6 +7508,8 @@ export const users = [
     Email: 'blesieurkt@livejournal.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-04-25',
+    DateExited: null,
   },
   {
     UserId: 751,
@@ -6016,6 +7518,8 @@ export const users = [
     Email: 'kflattmanku@spotify.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-04',
+    DateExited: '2023-08-23',
   },
   {
     UserId: 752,
@@ -6024,6 +7528,8 @@ export const users = [
     Email: 'baronkv@senate.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-30',
+    DateExited: null,
   },
   {
     UserId: 753,
@@ -6032,6 +7538,8 @@ export const users = [
     Email: 'afrizellkw@istockphoto.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-02-26',
+    DateExited: '2023-04-10',
   },
   {
     UserId: 754,
@@ -6040,6 +7548,8 @@ export const users = [
     Email: 'bcuzenkx@globo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-04-12',
+    DateExited: null,
   },
   {
     UserId: 755,
@@ -6048,6 +7558,8 @@ export const users = [
     Email: 'yvennersky@yale.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-03-06',
+    DateExited: '2024-02-15',
   },
   {
     UserId: 756,
@@ -6056,6 +7568,8 @@ export const users = [
     Email: 'tsharkeykz@buzzfeed.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-01-05',
+    DateExited: '2024-08-09',
   },
   {
     UserId: 757,
@@ -6064,6 +7578,8 @@ export const users = [
     Email: 'lodbyl0@altervista.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-09-16',
+    DateExited: null,
   },
   {
     UserId: 758,
@@ -6072,6 +7588,8 @@ export const users = [
     Email: 'ldegogayl1@com.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-04-01',
+    DateExited: '2024-02-15',
   },
   {
     UserId: 759,
@@ -6080,6 +7598,8 @@ export const users = [
     Email: 'sbownesl2@yahoo.co.jp',
     Gender: 'Non-binary',
     Active: 'FALSE',
+    DateHired: '2020-11-24',
+    DateExited: '2021-08-29',
   },
   {
     UserId: 760,
@@ -6088,6 +7608,8 @@ export const users = [
     Email: 'tconstantl3@intel.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-06-27',
+    DateExited: null,
   },
   {
     UserId: 761,
@@ -6096,6 +7618,8 @@ export const users = [
     Email: 'nswindenl4@cam.ac.uk',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-02-08',
+    DateExited: '2022-05-22',
   },
   {
     UserId: 762,
@@ -6104,6 +7628,8 @@ export const users = [
     Email: 'lgyngelll5@npr.org',
     Gender: 'Genderfluid',
     Active: 'TRUE',
+    DateHired: '2024-06-02',
+    DateExited: null,
   },
   {
     UserId: 763,
@@ -6112,6 +7638,8 @@ export const users = [
     Email: 'ssleichtl6@360.cn',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-05-26',
+    DateExited: null,
   },
   {
     UserId: 764,
@@ -6120,6 +7648,8 @@ export const users = [
     Email: 'abiml7@unesco.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-04-26',
+    DateExited: '2023-06-16',
   },
   {
     UserId: 765,
@@ -6128,6 +7658,8 @@ export const users = [
     Email: 'bbrennanl8@goo.ne.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-06-29',
+    DateExited: null,
   },
   {
     UserId: 766,
@@ -6136,6 +7668,8 @@ export const users = [
     Email: 'lhounshaml9@cnn.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-10-23',
+    DateExited: '2022-09-14',
   },
   {
     UserId: 767,
@@ -6144,6 +7678,8 @@ export const users = [
     Email: 'egookla@google.ru',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-05-17',
+    DateExited: '2024-10-01',
   },
   {
     UserId: 768,
@@ -6152,6 +7688,8 @@ export const users = [
     Email: 'aboissierlb@wikimedia.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-11-27',
+    DateExited: null,
   },
   {
     UserId: 769,
@@ -6160,6 +7698,8 @@ export const users = [
     Email: 'jklimowiczlc@twitter.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-07-22',
+    DateExited: null,
   },
   {
     UserId: 770,
@@ -6168,6 +7708,8 @@ export const users = [
     Email: 'toxxld@github.io',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-01-04',
+    DateExited: '2023-09-18',
   },
   {
     UserId: 771,
@@ -6176,6 +7718,8 @@ export const users = [
     Email: 'rgrishechkinle@rediff.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-10-01',
+    DateExited: null,
   },
   {
     UserId: 772,
@@ -6184,6 +7728,8 @@ export const users = [
     Email: 'sdreweslf@youtu.be',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-12-01',
+    DateExited: '2023-07-31',
   },
   {
     UserId: 773,
@@ -6192,6 +7738,8 @@ export const users = [
     Email: 'uchauncelg@google.nl',
     Gender: 'Non-binary',
     Active: 'FALSE',
+    DateHired: '2021-10-11',
+    DateExited: '2022-11-25',
   },
   {
     UserId: 774,
@@ -6200,6 +7748,8 @@ export const users = [
     Email: 'wpoizerlh@tinyurl.com',
     Gender: 'Bigender',
     Active: 'FALSE',
+    DateHired: '2024-01-14',
+    DateExited: '2024-10-28',
   },
   {
     UserId: 775,
@@ -6208,6 +7758,8 @@ export const users = [
     Email: 'rcereceresli@noaa.gov',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-06-30',
+    DateExited: null,
   },
   {
     UserId: 776,
@@ -6216,6 +7768,8 @@ export const users = [
     Email: 'csollimelj@smh.com.au',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2021-03-25',
+    DateExited: null,
   },
   {
     UserId: 777,
@@ -6224,6 +7778,8 @@ export const users = [
     Email: 'kbulmanlk@weather.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-03-11',
+    DateExited: null,
   },
   {
     UserId: 778,
@@ -6232,6 +7788,8 @@ export const users = [
     Email: 'tcoonihanll@virginia.edu',
     Gender: 'Genderfluid',
     Active: 'TRUE',
+    DateHired: '2021-04-09',
+    DateExited: null,
   },
   {
     UserId: 779,
@@ -6240,6 +7798,8 @@ export const users = [
     Email: 'stungaylm@wufoo.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-10-10',
+    DateExited: '2024-11-10',
   },
   {
     UserId: 780,
@@ -6248,6 +7808,8 @@ export const users = [
     Email: 'mskettlesln@goo.ne.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-03-02',
+    DateExited: null,
   },
   {
     UserId: 781,
@@ -6256,6 +7818,8 @@ export const users = [
     Email: 'jschankelo@deliciousdays.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-04-21',
+    DateExited: '2023-05-16',
   },
   {
     UserId: 782,
@@ -6264,6 +7828,8 @@ export const users = [
     Email: 'aiacovazzilp@oracle.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-03',
+    DateExited: '2023-01-16',
   },
   {
     UserId: 783,
@@ -6272,6 +7838,8 @@ export const users = [
     Email: 'smcgraffinlq@sitemeter.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-18',
+    DateExited: '2024-04-26',
   },
   {
     UserId: 784,
@@ -6280,6 +7848,8 @@ export const users = [
     Email: 'fchaiselr@networksolutions.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-01-28',
+    DateExited: '2020-02-13',
   },
   {
     UserId: 785,
@@ -6288,6 +7858,8 @@ export const users = [
     Email: 'dspringtorpels@cmu.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-03-17',
+    DateExited: null,
   },
   {
     UserId: 786,
@@ -6296,6 +7868,8 @@ export const users = [
     Email: 'parpinolt@ebay.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-12-12',
+    DateExited: '2023-12-19',
   },
   {
     UserId: 787,
@@ -6304,6 +7878,8 @@ export const users = [
     Email: 'lpricelu@tuttocitta.it',
     Gender: 'Genderqueer',
     Active: 'TRUE',
+    DateHired: '2024-01-18',
+    DateExited: null,
   },
   {
     UserId: 788,
@@ -6312,6 +7888,8 @@ export const users = [
     Email: 'fcunniffelv@cnn.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2022-02-01',
+    DateExited: '2023-01-07',
   },
   {
     UserId: 789,
@@ -6320,6 +7898,8 @@ export const users = [
     Email: 'hruskelw@msn.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2023-05-26',
+    DateExited: '2023-07-07',
   },
   {
     UserId: 790,
@@ -6328,6 +7908,8 @@ export const users = [
     Email: 'ecastlakelx@statcounter.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-02-29',
+    DateExited: null,
   },
   {
     UserId: 791,
@@ -6336,6 +7918,8 @@ export const users = [
     Email: 'nfynnly@accuweather.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-02-27',
+    DateExited: null,
   },
   {
     UserId: 792,
@@ -6344,6 +7928,8 @@ export const users = [
     Email: 'tcrosskilllz@themeforest.net',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-03-08',
+    DateExited: '2021-04-10',
   },
   {
     UserId: 793,
@@ -6352,6 +7938,8 @@ export const users = [
     Email: 'acabralesm0@google.de',
     Gender: 'Genderfluid',
     Active: 'FALSE',
+    DateHired: '2024-07-12',
+    DateExited: '2024-09-12',
   },
   {
     UserId: 794,
@@ -6360,6 +7948,8 @@ export const users = [
     Email: 'hgarriockm1@aboutads.info',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-06-24',
+    DateExited: null,
   },
   {
     UserId: 795,
@@ -6368,6 +7958,8 @@ export const users = [
     Email: 'vfishleighm2@nature.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-08-11',
+    DateExited: null,
   },
   {
     UserId: 796,
@@ -6376,6 +7968,8 @@ export const users = [
     Email: 'lfrailm3@cloudflare.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-11-20',
+    DateExited: '2022-01-29',
   },
   {
     UserId: 797,
@@ -6384,6 +7978,8 @@ export const users = [
     Email: 'graymondm4@unesco.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-07-05',
+    DateExited: '2023-08-11',
   },
   {
     UserId: 798,
@@ -6392,6 +7988,8 @@ export const users = [
     Email: 'omacgowm5@ibm.com',
     Gender: 'Polygender',
     Active: 'FALSE',
+    DateHired: '2020-12-07',
+    DateExited: '2022-08-29',
   },
   {
     UserId: 799,
@@ -6400,6 +7998,8 @@ export const users = [
     Email: 'adelacotem6@flavors.me',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-05-15',
+    DateExited: '2023-03-19',
   },
   {
     UserId: 800,
@@ -6408,6 +8008,8 @@ export const users = [
     Email: 'tsainterm7@admin.ch',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-08-27',
+    DateExited: null,
   },
   {
     UserId: 801,
@@ -6416,6 +8018,8 @@ export const users = [
     Email: 'fecobm8@github.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-05-19',
+    DateExited: null,
   },
   {
     UserId: 802,
@@ -6424,6 +8028,8 @@ export const users = [
     Email: 'nmimmackm9@cbsnews.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-06-14',
+    DateExited: null,
   },
   {
     UserId: 803,
@@ -6432,6 +8038,8 @@ export const users = [
     Email: 'amapledorumma@zimbio.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-01-23',
+    DateExited: '2024-01-22',
   },
   {
     UserId: 804,
@@ -6440,6 +8048,8 @@ export const users = [
     Email: 'cforsdykemb@people.com.cn',
     Gender: 'Non-binary',
     Active: 'FALSE',
+    DateHired: '2023-03-11',
+    DateExited: '2023-04-17',
   },
   {
     UserId: 805,
@@ -6448,6 +8058,8 @@ export const users = [
     Email: 'lrangeleymc@1und1.de',
     Gender: 'Genderqueer',
     Active: 'TRUE',
+    DateHired: '2023-11-19',
+    DateExited: null,
   },
   {
     UserId: 806,
@@ -6456,6 +8068,8 @@ export const users = [
     Email: 'loakenfordmd@opensource.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-03-16',
+    DateExited: '2024-10-07',
   },
   {
     UserId: 807,
@@ -6464,6 +8078,8 @@ export const users = [
     Email: 'ceastmanme@cmu.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-08-23',
+    DateExited: '2023-08-26',
   },
   {
     UserId: 808,
@@ -6472,6 +8088,8 @@ export const users = [
     Email: 'atironmf@people.com.cn',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-16',
+    DateExited: '2022-06-22',
   },
   {
     UserId: 809,
@@ -6480,6 +8098,8 @@ export const users = [
     Email: 'holijvemg@statcounter.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-10-27',
+    DateExited: null,
   },
   {
     UserId: 810,
@@ -6488,6 +8108,8 @@ export const users = [
     Email: 'bstambridgemh@zimbio.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-06-29',
+    DateExited: '2024-05-04',
   },
   {
     UserId: 811,
@@ -6496,6 +8118,8 @@ export const users = [
     Email: 'mdeetlefsmi@feedburner.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-01-19',
+    DateExited: '2021-12-02',
   },
   {
     UserId: 812,
@@ -6504,6 +8128,8 @@ export const users = [
     Email: 'pcristofolinimj@google.nl',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-10-28',
+    DateExited: '2022-07-19',
   },
   {
     UserId: 813,
@@ -6512,6 +8138,8 @@ export const users = [
     Email: 'mbroxapmk@netvibes.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-02-12',
+    DateExited: null,
   },
   {
     UserId: 814,
@@ -6520,6 +8148,8 @@ export const users = [
     Email: 'jcornickml@surveymonkey.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-06-16',
+    DateExited: null,
   },
   {
     UserId: 815,
@@ -6528,6 +8158,8 @@ export const users = [
     Email: 'gimisonmm@trellian.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-10-22',
+    DateExited: null,
   },
   {
     UserId: 816,
@@ -6536,6 +8168,8 @@ export const users = [
     Email: 'gplovermn@deviantart.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-05-30',
+    DateExited: '2024-10-15',
   },
   {
     UserId: 817,
@@ -6544,6 +8178,8 @@ export const users = [
     Email: 'cpericomo@berkeley.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-10-11',
+    DateExited: '2023-10-04',
   },
   {
     UserId: 818,
@@ -6552,6 +8188,8 @@ export const users = [
     Email: 'htoonemp@yellowpages.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-10-29',
+    DateExited: null,
   },
   {
     UserId: 819,
@@ -6560,6 +8198,8 @@ export const users = [
     Email: 'eocrianemq@yandex.ru',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-07-16',
+    DateExited: '2022-07-14',
   },
   {
     UserId: 820,
@@ -6568,6 +8208,8 @@ export const users = [
     Email: 'aelesandermr@e-recht24.de',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-09-29',
+    DateExited: null,
   },
   {
     UserId: 821,
@@ -6576,6 +8218,8 @@ export const users = [
     Email: 'arableaums@sbwire.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-05-14',
+    DateExited: '2024-10-10',
   },
   {
     UserId: 822,
@@ -6584,6 +8228,8 @@ export const users = [
     Email: 'tsambrookmt@hatena.ne.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-03-10',
+    DateExited: null,
   },
   {
     UserId: 823,
@@ -6592,6 +8238,8 @@ export const users = [
     Email: 'jleahymu@prnewswire.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-04-21',
+    DateExited: '2024-04-25',
   },
   {
     UserId: 824,
@@ -6600,6 +8248,8 @@ export const users = [
     Email: 'phenrionotmv@cbsnews.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-08',
+    DateExited: null,
   },
   {
     UserId: 825,
@@ -6608,6 +8258,8 @@ export const users = [
     Email: 'hvanthoffmw@army.mil',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-07-31',
+    DateExited: '2021-01-06',
   },
   {
     UserId: 826,
@@ -6616,6 +8268,8 @@ export const users = [
     Email: 'smacwilliammx@symantec.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-06-21',
+    DateExited: '2022-10-22',
   },
   {
     UserId: 827,
@@ -6624,6 +8278,8 @@ export const users = [
     Email: 'lsapsfordemy@bbc.co.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-06-22',
+    DateExited: null,
   },
   {
     UserId: 828,
@@ -6632,6 +8288,8 @@ export const users = [
     Email: 'lchristymz@artisteer.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-12-27',
+    DateExited: '2024-02-07',
   },
   {
     UserId: 829,
@@ -6640,6 +8298,8 @@ export const users = [
     Email: 'npourvoieurn0@free.fr',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-03-22',
+    DateExited: '2021-07-03',
   },
   {
     UserId: 830,
@@ -6648,6 +8308,8 @@ export const users = [
     Email: 'rjanderan1@geocities.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-08-25',
+    DateExited: '2023-08-31',
   },
   {
     UserId: 831,
@@ -6656,6 +8318,8 @@ export const users = [
     Email: 'mralfen2@topsy.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-10-11',
+    DateExited: '2022-10-21',
   },
   {
     UserId: 832,
@@ -6664,6 +8328,8 @@ export const users = [
     Email: 'gblankaun3@cam.ac.uk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-04-24',
+    DateExited: null,
   },
   {
     UserId: 833,
@@ -6672,6 +8338,8 @@ export const users = [
     Email: 'dgehringern4@taobao.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-01-13',
+    DateExited: null,
   },
   {
     UserId: 834,
@@ -6680,6 +8348,8 @@ export const users = [
     Email: 'fmatusn5@marketwatch.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-08-10',
+    DateExited: null,
   },
   {
     UserId: 835,
@@ -6688,6 +8358,8 @@ export const users = [
     Email: 'tkleynenn6@ebay.co.uk',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-09-07',
+    DateExited: null,
   },
   {
     UserId: 836,
@@ -6696,6 +8368,8 @@ export const users = [
     Email: 'gemersonn7@irs.gov',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2021-09-26',
+    DateExited: null,
   },
   {
     UserId: 837,
@@ -6704,6 +8378,8 @@ export const users = [
     Email: 'cbuntainn8@diigo.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-06-16',
+    DateExited: null,
   },
   {
     UserId: 838,
@@ -6712,6 +8388,8 @@ export const users = [
     Email: 'bunsteadn9@telegraph.co.uk',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-08-07',
+    DateExited: '2020-10-27',
   },
   {
     UserId: 839,
@@ -6720,6 +8398,8 @@ export const users = [
     Email: 'ghelversenna@comsenz.com',
     Gender: 'Non-binary',
     Active: 'TRUE',
+    DateHired: '2020-01-08',
+    DateExited: null,
   },
   {
     UserId: 840,
@@ -6728,6 +8408,8 @@ export const users = [
     Email: 'dehlerdingnb@facebook.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-22',
+    DateExited: null,
   },
   {
     UserId: 841,
@@ -6736,6 +8418,8 @@ export const users = [
     Email: 'ocoringtonnc@un.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-02-04',
+    DateExited: null,
   },
   {
     UserId: 842,
@@ -6744,6 +8428,8 @@ export const users = [
     Email: 'hoglesbeend@craigslist.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-10-30',
+    DateExited: '2022-10-04',
   },
   {
     UserId: 843,
@@ -6752,6 +8438,8 @@ export const users = [
     Email: 'ejosefovicne@answers.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-08-03',
+    DateExited: '2021-05-04',
   },
   {
     UserId: 844,
@@ -6760,6 +8448,8 @@ export const users = [
     Email: 'jcursonsnf@macromedia.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-22',
+    DateExited: null,
   },
   {
     UserId: 845,
@@ -6768,6 +8458,8 @@ export const users = [
     Email: 'nyegorevng@ycombinator.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-01-12',
+    DateExited: '2024-04-30',
   },
   {
     UserId: 846,
@@ -6776,6 +8468,8 @@ export const users = [
     Email: 'hmouldsnh@reverbnation.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-07-11',
+    DateExited: null,
   },
   {
     UserId: 847,
@@ -6784,6 +8478,8 @@ export const users = [
     Email: 'lpearneni@jalbum.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-06-22',
+    DateExited: '2024-03-24',
   },
   {
     UserId: 848,
@@ -6792,6 +8488,8 @@ export const users = [
     Email: 'awedmorenj@guardian.co.uk',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-03-15',
+    DateExited: '2022-11-08',
   },
   {
     UserId: 849,
@@ -6800,6 +8498,8 @@ export const users = [
     Email: 'gforsythnk@umn.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-08-08',
+    DateExited: '2024-01-16',
   },
   {
     UserId: 850,
@@ -6808,6 +8508,8 @@ export const users = [
     Email: 'smeeksnl@bizjournals.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-09-09',
+    DateExited: '2024-09-20',
   },
   {
     UserId: 851,
@@ -6816,6 +8518,8 @@ export const users = [
     Email: 'avanderkruinm@bloglovin.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-09-04',
+    DateExited: null,
   },
   {
     UserId: 852,
@@ -6824,6 +8528,8 @@ export const users = [
     Email: 'gadenotnn@live.com',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2024-01-12',
+    DateExited: null,
   },
   {
     UserId: 853,
@@ -6832,6 +8538,8 @@ export const users = [
     Email: 'llukinsno@eventbrite.com',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2020-03-16',
+    DateExited: null,
   },
   {
     UserId: 854,
@@ -6840,6 +8548,8 @@ export const users = [
     Email: 'bblanketnp@ft.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-05-25',
+    DateExited: null,
   },
   {
     UserId: 855,
@@ -6848,6 +8558,8 @@ export const users = [
     Email: 'ewhitlownq@yolasite.com',
     Gender: 'Polygender',
     Active: 'FALSE',
+    DateHired: '2020-09-02',
+    DateExited: '2022-09-20',
   },
   {
     UserId: 856,
@@ -6856,6 +8568,8 @@ export const users = [
     Email: 'ssydallnr@studiopress.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-02-16',
+    DateExited: '2023-12-17',
   },
   {
     UserId: 857,
@@ -6864,6 +8578,8 @@ export const users = [
     Email: 'wladdns@simplemachines.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-07-24',
+    DateExited: null,
   },
   {
     UserId: 858,
@@ -6872,6 +8588,8 @@ export const users = [
     Email: 'bcrowchernt@taobao.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-07-05',
+    DateExited: null,
   },
   {
     UserId: 859,
@@ -6880,6 +8598,8 @@ export const users = [
     Email: 'esiviornu@hibu.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-10-12',
+    DateExited: '2024-10-28',
   },
   {
     UserId: 860,
@@ -6888,6 +8608,8 @@ export const users = [
     Email: 'ttitchennv@booking.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-08-16',
+    DateExited: null,
   },
   {
     UserId: 861,
@@ -6896,6 +8618,8 @@ export const users = [
     Email: 'aebunoluwanw@quantcast.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-07-27',
+    DateExited: '2024-10-11',
   },
   {
     UserId: 862,
@@ -6904,6 +8628,8 @@ export const users = [
     Email: 'dnashnx@msn.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-06-11',
+    DateExited: null,
   },
   {
     UserId: 863,
@@ -6912,6 +8638,8 @@ export const users = [
     Email: 'mweareny@economist.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-07',
+    DateExited: null,
   },
   {
     UserId: 864,
@@ -6920,6 +8648,8 @@ export const users = [
     Email: 'lbarenskinz@php.net',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2022-08-28',
+    DateExited: null,
   },
   {
     UserId: 865,
@@ -6928,6 +8658,8 @@ export const users = [
     Email: 'mmannagho0@altervista.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-05-07',
+    DateExited: '2022-06-03',
   },
   {
     UserId: 866,
@@ -6936,6 +8668,8 @@ export const users = [
     Email: 'bmaceo1@indiatimes.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-07-14',
+    DateExited: '2023-10-09',
   },
   {
     UserId: 867,
@@ -6944,6 +8678,8 @@ export const users = [
     Email: 'ccatmullo2@wiley.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-07-07',
+    DateExited: null,
   },
   {
     UserId: 868,
@@ -6952,6 +8688,8 @@ export const users = [
     Email: 'htoffolonio3@feedburner.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-12-27',
+    DateExited: '2024-06-24',
   },
   {
     UserId: 869,
@@ -6960,6 +8698,8 @@ export const users = [
     Email: 'avergineo4@behance.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-02-20',
+    DateExited: null,
   },
   {
     UserId: 870,
@@ -6968,6 +8708,8 @@ export const users = [
     Email: 'rposero5@diigo.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-12-22',
+    DateExited: '2023-05-14',
   },
   {
     UserId: 871,
@@ -6976,6 +8718,8 @@ export const users = [
     Email: 'tizacenkoo6@auda.org.au',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-03-30',
+    DateExited: '2024-08-16',
   },
   {
     UserId: 872,
@@ -6984,6 +8728,8 @@ export const users = [
     Email: 'lswidenbanko7@tripadvisor.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2021-04-15',
+    DateExited: '2022-12-07',
   },
   {
     UserId: 873,
@@ -6992,6 +8738,8 @@ export const users = [
     Email: 'tmendezo8@sciencedaily.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-05-09',
+    DateExited: '2022-10-08',
   },
   {
     UserId: 874,
@@ -7000,6 +8748,8 @@ export const users = [
     Email: 'bcavyo9@storify.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-26',
+    DateExited: null,
   },
   {
     UserId: 875,
@@ -7008,6 +8758,8 @@ export const users = [
     Email: 'jdhenninoa@archive.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-06-28',
+    DateExited: '2022-11-17',
   },
   {
     UserId: 876,
@@ -7016,6 +8768,8 @@ export const users = [
     Email: 'cledesob@marriott.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-03-21',
+    DateExited: '2024-10-19',
   },
   {
     UserId: 877,
@@ -7024,6 +8778,8 @@ export const users = [
     Email: 'ryedyoc@jugem.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-12-27',
+    DateExited: null,
   },
   {
     UserId: 878,
@@ -7032,6 +8788,8 @@ export const users = [
     Email: 'sbuxcyod@altervista.org',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-08-30',
+    DateExited: '2024-02-18',
   },
   {
     UserId: 879,
@@ -7040,6 +8798,8 @@ export const users = [
     Email: 'epuntonoe@howstuffworks.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-07-06',
+    DateExited: '2020-08-17',
   },
   {
     UserId: 880,
@@ -7048,6 +8808,8 @@ export const users = [
     Email: 'wbowcockof@nsw.gov.au',
     Gender: 'Polygender',
     Active: 'TRUE',
+    DateHired: '2024-02-22',
+    DateExited: null,
   },
   {
     UserId: 881,
@@ -7056,6 +8818,8 @@ export const users = [
     Email: 'jfrodshamog@php.net',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-01-19',
+    DateExited: null,
   },
   {
     UserId: 882,
@@ -7064,6 +8828,8 @@ export const users = [
     Email: 'rwhitehalloh@hao123.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-08-03',
+    DateExited: '2023-09-02',
   },
   {
     UserId: 883,
@@ -7072,6 +8838,8 @@ export const users = [
     Email: 'yrookoi@cbslocal.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-09-26',
+    DateExited: '2024-10-17',
   },
   {
     UserId: 884,
@@ -7080,6 +8848,8 @@ export const users = [
     Email: 'bsimoninioj@squidoo.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-12-31',
+    DateExited: '2023-06-11',
   },
   {
     UserId: 885,
@@ -7088,6 +8858,8 @@ export const users = [
     Email: 'kloaldayok@e-recht24.de',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-12-27',
+    DateExited: null,
   },
   {
     UserId: 886,
@@ -7096,6 +8868,8 @@ export const users = [
     Email: 'educkerol@delicious.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-03-03',
+    DateExited: null,
   },
   {
     UserId: 887,
@@ -7104,6 +8878,8 @@ export const users = [
     Email: 'kkrollmanom@cornell.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-10-16',
+    DateExited: '2024-05-28',
   },
   {
     UserId: 888,
@@ -7112,6 +8888,8 @@ export const users = [
     Email: 'tgaukrogeron@flickr.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-11-02',
+    DateExited: '2024-11-06',
   },
   {
     UserId: 889,
@@ -7120,6 +8898,8 @@ export const users = [
     Email: 'zculliganoo@howstuffworks.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-02-05',
+    DateExited: '2024-07-28',
   },
   {
     UserId: 890,
@@ -7128,6 +8908,8 @@ export const users = [
     Email: 'pkeelinop@multiply.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-05-15',
+    DateExited: null,
   },
   {
     UserId: 891,
@@ -7136,6 +8918,8 @@ export const users = [
     Email: 'vclemensoq@wikipedia.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-12',
+    DateExited: null,
   },
   {
     UserId: 892,
@@ -7144,6 +8928,8 @@ export const users = [
     Email: 'pmillionsor@ucsd.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-02-08',
+    DateExited: null,
   },
   {
     UserId: 893,
@@ -7152,6 +8938,8 @@ export const users = [
     Email: 'hmcmainsos@blogtalkradio.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-06-01',
+    DateExited: '2022-10-04',
   },
   {
     UserId: 894,
@@ -7160,6 +8948,8 @@ export const users = [
     Email: 'nrostonot@archive.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-10-03',
+    DateExited: '2024-11-01',
   },
   {
     UserId: 895,
@@ -7168,6 +8958,8 @@ export const users = [
     Email: 'vaasafou@mlb.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-03-19',
+    DateExited: null,
   },
   {
     UserId: 896,
@@ -7176,6 +8968,8 @@ export const users = [
     Email: 'eszymonov@virginia.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-03-21',
+    DateExited: null,
   },
   {
     UserId: 897,
@@ -7184,6 +8978,8 @@ export const users = [
     Email: 'gkaleweow@cnn.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-02-03',
+    DateExited: null,
   },
   {
     UserId: 898,
@@ -7192,6 +8988,8 @@ export const users = [
     Email: 'bedworthyox@netscape.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-11-06',
+    DateExited: '2024-11-11',
   },
   {
     UserId: 899,
@@ -7200,6 +8998,8 @@ export const users = [
     Email: 'hgeraudeloy@amazon.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-08-08',
+    DateExited: null,
   },
   {
     UserId: 900,
@@ -7208,6 +9008,8 @@ export const users = [
     Email: 'jnorreyoz@adobe.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-01-02',
+    DateExited: '2024-07-09',
   },
   {
     UserId: 901,
@@ -7216,6 +9018,8 @@ export const users = [
     Email: 'ebeamishp0@ucla.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-11-16',
+    DateExited: null,
   },
   {
     UserId: 902,
@@ -7224,6 +9028,8 @@ export const users = [
     Email: 'ndarbyshirep1@zdnet.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-10-24',
+    DateExited: '2024-08-16',
   },
   {
     UserId: 903,
@@ -7232,6 +9038,8 @@ export const users = [
     Email: 'mbrittonerp2@g.co',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-06-04',
+    DateExited: null,
   },
   {
     UserId: 904,
@@ -7240,6 +9048,8 @@ export const users = [
     Email: 'sbrewsep3@alibaba.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-11-19',
+    DateExited: null,
   },
   {
     UserId: 905,
@@ -7248,6 +9058,8 @@ export const users = [
     Email: 'ccuddehyp4@ow.ly',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-03-03',
+    DateExited: '2024-03-15',
   },
   {
     UserId: 906,
@@ -7256,6 +9068,8 @@ export const users = [
     Email: 'ssquibep5@umich.edu',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-08-05',
+    DateExited: '2024-10-25',
   },
   {
     UserId: 907,
@@ -7264,6 +9078,8 @@ export const users = [
     Email: 'dadrainp6@barnesandnoble.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-03-26',
+    DateExited: null,
   },
   {
     UserId: 908,
@@ -7272,6 +9088,8 @@ export const users = [
     Email: 'lpibworthp7@gov.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-04-13',
+    DateExited: null,
   },
   {
     UserId: 909,
@@ -7280,6 +9098,8 @@ export const users = [
     Email: 'rflecknop8@statcounter.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-08-20',
+    DateExited: null,
   },
   {
     UserId: 910,
@@ -7288,6 +9108,8 @@ export const users = [
     Email: 'uclarycottp9@multiply.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-10-28',
+    DateExited: '2024-11-06',
   },
   {
     UserId: 911,
@@ -7296,6 +9118,8 @@ export const users = [
     Email: 'alanstonpa@pbs.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-02',
+    DateExited: null,
   },
   {
     UserId: 912,
@@ -7304,6 +9128,8 @@ export const users = [
     Email: 'cforcadepb@tuttocitta.it',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-04-24',
+    DateExited: null,
   },
   {
     UserId: 913,
@@ -7312,6 +9138,8 @@ export const users = [
     Email: 'dmcsheepc@psu.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-04-18',
+    DateExited: null,
   },
   {
     UserId: 914,
@@ -7320,6 +9148,8 @@ export const users = [
     Email: 'btortoisepd@istockphoto.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-11-22',
+    DateExited: null,
   },
   {
     UserId: 915,
@@ -7328,6 +9158,8 @@ export const users = [
     Email: 'aphilippardpe@cafepress.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-05-23',
+    DateExited: null,
   },
   {
     UserId: 916,
@@ -7336,6 +9168,8 @@ export const users = [
     Email: 'sgoldstonpf@sfgate.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-01-10',
+    DateExited: '2024-10-10',
   },
   {
     UserId: 917,
@@ -7344,6 +9178,8 @@ export const users = [
     Email: 'skirrenspg@nba.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-12-23',
+    DateExited: null,
   },
   {
     UserId: 918,
@@ -7352,6 +9188,8 @@ export const users = [
     Email: 'vbonallickph@vk.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-03-09',
+    DateExited: null,
   },
   {
     UserId: 919,
@@ -7360,6 +9198,8 @@ export const users = [
     Email: 'zmccamishpi@salon.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2021-01-08',
+    DateExited: null,
   },
   {
     UserId: 920,
@@ -7368,6 +9208,8 @@ export const users = [
     Email: 'oelnorpj@uol.com.br',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-03-04',
+    DateExited: '2024-10-06',
   },
   {
     UserId: 921,
@@ -7376,6 +9218,8 @@ export const users = [
     Email: 'lslatterpk@1und1.de',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-01-04',
+    DateExited: '2022-06-23',
   },
   {
     UserId: 922,
@@ -7384,6 +9228,8 @@ export const users = [
     Email: 'mrabidgepl@state.tx.us',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2023-05-11',
+    DateExited: null,
   },
   {
     UserId: 923,
@@ -7392,6 +9238,8 @@ export const users = [
     Email: 'eyoellpm@freewebs.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-05-01',
+    DateExited: '2023-09-06',
   },
   {
     UserId: 924,
@@ -7400,6 +9248,8 @@ export const users = [
     Email: 'lwarnockpn@google.cn',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-07-12',
+    DateExited: null,
   },
   {
     UserId: 925,
@@ -7408,6 +9258,8 @@ export const users = [
     Email: 'rjermypo@jimdo.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-08-07',
+    DateExited: null,
   },
   {
     UserId: 926,
@@ -7416,6 +9268,8 @@ export const users = [
     Email: 'mhardeypp@usatoday.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-04-23',
+    DateExited: null,
   },
   {
     UserId: 927,
@@ -7424,6 +9278,8 @@ export const users = [
     Email: 'radolfsenpq@cam.ac.uk',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-11-11',
+    DateExited: null,
   },
   {
     UserId: 928,
@@ -7432,6 +9288,8 @@ export const users = [
     Email: 'mapplebypr@time.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-08-13',
+    DateExited: '2022-01-26',
   },
   {
     UserId: 929,
@@ -7440,6 +9298,8 @@ export const users = [
     Email: 'wgluyusps@liveinternet.ru',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-03-04',
+    DateExited: '2023-01-18',
   },
   {
     UserId: 930,
@@ -7448,6 +9308,8 @@ export const users = [
     Email: 'ryushinpt@usa.gov',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-02-05',
+    DateExited: null,
   },
   {
     UserId: 931,
@@ -7456,6 +9318,8 @@ export const users = [
     Email: 'lpashbeepu@howstuffworks.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-03-11',
+    DateExited: '2023-05-05',
   },
   {
     UserId: 932,
@@ -7464,6 +9328,8 @@ export const users = [
     Email: 'kbittanypv@nbcnews.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-01-29',
+    DateExited: null,
   },
   {
     UserId: 933,
@@ -7472,6 +9338,8 @@ export const users = [
     Email: 'tedsellpw@so-net.ne.jp',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-07-13',
+    DateExited: '2024-05-29',
   },
   {
     UserId: 934,
@@ -7480,6 +9348,8 @@ export const users = [
     Email: 'gfollospx@furl.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-10-04',
+    DateExited: '2024-04-01',
   },
   {
     UserId: 935,
@@ -7488,6 +9358,8 @@ export const users = [
     Email: 'cnavarrepy@seattletimes.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-12-13',
+    DateExited: '2023-09-04',
   },
   {
     UserId: 936,
@@ -7496,6 +9368,8 @@ export const users = [
     Email: 'mczadlapz@i2i.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-06-01',
+    DateExited: null,
   },
   {
     UserId: 937,
@@ -7504,6 +9378,8 @@ export const users = [
     Email: 'pconorq0@mlb.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-01-31',
+    DateExited: '2024-05-05',
   },
   {
     UserId: 938,
@@ -7512,6 +9388,8 @@ export const users = [
     Email: 'lsmoutq1@bloglines.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-09-27',
+    DateExited: null,
   },
   {
     UserId: 939,
@@ -7520,6 +9398,8 @@ export const users = [
     Email: 'idyballq2@utexas.edu',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-01-23',
+    DateExited: null,
   },
   {
     UserId: 940,
@@ -7528,6 +9408,8 @@ export const users = [
     Email: 'dnooreq3@imgur.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-04-06',
+    DateExited: '2024-04-03',
   },
   {
     UserId: 941,
@@ -7536,6 +9418,8 @@ export const users = [
     Email: 'tackeroydq4@twitter.com',
     Gender: 'Genderqueer',
     Active: 'FALSE',
+    DateHired: '2020-04-12',
+    DateExited: '2023-06-14',
   },
   {
     UserId: 942,
@@ -7544,6 +9428,8 @@ export const users = [
     Email: 'nbillitteriq5@prnewswire.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-12-09',
+    DateExited: null,
   },
   {
     UserId: 943,
@@ -7552,6 +9438,8 @@ export const users = [
     Email: 'cmardallq6@theguardian.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2023-11-06',
+    DateExited: null,
   },
   {
     UserId: 944,
@@ -7560,6 +9448,8 @@ export const users = [
     Email: 'gvakhrushevq7@joomla.org',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-09-16',
+    DateExited: null,
   },
   {
     UserId: 945,
@@ -7568,6 +9458,8 @@ export const users = [
     Email: 'mtuttiettq8@amazonaws.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-07-07',
+    DateExited: '2023-09-07',
   },
   {
     UserId: 946,
@@ -7576,6 +9468,8 @@ export const users = [
     Email: 'ccrewdsonq9@tiny.cc',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-03-22',
+    DateExited: '2023-10-01',
   },
   {
     UserId: 947,
@@ -7584,6 +9478,8 @@ export const users = [
     Email: 'deppqa@cnn.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-08-16',
+    DateExited: '2023-02-08',
   },
   {
     UserId: 948,
@@ -7592,6 +9488,8 @@ export const users = [
     Email: 'nbeallqb@telegraph.co.uk',
     Gender: 'Bigender',
     Active: 'FALSE',
+    DateHired: '2020-07-04',
+    DateExited: '2021-09-25',
   },
   {
     UserId: 949,
@@ -7600,6 +9498,8 @@ export const users = [
     Email: 'wkynetonqc@ebay.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-01-06',
+    DateExited: null,
   },
   {
     UserId: 950,
@@ -7608,6 +9508,8 @@ export const users = [
     Email: 'rburgoyneqd@blogspot.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-11-30',
+    DateExited: null,
   },
   {
     UserId: 951,
@@ -7616,6 +9518,8 @@ export const users = [
     Email: 'bpettisqe@linkedin.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-05-15',
+    DateExited: null,
   },
   {
     UserId: 952,
@@ -7624,6 +9528,8 @@ export const users = [
     Email: 'econduitqf@hatena.ne.jp',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-09-05',
+    DateExited: null,
   },
   {
     UserId: 953,
@@ -7632,6 +9538,8 @@ export const users = [
     Email: 'jdifilippoqg@php.net',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-11-06',
+    DateExited: '2024-10-17',
   },
   {
     UserId: 954,
@@ -7640,6 +9548,8 @@ export const users = [
     Email: 'gfurneyqh@alexa.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-10-03',
+    DateExited: null,
   },
   {
     UserId: 955,
@@ -7648,6 +9558,8 @@ export const users = [
     Email: 'jhaileyqi@loc.gov',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-24',
+    DateExited: '2023-11-21',
   },
   {
     UserId: 956,
@@ -7656,6 +9568,8 @@ export const users = [
     Email: 'thundeyqj@globo.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-12-15',
+    DateExited: null,
   },
   {
     UserId: 957,
@@ -7664,6 +9578,8 @@ export const users = [
     Email: 'cblanningqk@angelfire.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2020-10-31',
+    DateExited: '2024-05-17',
   },
   {
     UserId: 958,
@@ -7672,6 +9588,8 @@ export const users = [
     Email: 'djordenql@harvard.edu',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-11-03',
+    DateExited: null,
   },
   {
     UserId: 959,
@@ -7680,6 +9598,8 @@ export const users = [
     Email: 'emuirdenqm@stumbleupon.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-05-15',
+    DateExited: null,
   },
   {
     UserId: 960,
@@ -7688,6 +9608,8 @@ export const users = [
     Email: 'bscrivensqn@amazon.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-04-14',
+    DateExited: null,
   },
   {
     UserId: 961,
@@ -7696,6 +9618,8 @@ export const users = [
     Email: 'rstockwellqo@unblog.fr',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-08-10',
+    DateExited: null,
   },
   {
     UserId: 962,
@@ -7704,6 +9628,8 @@ export const users = [
     Email: 'tbeynknqp@alexa.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2022-02-22',
+    DateExited: '2022-09-27',
   },
   {
     UserId: 963,
@@ -7712,6 +9638,8 @@ export const users = [
     Email: 'beversleyqq@baidu.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-04-30',
+    DateExited: null,
   },
   {
     UserId: 964,
@@ -7720,6 +9648,8 @@ export const users = [
     Email: 'cmaxweellqr@blogspot.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-06-22',
+    DateExited: null,
   },
   {
     UserId: 965,
@@ -7728,6 +9658,8 @@ export const users = [
     Email: 'mcraythornqs@goo.gl',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-06-19',
+    DateExited: null,
   },
   {
     UserId: 966,
@@ -7736,6 +9668,8 @@ export const users = [
     Email: 'nslimanqt@youku.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-03-12',
+    DateExited: '2023-12-09',
   },
   {
     UserId: 967,
@@ -7744,6 +9678,8 @@ export const users = [
     Email: 'mpadellqu@unblog.fr',
     Gender: 'Agender',
     Active: 'FALSE',
+    DateHired: '2021-08-20',
+    DateExited: '2021-10-13',
   },
   {
     UserId: 968,
@@ -7752,6 +9688,8 @@ export const users = [
     Email: 'ycurgenvenqv@dyndns.org',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-06-15',
+    DateExited: '2023-01-26',
   },
   {
     UserId: 969,
@@ -7760,6 +9698,8 @@ export const users = [
     Email: 'srowesbyqw@yandex.ru',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-03-01',
+    DateExited: '2024-11-08',
   },
   {
     UserId: 970,
@@ -7768,6 +9708,8 @@ export const users = [
     Email: 'zmacguireqx@canalblog.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-01-27',
+    DateExited: null,
   },
   {
     UserId: 971,
@@ -7776,6 +9718,8 @@ export const users = [
     Email: 'hbussyqy@arstechnica.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-12-22',
+    DateExited: null,
   },
   {
     UserId: 972,
@@ -7784,6 +9728,8 @@ export const users = [
     Email: 'gnattrassqz@google.it',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-07-09',
+    DateExited: null,
   },
   {
     UserId: 973,
@@ -7792,6 +9738,8 @@ export const users = [
     Email: 'cbelsonr0@qq.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-10-19',
+    DateExited: '2023-05-24',
   },
   {
     UserId: 974,
@@ -7800,6 +9748,8 @@ export const users = [
     Email: 'sdessentr1@cbc.ca',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-10-21',
+    DateExited: '2024-11-01',
   },
   {
     UserId: 975,
@@ -7808,6 +9758,8 @@ export const users = [
     Email: 'jwallbrookr2@biblegateway.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-01-23',
+    DateExited: null,
   },
   {
     UserId: 976,
@@ -7816,6 +9768,8 @@ export const users = [
     Email: 'kquinr3@goo.gl',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2020-07-26',
+    DateExited: null,
   },
   {
     UserId: 977,
@@ -7824,6 +9778,8 @@ export const users = [
     Email: 'twindmillr4@about.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-11-09',
+    DateExited: '2021-07-07',
   },
   {
     UserId: 978,
@@ -7832,6 +9788,8 @@ export const users = [
     Email: 'icogarr5@biblegateway.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-09-21',
+    DateExited: '2023-07-08',
   },
   {
     UserId: 979,
@@ -7840,6 +9798,8 @@ export const users = [
     Email: 'hlocktonr6@ebay.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2023-06-14',
+    DateExited: null,
   },
   {
     UserId: 980,
@@ -7848,6 +9808,8 @@ export const users = [
     Email: 'sregglarr7@apple.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-10-07',
+    DateExited: null,
   },
   {
     UserId: 981,
@@ -7856,6 +9818,8 @@ export const users = [
     Email: 'dtomichr8@i2i.jp',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-12-03',
+    DateExited: null,
   },
   {
     UserId: 982,
@@ -7864,6 +9828,8 @@ export const users = [
     Email: 'gsealyr9@desdev.cn',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2022-11-10',
+    DateExited: '2023-05-31',
   },
   {
     UserId: 983,
@@ -7872,6 +9838,8 @@ export const users = [
     Email: 'pdomangera@chicagotribune.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2024-09-06',
+    DateExited: '2024-10-15',
   },
   {
     UserId: 984,
@@ -7880,6 +9848,8 @@ export const users = [
     Email: 'rlantaffrb@feedburner.com',
     Gender: 'Bigender',
     Active: 'TRUE',
+    DateHired: '2023-11-29',
+    DateExited: null,
   },
   {
     UserId: 985,
@@ -7888,6 +9858,8 @@ export const users = [
     Email: 'fmcgiveenrc@wikipedia.org',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2021-05-28',
+    DateExited: null,
   },
   {
     UserId: 986,
@@ -7896,6 +9868,8 @@ export const users = [
     Email: 'sstonhamrd@linkedin.com',
     Gender: 'Polygender',
     Active: 'FALSE',
+    DateHired: '2022-08-10',
+    DateExited: '2023-10-25',
   },
   {
     UserId: 987,
@@ -7904,6 +9878,8 @@ export const users = [
     Email: 'mraratyre@adobe.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2024-08-03',
+    DateExited: null,
   },
   {
     UserId: 988,
@@ -7912,6 +9888,8 @@ export const users = [
     Email: 'bivainrf@360.cn',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-09-16',
+    DateExited: '2021-11-30',
   },
   {
     UserId: 989,
@@ -7920,6 +9898,8 @@ export const users = [
     Email: 'agaiterrg@1und1.de',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2024-10-23',
+    DateExited: '2024-11-07',
   },
   {
     UserId: 990,
@@ -7928,6 +9908,8 @@ export const users = [
     Email: 'rodeerh@vk.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2021-08-17',
+    DateExited: '2023-01-24',
   },
   {
     UserId: 991,
@@ -7936,6 +9918,8 @@ export const users = [
     Email: 'iondricekri@amazon.co.jp',
     Gender: 'Genderfluid',
     Active: 'FALSE',
+    DateHired: '2021-01-22',
+    DateExited: '2022-06-29',
   },
   {
     UserId: 992,
@@ -7944,6 +9928,8 @@ export const users = [
     Email: 'mpeirsonrj@istockphoto.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-01-30',
+    DateExited: '2024-07-05',
   },
   {
     UserId: 993,
@@ -7952,6 +9938,8 @@ export const users = [
     Email: 'renriquezrk@nps.gov',
     Gender: 'Agender',
     Active: 'TRUE',
+    DateHired: '2020-09-07',
+    DateExited: null,
   },
   {
     UserId: 994,
@@ -7960,6 +9948,8 @@ export const users = [
     Email: 'skidrl@sun.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2020-06-19',
+    DateExited: null,
   },
   {
     UserId: 995,
@@ -7968,6 +9958,8 @@ export const users = [
     Email: 'norwinrm@yelp.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2020-11-02',
+    DateExited: '2023-08-24',
   },
   {
     UserId: 996,
@@ -7976,6 +9968,8 @@ export const users = [
     Email: 'dlansdalern@phpbb.com',
     Gender: 'Female',
     Active: 'FALSE',
+    DateHired: '2023-07-11',
+    DateExited: '2024-05-28',
   },
   {
     UserId: 997,
@@ -7984,6 +9978,8 @@ export const users = [
     Email: 'sallsupro@domainmarket.com',
     Gender: 'Male',
     Active: 'FALSE',
+    DateHired: '2023-08-19',
+    DateExited: '2024-01-16',
   },
   {
     UserId: 998,
@@ -7992,6 +9988,8 @@ export const users = [
     Email: 'fduchatelrp@over-blog.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2024-08-13',
+    DateExited: null,
   },
   {
     UserId: 999,
@@ -8000,6 +9998,8 @@ export const users = [
     Email: 'klettsonrq@artisteer.com',
     Gender: 'Female',
     Active: 'TRUE',
+    DateHired: '2022-03-21',
+    DateExited: null,
   },
   {
     UserId: 1000,
@@ -8008,6 +10008,8 @@ export const users = [
     Email: 'sastletrr@posterous.com',
     Gender: 'Male',
     Active: 'TRUE',
+    DateHired: '2022-07-14',
+    DateExited: null,
   },
 ]
 

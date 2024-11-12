@@ -38,7 +38,7 @@ export function Stat({ title, value, badgeType, formattedRate, subText }) {
         {badgeType && (
           <>
             <Badge color={badgeType === 'positive' ? 'lime' : 'pink'}>{formattedRate}</Badge>{' '}
-            <span className="text-zinc-500">of total users</span>
+            <span className="text-zinc-500">of total employees</span>
           </>
         )}
         {subText && (
@@ -81,15 +81,15 @@ export default async function Home({ searchParams }) {
       </div>
       <div className="mt-4 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
         <Stat title="Total budget" value={formatCurrency(totalBudget)} subText="Allocated across all departments" />
-        <Stat title="Total Users" value={totalUsers} subText="All registered employees" />
+        <Stat title="Total Employees" value={totalUsers} subText="All registered employees" />
         <Stat
-          title="Total Active Users"
+          title="Total Active Employees"
           value={totalActiveUsers}
           badgeType="positive"
           formattedRate={`${activeUsersRate}%`}
         />
         <Stat
-          title="Total Inactive Users"
+          title="Total Inactive Employees"
           value={totalInactiveUsers}
           badgeType="negative"
           formattedRate={`${inactiveUsersRate}%`}
