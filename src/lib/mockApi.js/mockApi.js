@@ -166,6 +166,63 @@ export async function getTotalInactiveUsers() {
   return inactiveUsers.length
 }
 
+export async function getUsersJoinedByMonth(year) {
+  const users = await getUsers()
+
+  // Initialize an array of 12 months with counts set to 0
+  const joinedByMonth = Array(12).fill(0)
+
+  let totalEmployeesJoined = 0
+  const totalEmployees = users.length
+  users.forEach((user) => {
+    if (user.DateHired) {
+      const hireDate = new Date(user.DateHired)
+      const hireYear = hireDate.getFullYear()
+      if (hireYear === year) {
+        const hireMonth = hireDate.getMonth() // getMonth() returns 0 for Jan, 11 for Dec
+        joinedByMonth[hireMonth] += 1
+        totalEmployeesJoined += 1
+      }
+    }
+  })
+
+  const result = {
+    totalEmployees,
+    totalEmployeesJoined,
+    monthlyData: joinedByMonth,
+  }
+  return result
+}
+
+export async function getUsersLeftByMonth(year) {
+  const users = await getUsers()
+
+  // Initialize an array of 12 months with counts set to 0
+  const leftByMonth = Array(12).fill(0)
+
+  let totalEmployeesLeft = 0
+  const totalEmployees = users.length
+  users.forEach((user) => {
+    if (user.DateExited) {
+      const exitDate = new Date(user.DateExited)
+      const exitYear = exitDate.getFullYear()
+      if (exitYear === year) {
+        const exitMonth = exitDate.getMonth() // getMonth() returns 0 for Jan, 11 for Dec
+        leftByMonth[exitMonth] += 1
+        totalEmployeesLeft += 1
+      }
+    }
+  })
+
+  const result = {
+    totalEmployees,
+    totalEmployeesLeft,
+    monthlyData: leftByMonth,
+  }
+  console.log('result:', result)
+  return result
+}
+
 export async function getUsersInDepartment(departmentName, page = 1, limit = 10, query = '') {
   // Fetch basic user information
   const usersData = await getUsers()

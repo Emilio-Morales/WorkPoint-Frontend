@@ -1,6 +1,20 @@
 import StatCard from '@/components/metrics/TestGraph'
+import { getUsersJoinedByMonth, getUsersLeftByMonth } from '@/lib/mockApi.js/mockApi'
 
-export default function BentoGrid3() {
+export default async function BentoGrid3() {
+  const usersJoined2024 = await getUsersJoinedByMonth(2024)
+  const usersLeft2024 = await getUsersLeftByMonth(2024)
+
+  console.log('joined:', usersJoined2024)
+  console.log('left:', usersLeft2024)
+
+  const totalJoined2024 = usersJoined2024.totalEmployeesJoined
+  const totalLeft2024 = usersLeft2024.totalEmployeesLeft
+  const totalEmployees2024 = usersJoined2024.totalEmployees
+
+  const joinedPercentage2024 = ((totalJoined2024 / totalEmployees2024) * 100).toFixed(2)
+  const exitedPercentage2024 = ((totalLeft2024 / totalEmployees2024) * 100).toFixed(2)
+
   return (
     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
       <div className="relative lg:col-span-3 xl:col-span-2">
@@ -21,32 +35,41 @@ export default function BentoGrid3() {
           {/* title, value, interval, trend, data */}
           <StatCard
             title="Employees Joined"
-            value="23k"
-            interval="Last year"
+            value={totalJoined2024}
+            interval="2024"
             trend="up"
-            data={[200, 24, 220, 260, 240, 380, 100, 240, 280, 240, 300, 340]}
+            data={usersJoined2024.monthlyData}
+            rate={joinedPercentage2024}
           />
           {/* <EmployeesJoinedLineGraph /> */}
         </div>
         {/* <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]" /> */}
       </div>
       <div className="relative lg:col-span-3 xl:col-span-2">
-        <div className="absolute inset-px rounded-lg bg-white" />
-        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-          <img
+        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+        <div className="relative flex h-fit flex-col overflow-hidden">
+          {/* <img
             alt=""
             src="https://tailwindui.com/plus/img/component-images/bento-01-integrations.png"
             className="h-80 object-cover object-center"
+          /> */}
+          <StatCard
+            title="Employees Exited"
+            value={totalLeft2024}
+            interval="2024"
+            trend="down"
+            data={usersLeft2024.monthlyData}
+            rate={exitedPercentage2024}
           />
-          <div className="p-10 pt-4">
+          {/* <div className="p-10 pt-4">
             <h3 className="text-sm/4 font-semibold text-indigo-600">Integrations</h3>
             <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">Connect your favorite tools</p>
             <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
               Maecenas at augue sed elit dictum vulputate, in nisi aliquam maximus arcu.
             </p>
-          </div>
+          </div> */}
         </div>
-        <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" />
+        {/* <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" /> */}
       </div>
       <div className="relative lg:col-span-3 xl:col-span-2">
         <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]" />

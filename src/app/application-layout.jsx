@@ -47,8 +47,6 @@ function AccountDropdownMenu({ anchor }) {
 
 export async function ApplicationLayout({ events, children }) {
   const topDepartments = await getTopSalaryAllocatingDepartments()
-  console.log('top departments:', topDepartments)
-
   return (
     <SidebarLayout
       navbar={

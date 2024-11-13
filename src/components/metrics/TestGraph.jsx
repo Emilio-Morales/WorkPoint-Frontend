@@ -10,21 +10,6 @@ import { areaElementClasses } from '@mui/x-charts/LineChart'
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart'
 import { useTheme } from 'next-themes'
 
-function getDaysInMonth(month, year) {
-  const date = new Date(year, month, 0)
-  const monthName = date.toLocaleDateString('en-US', {
-    month: 'short',
-  })
-  const daysInMonth = date.getDate()
-  const days = []
-  let i = 1
-  while (days.length < daysInMonth) {
-    days.push(`${monthName} ${i}`)
-    i += 1
-  }
-  return days
-}
-
 function getAllMonths() {
   const months = []
 
@@ -51,9 +36,7 @@ function AreaGradient({ color, id }) {
   )
 }
 
-function StatCard({ title, value, interval, trend, data }) {
-  //   const muiTheme = muiUseTheme()
-
+function StatCard({ title, value, interval, trend, data, rate }) {
   const { theme } = useTheme()
   const isDarkMode = theme === 'dark'
 
@@ -65,7 +48,8 @@ function StatCard({ title, value, interval, trend, data }) {
         paper: isDarkMode ? '#18181b' : '#ffffff',
       },
       text: {
-        primary: isDarkMode ? '#d1d5db' : '#374151',
+        primary: isDarkMode ? '#d1d5db' : 'hsl(220, 30%, 6%)',
+        secondary: isDarkMode ? 'hsl(215, 15%, 75%)' : 'hsl(220, 20%, 35%)',
       },
     },
     components: {
@@ -97,21 +81,11 @@ function StatCard({ title, value, interval, trend, data }) {
   })
 
   muiTheme.palette.mode = isDarkMode ? 'dark' : 'light'
-
-  //   const daysInWeek = getDaysInMonth(4, 2024)
   const months = getAllMonths()
-
-  console.log('theme.palette: ', muiTheme.palette)
-  console.log('muiTheme.palette.mode:', muiTheme.palette.mode)
-  console.log('muiTheme:', muiTheme)
-
-  //   muiTheme.palette.background.default = isDarkMode ? '#18181b' : '#ffffff'
-  //   muiTheme.palette.background.paper = isDarkMode ? '#18181b' : '#ffffff'
-
   const trendColors = {
-    up: muiTheme.palette.mode === 'light' ? muiTheme.palette.success.main : muiTheme.palette.success.dark,
-    down: muiTheme.palette.mode === 'light' ? muiTheme.palette.error.main : muiTheme.palette.error.dark,
-    neutral: muiTheme.palette.mode === 'light' ? muiTheme.palette.grey[400] : muiTheme.palette.grey[700],
+    up: muiTheme.palette.mode === 'light' ? 'hsl(120, 59%, 30%)' : 'hsl(120, 75%, 16%)',
+    down: muiTheme.palette.mode === 'light' ? 'hsl(0, 90%, 40%)' : 'hsl(0, 94%, 18%)',
+    neutral: muiTheme.palette.mode === 'light' ? 'hsl(220, 20%, 65%)' : 'hsl(220, 20%, 25%)',
   }
 
   const labelColors = {
@@ -122,22 +96,79 @@ function StatCard({ title, value, interval, trend, data }) {
 
   const color = labelColors[trend]
   const chartColor = trendColors[trend]
-  const trendValues = { up: '+25%', down: '-25%', neutral: '+5%' }
+  const trendValues = { up: `+${rate}%`, down: `-${rate}%`, neutral: '+5%' }
 
   return (
     <ThemeProvider theme={muiTheme}>
       <Card variant="outlined" sx={{ height: '100%', flexGrow: 1 }}>
         <CardContent>
-          <Typography component="h2" variant="subtitle2" gutterBottom>
+          <Typography
+            component="h2"
+            variant="subtitle2"
+            gutterBottom
+            sx={{
+              fontWeight: 500,
+
+              color: isDarkMode ? '#FFFFFF' : 'hsl(220, 30%, 6%)',
+            }}
+          >
             {title}
           </Typography>
           <Stack direction="column" sx={{ justifyContent: 'space-between', flexGrow: '1', gap: 1 }}>
             <Stack sx={{ justifyContent: 'space-between' }}>
               <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-                <Typography variant="h4" component="p">
+                <Typography
+                  variant="h4"
+                  component="p"
+                  sx={{
+                    fontWeight: 600,
+                    color: isDarkMode ? '#FFFFFF' : 'hsl(220, 30%, 6%)',
+                    fontSize: '1.5rem',
+                    lineHeight: '1.5',
+                  }}
+                >
                   {value}
                 </Typography>
-                <Chip size="small" color={color} label={trendValues[trend]} />
+                <Chip
+                  size="small"
+                  color={color}
+                  label={trendValues[trend]}
+                  sx={{
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    paddingLeft: '8px',
+                    paddingRight: '8px',
+                    border: '1px solid',
+                    fontSize: '0.75rem',
+                    borderRadius: '999px',
+                    borderColor:
+                      trend === 'up'
+                        ? isDarkMode
+                          ? 'hsl(120, 84%, 10%)'
+                          : 'hsl(120, 75%, 87%)'
+                        : isDarkMode
+                          ? 'hsl(0, 95%, 12%)'
+                          : 'hsl(0, 92%, 90%)', // Conditional colors based on trend type
+                    backgroundColor:
+                      trend === 'up'
+                        ? isDarkMode
+                          ? 'hsl(120, 87%, 6%)'
+                          : 'hsl(120, 80%, 98%)'
+                        : isDarkMode
+                          ? 'hsl(0, 93%, 6%)'
+                          : 'hsl(0, 100%, 97%)', // Conditional colors for joined vs exited
+                    color:
+                      trend === 'up'
+                        ? isDarkMode
+                          ? 'hsl(120, 61%, 77%)'
+                          : 'hsl(120, 59%, 30%)'
+                        : isDarkMode
+                          ? 'hsl(0, 94%, 80%)'
+                          : 'hsl(0, 59%, 30%)', // Text color
+                    fontWeight: 600,
+                  }}
+                />
               </Stack>
               <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                 {interval}
