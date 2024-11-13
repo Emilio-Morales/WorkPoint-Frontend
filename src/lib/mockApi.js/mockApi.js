@@ -219,8 +219,82 @@ export async function getUsersLeftByMonth(year) {
     totalEmployeesLeft,
     monthlyData: leftByMonth,
   }
-  console.log('result:', result)
   return result
+}
+
+export async function getTotalBudgetByMonth(year) {
+  const mergedData = await mergeUsersWithSalaries() // Merged data that contains salaries and user details
+
+  // Initialize an array with 12 slots for each month of the year, each starting at 0
+  const monthlyBudgets = Array(12).fill(0)
+
+  mergedData.forEach((user) => {
+    if (user.DateHired) {
+      const hireDate = new Date(user.DateHired)
+
+      for (let month = 0; month < 12; month++) {
+        const monthDate = new Date(year, month)
+
+        // Employee should be counted if:
+        // 1. They were hired before or during the current month (`hireDate <= monthDate`).
+        if (hireDate <= monthDate) {
+          monthlyBudgets[month] += user.Salary
+        }
+      }
+    }
+  })
+
+  return monthlyBudgets
+}
+
+export async function getActiveEmployeeBudgetByMonth(year) {
+  const salaries = await mergeUsersWithSalaries()
+
+  // Initialize an array with 12 slots for each month of the year, each starting at 0
+  const monthlyBudgets = Array(12).fill(0)
+
+  salaries.forEach((user) => {
+    if (user.Active.toLowerCase() === 'true' && user.DateHired) {
+      const hireDate = new Date(user.DateHired)
+
+      for (let month = 0; month < 12; month++) {
+        const monthDate = new Date(year, month)
+
+        // Employee should be counted if:
+        // 1. They were hired before or during the current month (`hireDate <= monthDate`).
+        if (hireDate <= monthDate) {
+          monthlyBudgets[month] += user.Salary
+        }
+      }
+    }
+  })
+
+  return monthlyBudgets
+}
+
+export async function getExitedEmployeeBudgetByMonth(year) {
+  const salaries = await mergeUsersWithSalaries()
+
+  // Initialize an array with 12 slots for each month of the year, each starting at 0
+  const monthlyBudgets = Array(12).fill(0)
+
+  salaries.forEach((user) => {
+    if (user.Active.toLowerCase() === 'false' && user.DateHired) {
+      const hireDate = new Date(user.DateHired)
+
+      for (let month = 0; month < 12; month++) {
+        const monthDate = new Date(year, month)
+
+        // Employee should be counted if:
+        // 1. They were hired before or during the current month (`hireDate <= monthDate`).
+        if (hireDate <= monthDate) {
+          monthlyBudgets[month] += user.Salary
+        }
+      }
+    }
+  })
+
+  return monthlyBudgets
 }
 
 export async function getUsersInDepartment(departmentName, page = 1, limit = 10, query = '') {
@@ -327,4 +401,20 @@ async function getUsersJobInfo() {
 
 async function getUsersSalary() {
   return userSalary
+}
+async function mergeUsersWithSalaries() {
+  // Get both salaries and user details
+  const salaries = await getUsersSalary()
+  const users = await getUsers() // Assuming you have a function like getUsers() that fetches user details
+
+  // Merge salary data into user data based on UserId
+  const mergedData = users.map((user) => {
+    const userSalaryData = salaries.find((salary) => salary.UserId === user.UserId)
+    return {
+      ...user,
+      Salary: userSalaryData ? userSalaryData.Salary : 0, // Add salary, or 0 if not found
+    }
+  })
+
+  return mergedData
 }
