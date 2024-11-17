@@ -49,10 +49,18 @@ function getAllMonths() {
   return months
 }
 
-function formatData(data, variant) {
+function formatData(data) {
+  const propertiesToArray = Object.values(data)
+  const dataArray = propertiesToArray[0]
+
+  const rateOfChange = dataArray.map((value, index, array) => {
+    if (index === 0) return 0 // No rate of change for the first month
+    return value - array[index - 1] // Monthly difference
+  })
+
   const result = []
 
-  if (variant !== 'activeVsInactive' && data['totalBudget']) {
+  if (data['totalBudget']) {
     result.push({
       id: 'total-budget',
       label: 'Total Budget',
@@ -62,7 +70,7 @@ function formatData(data, variant) {
       // area: true,
       // stackOrder: 'ascending',
       // data: [300, 900, 600, 1200, 1500, 1800, 2400, 2100, 2700, 3000, 1800, 3300],
-      data: data['totalBudget'],
+      data: rateOfChange,
       // data: [
       //   116256588, 119005117, 120860721, 122052533, 123900109, 125348984, 127686610, 129278440, 131404242,
       //   133122616, 136651613, 137692611.88000008,
@@ -81,7 +89,7 @@ function formatData(data, variant) {
       // area: true,
       // stackOrder: 'ascending',
       // data: [500, 900, 700, 1400, 1100, 1700, 2300, 2000, 2600, 2900, 2300, 3200],
-      data: data['totalActiveBudget'],
+      data: rateOfChange,
     })
   }
   if (data['totalInactiveBudget']) {
@@ -93,7 +101,7 @@ function formatData(data, variant) {
       // stack: 'total',
       // stackOrder: 'ascending',
       // data: [1000, 1500, 1200, 1700, 1300, 2000, 2400, 2200, 2600, 2800, 2500, 3000],
-      data: data['totalInactiveBudget'],
+      data: rateOfChange,
       // area: true,
     })
   }
@@ -101,58 +109,16 @@ function formatData(data, variant) {
   return result
 }
 
-// Returns growth rate of specified budget and trend type
-function calculateGrowthRate(budget) {
-  console.log('budget:', budget)
-  const currentBudget = budget[budget.length - 1] // Current month
-  const previousBudget = budget[0] // Starting month
-
-  console.log('currentBudget:', currentBudget, 'previousBudget:', previousBudget)
-
-  let trend = ''
-
-  if (currentBudget > previousBudget) {
-    trend = 'up'
-  } else if (currentBudget < previousBudget) {
-    trend = 'down'
-  } else {
-    trend = 'neutral'
-  }
-
-  let growthRate = 0
-
-  // Prevent division by zero
-  if (previousBudget !== 0) {
-    const tempRate = ((currentBudget - previousBudget) / previousBudget) * 100
-    growthRate = `${tempRate > 0 ? '+' : '-'}${tempRate.toFixed(2)}%`
-  }
-
-  const result = { trend, growthRate }
-
-  console.log('Result:', result)
-  return result
-}
-
 /* 
-Budgets is expecting to recieve 3 properties:
+Budgets is expecting to recieve 1 of 3 properties:
   totalBudget,
   totalActiveBudget,
   totalInactiveBudget,
 
   All three of these are an array of numbers
 */
-export default function BudgetLineChart({ budgets, heading, description, variant, metricType }) {
-  const budgetData = formatData(budgets, variant)
-  const { trend, growthRate } =
-    variant === 'activeVsInactive'
-      ? calculateGrowthRate(budgets['totalBudget'])
-      : variant === 'totalVsActive'
-        ? calculateGrowthRate(budgets['totalActiveBudget'])
-        : calculateGrowthRate(budgets['totalInactiveBudget'])
-
-  let isPositiveTrend
-  if (metricType === 'neutral') isPositiveTrend = null
-  else isPositiveTrend = (metricType === 'good' && trend === 'up') || (metricType === 'bad' && trend === 'down')
+export default function BudgetRateOfChangeChart({ budgets }) {
+  const budgetData = formatData(budgets)
 
   const { theme } = useTheme()
 
@@ -205,7 +171,7 @@ export default function BudgetLineChart({ budgets, heading, description, variant
       <Card variant="outlined" sx={{ width: '100%' }}>
         <CardContent sx={{}}>
           <Typography component="h2" variant="subtitle2" gutterBottom>
-            {heading}
+            Sessions
           </Typography>
           <Stack sx={{ justifyContent: 'space-between' }}>
             <Stack
@@ -221,8 +187,8 @@ export default function BudgetLineChart({ budgets, heading, description, variant
               </Typography>
               <Chip
                 size="small"
-                color="error"
-                label={growthRate}
+                color="success"
+                label="+35%"
                 sx={{
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
@@ -232,48 +198,16 @@ export default function BudgetLineChart({ budgets, heading, description, variant
                   border: '1px solid',
                   fontSize: '0.75rem',
                   borderRadius: '999px',
-                  borderColor:
-                    metricType === 'neutral'
-                      ? isDarkMode
-                        ? 'rgb(51, 60, 77)'
-                        : ' rgb(218, 222, 231)'
-                      : isPositiveTrend
-                        ? isDarkMode
-                          ? 'hsl(120, 84%, 10%)'
-                          : 'hsl(120, 75%, 87%)'
-                        : isDarkMode
-                          ? 'hsl(0, 95%, 12%)'
-                          : 'hsl(0, 92%, 90%)', // Conditional colors based on trend type
-                  backgroundColor:
-                    metricType === 'neutral'
-                      ? isDarkMode
-                        ? 'rgb(11, 14, 20)'
-                        : 'rgb(235, 238, 244)'
-                      : isPositiveTrend
-                        ? isDarkMode
-                          ? 'hsl(120, 87%, 6%)'
-                          : 'hsl(120, 80%, 98%)'
-                        : isDarkMode
-                          ? 'hsl(0, 93%, 6%)'
-                          : 'hsl(0, 100%, 97%)', // Conditional colors for joined vs exited
-                  color:
-                    metricType === 'neutral'
-                      ? isDarkMode
-                        ? 'rgb(194, 201, 214)'
-                        : 'rgb(86, 100, 129)'
-                      : isPositiveTrend
-                        ? isDarkMode
-                          ? 'hsl(120, 61%, 77%)'
-                          : 'hsl(120, 59%, 30%)'
-                        : isDarkMode
-                          ? 'hsl(0, 94%, 80%)'
-                          : 'hsl(0, 59%, 30%)', // Text color
+                  borderColor: isDarkMode ? 'hsl(120, 84%, 10%)' : 'hsl(120, 75%, 87%)',
+
+                  backgroundColor: isDarkMode ? 'hsl(120, 87%, 6%)' : 'hsl(120, 80%, 98%)',
+                  color: isDarkMode ? 'hsl(120, 61%, 77%)' : 'hsl(120, 59%, 30%)',
                   fontWeight: 600,
                 }}
               />
             </Stack>
             <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-              {description}
+              Sessions per day for the last 30 days
             </Typography>
           </Stack>
           <LineChart
@@ -313,7 +247,7 @@ export default function BudgetLineChart({ budgets, heading, description, variant
             yAxis={[
               {
                 // data: [totalBudget[totalBudget.length - 1], 108000000, 81000000, 54000000, 27000000, 0],
-                min: 50000000, // Set an appropriate minimum value that fits your data range
+                // min: 50000000, // Set an appropriate minimum value that fits your data range
                 // max: 200000000,
                 // strict: true,
                 // scaleType: 'linear',
