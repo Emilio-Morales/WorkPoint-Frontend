@@ -11,7 +11,7 @@ import {
   getUsersLeftByMonth,
 } from '@/lib/mockApi.js/mockApi'
 
-export default async function BentoGrid3() {
+export default async function EmployeeAndBudgetMetrics() {
   const usersJoined2024 = await getUsersJoinedByMonth(2024)
   const usersLeft2024 = await getUsersLeftByMonth(2024)
 
@@ -36,20 +36,14 @@ export default async function BentoGrid3() {
   const totalActiveBudgets2024 = await getActiveEmployeeBudgetByMonth(2024)
   const totalInactiveBudgets2024 = await getExitedEmployeeBudgetByMonth(2024)
 
-  // console.log('totalBudgets2024', totalBudgets2024)
-  // console.log('totalActiveBudgets2024', totalActiveBudgets2024)
-  // console.log('totalInactiveBudgets2024', totalInactiveBudgets2024)
-
   return (
-    <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-12">
+    <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-12">
       <div className="col-span-full">
         <Subheading>Comprehensive Analytics for Workforce and Budget Performance</Subheading>
         <Divider className="mt-4" />
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
-        {/* <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" /> */}
+      <div className="relative w-full sm:col-span-6 xl:col-span-3 xl:max-w-72">
         <div className="relative flex h-fit flex-col overflow-hidden">
-          {/* title, value, interval, trend, data */}
           <StatCard
             title="Employees Joined"
             value={totalJoined2024}
@@ -58,10 +52,9 @@ export default async function BentoGrid3() {
             data={usersJoined2024.monthlyData}
             rate={joinedPercentage2024}
           />
-          {/* <EmployeesJoinedLineGraph /> */}
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
+      <div className="relative sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
         <div className="relative flex h-fit flex-col overflow-hidden">
           <StatCard
             title="Employees Exited"
@@ -73,7 +66,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
+      <div className="relative sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
         <div className="relative flex h-fit flex-col overflow-hidden">
           <StatCard
             title="Employees Joined"
@@ -85,7 +78,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
+      <div className="relative sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
         <div className="relative flex h-fit flex-col overflow-hidden">
           <StatCard
             title="Employees Exited"
@@ -97,7 +90,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-12 xl:col-span-4">
+      <div className="relative order-1 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
         <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetLineChart
@@ -113,7 +106,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-4">
+      <div className="relative order-3 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
         <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetLineChart
@@ -128,7 +121,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-4">
+      <div className="relative order-5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
         <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetLineChart
@@ -143,7 +136,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-4">
+      <div className="relative order-2 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
         <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetRateOfChangeChart
@@ -157,7 +150,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-4">
+      <div className="relative order-4 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
         <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetRateOfChangeChart
@@ -171,7 +164,7 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      <div className="relative lg:col-span-6 xl:col-span-4">
+      <div className="relative order-6 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
         <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetRateOfChangeChart
@@ -185,43 +178,6 @@ export default async function BentoGrid3() {
           />
         </div>
       </div>
-      {/* <div className="relative lg:col-span-6 xl:col-span-4">
-        <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]" />
-        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
-          <img
-            alt=""
-            src="https://tailwindui.com/plus/img/component-images/bento-01-performance.png"
-            className="h-80 object-cover object-left"
-          />
-          <div className="p-10 pt-4">
-            <h3 className="text-sm/4 font-semibold text-indigo-600">Performance</h3>
-            <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">Lightning-fast builds</p>
-            <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida justo et nulla efficitur, maximus
-              egestas sem pellentesque.
-            </p>
-          </div>
-        </div>
-        <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]" />
-      </div>
-      <div className="relative lg:col-span-6 xl:col-span-4">
-        <div className="absolute inset-px rounded-lg bg-white lg:rounded-tr-[2rem]" />
-        <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
-          <img
-            alt=""
-            src="https://tailwindui.com/plus/img/component-images/bento-01-releases.png"
-            className="h-80 object-cover object-left lg:object-right"
-          />
-          <div className="p-10 pt-4">
-            <h3 className="text-sm/4 font-semibold text-indigo-600">Releases</h3>
-            <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">Push to deploy</p>
-            <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus massa, laoreet dapibus ex elit vitae odio.
-            </p>
-          </div>
-        </div>
-        <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]" />
-      </div> */}
     </div>
   )
 }
