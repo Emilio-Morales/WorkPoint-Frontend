@@ -11,12 +11,12 @@ import { useTheme } from 'next-themes'
 
 const colorMap = {
   light: {
-    'total-budget': 'hsl(215, 15%, 75%)', // Neutral blue for total budget
+    'total-budget': 'hsl(215, 15%, 75%)', // Neutral grey for total budget
     'total-active-budget': 'hsl(144, 72%, 41%)', // Green for active budget
     'total-inactive-budget': 'hsl(355, 98%, 66%)', // Red for inactive budget
   },
   dark: {
-    'total-budget': 'hsl(215, 15%, 40%)', // Darker neutral blue for total budget
+    'total-budget': 'hsl(215, 15%, 40%)', // Darker neutral grey for total budget
     'total-active-budget': 'hsl(144, 72%, 37%)', // Darker green for active budget
     'total-inactive-budget': 'hsl(355, 98%, 39%)', // Darker red for inactive budget
   },
@@ -25,9 +25,8 @@ const colorMap = {
 function getAllMonths() {
   const months = []
 
-  // Loop through months from 0 to 11 (JavaScript months are 0-indexed)
   for (let month = 0; month < 12; month++) {
-    const date = new Date(2023, month) // Year can be any year
+    const date = new Date(2023, month)
     const monthName = date.toLocaleDateString('en-US', {
       month: 'short',
     })
@@ -155,6 +154,7 @@ export default function BudgetLineChart({ budgets, heading, description, variant
       },
       text: {
         primary: isDarkMode ? '#d1d5db' : '#374151',
+        secondary: isDarkMode ? 'hsl(215, 15%, 75%)' : 'hsl(220, 20%, 35%)',
       },
     },
     components: {
@@ -192,7 +192,14 @@ export default function BudgetLineChart({ budgets, heading, description, variant
     <ThemeProvider theme={muiTheme}>
       <Card variant="outlined" sx={{ width: '100%' }}>
         <CardContent sx={{}}>
-          <Typography component="h2" variant="subtitle2" gutterBottom>
+          <Typography
+            component="h2"
+            variant="subtitle2"
+            gutterBottom
+            sx={{
+              color: isDarkMode ? 'hsl(0, 0%, 100%)' : 'hsl(220, 30%, 6%)',
+            }}
+          >
             {heading}
           </Typography>
           <Stack sx={{ justifyContent: 'space-between' }}>
@@ -204,7 +211,13 @@ export default function BudgetLineChart({ budgets, heading, description, variant
                 gap: 1,
               }}
             >
-              <Typography variant="h5" component="p">
+              <Typography
+                variant="h5"
+                component="p"
+                sx={{
+                  color: isDarkMode ? 'hsl(0, 0%, 100%)' : 'hsl(220, 30%, 6%)',
+                }}
+              >
                 {budgetSum}
               </Typography>
               <Chip

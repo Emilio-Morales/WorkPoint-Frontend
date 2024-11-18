@@ -150,6 +150,10 @@ export default async function BentoGrid3() {
             budgets={{
               totalBudget: totalBudgets2024,
             }}
+            heading="Monthly Total Budget Change"
+            description="Total net change in employee budget allocation across all months in 2024"
+            variant="activeVsInactive"
+            metricType="neutral"
           />
         </div>
       </div>
@@ -160,6 +164,10 @@ export default async function BentoGrid3() {
             budgets={{
               totalActiveBudget: totalActiveBudgets2024,
             }}
+            heading="Monthly Active Employee Budget Change"
+            description="Total net change in active employee budget allocation across all months in 2024"
+            variant="totalVsActive"
+            metricType="good"
           />
         </div>
       </div>
@@ -170,6 +178,10 @@ export default async function BentoGrid3() {
             budgets={{
               totalInactiveBudget: totalInactiveBudgets2024,
             }}
+            heading="Monthly Inactive Employee Budget Change"
+            description="Total net change in inactive employee budget allocation across all months in 2024"
+            variant="totalVsInactive"
+            metricType="bad"
           />
         </div>
       </div>

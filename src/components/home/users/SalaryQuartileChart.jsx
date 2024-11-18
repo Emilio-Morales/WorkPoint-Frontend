@@ -12,6 +12,7 @@ export default function SalaryQuartileChart({ userSalary, minSalary, maxSalary }
       mode: isDarkMode ? 'dark' : 'light',
       background: {
         default: isDarkMode ? '#18181b' : '#ffffff',
+        paper: isDarkMode ? '#18181b' : '#ffffff',
       },
       text: {
         primary: isDarkMode ? '#d1d5db' : '#374151',
