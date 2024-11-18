@@ -1,6 +1,8 @@
 import BudgetLineChart from '@/components/metrics/BudgetLineChart'
 import BudgetRateOfChangeChart from '@/components/metrics/BudgetRateOfChange'
-import StatCard from '@/components/metrics/TestGraph'
+import StatCard from '@/components/metrics/StatCard'
+import { Divider } from '@/components/ui/divider'
+import { Subheading } from '@/components/ui/heading'
 import {
   getActiveEmployeeBudgetByMonth,
   getExitedEmployeeBudgetByMonth,
@@ -39,7 +41,11 @@ export default async function BentoGrid3() {
   // console.log('totalInactiveBudgets2024', totalInactiveBudgets2024)
 
   return (
-    <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-12">
+    <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-12">
+      <div className="col-span-full">
+        <Subheading>Comprehensive Analytics for Workforce and Budget Performance</Subheading>
+        <Divider className="mt-4" />
+      </div>
       <div className="relative lg:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
         {/* <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" /> */}
         <div className="relative flex h-fit flex-col overflow-hidden">
@@ -116,7 +122,7 @@ export default async function BentoGrid3() {
               totalActiveBudget: totalActiveBudgets2024,
             }}
             heading="Monthly Active vs Total Salary Utilization"
-            description="Allocated to active Salary Budget in 2024"
+            description="Allocated to active employees Salary Budget in 2024"
             variant="totalVsActive"
             metricType="good"
           />
@@ -131,7 +137,7 @@ export default async function BentoGrid3() {
               totalInactiveBudget: totalInactiveBudgets2024,
             }}
             heading="Monthly Inactive vs Total Salary Utilization"
-            description="Allocated to inactive Salary Budget in 2024"
+            description="Allocated to inactive employees Salary Budget in 2024"
             variant="totalVsInactive"
             metricType="bad"
           />

@@ -1,10 +1,12 @@
 import BentoGrid1 from '@/components/home/users/BentoGrid1'
 import BentoGrid3 from '@/components/home/users/BentoGrid3'
+import { Heading } from '@/components/ui/heading'
 
 export default async function Metrics() {
   return (
     <div className="">
-      {/* <div className="flex h-screen items-center justify-center text-7xl">The Nigga Page.</div> */}
+      <Heading>Company Metrics Dashboard</Heading>
+
       <BentoGrid3 />
       <BentoGrid1 />
     </div>

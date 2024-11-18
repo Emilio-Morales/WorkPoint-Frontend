@@ -82,9 +82,14 @@ function StatCard({ title, value, interval, trend, data, rate }) {
 
   muiTheme.palette.mode = isDarkMode ? 'dark' : 'light'
   const months = getAllMonths()
+  // const trendColors = {
+  //   up: muiTheme.palette.mode === 'light' ? 'hsl(120, 59%, 30%)' : 'hsl(120, 75%, 16%)',
+  //   down: muiTheme.palette.mode === 'light' ? 'hsl(0, 90%, 40%)' : 'hsl(0, 94%, 18%)',
+  //   neutral: muiTheme.palette.mode === 'light' ? 'hsl(220, 20%, 65%)' : 'hsl(220, 20%, 25%)',
+  // }
   const trendColors = {
-    up: muiTheme.palette.mode === 'light' ? 'hsl(120, 59%, 30%)' : 'hsl(120, 75%, 16%)',
-    down: muiTheme.palette.mode === 'light' ? 'hsl(0, 90%, 40%)' : 'hsl(0, 94%, 18%)',
+    up: muiTheme.palette.mode === 'light' ? 'hsl(144, 72%, 41%)' : 'hsl(144, 72%, 37%)',
+    down: muiTheme.palette.mode === 'light' ? 'hsl(355, 98%, 66%)' : 'hsl(355, 98%, 39%)',
     neutral: muiTheme.palette.mode === 'light' ? 'hsl(220, 20%, 65%)' : 'hsl(220, 20%, 25%)',
   }
 
