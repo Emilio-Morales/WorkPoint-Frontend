@@ -42,7 +42,7 @@ export default async function EmployeeAndBudgetMetrics() {
         <Subheading>Comprehensive Analytics for Workforce and Budget Performance</Subheading>
         <Divider className="mt-4" />
       </div>
-      <div className="relative w-full sm:col-span-6 xl:col-span-3 xl:max-w-72">
+      <div className="relative w-full rounded-lg border border-zinc-950/5 sm:col-span-6 xl:col-span-3 xl:max-w-72 dark:border-white/10">
         <div className="relative flex h-fit flex-col overflow-hidden">
           <StatCard
             title="Employees Joined"
@@ -54,7 +54,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
+      <div className="relative rounded-lg border border-zinc-950/5 sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72 dark:border-white/10">
         <div className="relative flex h-fit flex-col overflow-hidden">
           <StatCard
             title="Employees Exited"
@@ -66,7 +66,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
+      <div className="relative rounded-lg border border-zinc-950/5 sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72 dark:border-white/10">
         <div className="relative flex h-fit flex-col overflow-hidden">
           <StatCard
             title="Employees Joined"
@@ -78,7 +78,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72">
+      <div className="relative rounded-lg border border-zinc-950/5 sm:col-span-6 xl:col-span-3 xl:w-full xl:max-w-72 dark:border-white/10">
         <div className="relative flex h-fit flex-col overflow-hidden">
           <StatCard
             title="Employees Exited"
@@ -90,8 +90,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative order-1 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
-        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+      <div className="relative order-1 rounded-lg border border-zinc-950/5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4 dark:border-white/10">
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetLineChart
             budgets={{
@@ -106,8 +105,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative order-3 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
-        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+      <div className="relative order-3 rounded-lg border border-zinc-950/5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4 dark:border-white/10">
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetLineChart
             budgets={{
@@ -121,8 +119,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative order-5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
-        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+      <div className="relative order-5 rounded-lg border border-zinc-950/5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4 dark:border-white/10">
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetLineChart
             budgets={{
@@ -136,8 +133,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative order-2 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
-        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+      <div className="relative order-2 rounded-lg border border-zinc-950/5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4 dark:border-white/10">
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetRateOfChangeChart
             budgets={{
@@ -150,8 +146,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative order-4 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
-        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+      <div className="relative order-4 rounded-lg border border-zinc-950/5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4 dark:border-white/10">
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetRateOfChangeChart
             budgets={{
@@ -164,8 +159,7 @@ export default async function EmployeeAndBudgetMetrics() {
           />
         </div>
       </div>
-      <div className="relative order-6 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4">
-        <div className="absolute inset-px rounded-lg border border-zinc-950/5 dark:border-white/10" />
+      <div className="relative order-6 rounded-lg border border-zinc-950/5 sm:col-span-12 lg:col-span-6 xl:order-none xl:col-span-4 dark:border-white/10">
         <div className="relative flex h-full flex-col overflow-hidden">
           <BudgetRateOfChangeChart
             budgets={{

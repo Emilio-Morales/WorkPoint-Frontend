@@ -10,7 +10,9 @@ const CustomTable = ({ columns, data }) => {
         <TableHead>
           <TableRow>
             {columns.map((column, index) => (
-              <TableHeader className={index === columns.length - 1 ? 'text-right' : ''}>{column.text}</TableHeader>
+              <TableHeader key={index + column.text} className={index === columns.length - 1 ? 'text-right' : ''}>
+                {column.text}
+              </TableHeader>
             ))}
           </TableRow>
         </TableHead>

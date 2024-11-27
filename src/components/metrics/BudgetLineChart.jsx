@@ -190,7 +190,15 @@ export default function BudgetLineChart({ budgets, heading, description, variant
 
   return (
     <ThemeProvider theme={muiTheme}>
-      <Card variant="outlined" sx={{ width: '100%' }}>
+      <Card
+        variant="outlined"
+        sx={{
+          width: '100%',
+          border: '0',
+          borderRadius: '0.5rem',
+          borderColor: isDarkMode ? 'rgb(255 255 255 / 0.1)' : 'rgb(9 9 11 / 0.05)',
+        }}
+      >
         <CardContent sx={{}}>
           <Typography
             component="h2"

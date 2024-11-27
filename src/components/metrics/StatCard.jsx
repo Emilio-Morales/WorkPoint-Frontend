@@ -105,7 +105,16 @@ function StatCard({ title, value, interval, trend, data, rate }) {
 
   return (
     <ThemeProvider theme={muiTheme}>
-      <Card variant="outlined" sx={{ height: '100%', flexGrow: 1 }}>
+      <Card
+        variant="outlined"
+        sx={{
+          height: '100%',
+          flexGrow: 1,
+          border: '0',
+          borderRadius: '0.5rem',
+          borderColor: isDarkMode ? 'rgb(255 255 255 / 0.1)' : 'rgb(9 9 11 / 0.05)',
+        }}
+      >
         <CardContent>
           <Typography
             component="h2"
