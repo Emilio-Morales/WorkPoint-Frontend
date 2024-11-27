@@ -50,7 +50,7 @@ const SalaryShareChart = ({ userSalary, departmentTotalSalary, userFirstName }) 
     return () => {
       clearInterval(timer)
     }
-  }, [])
+  }, [userSharePercentage])
 
   return (
     <div className="mx-auto h-44 w-full max-w-80 p-4">

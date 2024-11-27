@@ -63,8 +63,8 @@ export default function BentoGrid2({
               Budget Share for {user.FirstName} {user.LastName}
             </p>
             <p className="mt-2 max-w-lg text-sm/6 text-zinc-500 dark:text-zinc-400">
-              See how much of the {user.Department} department's salary budget is allocated to {user.FirstName}'s
-              compensation.
+              See how much of the {user.Department} department&apos;s salary budget is allocated to {user.FirstName}
+              &apos;s compensation.
             </p>
           </div>
           <div className="mx-auto mb-9 h-44 w-full max-w-80 p-4">
