@@ -101,7 +101,7 @@ function calculateGrowthRate(budget) {
 
   const result = { trend, growthRate }
 
-  console.log('Result:', result)
+  // console.log('Result:', result)
   return result
 }
 

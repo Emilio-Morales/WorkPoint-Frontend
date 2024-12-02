@@ -5,11 +5,13 @@ import { Divider } from '@/components/ui/divider'
 import { Subheading } from '@/components/ui/heading'
 import {
   getActiveEmployeeBudgetByMonth,
+  getDepartmentInfo,
   getExitedEmployeeBudgetByMonth,
   getTotalBudgetByMonth,
   getUsersJoinedByMonth,
   getUsersLeftByMonth,
 } from '@/lib/mockApi.js/mockApi'
+import { formatDepartmentsTableData } from '@/lib/utils'
 
 export default async function EmployeeAndBudgetMetrics() {
   const usersJoined2024 = await getUsersJoinedByMonth(2024)
@@ -35,6 +37,9 @@ export default async function EmployeeAndBudgetMetrics() {
   const totalBudgets2024 = await getTotalBudgetByMonth(2024)
   const totalActiveBudgets2024 = await getActiveEmployeeBudgetByMonth(2024)
   const totalInactiveBudgets2024 = await getExitedEmployeeBudgetByMonth(2024)
+  const test = await getDepartmentInfo()
+  const testDepartment = await formatDepartmentsTableData(test)
+  console.log('test:', testDepartment)
 
   return (
     <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-12">

@@ -389,6 +389,55 @@ export async function getTopSalaryAllocatingDepartments(limit = 4) {
   return sortedDepartments.slice(0, limit)
 }
 
+export async function getUsersJoinedByMonthForDepartment(departmentName, year) {
+  // Fetch basic user information
+  const users = await getUsers()
+  const jobInfo = await getUsersJobInfo()
+
+  // Join user data with job info
+  const fullUserData = users.map((user) => {
+    const job = jobInfo.find((job) => job.UserId === user.UserId)
+    return {
+      ...user,
+      Department: job ? job.Department : 'N/A',
+    }
+  })
+
+  // Filter users by department
+  const filteredByDepartment = fullUserData.filter(
+    (user) => user.Department.toLowerCase() === departmentName.toLowerCase()
+  )
+
+  // Initialize an array of 12 months with counts set to 0
+  const joinedByMonth = Array(12).fill(0)
+
+  let totalEmployeesJoined = 0
+  const totalEmployees = filteredByDepartment.length
+
+  // Iterate over filtered users to calculate join counts by month
+  filteredByDepartment.forEach((user) => {
+    if (user.DateHired) {
+      const hireDate = new Date(user.DateHired)
+      const hireYear = hireDate.getFullYear()
+      if (hireYear === year) {
+        const hireMonth = hireDate.getMonth() // getMonth() returns 0 for Jan, 11 for Dec
+        joinedByMonth[hireMonth] += 1
+        totalEmployeesJoined += 1
+      }
+    }
+  })
+
+  // Return the result
+  const result = {
+    department: departmentName,
+    totalEmployees,
+    totalEmployeesJoined,
+    monthlyData: joinedByMonth,
+  }
+
+  return result
+}
+
 /*
 ----Example Usage
     getDepartmentInfo().then(console.log) // Get info for all departments

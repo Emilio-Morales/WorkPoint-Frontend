@@ -60,6 +60,7 @@ export default async function Home({ searchParams }) {
   const query = searchParams.query || ''
 
   const usersInfo = await fetchUsers(page, 10, query)
+  console.log('userInfo: ', usersInfo)
   const users = usersInfo.data
 
   // Fetch Stats Data
