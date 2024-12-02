@@ -1,10 +1,36 @@
+import BudgetAllocationChart from '@/components/metrics/BudgetAllocationChart'
 import DepartmentsTable from '@/components/metrics/DepartmentsTable'
 import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
-import { formatDepartmentsTableData } from '@/lib/utils'
+import {
+  formatDepartmentsPieChartData,
+  formatDepartmentsProgressBarData,
+  formatDepartmentsTableData,
+} from '@/lib/utils'
+
+// {
+//   name: 'India',
+//   value: 50,
+//   flag: <IndiaFlag />,
+//   color: 'hsl(220, 25%, 65%)',
+// },
+
+// {
+//   departmentName: 'India',
+//   departmentBudgetShare: 50,
+//   departmentIcon: <IndiaFlag />,
+//   color: 'hsl(220, 25%, 65%)',
+// },
+
+// { departmentName: 'India', departmentBudget: 50000 },
 
 export default async function BentoGrid1() {
   const test = await getDepartmentInfo()
   const testDepartment = await formatDepartmentsTableData(test)
+  const testingDepartments = await getDepartmentInfo()
+  const testFormat = await formatDepartmentsProgressBarData(testingDepartments)
+  const testFormat2 = await formatDepartmentsPieChartData(testingDepartments)
+  // console.log('formatted:', testFormat)
+
   return (
     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-6 lg:grid-cols-12 lg:grid-rows-3">
       <div className="relative col-span-1 min-h-[80%] sm:col-span-6 lg:col-span-12 lg:row-span-3 xl:col-span-9">
@@ -46,9 +72,9 @@ export default async function BentoGrid1() {
           </div>
         </div>
       </div>
-      <div className="relative rounded-lg border sm:col-span-4 sm:max-h-[80%] lg:col-span-8 lg:row-span-2 xl:col-span-3">
+      <div className="relative sm:col-span-4 sm:max-h-[80%] lg:col-span-8 lg:row-span-2 xl:col-span-3">
         <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-zinc-950/5 dark:border-white/10">
-          <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+          {/* <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
             <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Powerful APIs</p>
             <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
               Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
@@ -66,7 +92,8 @@ export default async function BentoGrid1() {
               </div>
               <div className="px-6 pb-14 pt-6">public static void main (String[] args, int double) </div>
             </div>
-          </div>
+          </div> */}
+          <BudgetAllocationChart departments={testFormat} pieChartData={testFormat2} />
         </div>
       </div>
     </div>

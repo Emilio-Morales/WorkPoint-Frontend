@@ -15,7 +15,7 @@ import {
 import { Chip } from '@mui/material'
 import { SparkLineChart } from '@mui/x-charts'
 import Link from 'next/link'
-import { getUsersJoinedByMonthForDepartment } from './mockApi.js/mockApi'
+import { getTotalBudget, getUsersJoinedByMonthForDepartment } from './mockApi.js/mockApi'
 export function properCase(str) {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 }
@@ -729,4 +729,102 @@ export async function formatDepartmentsTableData(departmentsData) {
   )
 
   return formattedData
+}
+
+// export const departmentIcons = {
+//   Services: <ShieldCheckIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   Support: <PhoneArrowDownLeftIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   Accounting: <CreditCardIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   'Product Management': <FolderIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   Sales: <CurrencyDollarIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   'Research and Development': <BeakerIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   Training: <BookOpenIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   Legal: <ScaleIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   'Human Resources': <UserGroupIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   'Business Development': <ArrowTrendingUpIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   Marketing: <TagIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+//   Engineering: <CogIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
+// }
+export async function formatDepartmentsProgressBarData(departmentsData) {
+  if (!departmentsData || !Array.isArray(departmentsData)) {
+    throw new Error('Invalid department data provided')
+  }
+
+  const departmentIcons = {
+    Services: <ShieldCheckIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    Support: <PhoneArrowDownLeftIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    Accounting: <CreditCardIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    'Product Management': <FolderIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    Sales: <CurrencyDollarIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    'Research and Development': <BeakerIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    Training: <BookOpenIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    Legal: <ScaleIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    'Human Resources': <UserGroupIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    'Business Development': <ArrowTrendingUpIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    Marketing: <TagIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+    Engineering: <CogIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
+  }
+
+  const totalBudget = await getTotalBudget()
+
+  // {
+  //   departmentName: 'India',
+  //   departmentBudget: 50,
+  //   departmentIcon: <IndiaFlag />,
+  //   color: 'hsl(220, 25%, 65%)',
+  // },
+  const formattedData = await Promise.all(
+    departmentsData.map(async (department, index) => {
+      const departmentName = department.Department
+      const departmentBudgetShare = ((department.TotalSalaryPaidToDepartment / totalBudget) * 100).toFixed(1)
+      const departmentIcon = departmentIcons[departmentName]
+      const color = 'hsl(220, 25%, 65%)'
+
+      return {
+        id: index,
+        departmentName,
+        departmentBudgetShare,
+        departmentIcon,
+        color,
+      }
+    })
+  )
+
+  return formattedData
+}
+
+export function formatTotalBudget(value) {
+  if (value >= 1000000) {
+    return `${(value / 1000000).toFixed(1)}M` // Format millions as "X.XM"
+  } else if (value >= 1000) {
+    return `${(value / 1000).toFixed(1)}K` // Format thousands as "X.XK"
+  }
+  return value.toString() // If the value is less than 1000, return it as is
+}
+
+export async function formatDepartmentsPieChartData(departmentsData) {
+  if (!departmentsData || !Array.isArray(departmentsData)) {
+    throw new Error('Invalid department data provided')
+  }
+
+  const totalBudgetRaw = await getTotalBudget()
+  const totalBudget = formatTotalBudget(totalBudgetRaw)
+
+  const formattedData = await Promise.all(
+    departmentsData.map(async (department, index) => {
+      const label = department.Department
+      const value = department.TotalSalaryPaidToDepartment
+
+      return {
+        id: index,
+        label,
+        value,
+      }
+    })
+  )
+
+  return {
+    totalBudget,
+    formattedData,
+  }
 }
