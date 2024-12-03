@@ -129,7 +129,7 @@ function PieCenterLabel({ primaryText, secondaryText, isDarkMode }) {
           fill: isDarkMode ? 'white' : 'rgb(9, 9, 11)',
         }}
       >
-        {primaryText}
+        ${primaryText}
       </StyledText>
       <StyledText
         variant="secondary"
