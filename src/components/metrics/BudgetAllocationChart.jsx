@@ -14,47 +14,6 @@ import { useTheme } from 'next-themes'
 import PropTypes from 'prop-types'
 import * as React from 'react'
 
-// const data = [
-//   { label: 'India', value: 50000 },
-//   { label: 'USA', value: 35000 },
-//   { label: 'Brazil', value: 10000 },
-//   { label: 'Other', value: 5000 },
-//   { label: 'fkfddks', value: 8000 },
-// ]
-
-// const departments = [
-//   {
-//     departmentName: 'India',
-//     departmentBudget: 50,
-//     departmentIcon: <IndiaFlag />,
-//     color: 'hsl(220, 25%, 65%)',
-//   },
-//   {
-//     departmentName: 'USA',
-//     departmentBudget: 35,
-//     departmentIcon: <UsaFlag />,
-//     color: 'hsl(220, 25%, 45%)',
-//   },
-//   {
-//     departmentName: 'Brazil',
-//     departmentBudget: 10,
-//     departmentIcon: <BrazilFlag />,
-//     color: 'hsl(220, 25%, 30%)',
-//   },
-//   {
-//     departmentName: 'Other',
-//     departmentBudget: 5,
-//     departmentIcon: <GlobeFlag />,
-//     color: 'hsl(220, 25%, 20%)',
-//   },
-//   {
-//     departmentName: 'fkfddks',
-//     departmentBudget: 10,
-//     departmentIcon: <GlobeFlag />,
-//     color: 'hsl(220, 25%, 20%)',
-//   },
-// ]
-
 const StyledText = styled('text', {
   shouldForwardProp: (prop) => prop !== 'variant',
 })(({ theme }) => ({
@@ -176,8 +135,34 @@ export default function BudgetAllocationChart({ departments, pieChartData }) {
   })
 
   const colors = isDarkMode
-    ? ['#78716c', '#8e8781', '#6d6561', '#585250'] // Dark mode colors
-    : ['#a8a29e', '#8e8985', '#e4e4e7', '#cccccf'] // Light mode colors
+    ? [
+        '#a8a29e',
+        '#948e88',
+        '#87817b',
+        '#78716c',
+        '#69645f',
+        '#5d5853',
+        '#524f49',
+        '#484540',
+        '#3e3b37',
+        '#34312f',
+        '#2b2926',
+        '#211f1d',
+      ]
+    : [
+        '#d0c9c4',
+        '#c2bbb7',
+        '#b7b0ab',
+        '#a8a29e',
+        '#9f9893',
+        '#938d88',
+        '#8a847f',
+        '#857d78',
+        '#78716c',
+        '#6b635e',
+        '#5d5853',
+        '#484540',
+      ]
 
   console.log('pie arc classes', pieArcClasses)
 
