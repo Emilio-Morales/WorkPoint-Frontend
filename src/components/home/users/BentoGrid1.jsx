@@ -1,35 +1,20 @@
 import BudgetAllocationChart from '@/components/metrics/BudgetAllocationChart'
+import DepartmentGrowthPieChart from '@/components/metrics/DepartmentGrowthPieChart'
 import DepartmentsTable from '@/components/metrics/DepartmentsTable'
 import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
 import {
+  formatDepartmentGrowthPieChartData,
   formatDepartmentsPieChartData,
   formatDepartmentsProgressBarData,
   formatDepartmentsTableData,
 } from '@/lib/utils'
-
-// {
-//   name: 'India',
-//   value: 50,
-//   flag: <IndiaFlag />,
-//   color: 'hsl(220, 25%, 65%)',
-// },
-
-// {
-//   departmentName: 'India',
-//   departmentBudgetShare: 50,
-//   departmentIcon: <IndiaFlag />,
-//   color: 'hsl(220, 25%, 65%)',
-// },
-
-// { departmentName: 'India', departmentBudget: 50000 },
-
 export default async function BentoGrid1() {
   const test = await getDepartmentInfo()
   const testDepartment = await formatDepartmentsTableData(test)
   const testingDepartments = await getDepartmentInfo()
   const testFormat = await formatDepartmentsProgressBarData(testingDepartments)
   const testFormat2 = await formatDepartmentsPieChartData(testingDepartments)
-  // console.log('formatted:', testFormat)
+  const testFormat3 = await formatDepartmentGrowthPieChartData(testDepartment)
 
   return (
     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-6 lg:grid-cols-12 lg:grid-rows-3">
@@ -55,21 +40,21 @@ export default async function BentoGrid1() {
           <DepartmentsTable rowData={testDepartment} />
         </div>
       </div>
-      <div className="relative rounded-lg border sm:col-span-2 sm:max-h-[80%] lg:col-span-4 lg:row-span-2 xl:col-span-3 xl:col-start-10 xl:row-span-1 xl:row-start-1 xl:max-h-full">
-        <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-zinc-950/5 dark:border-white/10">
-          <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-            <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
-            <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-              Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+      <div className="relative rounded-lg sm:col-span-2 sm:max-h-[80%] lg:col-span-4 lg:row-span-2 xl:col-span-3 xl:col-start-10 xl:row-span-1 xl:row-start-1 xl:max-h-full">
+        <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-zinc-950/5 xl:min-h-80 dark:border-white/10">
+          <div className="px-4 pt-4">
+            <h3 className="text-sm/4 font-semibold text-[hsl(220,30%,6%)] dark:text-[hsl(0,0%,100%)]">
+              Employees Joined by Department
+            </h3>
+            <p className="dark:text-zinc-400max-lg:text-center mt-2 max-w-lg text-sm/6 text-zinc-500">
+              Track departmental growth in 2024, with total new hires shown at the center.
             </p>
           </div>
-          <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-            <img
-              className="h-[min(152px,40cqw)] object-cover object-center"
-              src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
-              alt=""
-            />
+          <div className="flex h-full max-h-64 flex-col justify-center">
+            <DepartmentGrowthPieChart pieChartData={testFormat3} />
           </div>
+
+          {/* <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2"></div> */}
         </div>
       </div>
       <div className="relative sm:col-span-4 sm:max-h-[80%] lg:col-span-8 lg:row-span-2 xl:col-span-3">

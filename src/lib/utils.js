@@ -828,3 +828,41 @@ export async function formatDepartmentsPieChartData(departmentsData) {
     formattedData,
   }
 }
+
+export async function formatDepartmentGrowthPieChartData(departmentsData) {
+  if (!departmentsData || !Array.isArray(departmentsData)) {
+    throw new Error('Invalid department data provided')
+  }
+
+  // id: number;
+  // department: any;
+  // budgetStatus: string;
+  // totalEmployees: any;
+  // totalBudget: any;
+  // activeEmployees: any;
+  // inactiveEmployees: number;
+  // employeesJoined: any[];
+  const totalBudgetRaw = await getTotalBudget()
+  const totalBudget = formatTotalBudget(totalBudgetRaw)
+  let totalEmployeesJoined = 0
+
+  const formattedData = await Promise.all(
+    departmentsData.map(async (department, index) => {
+      const label = department.department
+      const value = department.employeesJoined.reduce((sum, value) => sum + value, 0)
+
+      totalEmployeesJoined += value
+
+      return {
+        id: department.id,
+        label,
+        value,
+      }
+    })
+  )
+
+  return {
+    totalEmployeesJoined,
+    formattedData,
+  }
+}

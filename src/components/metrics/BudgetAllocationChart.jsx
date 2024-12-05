@@ -5,7 +5,7 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'
 import Stack from '@mui/material/Stack'
-import { createTheme, styled } from '@mui/material/styles'
+import { createTheme, styled, ThemeProvider } from '@mui/material/styles'
 import SvgIcon from '@mui/material/SvgIcon'
 import Typography from '@mui/material/Typography'
 import { useDrawingArea } from '@mui/x-charts/hooks'
@@ -52,27 +52,6 @@ const StyledText = styled('text', {
   ],
 }))
 
-// function PieCenterLabel({ primaryText, secondaryText }) {
-//   const { width, height, left, top } = useDrawingArea()
-//   const primaryY = top + height / 2 - 10
-//   const secondaryY = primaryY + 24
-
-//   return (
-//     <React.Fragment>
-//       <StyledText variant="primary" x={left + width / 2} y={primaryY}>
-//         {primaryText}
-//       </StyledText>
-//       <StyledText variant="secondary" x={left + width / 2} y={secondaryY}>
-//         {secondaryText}
-//       </StyledText>
-//     </React.Fragment>
-//   )
-// }
-
-// PieCenterLabel.propTypes = {
-//   primaryText: PropTypes.string.isRequired,
-//   secondaryText: PropTypes.string.isRequired,
-// }
 function PieCenterLabel({ primaryText, secondaryText, isDarkMode }) {
   const { width, height, left, top } = useDrawingArea()
   const primaryY = top + height / 2 - 10
@@ -110,8 +89,6 @@ PieCenterLabel.propTypes = {
   isDarkMode: PropTypes.bool.isRequired,
 }
 
-// const colors = ['hsl(220, 20%, 65%)', 'hsl(220, 20%, 42%)', 'hsl(220, 20%, 35%)', 'hsl(220, 20%, 25%)']
-
 export default function BudgetAllocationChart({ departments, pieChartData }) {
   const { theme } = useTheme()
   const isDarkMode = theme === 'dark'
@@ -120,169 +97,200 @@ export default function BudgetAllocationChart({ departments, pieChartData }) {
   console.log('pie chart data', formattedData)
   const data = formattedData
   const muiTheme = createTheme({
+    palette: {
+      mode: isDarkMode ? 'dark' : 'light',
+      background: {
+        default: isDarkMode ? '#18181b' : '#ffffff',
+        paper: isDarkMode ? '#18181b' : '#ffffff',
+      },
+      text: {
+        primary: isDarkMode ? '#fff !important' : 'hsl(220, 30%, 6%)',
+        secondary: isDarkMode ? '#d1d5db' : 'hsl(220, 20%, 35%)',
+      },
+    },
     components: {
-      MuiPieChart: {
-        MuiPieArc: {
-          styleOverrides: {
-            root: {
-              stroke: 'none', // Remove the stroke color
-              strokeWidth: 0, // Set stroke width to 0
-            },
+      MuiTooltip: {
+        styleOverrides: {
+          tooltip: {
+            backgroundColor: isDarkMode ? '#18181b !important' : '#f3f4f6',
+            color: isDarkMode ? '#d1d5db' : '#374151',
           },
         },
       },
     },
   })
 
+  // const colors = isDarkMode
+  //   ? [
+  //       '#a8a29e',
+  //       '#948e88',
+  //       '#87817b',
+  //       '#78716c',
+  //       '#69645f',
+  //       '#5d5853',
+  //       '#524f49',
+  //       '#484540',
+  //       '#3e3b37',
+  //       '#34312f',
+  //       '#2b2926',
+  //       '#211f1d',
+  //     ]
+  //   : [
+  //       '#d0c9c4',
+  //       '#c2bbb7',
+  //       '#b7b0ab',
+  //       '#a8a29e',
+  //       '#9f9893',
+  //       '#938d88',
+  //       '#8a847f',
+  //       '#857d78',
+  //       '#78716c',
+  //       '#6b635e',
+  //       '#5d5853',
+  //       '#484540',
+  //     ]
+
   const colors = isDarkMode
     ? [
-        '#a8a29e',
-        '#948e88',
-        '#87817b',
-        '#78716c',
-        '#69645f',
-        '#5d5853',
-        '#524f49',
-        '#484540',
-        '#3e3b37',
-        '#34312f',
-        '#2b2926',
-        '#211f1d',
+        '#b2805b', // Deep warm brownish-orange
+        '#bf8e65',
+        '#c99a70',
+        '#d2a47a',
+        '#dbaf85',
+        '#e3ba90',
+        '#eac49b',
+        '#f0cea6',
+        '#f5d8b1',
+        '#f9e0bb',
+        '#fbe7c4',
+        '#ffeed0', // Lightest warm tone for dark mode
       ]
     : [
-        '#d0c9c4',
-        '#c2bbb7',
-        '#b7b0ab',
-        '#a8a29e',
-        '#9f9893',
-        '#938d88',
-        '#8a847f',
-        '#857d78',
-        '#78716c',
-        '#6b635e',
-        '#5d5853',
-        '#484540',
+        '#d19f72', // Medium warm brownish-orange
+        '#d8a87b',
+        '#dfb186',
+        '#e6bb91',
+        '#ecc59c',
+        '#f1cea6',
+        '#f5d7b0',
+        '#f8dfb9',
+        '#fae7c2',
+        '#fcf0ca',
+        '#f4e3b8', // Adjusted for better contrast
+        '#f2deb0', // Adjusted for better contrast
       ]
 
   console.log('pie arc classes', pieArcClasses)
 
   return (
-    // <ThemeProvider theme={muiTheme}>
-    <Card
-      variant=""
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '8px',
-        flexGrow: 1,
-        backgroundColor: 'transparent',
-        border: 'none',
-        borderWidth: 0,
-      }}
-    >
-      <CardContent>
-        <Typography
-          component="h2"
-          variant="subtitle2"
-          sx={{ color: isDarkMode ? 'rgb(161 161 170)' : 'rgb(113 113 122)', fontWeight: 600 }}
-        >
-          Department Budget Allocation
-        </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <PieChart
-            colors={colors}
-            // segmentShowStroke={false}
-            margin={{
-              left: 80,
-              right: 80,
-              top: 80,
-              bottom: 80,
-            }}
-            series={[
-              {
-                data,
-                innerRadius: 75,
-                outerRadius: 100,
-                paddingAngle: 0,
-                highlightScope: { faded: 'global', highlighted: 'item' },
-                valueFormatter: (value) => `${formatCurrency(value.value)}`,
-              },
-            ]}
-            height={260}
-            width={260}
-            slotProps={{
-              legend: { hidden: true },
-              //   tooltip: {
-              //     formatter: (params) => {
-              //       return `fdfd$${params.value}`
-              //     },
-              //   },
-            }}
+    <ThemeProvider theme={muiTheme}>
+      <Card
+        variant=""
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          flexGrow: 1,
+          backgroundColor: 'transparent',
+          border: 'none',
+          borderWidth: 0,
+        }}
+      >
+        <CardContent>
+          <Typography
+            component="h2"
+            variant="subtitle2"
+            sx={{ color: isDarkMode ? 'hsl(0, 0%, 100%)' : 'hsl(220, 30%, 6%)', fontWeight: 600 }}
+          >
+            Department Budget Allocation
+          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <PieChart
+              colors={colors}
+              margin={{
+                left: 80,
+                right: 80,
+                top: 80,
+                bottom: 80,
+              }}
+              series={[
+                {
+                  data,
+                  innerRadius: 75,
+                  outerRadius: 100,
+                  paddingAngle: 0,
+                  highlightScope: { faded: 'global', highlighted: 'item' },
+                  valueFormatter: (value) => `${formatCurrency(value.value)}`,
+                },
+              ]}
+              height={260}
+              width={260}
+              slotProps={{
+                legend: { hidden: true },
+              }}
+              sx={{
+                [`& .${pieArcClasses.root}`]: {
+                  stroke: 'none',
+                  strokeWidth: 0,
+                },
+              }}
+            >
+              <PieCenterLabel primaryText={totalBudget} secondaryText="Total" isDarkMode={isDarkMode} />
+            </PieChart>
+          </Box>
+          <Box
             sx={{
-              [`& .${pieArcClasses.root}`]: {
-                stroke: 'none',
-                strokeWidth: 0,
+              overflowY: 'auto',
+              maxHeight: '200px',
+              '&::-webkit-scrollbar': {
+                display: 'none', // Hide scrollbar for Chrome, Safari, and Edge
               },
+              '-ms-overflow-style': 'none', // Hide scrollbar for Internet Explorer
+              'scrollbar-width': 'none', // Hide scrollbar for Firefox
             }}
           >
-            <PieCenterLabel primaryText={totalBudget} secondaryText="Total" isDarkMode={isDarkMode} />
-          </PieChart>
-        </Box>
-        <Box
-          sx={{
-            overflowY: 'auto',
-            maxHeight: '200px',
-            '&::-webkit-scrollbar': {
-              display: 'none', // Hide scrollbar for Chrome, Safari, and Edge
-            },
-            '-ms-overflow-style': 'none', // Hide scrollbar for Internet Explorer
-            'scrollbar-width': 'none', // Hide scrollbar for Firefox
-          }}
-        >
-          {/* {
-                departmentName: 'India',
-                departmentBudget: 50,
-                departmentIcon: <IndiaFlag />,
-                color: 'hsl(220, 25%, 65%)',
-            }, */}
-          {departments.map((department, index) => (
-            <Stack key={index} direction="row" sx={{ alignItems: 'center', gap: 2, pb: 2 }}>
-              {department.departmentIcon}
-              <Stack sx={{ gap: 1, flexGrow: 1 }}>
-                <Stack
-                  direction="row"
-                  sx={{
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    gap: 2,
-                  }}
-                >
-                  <Typography variant="body2" sx={{ fontWeight: '500', color: isDarkMode ? 'white' : 'rgb(9, 9, 11)' }}>
-                    {department.departmentName}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: isDarkMode ? 'white' : 'rgb(9, 9, 11)' }}>
-                    {department.departmentBudgetShare}%
-                  </Typography>
+            {departments.map((department, index) => (
+              <Stack key={index} direction="row" sx={{ alignItems: 'center', gap: 2, pb: 2 }}>
+                {department.departmentIcon}
+                <Stack sx={{ gap: 1, flexGrow: 1 }}>
+                  <Stack
+                    direction="row"
+                    sx={{
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      gap: 2,
+                    }}
+                  >
+                    <Typography
+                      variant="body2"
+                      sx={{ fontWeight: '500', color: isDarkMode ? 'white' : 'rgb(9, 9, 11)' }}
+                    >
+                      {department.departmentName}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: isDarkMode ? 'white' : 'rgb(9, 9, 11)' }}>
+                      {department.departmentBudgetShare}%
+                    </Typography>
+                  </Stack>
+                  <LinearProgress
+                    variant="determinate"
+                    aria-label="Number of users by country"
+                    value={department.departmentBudgetShare}
+                    sx={{
+                      backgroundColor: isDarkMode ? '#27272a' : '#d1d5db',
+                      [`& .${linearProgressClasses.bar}`]: {
+                        //   backgroundColor: country.color,
+                        // backgroundColor: isDarkMode ? '#78716c' : '#a8a29e',
+                        backgroundColor: colors[0],
+                      },
+                    }}
+                  />
                 </Stack>
-                <LinearProgress
-                  variant="determinate"
-                  aria-label="Number of users by country"
-                  value={department.departmentBudgetShare}
-                  sx={{
-                    backgroundColor: isDarkMode ? '#27272a' : '#d1d5db',
-                    [`& .${linearProgressClasses.bar}`]: {
-                      //   backgroundColor: country.color,
-                      backgroundColor: isDarkMode ? '#78716c' : '#a8a29e',
-                    },
-                  }}
-                />
               </Stack>
-            </Stack>
-          ))}
-        </Box>
-      </CardContent>
-    </Card>
-    // </ThemeProvider>
+            ))}
+          </Box>
+        </CardContent>
+      </Card>
+    </ThemeProvider>
   )
 }
 
