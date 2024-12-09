@@ -17,8 +17,8 @@ import {
 } from '@heroicons/react/20/solid'
 import { useState } from 'react'
 
-export function DepartmentListBox({ departments }) {
-  let [department, setDepartment] = useState(departments[0].Department)
+export function DepartmentListBox({ departments, defaultValue }) {
+  let [department, setDepartment] = useState(defaultValue ? defaultValue : departments[0].Department)
   console.log('departments:', departments)
   console.log('department STATE:', department)
   const departmentIcons = {

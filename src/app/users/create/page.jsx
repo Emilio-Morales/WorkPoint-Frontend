@@ -29,11 +29,22 @@ export default async function CreateUser() {
 
         <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="space-y-1">
-            <Subheading>Employee Name</Subheading>
-            <Text>Please enter the full legal name of the employee.</Text>
+            <Subheading>Employee First Name</Subheading>
+            <Text>Please enter the legal first name of the employee.</Text>
           </div>
           <div>
-            <Input aria-label="Employee Name" name="name" defaultValue="" placeholder="John Smith" />
+            <Input aria-label="Employee First Name" name="first_name" defaultValue="" placeholder="John" />
+          </div>
+        </section>
+        <Divider className="my-10 mt-6" />
+
+        <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div className="space-y-1">
+            <Subheading>Employee Last Name</Subheading>
+            <Text>Please enter the legal last name of the employee.</Text>
+          </div>
+          <div>
+            <Input aria-label="Employee Last Name" name="last_name" defaultValue="" placeholder="Smith" />
           </div>
         </section>
 
