@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
 import { Text } from '@/components/ui/text'
 import { Textarea } from '@/components/ui/textarea'
-import { Address } from './address'
+// import { Address } from './departmentListBox'
 
 export const metadata = {
   title: 'Settings',
@@ -64,7 +64,7 @@ export default function Settings() {
           <Subheading>Address</Subheading>
           <Text>This is where your organization is registered.</Text>
         </div>
-        <Address />
+        {/* <Address /> */}
       </section>
 
       <Divider className="my-10" soft />

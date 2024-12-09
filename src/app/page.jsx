@@ -116,7 +116,7 @@ export default async function Home({ searchParams }) {
             </div>
           </div>
         </div>
-        <Button>Create user</Button>
+        <Button href="/users/create">Create user</Button>
       </div>
       <UsersTable users={users} />
       <Pagination totalPages={usersInfo.totalPages} />

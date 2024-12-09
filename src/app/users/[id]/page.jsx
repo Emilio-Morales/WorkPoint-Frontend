@@ -94,7 +94,7 @@ export default async function User({ params }) {
           </div>
           <div className="flex gap-4">
             <DeleteUser outline>Delete</DeleteUser>
-            <Button>Edit Profile</Button>
+            <Button href={`/users/${user.UserId}/edit`}>Edit Profile</Button>
           </div>
         </div>
       </div>

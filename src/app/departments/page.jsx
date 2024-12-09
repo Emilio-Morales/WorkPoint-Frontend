@@ -122,8 +122,8 @@ export default async function Departments() {
                       </DropdownButton>
                       <DropdownMenu anchor="bottom end">
                         <DropdownItem href={`/departments/${departmentHref}`}>View</DropdownItem>
-                        <DropdownItem>Edit</DropdownItem>
-                        <DropdownItem>Delete</DropdownItem>
+                        {/* <DropdownItem>Edit</DropdownItem>
+                        <DropdownItem>Delete</DropdownItem> */}
                       </DropdownMenu>
                     </Dropdown>
                   </div>
