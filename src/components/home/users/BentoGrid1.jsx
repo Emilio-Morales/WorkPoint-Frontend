@@ -57,7 +57,7 @@ export default async function BentoGrid1() {
           {/* <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2"></div> */}
         </div>
       </div>
-      <div className="relative sm:col-span-4 sm:max-h-[80%] lg:col-span-8 lg:row-span-2 xl:col-span-3">
+      <div className="relative sm:col-span-4 lg:col-span-8 lg:row-span-2 lg:max-h-[33rem] xl:col-span-3">
         <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-zinc-950/5 dark:border-white/10">
           {/* <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
             <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Powerful APIs</p>
