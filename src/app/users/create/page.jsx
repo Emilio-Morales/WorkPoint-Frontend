@@ -2,12 +2,11 @@ import { DepartmentListBox } from '@/app/settings/departmentListBox'
 import { Button } from '@/components/ui/button'
 import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
-import { Input } from '@/components/ui/input'
+import { Input, InputGroup } from '@/components/ui/input'
 import { Link } from '@/components/ui/link'
-import { Select } from '@/components/ui/select'
 import { Text } from '@/components/ui/text'
 import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
-import { ChevronLeftIcon } from '@heroicons/react/16/solid'
+import { ChevronLeftIcon, CurrencyDollarIcon } from '@heroicons/react/16/solid'
 
 export const metadata = {
   title: 'Create User',
@@ -84,15 +83,13 @@ export default async function CreateUser() {
 
         <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="space-y-1">
-            <Subheading>Currency</Subheading>
-            <Text>The currency that your organization will be collecting.</Text>
+            <Subheading>Annual Salary</Subheading>
+            <Text>Specify the employee's yearly salary in USD</Text>
           </div>
-          <div>
-            <Select aria-label="Currency" name="currency" defaultValue="cad">
-              <option value="cad">CAD - Canadian Dollar</option>
-              <option value="usd">USD - United States Dollar</option>
-            </Select>
-          </div>
+          <InputGroup>
+            <CurrencyDollarIcon className="size-5 text-stone-900 dark:text-stone-500" />
+            <Input aria-label="Employee Name" name="name" defaultValue="" placeholder="70000" />
+          </InputGroup>
         </section>
 
         <Divider className="my-10" soft />
