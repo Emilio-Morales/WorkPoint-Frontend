@@ -1,6 +1,6 @@
 import { getDepartmentInfo, getUserFullDetails } from '@/lib/mockApi.js/mockApi'
 
-import { DepartmentListBox } from '@/app/settings/departmentListBox'
+import { DepartmentListBox } from '@/app/(dashboard)/settings/departmentListBox'
 import { Button } from '@/components/ui/button'
 import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
