@@ -1,4 +1,4 @@
-import { Stat } from '@/app/(dashboard)page'
+import { Stat } from '@/app/(dashboard)/page'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Heading, Subheading } from '@/components/ui/heading'
