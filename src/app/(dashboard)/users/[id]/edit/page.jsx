@@ -117,7 +117,7 @@ const page = async ({ params }) => {
         <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="space-y-1">
             <Subheading>Annual Salary</Subheading>
-            <Text>Update the employee's yearly salary in USD</Text>
+            <Text>Update the employee&apos;s yearly salary in USD</Text>
           </div>
           <InputGroup>
             <CurrencyDollarIcon className="size-5 text-stone-900 dark:text-stone-500" />
