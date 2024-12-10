@@ -76,7 +76,8 @@ const page = async ({ params }) => {
           <div className="space-y-1">
             <Subheading>Job Title</Subheading>
             <Text>
-              Update the role or position within the organization (e.g., "Software Engineer" or "Marketing Manager").
+              Update the role or position within the organization (e.g., &quot;Software Engineer&quot; or
+              &quot;Marketing Manager&quot;).
             </Text>
           </div>
           <div>
@@ -89,7 +90,8 @@ const page = async ({ params }) => {
           <div className="space-y-1">
             <Subheading>Department</Subheading>
             <Text>
-              Update the department where the employee will be working (e.g., "Engineering," "HR," or "Sales").
+              Update the department where the employee will be working (e.g., &quot;Engineering,&quot; &quot;HR,&quot;
+              or &quot;Sales&quot;).
             </Text>
           </div>
           <DepartmentListBox departments={departments} defaultValue={user.Department} />

@@ -54,7 +54,8 @@ export default async function CreateUser() {
           <div className="space-y-1">
             <Subheading>Job Title</Subheading>
             <Text>
-              Specify the role or position within the organization (e.g., "Software Engineer" or "Marketing Manager").
+              Specify the role or position within the organization (e.g., &quot;Software Engineer&quot; or
+              &quot;Marketing Manager&quot;).
             </Text>
           </div>
           <div>
@@ -67,7 +68,8 @@ export default async function CreateUser() {
           <div className="space-y-1">
             <Subheading>Department</Subheading>
             <Text>
-              Select the department where the employee will be working (e.g., "Engineering," "HR," or "Sales").
+              Select the department where the employee will be working (e.g., &quot;Engineering,&quot; &quot;HR,&quot;
+              or &quot;Sales&quot;).
             </Text>
           </div>
           <DepartmentListBox departments={departments} />
