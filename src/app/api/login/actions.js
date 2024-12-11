@@ -19,12 +19,16 @@ export async function loginUser(credentials) {
 
   const { token } = await response.json()
 
+  console.log('token inside of login: ', token)
+
   // Store JWT in an HTTP-only cookie
   cookies().set('authToken', token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     path: '/',
   })
+
+  console.log('cookies inside login: ', cookies().get('authToken'))
 
   // Redirect to dashboard
   const redirectTo = '/dashboard'

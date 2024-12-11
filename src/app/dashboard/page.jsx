@@ -8,6 +8,8 @@ import { Select } from '@/components/ui/select'
 import UsersTable from '@/components/UsersTable'
 import { getTotalActiveUsers, getTotalBudget, getTotalInactiveUsers, getTotalUsers } from '@/lib/mockApi.js/mockApi'
 import { calculateRate, formatCurrency } from '@/lib/utils'
+import { cookies } from 'next/headers'
+import { Suspense } from 'react'
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' // Use env
 // async function fetchUsers(page = 1, limit = 10) {
@@ -20,11 +22,17 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' // U
 // }
 
 async function fetchUsers(page = 1, limit = 10, query = '') {
+  const authToken = cookies().get('authToken')?.value
   const res = await fetch(`${baseUrl}/api/users?page=${page}&limit=${limit}&query=${query}`, {
     cache: 'no-store', // Ensures fresh data every time
+    credentials: 'include',
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
   })
   const data = await res.json()
-  // console.log('data:', data)
+
+  console.log('data:', data)
   return data
 }
 
@@ -59,9 +67,11 @@ export default async function Home({ searchParams }) {
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
   const query = searchParams.query || ''
 
-  const usersInfo = await fetchUsers(page, 10, query)
-  console.log('userInfo: ', usersInfo)
-  const users = usersInfo.data
+  // const usersInfo = await fetchUsers(page, 10, query)
+  // console.log('userInfo: ', usersInfo)
+  // const users = usersInfo.data
+  const users = await fetchUsers(page, 10, query)
+  console.log('users: ', users)
 
   // Fetch Stats Data
   const [totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers] = await Promise.all([
@@ -118,8 +128,11 @@ export default async function Home({ searchParams }) {
         </div>
         <Button href="/users/create">Create user</Button>
       </div>
-      <UsersTable users={users} />
-      <Pagination totalPages={usersInfo.totalPages} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <UsersTable users={users} />
+      </Suspense>
+      {/* <Pagination totalPages={usersInfo.totalPages} /> */}
+      <Pagination totalPages={100} />
     </>
   )
 }
