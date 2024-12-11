@@ -1,13 +1,11 @@
 import { NextResponse } from 'next/server'
 export async function GET(req) {
+  // Bearer ${token}
+  const authToken = req.headers.get('Authorization')
+  if (!authToken) {
+    return NextResponse.json({ message: 'Unauthorized: No token provided' }, { status: 401 })
+  }
   try {
-    // Bearer ${token}
-    const authToken = req.headers.get('Authorization')
-
-    if (!authToken) {
-      return NextResponse.json({ message: 'Unauthorized: No token provided' }, { status: 401 })
-    }
-
     const { searchParams } = new URL(req.url)
     const page = parseInt(searchParams.get('page') || '1', 10)
     const limit = parseInt(searchParams.get('limit') || '10', 10)
