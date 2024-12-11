@@ -94,7 +94,7 @@ export default async function Departments() {
                     </div>
                     <div className="space-y-1.5">
                       <div className="text-base/6 font-semibold">
-                        <Link href={`/departments/${departmentHref}`}>{department.Department}</Link>
+                        <Link href={`/dashboard/departments/${departmentHref}`}>{department.Department}</Link>
                       </div>
                       <div className="text-xs/6 text-zinc-500">
                         Total Allocated Budget: {formatCurrency(department.TotalSalaryPaidToDepartment)}
@@ -121,7 +121,7 @@ export default async function Departments() {
                         <EllipsisVerticalIcon />
                       </DropdownButton>
                       <DropdownMenu anchor="bottom end">
-                        <DropdownItem href={`/departments/${departmentHref}`}>View</DropdownItem>
+                        <DropdownItem href={`/dashboard/departments/${departmentHref}`}>View</DropdownItem>
                         {/* <DropdownItem>Edit</DropdownItem>
                         <DropdownItem>Delete</DropdownItem> */}
                       </DropdownMenu>

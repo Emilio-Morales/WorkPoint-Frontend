@@ -56,7 +56,7 @@ export default async function User({ params }) {
   return (
     <>
       <div className="max-lg:hidden">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm/6 text-zinc-500 dark:text-zinc-400">
+        <Link href="/dashboard" className="inline-flex items-center gap-2 text-sm/6 text-zinc-500 dark:text-zinc-400">
           <ChevronLeftIcon className="size-4 fill-zinc-400 dark:fill-zinc-500" />
           Home
         </Link>
@@ -85,7 +85,7 @@ export default async function User({ params }) {
             </span>
             <Link
               className="flex items-center gap-3 text-base/6 text-zinc-950 sm:text-sm/6 dark:text-white"
-              href={`/departments/${encodeURIComponent(user.Department)}`}
+              href={`/dashboard/departments/${encodeURIComponent(user.Department)}`}
             >
               <BuildingOffice2Icon className="size-4 shrink-0 fill-zinc-400 dark:fill-zinc-500" />
               {/* <span>{order.date}</span> */}
@@ -94,7 +94,7 @@ export default async function User({ params }) {
           </div>
           <div className="flex gap-4">
             <DeleteUser outline>Delete</DeleteUser>
-            <Button href={`/users/${user.UserId}/edit`}>Edit Profile</Button>
+            <Button href={`/dashboard/users/${user.UserId}/edit`}>Edit Profile</Button>
           </div>
         </div>
       </div>
@@ -115,7 +115,9 @@ export default async function User({ params }) {
 
           <DescriptionTerm>Department</DescriptionTerm>
           <DescriptionDetails>
-            <TextLink href={`/departments/${encodeURIComponent(user.Department)}`}>{user.Department}</TextLink>
+            <TextLink href={`/dashboard/departments/${encodeURIComponent(user.Department)}`}>
+              {user.Department}
+            </TextLink>
           </DescriptionDetails>
 
           <DescriptionTerm>Email</DescriptionTerm>

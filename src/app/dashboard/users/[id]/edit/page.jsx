@@ -1,6 +1,6 @@
 import { getDepartmentInfo, getUserFullDetails } from '@/lib/mockApi.js/mockApi'
 
-import { DepartmentListBox } from '@/app/(dashboard)/settings/departmentListBox'
+import { DepartmentListBox } from '@/app/dashboard/settings/departmentListBox'
 import { Button } from '@/components/ui/button'
 import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
@@ -33,7 +33,7 @@ const page = async ({ params }) => {
     <>
       <div className="max-lg:hidden">
         <Link
-          href={`/users/${params.id}`}
+          href={`/dashboard/users/${params.id}`}
           className="inline-flex items-center gap-2 text-sm/6 text-zinc-500 dark:text-zinc-400"
         >
           <ChevronLeftIcon className="size-4 fill-zinc-400 dark:fill-zinc-500" />
@@ -148,7 +148,7 @@ const page = async ({ params }) => {
         <Divider className="my-10" soft />
 
         <div className="flex justify-end gap-4">
-          <Button href={`/users/${params.id}`} plain>
+          <Button href={`/dashboard/users/${params.id}`} plain>
             Cancel
           </Button>
           <Button type="submit">Save Changes</Button>

@@ -8,19 +8,19 @@ const ApplicationLayoutSidebarLinks = () => {
 
   return (
     <SidebarSection>
-      <SidebarItem href="/" current={pathname === '/'}>
+      <SidebarItem href="/dashboard" current={pathname === '/dashboard'}>
         <HomeIcon />
         <SidebarLabel>Home</SidebarLabel>
       </SidebarItem>
-      <SidebarItem href="/departments" current={pathname.startsWith('/departments')}>
+      <SidebarItem href="/dashboard/departments" current={pathname.startsWith('/dashboard/departments')}>
         <BuildingOffice2Icon />
         <SidebarLabel>Departments</SidebarLabel>
       </SidebarItem>
-      <SidebarItem href="/metrics" current={pathname.startsWith('/metrics')}>
+      <SidebarItem href="/dashboard/metrics" current={pathname.startsWith('/dashboard/metrics')}>
         <PresentationChartLineIcon />
         <SidebarLabel>Metrics</SidebarLabel>
       </SidebarItem>
-      <SidebarItem href="/settings" current={pathname.startsWith('/settings')}>
+      <SidebarItem href="/dashboard/settings" current={pathname.startsWith('/dashboard/settings')}>
         <Cog6ToothIcon />
         <SidebarLabel>Settings</SidebarLabel>
       </SidebarItem>

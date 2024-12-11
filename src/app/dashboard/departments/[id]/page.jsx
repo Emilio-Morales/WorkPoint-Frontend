@@ -120,7 +120,10 @@ export default async function Department({ params, searchParams }) {
   return (
     <>
       <div className="max-lg:hidden">
-        <Link href="/departments" className="inline-flex items-center gap-2 text-sm/6 text-zinc-500 dark:text-zinc-400">
+        <Link
+          href="/dashboard/departments"
+          className="inline-flex items-center gap-2 text-sm/6 text-zinc-500 dark:text-zinc-400"
+        >
           <ChevronLeftIcon className="size-4 fill-zinc-400 dark:fill-zinc-500" />
           Departments
         </Link>
