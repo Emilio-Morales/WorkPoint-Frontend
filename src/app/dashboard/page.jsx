@@ -8,10 +8,9 @@ import { Select } from '@/components/ui/select'
 import UsersTable from '@/components/UsersTable'
 import { getTotalActiveUsers, getTotalBudget, getTotalInactiveUsers, getTotalUsers } from '@/lib/mockApi.js/mockApi'
 import { calculateRate, formatCurrency } from '@/lib/utils'
-import { cookies } from 'next/headers'
 import { Suspense } from 'react'
+import { fetchUsers } from '../api/users/actions'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' // Use env
 // async function fetchUsers(page = 1, limit = 10) {
 //   const res = await fetch(`${baseUrl}/api/users?page=${page}&limit=${limit}`, {
 //     cache: 'no-store', // Ensures fresh data every time
@@ -20,21 +19,6 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' // U
 //   console.log('data:', data)
 //   return data
 // }
-
-async function fetchUsers(page = 1, limit = 10, query = '') {
-  const authToken = cookies().get('authToken')?.value
-  const res = await fetch(`${baseUrl}/api/users?page=${page}&limit=${limit}&query=${query}`, {
-    cache: 'no-store', // Ensures fresh data every time
-    credentials: 'include',
-    headers: {
-      Authorization: `Bearer ${authToken}`,
-    },
-  })
-  const data = await res.json()
-
-  console.log('data:', data)
-  return data
-}
 
 export function Stat({ title, value, badgeType, formattedRate, subText }) {
   return (
