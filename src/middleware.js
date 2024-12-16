@@ -17,7 +17,7 @@ export function middleware(req) {
   // Check for token in cookies for protected dashboard routes
   const token = req.cookies.get('authToken')?.value
 
-  console.log('token inside middleware ', token)
+  // console.log('token inside middleware ', token)
 
   if (!token) {
     // Redirect to login if token is missing
@@ -44,7 +44,7 @@ export function middleware(req) {
       path: '/',
     })
 
-    console.log('cookies in middleware:', response.cookies)
+    // console.log('cookies in middleware:', response.cookies)
 
     return response
     // Token is valid, allow the request to proceed

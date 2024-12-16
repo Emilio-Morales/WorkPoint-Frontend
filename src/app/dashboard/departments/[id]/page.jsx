@@ -1,3 +1,4 @@
+import { fetchUsersInDepartment, getDepartmentInfo } from '@/app/api/departments/actions'
 import DepartmentUsersTable from '@/components/DepartmentUsersTable'
 import Pagination from '@/components/pagination/Pagination'
 import Search from '@/components/Search'
@@ -6,7 +7,9 @@ import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
 import { Link } from '@/components/ui/link'
 import { Select } from '@/components/ui/select'
-import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
+
+// import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
+
 import { calculateRate, formatCurrency } from '@/lib/utils'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import {
@@ -24,22 +27,14 @@ import {
   UserGroupIcon,
 } from '@heroicons/react/20/solid'
 import { notFound } from 'next/navigation'
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-async function fetchUsers(department, page = 1, limit = 10, query = '') {
-  const res = await fetch(`${baseUrl}/api/departments/${department}/users?page=${page}&limit=${limit}&query=${query}`, {
-    cache: 'no-store', // Ensures fresh data every time
-  })
-  const data = await res.json()
-  // console.log('data:', data)
-  return data
-}
+import { Suspense } from 'react'
 
 export async function generateMetadata({ params }) {
   // let event = await getEvent(params.id)
   let departmentName = decodeURIComponent(params.id)
   let department = await getDepartmentInfo(departmentName)
-  let titleName = `${department[0].Department} Department`
+  // console.log('department: ', department)
+  let titleName = `${department[0].department} Department`
 
   // Limit total length of title to 20 characters
   if (titleName.length > 20) {
@@ -75,25 +70,31 @@ function Stat({ title, value, badgeType, formattedRate, subText }) {
 export default async function Department({ params, searchParams }) {
   let departmentName = decodeURIComponent(params.id)
   let data = await getDepartmentInfo(departmentName)
+  // console.log('inside department/[id]: ', data)
   let department = data[0]
 
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
   const query = searchParams.query || ''
 
-  const usersInfo = await fetchUsers(department.Department, page, 10, query)
-  const users = usersInfo.data
+  const usersInfo = await fetchUsersInDepartment(department.department, page, 10, query)
+  // console.log('userInfo: ', usersInfo)
+  const users = usersInfo.users
   const totalActiveSalary = usersInfo.totalActiveSalary
   const totalInactiveSalary = usersInfo.totalInactiveSalary
 
-  const totalUsers = department.Count
-  const totalActiveUsers = department.ActiveCount
-  const totalInactiveUsers = department.Count - department.ActiveCount
+  // const totalUsers = department.Count
+  // const totalActiveUsers = department.ActiveCount
+  // const totalInactiveUsers = department.Count - department.ActiveCount
+
+  const totalUsers = department.employeeCount
+  const totalActiveUsers = department.activeEmployeeCount
+  const totalInactiveUsers = totalUsers - totalActiveUsers
 
   const activeUsersRate = calculateRate(totalUsers, totalActiveUsers)
   const inactiveUsersRate = calculateRate(totalUsers, totalInactiveUsers)
 
-  console.log('totalActiveSalary', totalActiveSalary)
-  console.log('totalInactiveSalary', totalInactiveSalary)
+  // console.log('totalActiveSalary', totalActiveSalary)
+  // console.log('totalInactiveSalary', totalInactiveSalary)
 
   // let orders = await getEventOrders(params.id)
 
@@ -131,11 +132,11 @@ export default async function Department({ params, searchParams }) {
       <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
         <div className="flex flex-wrap items-center gap-6">
           <div className="w-32 shrink-0 rounded-lg border border-zinc-950/5 dark:border-white/10">
-            {departmentIcons[department.Department]}
+            {departmentIcons[department.department]}
           </div>
           <div>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-              <Heading>{department.Department}</Heading>
+              <Heading>{department.department}</Heading>
               {totalActiveUsers > totalInactiveUsers ? (
                 <Badge className="max-sm:hidden" color="lime">
                   Healthy Budget Allocation
@@ -157,7 +158,8 @@ export default async function Department({ params, searchParams }) {
         </div>
       </div>
       <div className="mt-8 grid gap-8 sm:grid-cols-3">
-        <Stat title="Total Budget" value={formatCurrency(department.TotalSalaryPaidToDepartment)} />
+        <Stat title="Total Budget" value={formatCurrency(totalActiveSalary + totalInactiveSalary)} />
+        {/* <Stat title="Total Budget" value={formatCurrency(department.totalSalary)} /> */}
         <Stat
           title="Active Employee Budget"
           value={formatCurrency(totalActiveSalary)}
@@ -193,7 +195,9 @@ export default async function Department({ params, searchParams }) {
           </div>
         </div>
       </div>
-      <DepartmentUsersTable users={users} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <DepartmentUsersTable users={users} />
+      </Suspense>
       <Pagination totalPages={usersInfo.totalPages} />
     </>
   )

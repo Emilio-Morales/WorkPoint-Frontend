@@ -51,11 +51,13 @@ export default async function Home({ searchParams }) {
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
   const query = searchParams.query || ''
 
-  // const usersInfo = await fetchUsers(page, 10, query)
+  const usersInfo = await fetchUsers(page, 10, query)
+  const users = JSON.parse(usersInfo.arrayUserComplete)
+  const totalPages = usersInfo.totalPages
   // console.log('userInfo: ', usersInfo)
   // const users = usersInfo.data
-  const users = await fetchUsers(page, 10, query)
-  console.log('users: ', users)
+  // const users = await fetchUsers(page, 10, query)
+  // console.log('users: ', users)
 
   // Fetch Stats Data
   const [totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers] = await Promise.all([
@@ -116,7 +118,7 @@ export default async function Home({ searchParams }) {
         <UsersTable users={users} />
       </Suspense>
       {/* <Pagination totalPages={usersInfo.totalPages} /> */}
-      <Pagination totalPages={100} />
+      <Pagination totalPages={totalPages} />
     </>
   )
 }

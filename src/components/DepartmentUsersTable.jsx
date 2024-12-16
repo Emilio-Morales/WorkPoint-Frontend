@@ -1,7 +1,8 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { formatCurrency, isActive } from '@/lib/utils'
+import { formatCurrency } from '@/lib/utils'
 import { Badge } from './ui/badge'
 const DepartmentUsersTable = ({ users }) => {
+  // console.log('inside departments table:', users)
   return (
     <div className="">
       <Table className="mt-4 [--gutter:theme(spacing.6)] lg:[--gutter:theme(spacing.10)]">
@@ -15,23 +16,26 @@ const DepartmentUsersTable = ({ users }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((user) => (
-            <TableRow key={user.id} href={`/dashboard/users/${user.UserId}`} title={`user #${user.id}`}>
-              <TableCell>{user.FirstName + ' ' + user.LastName}</TableCell>
-              <TableCell className="text-zinc-500">{user.Email}</TableCell>
-              <TableCell>{user.JobTitle}</TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <span>{formatCurrency(user.Salary)}</span>
-                </div>
-              </TableCell>
-              <TableCell className={'text-left'}>
-                <Badge color={user.Active === 'TRUE' ? 'lime' : 'pink'}>{isActive(user.Active)}</Badge>
-              </TableCell>
-              {/* <TableCell>US{user.amount.usd}</TableCell> */}
-              {/* <TableCell>US{user.amount.usd}</TableCell> */}
-            </TableRow>
-          ))}
+          {users.length > 1 &&
+            users.map((user, index) => (
+              <TableRow
+                key={user.userId + user.firstName + index}
+                href={`/dashboard/users/${user.userId}`}
+                title={`user #${user.userid}`}
+              >
+                <TableCell>{user.firstName + ' ' + user.lastName}</TableCell>
+                <TableCell className="text-zinc-500">{user.email}</TableCell>
+                <TableCell>{user.jobTitle}</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <span>{formatCurrency(user.salary)}</span>
+                  </div>
+                </TableCell>
+                <TableCell className={'text-left'}>
+                  <Badge color={user.active ? 'lime' : 'pink'}>{user.active ? 'Active' : 'Inactive'}</Badge>
+                </TableCell>
+              </TableRow>
+            ))}
         </TableBody>
       </Table>
     </div>

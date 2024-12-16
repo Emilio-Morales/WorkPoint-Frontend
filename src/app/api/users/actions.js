@@ -12,6 +12,6 @@ export async function fetchUsers(page = 1, limit = 10, query = '') {
   })
   const data = await res.json()
 
-  console.log('data:', data)
+  // console.log('data:', data)
   return data
 }

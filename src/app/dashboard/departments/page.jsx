@@ -1,4 +1,4 @@
-import { getDepartmentInfo } from '@/app/api/departments/actions'
+import { getDepartmentsInfo } from '@/app/api/departments/actions'
 import { Badge } from '@/components/ui/badge'
 import { Divider } from '@/components/ui/divider'
 import { Dropdown, DropdownButton, DropdownItem, DropdownMenu } from '@/components/ui/dropdown'
@@ -17,7 +17,7 @@ export const metadata = {
 
 export default async function Departments() {
   // let events = await getEvents()
-  let departments = await getDepartmentInfo()
+  let departments = await getDepartmentsInfo()
 
   console.log('data: ', departments)
 

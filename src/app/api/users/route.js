@@ -30,7 +30,7 @@ export async function GET(req) {
 
     // Parse the JSON response
     const paginatedData = await response.json()
-    console.log('Printing out paginatedData: ', paginatedData)
+    // console.log('Printing out paginatedData: ', paginatedData)
 
     return NextResponse.json(paginatedData)
   } catch (error) {

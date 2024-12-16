@@ -6,16 +6,11 @@ export async function GET(req) {
     return NextResponse.json({ message: 'Unauthorized: No token provided' }, { status: 401 })
   }
   try {
-    // const { searchParams } = new URL(req.url)
-    // const page = parseInt(searchParams.get('page') || '1', 10)
-    // const limit = parseInt(searchParams.get('limit') || '10', 10)
-    // const query = searchParams.get('query') || ''
-
-    // Pass the query to `getUsersFullDetails` for filtering
-    // const paginatedData = await getUsersFullDetails(page, limit, query)
+    const { searchParams } = new URL(req.url)
+    const department = searchParams.get('department') || ''
     const response = await fetch(
       //   `https://workpointbackend.azurewebsites.net/UserComplete/GetUsersWithPagination/0/false/${page}/${limit}`,
-      `https://workpointbackend.azurewebsites.net/UserSalary/GetDepartmentsInfo`,
+      `https://workpointbackend.azurewebsites.net/UserSalary/GetDepartmentsInfo/${department}`,
       {
         headers: {
           'Content-Type': 'application/json',
@@ -30,10 +25,10 @@ export async function GET(req) {
     }
 
     // Parse the JSON response
-    const paginatedData = await response.json()
-    console.log('Printing out paginatedData: ', paginatedData)
+    const data = await response.json()
+    // console.log('Printing out departments data: ', data)
 
-    return NextResponse.json(paginatedData)
+    return NextResponse.json(data)
   } catch (error) {
     console.error('Error in GET function:', error.message)
     return NextResponse.json({ error: 'Failed to fetch user data' }, { status: 500 })
