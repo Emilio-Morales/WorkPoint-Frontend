@@ -10,6 +10,7 @@ import toast from 'react-hot-toast'
 export function DeleteUser({ userId, userEmail, ...props }) {
   // Temp fix to prevent deletion of demo user
   let [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
   if (userEmail === 'johnsmith@example.com') {
     return (
       <>
@@ -28,7 +29,6 @@ export function DeleteUser({ userId, userEmail, ...props }) {
       </>
     )
   }
-  const router = useRouter()
   const handleDelete = async () => {
     try {
       // Optimistic update
