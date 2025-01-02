@@ -14,7 +14,7 @@ const LoginPageImage = () => {
     /> */}
       <Image
         alt="Dashboard Home Page"
-        src={isDarkMode ? '/dashboardHomePage1.png' : '/dashboardHomePageLight1.png'}
+        src={isDarkMode ? '/dashboardHomePage.png' : '/dashboardHomePageLight.png'}
         className="object-cover object-left"
         fill
       />
