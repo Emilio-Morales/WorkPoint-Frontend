@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
@@ -148,7 +149,7 @@ export default function HomePage() {
           </div>
         </div>
       ) : (
-        <>Server only</>
+        <>Loading...</>
       )}
     </>
   )
