@@ -53,7 +53,10 @@ export async function ApplicationLayout({ events, children }) {
             <SidebarSection className="max-lg:hidden">
               <SidebarHeading>Departments with Largest Budgets</SidebarHeading>
               {topDepartments.map((department, index) => (
-                <SidebarItem key={department.Department + index} href={`/departments/${department.Department}`}>
+                <SidebarItem
+                  key={department.Department + index}
+                  href={`dashboard/departments/${department.Department}`}
+                >
                   {department.Department}
                 </SidebarItem>
               ))}
