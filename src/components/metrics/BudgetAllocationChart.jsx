@@ -94,7 +94,7 @@ export default function BudgetAllocationChart({ departments, pieChartData }) {
   const isDarkMode = theme === 'dark'
   const { totalBudget, formattedData } = pieChartData
 
-  console.log('pie chart data', formattedData)
+  // console.log('pie chart data', formattedData)
   const data = formattedData
   const muiTheme = createTheme({
     palette: {
@@ -180,7 +180,7 @@ export default function BudgetAllocationChart({ departments, pieChartData }) {
         '#f2deb0', // Adjusted for better contrast
       ]
 
-  console.log('pie arc classes', pieArcClasses)
+  // console.log('pie arc classes', pieArcClasses)
 
   return (
     <ThemeProvider theme={muiTheme}>
@@ -241,7 +241,7 @@ export default function BudgetAllocationChart({ departments, pieChartData }) {
           <Box
             sx={{
               overflowY: 'auto',
-              maxHeight: '200px',
+              maxHeight: '270px',
               '&::-webkit-scrollbar': {
                 display: 'none', // Hide scrollbar for Chrome, Safari, and Edge
               },

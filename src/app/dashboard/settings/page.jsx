@@ -1,10 +1,7 @@
 import { Button } from '@/components/ui/button'
-import { Checkbox, CheckboxField } from '@/components/ui/checkbox'
 import { Divider } from '@/components/ui/divider'
-import { Label } from '@/components/ui/fieldset'
 import { Heading, Subheading } from '@/components/ui/heading'
 import { Input } from '@/components/ui/input'
-import { Select } from '@/components/ui/select'
 import { Text } from '@/components/ui/text'
 import { Textarea } from '@/components/ui/textarea'
 // import { Address } from './departmentListBox'
@@ -25,7 +22,7 @@ export default function Settings() {
           <Text>This will be displayed on your public profile.</Text>
         </div>
         <div>
-          <Input aria-label="Organization Name" name="name" defaultValue="Catalyst" />
+          <Input aria-label="Organization Name" name="name" defaultValue="WorkPoint" />
         </div>
       </section>
 
@@ -43,7 +40,7 @@ export default function Settings() {
 
       <Divider className="my-10" soft />
 
-      <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+      {/* <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
         <div className="space-y-1">
           <Subheading>Organization Email</Subheading>
           <Text>This is how customers can contact you for support.</Text>
@@ -64,9 +61,8 @@ export default function Settings() {
           <Subheading>Address</Subheading>
           <Text>This is where your organization is registered.</Text>
         </div>
-        {/* <Address /> */}
+        <Address />
       </section>
-
       <Divider className="my-10" soft />
 
       <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -82,7 +78,7 @@ export default function Settings() {
         </div>
       </section>
 
-      <Divider className="my-10" soft />
+      <Divider className="my-10" soft /> */}
 
       <div className="flex justify-end gap-4">
         <Button type="reset" plain>

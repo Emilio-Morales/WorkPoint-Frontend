@@ -1,19 +1,19 @@
-import { DepartmentListBox } from '@/app/dashboard/settings/departmentListBox'
-import { Button } from '@/components/ui/button'
-import { Divider } from '@/components/ui/divider'
-import { Heading, Subheading } from '@/components/ui/heading'
-import { Input, InputGroup } from '@/components/ui/input'
+import { getDepartmentsInfo } from '@/app/api/departments/actions'
+import CreateUserForm from '@/components/home/users/CreateUserForm'
 import { Link } from '@/components/ui/link'
-import { Text } from '@/components/ui/text'
-import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
-import { ChevronLeftIcon, CurrencyDollarIcon } from '@heroicons/react/16/solid'
+import { ChevronLeftIcon } from '@heroicons/react/16/solid'
+import { redirect } from 'next/navigation'
 
 export const metadata = {
   title: 'Create User',
 }
 
 export default async function CreateUser() {
-  const departments = await getDepartmentInfo()
+  // const departmentsMockApi = await getDepartmentInfo()
+  const departments = await getDepartmentsInfo()
+  if (departments.status && departments.status === 401) {
+    redirect('/login') // Redirect to login if unauthorized
+  }
 
   return (
     <>
@@ -23,97 +23,7 @@ export default async function CreateUser() {
           Home
         </Link>
       </div>
-      <form className="mx-auto mt-4 max-w-4xl lg:mt-8">
-        <Heading>New Employee</Heading>
-        <Divider className="my-10 mt-6" />
-
-        <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="space-y-1">
-            <Subheading>Employee First Name</Subheading>
-            <Text>Please enter the legal first name of the employee.</Text>
-          </div>
-          <div>
-            <Input aria-label="Employee First Name" name="first_name" defaultValue="" placeholder="John" />
-          </div>
-        </section>
-        <Divider className="my-10 mt-6" />
-
-        <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="space-y-1">
-            <Subheading>Employee Last Name</Subheading>
-            <Text>Please enter the legal last name of the employee.</Text>
-          </div>
-          <div>
-            <Input aria-label="Employee Last Name" name="last_name" defaultValue="" placeholder="Smith" />
-          </div>
-        </section>
-
-        <Divider className="my-10" soft />
-
-        <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="space-y-1">
-            <Subheading>Job Title</Subheading>
-            <Text>
-              Specify the role or position within the organization (e.g., &quot;Software Engineer&quot; or
-              &quot;Marketing Manager&quot;).
-            </Text>
-          </div>
-          <div>
-            <Input aria-label="Job Title" name="bio" placeholder="Sales Associate" />
-          </div>
-        </section>
-
-        <Divider className="my-10" soft />
-        <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="space-y-1">
-            <Subheading>Department</Subheading>
-            <Text>
-              Select the department where the employee will be working (e.g., &quot;Engineering,&quot; &quot;HR,&quot;
-              or &quot;Sales&quot;).
-            </Text>
-          </div>
-          <DepartmentListBox departments={departments} />
-        </section>
-        <Divider className="my-10" soft />
-
-        <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="space-y-1">
-            <Subheading>Employee Email</Subheading>
-            <Text>Enter the official work email address for the employee.</Text>
-          </div>
-          <div className="space-y-4">
-            <Input
-              type="email"
-              aria-label="Employee Email"
-              name="email"
-              defaultValue=""
-              placeholder="johnsmith@example.com"
-            />
-          </div>
-        </section>
-
-        <Divider className="my-10" soft />
-
-        <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="space-y-1">
-            <Subheading>Annual Salary</Subheading>
-            <Text>Specify the employee&apos;s yearly salary in USD</Text>
-          </div>
-          <InputGroup>
-            <CurrencyDollarIcon className="size-5 text-stone-900 dark:text-stone-500" />
-            <Input aria-label="Employee Name" name="name" defaultValue="" placeholder="70000" />
-          </InputGroup>
-        </section>
-
-        <Divider className="my-10" soft />
-
-        <div className="flex justify-end gap-4">
-          {/* <Button type="reset" plain>
-          Cancel
-        </Button> */}
-          <Button type="submit">Add</Button>
-        </div>
-      </form>
+      <CreateUserForm departments={departments} />
     </>
   )
 }

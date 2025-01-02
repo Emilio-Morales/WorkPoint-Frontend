@@ -2,7 +2,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { formatCurrency } from '@/lib/utils'
 import { Badge } from './ui/badge'
 const DepartmentUsersTable = ({ users }) => {
-  // console.log('inside departments table:', users)
   return (
     <div className="">
       <Table className="mt-4 [--gutter:theme(spacing.6)] lg:[--gutter:theme(spacing.10)]">
@@ -16,7 +15,7 @@ const DepartmentUsersTable = ({ users }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.length > 1 &&
+          {users.length > 0 &&
             users.map((user, index) => (
               <TableRow
                 key={user.userId + user.firstName + index}

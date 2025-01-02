@@ -1,15 +1,17 @@
 import Pagination from '@/components/pagination/Pagination'
 import Search from '@/components/Search'
+import SelectSort from '@/components/SelectSort'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
-import { Select } from '@/components/ui/select'
 import UsersTable from '@/components/UsersTable'
-import { getTotalActiveUsers, getTotalBudget, getTotalInactiveUsers, getTotalUsers } from '@/lib/mockApi.js/mockApi'
 import { calculateRate, formatCurrency } from '@/lib/utils'
+import { redirect } from 'next/navigation'
 import { Suspense } from 'react'
-import { fetchUsers } from '../api/users/actions'
+import { checkUser } from '../api/auth/actions'
+import { getCompanyInfo } from '../api/company/actions'
+import { fetchUser, fetchUsers } from '../api/users/actions'
 
 // async function fetchUsers(page = 1, limit = 10) {
 //   const res = await fetch(`${baseUrl}/api/users?page=${page}&limit=${limit}`, {
@@ -47,32 +49,48 @@ export default async function Home({ searchParams }) {
   // let orders = await getRecentOrders()
   // let users = await getUsersFullDetails()
   // let firstUsers = users.slice(0, 10)
+  const loggedInUserId = await checkUser()
+  const loggedInUserArray = await fetchUser(loggedInUserId)
+  const loggedInUser = loggedInUserArray[0]
 
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
   const query = searchParams.query || ''
+  const sort = searchParams.sort || ''
 
-  const usersInfo = await fetchUsers(page, 10, query)
-  const users = JSON.parse(usersInfo.arrayUserComplete)
-  const totalPages = usersInfo.totalPages
+  const usersInfo = await fetchUsers(page, 10, query, sort)
+  if (usersInfo.status && usersInfo.status === 401) {
+    redirect('/login') // Redirect to login if unauthorized
+  }
+
+  console.log('usersInfo data: ', usersInfo)
+
+  const users = JSON.parse(usersInfo?.arrayUserComplete)
+  const totalPages = usersInfo?.totalPages
   // console.log('userInfo: ', usersInfo)
   // const users = usersInfo.data
   // const users = await fetchUsers(page, 10, query)
   // console.log('users: ', users)
 
   // Fetch Stats Data
-  const [totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers] = await Promise.all([
-    getTotalBudget(),
-    getTotalUsers(),
-    getTotalActiveUsers(),
-    getTotalInactiveUsers(),
-  ])
+  const test = await getCompanyInfo()
+
+  console.log('companyInfo: ', test)
+
+  // const [totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers] = await Promise.all([
+  //   getTotalBudget(),
+  //   getTotalUsers(),
+  //   getTotalActiveUsers(),
+  //   getTotalInactiveUsers(),
+  // ])
+
+  const { totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers } = await getCompanyInfo()
 
   const activeUsersRate = calculateRate(totalUsers, totalActiveUsers)
   const inactiveUsersRate = calculateRate(totalUsers, totalInactiveUsers)
-
+  const sortValues = ['name', 'department', 'active']
   return (
     <>
-      <Heading>Good afternoon, John</Heading>
+      <Heading>Good afternoon, {loggedInUser?.firstName}</Heading>
       <div className="mt-8 flex items-end justify-between">
         <Subheading>Overview</Subheading>
       </div>
@@ -97,8 +115,9 @@ export default async function Home({ searchParams }) {
         <div className="max-sm:w-full sm:flex-1">
           <div className="mt-4 flex max-w-xl gap-4">
             <Search placeholder="Search users&hellip;" />
-            <div>
-              <Select name="sort_by">
+            <SelectSort values={sortValues} variant="home" />
+            {/* <div>
+              <Select name="sort_by" >
                 <option value="name" className="">
                   Sort by name
                 </option>
@@ -109,10 +128,10 @@ export default async function Home({ searchParams }) {
                   Sort by active
                 </option>
               </Select>
-            </div>
+            </div> */}
           </div>
         </div>
-        <Button href="/users/create">Create user</Button>
+        <Button href="/dashboard/users/create">Create user</Button>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
         <UsersTable users={users} />

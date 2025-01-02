@@ -114,6 +114,24 @@ function calculateBudgetSum(budget) {
   return result
 }
 
+const getMinYValue = (budgetData, variant) => {
+  let result = 0
+
+  switch (variant) {
+    case 'activeVsInactive':
+      result = Math.floor(Math.min(...budgetData['totalActiveBudget'], ...budgetData['totalInactiveBudget']))
+      break
+    case 'totalVsActive':
+      result = Math.floor(Math.min(...budgetData['totalBudget'], ...budgetData['totalActiveBudget']))
+      break
+    case 'totalVsInactive':
+      result = Math.floor(Math.min(...budgetData['totalBudget'], ...budgetData['totalInactiveBudget']))
+      break
+  }
+
+  return result
+}
+
 /* 
 Budgets is expecting to recieve 3 properties:
   totalBudget,
@@ -127,6 +145,9 @@ export default function BudgetLineChart({ budgets, heading, description, variant
   const isDarkMode = theme === 'dark'
 
   const budgetData = formatData(budgets, variant, isDarkMode)
+
+  const minYValue = getMinYValue(budgets)
+
   const { trend, growthRate } =
     variant === 'activeVsInactive'
       ? calculateGrowthRate(budgets['totalBudget'])
@@ -319,11 +340,6 @@ export default function BudgetLineChart({ budgets, heading, description, variant
                 hidden: true,
               },
             }}
-            yAxis={[
-              {
-                min: 50000000,
-              },
-            ]}
           ></LineChart>
         </CardContent>
       </Card>

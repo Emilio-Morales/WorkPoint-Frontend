@@ -15,12 +15,8 @@ import {
   TagIcon,
   UserGroupIcon,
 } from '@heroicons/react/20/solid'
-import { useState } from 'react'
 
-export function DepartmentListBox({ departments, defaultValue }) {
-  let [department, setDepartment] = useState(defaultValue ? defaultValue : departments[0].Department)
-  console.log('departments:', departments)
-  console.log('department STATE:', department)
+export function DepartmentListBox({ departments, defaultValue, value, onChange }) {
   const departmentIcons = {
     Services: <ShieldCheckIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
     Support: <PhoneArrowDownLeftIcon className="h-6 w-6 text-stone-900 dark:text-stone-500" />,
@@ -42,16 +38,15 @@ export function DepartmentListBox({ departments, defaultValue }) {
         aria-label="Department"
         name="department"
         placeholder="department"
-        // by="department"
-        value={department}
-        onChange={(department) => setDepartment(department)}
+        value={value}
+        onChange={onChange}
         className=""
       >
         {departments.map((department) => (
-          <ListboxOption key={department.Department} value={department.Department}>
+          <ListboxOption key={department.department} value={department.department}>
             {/* <img className="w-5 sm:w-4" src={country.flagUrl} alt="" /> */}
-            {departmentIcons[department.Department]}
-            <ListboxLabel>{department.Department}</ListboxLabel>
+            {departmentIcons[department.department]}
+            <ListboxLabel>{department.department}</ListboxLabel>
           </ListboxOption>
         ))}
       </Listbox>

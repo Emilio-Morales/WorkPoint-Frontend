@@ -1,23 +1,30 @@
 import { getDepartmentsInfo } from '@/app/api/departments/actions'
+import Search from '@/components/Search'
+import SelectSort from '@/components/SelectSort'
 import { Badge } from '@/components/ui/badge'
 import { Divider } from '@/components/ui/divider'
 import { Dropdown, DropdownButton, DropdownItem, DropdownMenu } from '@/components/ui/dropdown'
 import { Heading } from '@/components/ui/heading'
-import { Input, InputGroup } from '@/components/ui/input'
 import { Link } from '@/components/ui/link'
-import { Select } from '@/components/ui/select'
 // import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
 import { departmentIcons, formatCurrency } from '@/lib/utils'
-import { EllipsisVerticalIcon, MagnifyingGlassIcon } from '@heroicons/react/16/solid'
+import { EllipsisVerticalIcon } from '@heroicons/react/16/solid'
+import { redirect } from 'next/navigation'
 import { Suspense } from 'react'
 
 export const metadata = {
   title: 'Departments',
 }
 
-export default async function Departments() {
+export default async function Departments({ searchParams }) {
   // let events = await getEvents()
-  let departments = await getDepartmentsInfo()
+  const query = searchParams.query || ''
+  const sort = searchParams.sort || ''
+
+  let departments = await getDepartmentsInfo(query, sort)
+  if (departments.status && departments.status === 401) {
+    redirect('/login') // Redirect to login if unauthorized
+  }
 
   console.log('data: ', departments)
 
@@ -58,25 +65,22 @@ export default async function Departments() {
   //   Count: 77,
   //   ActiveCount: 38
   // },
+
+  const sortValues = ['name', 'budget ↓', 'budget ↑']
   return (
     <>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div className="max-sm:w-full sm:flex-1">
           <Heading>Departments</Heading>
           <div className="mt-4 flex max-w-xl gap-4">
-            <div className="flex-1">
-              <InputGroup>
-                <MagnifyingGlassIcon />
-                <Input name="search" placeholder="Search departments&hellip;" />
-              </InputGroup>
-            </div>
-            <div>
+            <Search placeholder="Search departments&hellip;" />
+            <SelectSort values={sortValues} variant="departments" />
+            {/* <div>
               <Select name="sort_by">
                 <option value="name">Sort by name</option>
-                <option value="date">Sort by Active</option>
-                <option value="status">Sort by Budget</option>
+                <option value="status">Sort by budget</option>
               </Select>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+const backEndUrl = process.env.NEXT_BACKEND_URL
 export async function GET(req) {
   // Bearer ${token}
   const authToken = req.headers.get('Authorization')
@@ -8,9 +9,11 @@ export async function GET(req) {
   try {
     const { searchParams } = new URL(req.url)
     const department = searchParams.get('department') || ''
+    const query = searchParams.get('query') || ''
+    const sort = searchParams.get('sort') || ''
+    // console.log('departmentssss:', department)
     const response = await fetch(
-      //   `https://workpointbackend.azurewebsites.net/UserComplete/GetUsersWithPagination/0/false/${page}/${limit}`,
-      `https://workpointbackend.azurewebsites.net/UserSalary/GetDepartmentsInfo/${department}`,
+      `${backEndUrl}/UserSalary/GetDepartmentsInfo/${department}?query=${query}&sort=${sort}`,
       {
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +34,7 @@ export async function GET(req) {
     return NextResponse.json(data)
   } catch (error) {
     console.error('Error in GET function:', error.message)
-    return NextResponse.json({ error: 'Failed to fetch user data' }, { status: 500 })
+    return NextResponse.json({ error: 'Failed to fetch departments data' }, { status: 500 })
   }
 }
 

@@ -1,5 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Badge } from './ui/badge'
+import { Text } from './ui/text'
 const UsersTable = ({ users }) => {
   return (
     <div className="">
@@ -14,7 +15,7 @@ const UsersTable = ({ users }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.length > 1 &&
+          {users?.length > 0 ? (
             users.map((user, index) => (
               <TableRow
                 key={user.UserId + user.FirstName + index}
@@ -34,7 +35,10 @@ const UsersTable = ({ users }) => {
                   <Badge color={user.Active ? 'lime' : 'pink'}>{user.Active ? 'Active' : 'Inactive'}</Badge>
                 </TableCell>
               </TableRow>
-            ))}
+            ))
+          ) : (
+            <Text>No results found.</Text>
+          )}
         </TableBody>
       </Table>
     </div>

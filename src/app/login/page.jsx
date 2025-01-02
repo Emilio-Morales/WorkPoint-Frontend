@@ -8,13 +8,14 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
-import { loginUser } from '../api/login/actions'
+import { loginUser } from '../api/auth/actions'
 import workPointLogo from '/public/teams/catalyst.svg'
 
 export default function Login() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
     setError,
   } = useForm()
@@ -24,6 +25,7 @@ export default function Login() {
     console.log('Form submitted:', data)
     const credentials = data
     try {
+      reset()
       const result = await loginUser(credentials)
       console.log('Login result:', result)
       router.push(result.redirectTo)

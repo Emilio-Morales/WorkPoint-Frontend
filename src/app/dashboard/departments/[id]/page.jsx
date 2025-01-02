@@ -2,11 +2,11 @@ import { fetchUsersInDepartment, getDepartmentInfo } from '@/app/api/departments
 import DepartmentUsersTable from '@/components/DepartmentUsersTable'
 import Pagination from '@/components/pagination/Pagination'
 import Search from '@/components/Search'
+import SelectSort from '@/components/SelectSort'
 import { Badge } from '@/components/ui/badge'
 import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
 import { Link } from '@/components/ui/link'
-import { Select } from '@/components/ui/select'
 
 // import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
 
@@ -26,13 +26,16 @@ import {
   TagIcon,
   UserGroupIcon,
 } from '@heroicons/react/20/solid'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { Suspense } from 'react'
 
 export async function generateMetadata({ params }) {
   // let event = await getEvent(params.id)
   let departmentName = decodeURIComponent(params.id)
   let department = await getDepartmentInfo(departmentName)
+  if (department.status && department.status === 401) {
+    redirect('/login') // Redirect to login if unauthorized
+  }
   // console.log('department: ', department)
   let titleName = `${department[0].department} Department`
 
@@ -75,10 +78,15 @@ export default async function Department({ params, searchParams }) {
 
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
   const query = searchParams.query || ''
+  const sort = searchParams.sort || ''
 
-  const usersInfo = await fetchUsersInDepartment(department.department, page, 10, query)
-  // console.log('userInfo: ', usersInfo)
+  const usersInfo = await fetchUsersInDepartment(department.department, page, 10, query, sort)
+  if (usersInfo.status && usersInfo.status === 401) {
+    redirect('/login') // Redirect to login if unauthorized
+  }
+
   const users = usersInfo.users
+
   const totalActiveSalary = usersInfo.totalActiveSalary
   const totalInactiveSalary = usersInfo.totalInactiveSalary
 
@@ -118,6 +126,7 @@ export default async function Department({ params, searchParams }) {
     Engineering: <CogIcon className="h-20 w-32 text-stone-900 dark:text-stone-500" />,
   }
 
+  const sortValues = ['name', 'salary ↓', 'salary ↑', 'active']
   return (
     <>
       <div className="max-lg:hidden">
@@ -132,11 +141,11 @@ export default async function Department({ params, searchParams }) {
       <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
         <div className="flex flex-wrap items-center gap-6">
           <div className="w-32 shrink-0 rounded-lg border border-zinc-950/5 dark:border-white/10">
-            {departmentIcons[department.department]}
+            {departmentIcons[department?.department]}
           </div>
           <div>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-              <Heading>{department.department}</Heading>
+              <Heading>{department?.department}</Heading>
               {totalActiveUsers > totalInactiveUsers ? (
                 <Badge className="max-sm:hidden" color="lime">
                   Healthy Budget Allocation
@@ -179,7 +188,8 @@ export default async function Department({ params, searchParams }) {
         <div className="max-sm:w-full sm:flex-1">
           <div className="mt-4 flex max-w-xl gap-4">
             <Search placeholder="Search employees&hellip;" />
-            <div>
+            <SelectSort values={sortValues} variant="departmentEmployees" />
+            {/* <div>
               <Select name="sort_by">
                 <option value="name" className="">
                   Sort by name
@@ -191,14 +201,14 @@ export default async function Department({ params, searchParams }) {
                   Sort by active
                 </option>
               </Select>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
         <DepartmentUsersTable users={users} />
       </Suspense>
-      <Pagination totalPages={usersInfo.totalPages} />
+      <Pagination totalPages={usersInfo?.totalPages} />
     </>
   )
 }

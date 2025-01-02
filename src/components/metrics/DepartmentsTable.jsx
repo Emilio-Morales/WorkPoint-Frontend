@@ -175,7 +175,7 @@ export default function DepartmentsTable({ rowData }) {
         // }}
         getRowClassName={(params) => (params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd')}
         initialState={{
-          pagination: { paginationModel: { pageSize: 10 } },
+          pagination: { paginationModel: { pageSize: 20 } },
         }}
         pageSizeOptions={[5, 10, 20]}
         // disableColumnResize

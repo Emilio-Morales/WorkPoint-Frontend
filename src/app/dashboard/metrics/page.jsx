@@ -1,4 +1,4 @@
-import BentoGrid1 from '@/components/home/users/BentoGrid1'
+import DepartmentsMetrics from '@/components/metrics/DepartmentsMetrics'
 import EmployeeAndBudgetMetrics from '@/components/metrics/EmployeeAndBudgetMetrics'
 import { Heading } from '@/components/ui/heading'
 
@@ -7,7 +7,7 @@ export default async function Metrics() {
     <div className="">
       <Heading>Company Metrics Dashboard</Heading>
       <EmployeeAndBudgetMetrics />
-      <BentoGrid1 />
+      <DepartmentsMetrics />
     </div>
   )
 }

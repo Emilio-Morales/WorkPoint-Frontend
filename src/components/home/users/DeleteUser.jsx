@@ -1,12 +1,49 @@
 'use client'
 
+import { deleteUser } from '@/app/api/users/actions'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogActions, DialogDescription, DialogTitle } from '@/components/ui/dialog'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import toast from 'react-hot-toast'
 
-export function DeleteUser({ amount, ...props }) {
+export function DeleteUser({ userId, userEmail, ...props }) {
+  // Temp fix to prevent deletion of demo user
   let [isOpen, setIsOpen] = useState(false)
-
+  if (userEmail === 'johnsmith@example.com') {
+    return (
+      <>
+        <Button type="button" onClick={() => setIsOpen(true)} {...props} />
+        <Dialog open={isOpen} onClose={setIsOpen}>
+          <DialogTitle>Cannot Delete User</DialogTitle>
+          <DialogDescription>
+            The following user is the user used for demo purposes and cannot be deleted.
+          </DialogDescription>
+          <DialogActions>
+            <Button plain onClick={() => setIsOpen(false)}>
+              Cancel
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </>
+    )
+  }
+  const router = useRouter()
+  const handleDelete = async () => {
+    try {
+      // Optimistic update
+      toast.success('User deleted successfully')
+      router.push(`/dashboard`)
+      const response = await deleteUser(userId)
+      if (response.status === 200) {
+        setIsOpen(false)
+      }
+    } catch (error) {
+      console.log(error)
+      toast.error(error.message)
+      setIsOpen(false)
+    }
+  }
   return (
     <>
       <Button type="button" onClick={() => setIsOpen(true)} {...props} />
@@ -15,36 +52,11 @@ export function DeleteUser({ amount, ...props }) {
         <DialogDescription>
           Are you sure you want to delete this user? This action is permanent and cannot be undone.
         </DialogDescription>
-        {/* <DialogBody>
-          <FieldGroup>
-            <Field>
-              <Label>Amount</Label>
-              <Input name="amount" defaultValue={amount} placeholder="$0.00" autoFocus />
-            </Field>
-            <Field>
-              <Label>Reason</Label>
-              <Select name="reason" defaultValue="">
-                <option value="" disabled>
-                  Select a reason&hellip;
-                </option>
-                <option value="duplicate">Duplicate</option>
-                <option value="fraudulent">Fraudulent</option>
-                <option value="requested_by_customer">Requested by customer</option>
-                <option value="other">Other</option>
-              </Select>
-            </Field>
-            <CheckboxField>
-              <Checkbox name="notify" />
-              <Label>Notify customer</Label>
-              <Description>An email notification will be sent to this customer.</Description>
-            </CheckboxField>
-          </FieldGroup>
-        </DialogBody> */}
         <DialogActions>
           <Button plain onClick={() => setIsOpen(false)}>
             Cancel
           </Button>
-          <Button onClick={() => setIsOpen(false)}>Delete</Button>
+          <Button onClick={handleDelete}>Delete</Button>
         </DialogActions>
       </Dialog>
     </>

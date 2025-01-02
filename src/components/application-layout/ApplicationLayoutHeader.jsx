@@ -1,5 +1,5 @@
 'use client'
-import { ChevronDownIcon, PlusIcon } from '@heroicons/react/16/solid'
+import { PlusIcon } from '@heroicons/react/16/solid'
 import { Avatar } from '../ui/avatar'
 import {
   Dropdown,
@@ -17,11 +17,13 @@ const ApplicationLayoutHeader = () => {
   return (
     <SidebarHeader>
       <Dropdown>
-        <DropdownButton as={SidebarItem}>
+        {/******** Button disabled until section is completed  ********/}
+        <DropdownButton as={SidebarItem} disabled>
           <Avatar src="/teams/catalyst.svg" />
           <SidebarLabel>WorkPoint</SidebarLabel>
-          <ChevronDownIcon />
+          {/* <ChevronDownIcon /> */}
         </DropdownButton>
+        {/******** To Do ********/}
         <DropdownMenu className="min-w-80 lg:min-w-64" anchor="bottom start">
           {/* <DropdownItem> */}
           {/* <Cog8ToothIcon /> */}

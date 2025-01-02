@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+const backEndUrl = process.env.NEXT_BACKEND_URL
 
 export async function GET(req, { params }) {
   // Bearer ${token}
@@ -16,11 +17,12 @@ export async function GET(req, { params }) {
     const page = parseInt(searchParams.get('page') || '1', 10)
     const limit = parseInt(searchParams.get('limit') || '10', 10)
     const query = searchParams.get('query') || '' // Get the query from search params
+    const sort = searchParams.get('sort') || ''
 
     // Pass the query to `getUsersFullDetails` for filtering
     // const paginatedData = await getUsersFullDetails(page, limit, query)
     const response = await fetch(
-      `https://workpointbackend.azurewebsites.net/UserJobInfo/GetUsersInDepartments/${department}/${page}/${limit}`,
+      `${backEndUrl}/UserJobInfo/GetUsersInDepartments/${department}/${page}/${limit}?query=${query}&sort=${sort}`,
       {
         headers: {
           'Content-Type': 'application/json',
@@ -43,19 +45,4 @@ export async function GET(req, { params }) {
     console.error('Error in GET function:', error.message)
     return NextResponse.json({ error: 'Failed to fetch user data' }, { status: 500 })
   }
-
-  // const response = await fetch(
-  //   `https://workpointbackend.azurewebsites.net/UserComplete/GetUsersWithPagination/0/false/${page}/${limit}`,
-  //   {
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       Authorization: authToken,
-  //     },
-  //   }
-  // )
-
-  // // Fetch users in the given department with pagination and query
-  // const paginatedData = await getUsersInDepartment(department, page, limit, query)
-
-  // return NextResponse.json(paginatedData)
 }

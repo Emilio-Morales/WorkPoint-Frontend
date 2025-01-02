@@ -2,12 +2,13 @@
 import { cookies } from 'next/headers'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
 
-export async function getDepartmentsInfo(query = '', sort = '') {
+export async function getUsersJoinedByMonth(year) {
   const authToken = cookies().get('authToken')?.value
   if (!authToken) {
     return { status: 401, message: 'Unauthorized: No token provided' }
   }
-  const res = await fetch(`${baseUrl}/api/departments?query=${query}&sort=${sort}`, {
+  const status = true
+  const res = await fetch(`${baseUrl}/api/metrics/employees/activity?year=${year}&status=${status}`, {
     cache: 'no-store', // Ensures fresh data every time
     credentials: 'include',
     headers: {
@@ -20,13 +21,13 @@ export async function getDepartmentsInfo(query = '', sort = '') {
   return data
 }
 
-export async function getDepartmentInfo(department) {
-  console.log('inside get department info: ', department)
+export async function getUsersLeftByMonth(year) {
   const authToken = cookies().get('authToken')?.value
   if (!authToken) {
     return { status: 401, message: 'Unauthorized: No token provided' }
   }
-  const res = await fetch(`${baseUrl}/api/departments?department=${department}`, {
+  const status = false
+  const res = await fetch(`${baseUrl}/api/metrics/employees/activity?year=${year}&status=${status}`, {
     cache: 'no-store', // Ensures fresh data every time
     credentials: 'include',
     headers: {
@@ -35,26 +36,22 @@ export async function getDepartmentInfo(department) {
   })
   const data = await res.json()
 
-  // console.log('data individual department:', data)
+  // console.log('data:', data)
   return data
 }
 
-export async function fetchUsersInDepartment(department, page = 1, limit = 10, query = '', sort = '') {
+export async function getTotalBudgetByMonth(year) {
   const authToken = cookies().get('authToken')?.value
   if (!authToken) {
     return { status: 401, message: 'Unauthorized: No token provided' }
   }
-  const res = await fetch(
-    `${baseUrl}/api/departments/${department}/users?page=${page}&limit=${limit}&query=${query}&sort=${sort}`,
-    {
-      cache: 'no-store', // Ensures fresh data every time
-      credentials: 'include',
-      headers: {
-        Authorization: `Bearer ${authToken}`,
-      },
-    }
-  )
+  const res = await fetch(`${baseUrl}/api/metrics/budget?year=${year}`, {
+    cache: 'no-store', // Ensures fresh data every time
+    credentials: 'include',
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  })
   const data = await res.json()
-  // console.log('data:', data)
   return data
 }

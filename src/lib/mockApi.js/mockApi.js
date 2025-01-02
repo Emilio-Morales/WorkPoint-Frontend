@@ -254,19 +254,34 @@ export async function getActiveEmployeeBudgetByMonth(year) {
   const monthlyBudgets = Array(12).fill(0)
 
   salaries.forEach((user) => {
-    if (user.Active.toLowerCase() === 'true' && user.DateHired) {
+    if (user.DateHired) {
       const hireDate = new Date(user.DateHired)
+      const exitDate = user.DateExited ? new Date(user.DateExited) : null // Check for exit date
 
       for (let month = 0; month < 12; month++) {
         const monthDate = new Date(year, month)
 
         // Employee should be counted if:
         // 1. They were hired before or during the current month (`hireDate <= monthDate`).
-        if (hireDate <= monthDate) {
+        // 2. They did not exit before the current month (`!exitDate || exitDate >= monthDate`).
+        if (hireDate <= monthDate && (!exitDate || exitDate >= monthDate)) {
           monthlyBudgets[month] += user.Salary
         }
       }
     }
+    // if (user.Active.toLowerCase() === 'true' && user.DateHired) {
+    //   const hireDate = new Date(user.DateHired)
+
+    //   for (let month = 0; month < 12; month++) {
+    //     const monthDate = new Date(year, month)
+
+    //     // Employee should be counted if:
+    //     // 1. They were hired before or during the current month (`hireDate <= monthDate`).
+    //     if (hireDate <= monthDate) {
+    //       monthlyBudgets[month] += user.Salary
+    //     }
+    //   }
+    // }
   })
 
   return monthlyBudgets
@@ -279,19 +294,32 @@ export async function getExitedEmployeeBudgetByMonth(year) {
   const monthlyBudgets = Array(12).fill(0)
 
   salaries.forEach((user) => {
-    if (user.Active.toLowerCase() === 'false' && user.DateHired) {
-      const hireDate = new Date(user.DateHired)
+    if (user.Active.toLowerCase() === 'false' && user.DateExited) {
+      const exitDate = new Date(user.DateExited)
 
       for (let month = 0; month < 12; month++) {
         const monthDate = new Date(year, month)
 
         // Employee should be counted if:
-        // 1. They were hired before or during the current month (`hireDate <= monthDate`).
-        if (hireDate <= monthDate) {
+        // 1. They exited on or before the current month (`exitDate <= monthDate`).
+        if (exitDate <= monthDate) {
           monthlyBudgets[month] += user.Salary
         }
       }
     }
+    // if (user.Active.toLowerCase() === 'false' && user.DateHired) {
+    //   const hireDate = new Date(user.DateHired)
+
+    //   for (let month = 0; month < 12; month++) {
+    //     const monthDate = new Date(year, month)
+
+    //     // Employee should be counted if:
+    //     // 1. They were hired before or during the current month (`hireDate <= monthDate`).
+    //     if (hireDate <= monthDate) {
+    //       monthlyBudgets[month] += user.Salary
+    //     }
+    //   }
+    // }
   })
 
   return monthlyBudgets
@@ -387,6 +415,55 @@ export async function getTopSalaryAllocatingDepartments(limit = 4) {
 
   // Return the top departments based on the limit
   return sortedDepartments.slice(0, limit)
+}
+
+export async function getUsersJoinedByMonthForDepartmentMockApi(departmentName, year) {
+  // Fetch basic user information
+  const users = await getUsers()
+  const jobInfo = await getUsersJobInfo()
+
+  // Join user data with job info
+  const fullUserData = users.map((user) => {
+    const job = jobInfo.find((job) => job.UserId === user.UserId)
+    return {
+      ...user,
+      Department: job ? job.Department : 'N/A',
+    }
+  })
+
+  // Filter users by department
+  const filteredByDepartment = fullUserData.filter(
+    (user) => user.Department.toLowerCase() === departmentName.toLowerCase()
+  )
+
+  // Initialize an array of 12 months with counts set to 0
+  const joinedByMonth = Array(12).fill(0)
+
+  let totalEmployeesJoined = 0
+  const totalEmployees = filteredByDepartment.length
+
+  // Iterate over filtered users to calculate join counts by month
+  filteredByDepartment.forEach((user) => {
+    if (user.DateHired) {
+      const hireDate = new Date(user.DateHired)
+      const hireYear = hireDate.getFullYear()
+      if (hireYear === year) {
+        const hireMonth = hireDate.getMonth() // getMonth() returns 0 for Jan, 11 for Dec
+        joinedByMonth[hireMonth] += 1
+        totalEmployeesJoined += 1
+      }
+    }
+  })
+
+  // Return the result
+  const result = {
+    department: departmentName,
+    totalEmployees,
+    totalEmployeesJoined,
+    monthlyData: joinedByMonth,
+  }
+
+  return result
 }
 
 export async function getUsersJoinedByMonthForDepartment(departmentName, year) {
