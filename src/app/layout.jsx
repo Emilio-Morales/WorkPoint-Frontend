@@ -1,4 +1,5 @@
 import '@/styles/tailwind.css'
+import { Analytics } from '@vercel/analytics/react'
 import Providers from './dashboard/providers'
 export const metadata = {
   title: 'WorkPoint',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <Providers attribute="class" defaultTheme="system" enableSystem>
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   )
