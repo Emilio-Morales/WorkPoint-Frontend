@@ -10,23 +10,22 @@ import { useTheme } from 'next-themes'
 
 const colorMap = {
   light: {
-    'total-budget': 'hsl(215, 15%, 75%)', // Neutral blue for total budget
-    'total-active-budget': 'hsl(144, 72%, 41%)', // Green for active budget
-    'total-inactive-budget': 'hsl(355, 98%, 66%)', // Red for inactive budget
+    'total-budget': 'hsl(215, 15%, 75%)',
+    'total-active-budget': 'hsl(144, 72%, 41%)',
+    'total-inactive-budget': 'hsl(355, 98%, 66%)',
   },
   dark: {
-    'total-budget': 'hsl(215, 15%, 40%)', // Darker neutral blue for total budget
-    'total-active-budget': 'hsl(144, 72%, 37%)', // Darker green for active budget
-    'total-inactive-budget': 'hsl(355, 98%, 39%)', // Darker red for inactive budget
+    'total-budget': 'hsl(215, 15%, 40%)',
+    'total-active-budget': 'hsl(144, 72%, 37%)',
+    'total-inactive-budget': 'hsl(355, 98%, 39%)',
   },
 }
 
 function getAllMonths() {
   const months = []
 
-  // Loop through months from 0 to 11 (JavaScript months are 0-indexed)
   for (let month = 0; month < 12; month++) {
-    const date = new Date(2023, month) // Year can be any year
+    const date = new Date(2023, month)
     const monthName = date.toLocaleDateString('en-US', {
       month: 'short',
     })

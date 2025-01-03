@@ -13,17 +13,15 @@ export default function Pagination({ totalPages }) {
   const query = searchParams.get('query') || ''
 
   const handlePageClick = (pageNumber) => {
-    // Set the new page parameter and trigger navigation
     const params = new URLSearchParams(searchParams)
     params.set('page', pageNumber.toString())
     if (query) {
-      params.set('query', query) // Ensure the query is preserved
+      params.set('query', query)
     }
     return `${pathname}?${params.toString()}`
   }
 
   const renderPaginationButtons = () => {
-    console.log('inside renderPaginatioButtons')
     if (totalPages > 7) {
       return (
         <>
@@ -111,11 +109,7 @@ export default function Pagination({ totalPages }) {
           Previous
         </Link>
       </div>
-      {console.log('entering pagination')}
-      <div className="hidden md:-mt-px md:flex">
-        {/* Render pagination buttons */}
-        {renderPaginationButtons()}
-      </div>
+      <div className="hidden md:-mt-px md:flex">{renderPaginationButtons()}</div>
       <div className="-mt-px flex w-0 flex-1 justify-end">
         <Link
           className={clsx(

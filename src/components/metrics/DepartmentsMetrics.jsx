@@ -1,38 +1,24 @@
 import { getDepartmentsInfo } from '@/app/api/departments/actions'
 import DepartmentsTable from '@/components/metrics/DepartmentsTable'
-import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
 import {
   formatDepartmentGrowthPieChartData,
-  formatDepartmentGrowthPieChartDataMockApi,
   formatDepartmentsPieChartData,
-  formatDepartmentsPieChartDataMockApi,
   formatDepartmentsProgressBarData,
-  formatDepartmentsProgressBarDataMockApi,
   formatDepartmentsTableData,
-  formatDepartmentsTableDataMockApi,
 } from '@/lib/utils'
 import { redirect } from 'next/navigation'
 import BudgetAllocationChart from './BudgetAllocationChart'
 import DepartmentGrowthPieChart from './DepartmentGrowthPieChart'
 export default async function DepartmentsMetrics() {
-  const departmentsDataMockApi = await getDepartmentInfo()
   const departmentsData = await getDepartmentsInfo()
 
   if (departmentsData.status && departmentsData.status === 401) {
     redirect('/login') // Redirect to login if unauthorized
   }
 
-  const departmentTableDataMockApi = await formatDepartmentsTableDataMockApi(departmentsDataMockApi)
   const departmentTableData = await formatDepartmentsTableData(departmentsData)
-
-  const departmentsProgressBarDataMockApi = await formatDepartmentsProgressBarDataMockApi(departmentsDataMockApi)
   const departmentsProgressBarData = await formatDepartmentsProgressBarData(departmentsData)
-
-  const departmentsPieChartDataMockApi = await formatDepartmentsPieChartDataMockApi(departmentsDataMockApi)
   const departmentsPieChartData = await formatDepartmentsPieChartData(departmentsData)
-
-  const departmentsGrowthPieChartDataMockApi =
-    await formatDepartmentGrowthPieChartDataMockApi(departmentTableDataMockApi)
   const departmentsGrowthPieChartData = await formatDepartmentGrowthPieChartData(departmentTableData)
 
   return (

@@ -11,14 +11,14 @@ import { useTheme } from 'next-themes'
 
 const colorMap = {
   light: {
-    'total-budget': 'hsl(215, 15%, 75%)', // Neutral grey for total budget
-    'total-active-budget': 'hsl(144, 72%, 41%)', // Green for active budget
-    'total-inactive-budget': 'hsl(355, 98%, 66%)', // Red for inactive budget
+    'total-budget': 'hsl(215, 15%, 75%)',
+    'total-active-budget': 'hsl(144, 72%, 41%)',
+    'total-inactive-budget': 'hsl(355, 98%, 66%)',
   },
   dark: {
-    'total-budget': 'hsl(215, 15%, 40%)', // Darker neutral grey for total budget
-    'total-active-budget': 'hsl(144, 72%, 37%)', // Darker green for active budget
-    'total-inactive-budget': 'hsl(355, 98%, 39%)', // Darker red for inactive budget
+    'total-budget': 'hsl(215, 15%, 40%)',
+    'total-active-budget': 'hsl(144, 72%, 37%)',
+    'total-inactive-budget': 'hsl(355, 98%, 39%)',
   },
 }
 
@@ -76,7 +76,6 @@ function formatData(data, variant, isDarkMode) {
   return result
 }
 
-// Returns growth rate of specified budget and trend type
 function calculateGrowthRate(budget) {
   const currentBudget = budget[budget.length - 1] // Current month
   const previousBudget = budget[0] // Starting month
@@ -101,7 +100,6 @@ function calculateGrowthRate(budget) {
 
   const result = { trend, growthRate }
 
-  // console.log('Result:', result)
   return result
 }
 

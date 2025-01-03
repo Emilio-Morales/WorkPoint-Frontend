@@ -5,31 +5,6 @@ import { DataGrid } from '@mui/x-data-grid'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/navigation'
 
-// {
-//   id: 1,
-//   department: 'Homepage Overview',
-//   budgetStatus: 'Online',
-//   totalEmployees: 8345,
-//   totalBudget: 212423,
-//   activeEmployees: 18.5,
-//   inactiveEmployees: '2m 15s',
-//   employeesJoined: [
-//     469172, 488506, 592287, 617401, 640374, 632751, 668638, 807246, 749198, 944863, 911787, 844815, 992022, 1143838,
-//     1446926, 1267886, 1362511, 1348746, 1560533, 1670690, 1695142, 1916613, 1823306, 1683646, 2025965, 2529989,
-//     3263473, 3296541, 3041524, 2599497,
-//   ],
-// },
-
-// {
-//   Department: 'Accounting',
-//   AverageSalaryInDepartment: 132797.7384415584,
-//   MinSalaryInDepartment: 76407.96,
-//   MaxSalaryInDepartment: 199702.13,
-//   TotalSalaryPaidToDepartment: 10225425.859999998,
-//   Count: 77,
-//   ActiveCount: 38
-// },
-
 function CustomColumnHeader(props) {
   const { colDef } = props
 
@@ -78,8 +53,8 @@ export default function DepartmentsTable({ rowData }) {
           },
           columnHeaderDraggableContainer: { paddingRight: 2 },
           columnHeaderTitle: {
-            fontWeight: '500 !important', // font-medium
-            color: isDarkMode ? '#ffffff' : '#18181b', // text-white for dark mode, text-zinc-950 for light mode
+            fontWeight: '500 !important',
+            color: isDarkMode ? '#ffffff' : '#18181b',
           },
         },
       },
@@ -166,19 +141,13 @@ export default function DepartmentsTable({ rowData }) {
   return (
     <ThemeProvider theme={muiTheme}>
       <DataGrid
-        // checkboxSelection
         rows={rowData}
         columns={columns}
-        // onRowClick={handleRowClick}
-        // components={{
-        //   ColumnHeader: CustomColumnHeader,
-        // }}
         getRowClassName={(params) => (params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd')}
         initialState={{
           pagination: { paginationModel: { pageSize: 20 } },
         }}
         pageSizeOptions={[5, 10, 20]}
-        // disableColumnResize
         sx={{
           border: '1px',
           borderRadius: '0.5rem',

@@ -13,7 +13,6 @@ const SelectSort = ({ values, variant }) => {
 
     params.set('sort', sortValue)
 
-    // Update the URL without removing other parameters
     replace(`${pathname}?${params.toString()}`)
   }
 

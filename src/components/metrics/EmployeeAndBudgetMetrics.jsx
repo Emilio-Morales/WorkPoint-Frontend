@@ -6,16 +6,9 @@ import { Divider } from '@/components/ui/divider'
 import { Subheading } from '@/components/ui/heading'
 
 export default async function EmployeeAndBudgetMetrics() {
-  // const usersJoined2024 = await getUsersJoinedByMonth(2024)
   const usersJoined2024 = await getUsersJoinedByMonth(2024)
   const usersLeft2024 = await getUsersLeftByMonth(2024)
 
-  // console.log('usersJoined2024:', usersJoined2024)
-  // console.log('usersLeft2024:', usersLeft2024)
-
-  // const totalJoined2024 = usersJoined2024.totalEmployeesJoined
-  // const totalLeft2024 = usersLeft2024.totalEmployeesLeft
-  // const totalEmployees2024 = usersJoined2024.totalEmployees
   const totalJoined2024 = usersJoined2024.joinedOrLeftYearly
   const totalLeft2024 = usersLeft2024.joinedOrLeftYearly
   const totalEmployees2024 = usersJoined2024.totalEmployees
@@ -26,13 +19,6 @@ export default async function EmployeeAndBudgetMetrics() {
   const usersJoined2023 = await getUsersJoinedByMonth(2023)
   const usersLeft2023 = await getUsersLeftByMonth(2023)
 
-  // console.log('usersJoined2023:', usersJoined2023)
-  // console.log('usersLeft2023:', usersLeft2023)
-
-  // const totalJoined2023 = usersJoined2023.totalEmployeesJoined
-  // const totalLeft2023 = usersLeft2023.totalEmployeesLeft
-  // const totalEmployees2023 = usersJoined2023.totalEmployees
-
   const totalJoined2023 = usersJoined2023.joinedOrLeftYearly
   const totalLeft2023 = usersLeft2023.joinedOrLeftYearly
   const totalEmployees2023 = usersJoined2023.totalEmployees
@@ -40,22 +26,10 @@ export default async function EmployeeAndBudgetMetrics() {
   const joinedPercentage2023 = ((totalJoined2023 / totalEmployees2023) * 100).toFixed(2)
   const exitedPercentage2023 = ((totalLeft2023 / totalEmployees2023) * 100).toFixed(2)
 
-  // const totalBudgets2024 = await getTotalBudgetByMonthMockApi(2024)
-  // const totalBudgets2023 = await getTotalBudgetByMonthMockApi(2023)
-
   const budgetsData2024 = await getTotalBudgetByMonth(2024)
   const totalBudget2024Backend = budgetsData2024.map((budget) => budget.totalBudget)
   const activeBudget2024Backend = budgetsData2024.map((budget) => budget.activeBudget)
   const inactiveBudget2024Backend = budgetsData2024.map((budget) => budget.inactiveBudget)
-
-  // const totalActiveBudgets2024 = await getActiveEmployeeBudgetByMonth(2024)
-  // const totalActiveBudgets2023 = await getActiveEmployeeBudgetByMonth(2023)
-
-  // const totalInactiveBudgets2024 = await getExitedEmployeeBudgetByMonth(2024)
-  // const totalInactiveBudgets2023 = await getExitedEmployeeBudgetByMonth(2023)
-  // console.log('--------Total 2023: ', totalBudgets2023)
-  // console.log('--------Active 2023: ', totalActiveBudgets2023)
-  // console.log('--------Inactive 2023: ', totalInactiveBudgets2023)
 
   return (
     <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-12">

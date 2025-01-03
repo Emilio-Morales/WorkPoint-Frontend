@@ -44,7 +44,6 @@ export function DepartmentListBox({ departments, defaultValue, value, onChange }
       >
         {departments.map((department) => (
           <ListboxOption key={department.department} value={department.department}>
-            {/* <img className="w-5 sm:w-4" src={country.flagUrl} alt="" /> */}
             {departmentIcons[department.department]}
             <ListboxLabel>{department.department}</ListboxLabel>
           </ListboxOption>

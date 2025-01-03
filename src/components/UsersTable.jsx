@@ -31,7 +31,6 @@ const UsersTable = ({ users }) => {
                   </div>
                 </TableCell>
                 <TableCell className={'text-left'}>
-                  {/* <Badge color={user.active === 'TRUE' ? 'lime' : 'pink'}>{isActive(user.Active)}</Badge> */}
                   <Badge color={user.Active ? 'lime' : 'pink'}>{user.Active ? 'Active' : 'Inactive'}</Badge>
                 </TableCell>
               </TableRow>

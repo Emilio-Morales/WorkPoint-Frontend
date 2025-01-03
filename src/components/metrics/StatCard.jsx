@@ -13,9 +13,8 @@ import { useTheme } from 'next-themes'
 function getAllMonths() {
   const months = []
 
-  // Loop through months from 0 to 11 (JavaScript months are 0-indexed)
   for (let month = 0; month < 12; month++) {
-    const date = new Date(2023, month) // Year can be any year
+    const date = new Date(2023, month)
     const monthName = date.toLocaleDateString('en-US', {
       month: 'short',
     })
@@ -81,12 +80,6 @@ function StatCard({ title, value, interval, trend, data, rate }) {
   })
 
   muiTheme.palette.mode = isDarkMode ? 'dark' : 'light'
-  // const months = getAllMonths()
-  // const trendColors = {
-  //   up: muiTheme.palette.mode === 'light' ? 'hsl(120, 59%, 30%)' : 'hsl(120, 75%, 16%)',
-  //   down: muiTheme.palette.mode === 'light' ? 'hsl(0, 90%, 40%)' : 'hsl(0, 94%, 18%)',
-  //   neutral: muiTheme.palette.mode === 'light' ? 'hsl(220, 20%, 65%)' : 'hsl(220, 20%, 25%)',
-  // }
 
   const monthlyData = data.map((item) => item.count)
   const months = data.map((item) => item.month)
@@ -167,7 +160,7 @@ function StatCard({ title, value, interval, trend, data, rate }) {
                           : 'hsl(120, 75%, 87%)'
                         : isDarkMode
                           ? 'hsl(0, 95%, 12%)'
-                          : 'hsl(0, 92%, 90%)', // Conditional colors based on trend type
+                          : 'hsl(0, 92%, 90%)',
                     backgroundColor:
                       trend === 'up'
                         ? isDarkMode
@@ -175,7 +168,7 @@ function StatCard({ title, value, interval, trend, data, rate }) {
                           : 'hsl(120, 80%, 98%)'
                         : isDarkMode
                           ? 'hsl(0, 93%, 6%)'
-                          : 'hsl(0, 100%, 97%)', // Conditional colors for joined vs exited
+                          : 'hsl(0, 100%, 97%)',
                     color:
                       trend === 'up'
                         ? isDarkMode
@@ -183,7 +176,7 @@ function StatCard({ title, value, interval, trend, data, rate }) {
                           : 'hsl(120, 59%, 30%)'
                         : isDarkMode
                           ? 'hsl(0, 94%, 80%)'
-                          : 'hsl(0, 59%, 30%)', // Text color
+                          : 'hsl(0, 59%, 30%)',
                     fontWeight: 600,
                   }}
                 />
@@ -201,7 +194,7 @@ function StatCard({ title, value, interval, trend, data, rate }) {
                 showTooltip
                 xAxis={{
                   scaleType: 'band',
-                  data: months, // Use the correct property 'data' for xAxis
+                  data: months,
                 }}
                 sx={{
                   [`& .${areaElementClasses.root}`]: {
