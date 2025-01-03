@@ -1,7 +1,7 @@
 'use client'
 
 import { updateUser } from '@/app/api/users/actions'
-import { DepartmentListBox } from '@/components/DepartmentListBox'
+import { DepartmentListBox } from '@/components/DepartmentListBox1'
 import { Button } from '@/components/ui/button'
 import { Divider } from '@/components/ui/divider'
 import { ErrorMessage, Field } from '@/components/ui/fieldset'
