@@ -62,7 +62,6 @@ To run the application locally, follow these steps:
 
    ```bash
    git clone https://github.com/Emilio-Morales/dotnet-frontend.git
-   cd workpoint
    ```
 
 2. **Install frontend dependencies**  
@@ -73,10 +72,12 @@ To run the application locally, follow these steps:
    npm install
    ```
 
-3. **Set up the database**  
-   - Configure your **SQL Express** instance and create the necessary database.  
-   - Update the connection string in the backend configuration file (available in the backend repository) to point to your SQL Express database.
-
+3. **Create environment variables**  
+   - Create a `.env` file in the frontend directory.  
+   - Add the following line to set the backend URL:  
+   ```bash
+   NEXT_BACKEND_URL=http://localhost:5000
+   
 4. **Start the development servers**  
 
    - Start the frontend development server:
