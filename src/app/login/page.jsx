@@ -22,12 +22,10 @@ export default function Login() {
   const router = useRouter()
 
   const onSubmit = async (data) => {
-    console.log('Form submitted:', data)
     const credentials = data
     try {
       reset()
       const result = await loginUser(credentials)
-      console.log('Login result:', result)
       router.push(result.redirectTo)
     } catch (error) {
       console.error('Error logging in:', error)

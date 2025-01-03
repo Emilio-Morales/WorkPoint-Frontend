@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 const backEndUrl = process.env.NEXT_BACKEND_URL
 export async function GET(req) {
-  // Bearer ${token}
   const authToken = req.headers.get('Authorization')
   if (!authToken) {
     return NextResponse.json({ message: 'Unauthorized: No token provided' }, { status: 401 })
@@ -21,10 +20,7 @@ export async function GET(req) {
       console.error('Error fetching data:', response.status, response.statusText)
       throw new Error(`HTTP error! Status: ${response.status}`)
     }
-
-    // Parse the JSON response
     const data = await response.json()
-    // console.log('Printing out metrics data: ', data)
 
     return NextResponse.json(data)
   } catch (error) {

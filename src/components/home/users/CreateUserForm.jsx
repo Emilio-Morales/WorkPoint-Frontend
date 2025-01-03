@@ -1,6 +1,6 @@
 'use client'
 import { createUser } from '@/app/api/users/actions'
-import { DepartmentListBox } from '@/app/dashboard/settings/departmentListBox'
+import { DepartmentListBox } from '@/components/departmentListBox'
 import { Button } from '@/components/ui/button'
 import { Divider } from '@/components/ui/divider'
 import { ErrorMessage, Field } from '@/components/ui/fieldset'

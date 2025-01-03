@@ -9,7 +9,6 @@ export const metadata = {
 }
 
 export default async function CreateUser() {
-  // const departmentsMockApi = await getDepartmentInfo()
   const departments = await getDepartmentsInfo()
   if (departments.status && departments.status === 401) {
     redirect('/login') // Redirect to login if unauthorized

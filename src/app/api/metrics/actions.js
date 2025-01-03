@@ -16,8 +16,6 @@ export async function getUsersJoinedByMonth(year) {
     },
   })
   const data = await res.json()
-
-  // console.log('data:', data)
   return data
 }
 
@@ -36,7 +34,6 @@ export async function getUsersLeftByMonth(year) {
   })
   const data = await res.json()
 
-  // console.log('data:', data)
   return data
 }
 

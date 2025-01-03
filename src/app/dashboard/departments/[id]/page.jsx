@@ -8,8 +8,6 @@ import { Divider } from '@/components/ui/divider'
 import { Heading, Subheading } from '@/components/ui/heading'
 import { Link } from '@/components/ui/link'
 
-// import { getDepartmentInfo } from '@/lib/mockApi.js/mockApi'
-
 import { calculateRate, formatCurrency } from '@/lib/utils'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import {
@@ -30,13 +28,11 @@ import { notFound, redirect } from 'next/navigation'
 import { Suspense } from 'react'
 
 export async function generateMetadata({ params }) {
-  // let event = await getEvent(params.id)
   let departmentName = decodeURIComponent(params.id)
   let department = await getDepartmentInfo(departmentName)
   if (department.status && department.status === 401) {
     redirect('/login') // Redirect to login if unauthorized
   }
-  // console.log('department: ', department)
   let titleName = `${department[0].department} Department`
 
   // Limit total length of title to 20 characters
@@ -73,7 +69,6 @@ function Stat({ title, value, badgeType, formattedRate, subText }) {
 export default async function Department({ params, searchParams }) {
   let departmentName = decodeURIComponent(params.id)
   let data = await getDepartmentInfo(departmentName)
-  // console.log('inside department/[id]: ', data)
   let department = data[0]
 
   const page = searchParams.page ? parseInt(searchParams.page, 10) : 1
@@ -90,10 +85,6 @@ export default async function Department({ params, searchParams }) {
   const totalActiveSalary = usersInfo.totalActiveSalary
   const totalInactiveSalary = usersInfo.totalInactiveSalary
 
-  // const totalUsers = department.Count
-  // const totalActiveUsers = department.ActiveCount
-  // const totalInactiveUsers = department.Count - department.ActiveCount
-
   const totalUsers = department.employeeCount
   const totalActiveUsers = department.activeEmployeeCount
   const totalInactiveUsers = totalUsers - totalActiveUsers
@@ -101,12 +92,6 @@ export default async function Department({ params, searchParams }) {
   const activeUsersRate = calculateRate(totalUsers, totalActiveUsers)
   const inactiveUsersRate = calculateRate(totalUsers, totalInactiveUsers)
 
-  // console.log('totalActiveSalary', totalActiveSalary)
-  // console.log('totalInactiveSalary', totalInactiveSalary)
-
-  // let orders = await getEventOrders(params.id)
-
-  // console.log('department:-------------------', department)
   if (!department) {
     notFound()
   }
@@ -160,22 +145,17 @@ export default async function Department({ params, searchParams }) {
               {totalActiveUsers} active employees <span aria-hidden="true">·</span> {totalInactiveUsers} inactive
               employees <span aria-hidden="true">·</span> {totalUsers} total employees
             </div>
-            {/* <div className="mt-2 text-sm/6 text-zinc-500">
-              {event.date} at {event.time} <span aria-hidden="true">·</span> {event.location}
-            </div> */}
           </div>
         </div>
       </div>
       <div className="mt-8 grid gap-8 sm:grid-cols-3">
         <Stat title="Total Budget" value={formatCurrency(totalActiveSalary + totalInactiveSalary)} />
-        {/* <Stat title="Total Budget" value={formatCurrency(department.totalSalary)} /> */}
         <Stat
           title="Active Employee Budget"
           value={formatCurrency(totalActiveSalary)}
           badgeType="positive"
           formattedRate={`${activeUsersRate}%`}
         />
-        {/* ***CHANGE TO INACTIVE BUDGET????*** */}
         <Stat
           title="Inactive Employee Budget"
           value={formatCurrency(totalInactiveSalary)}
@@ -189,19 +169,6 @@ export default async function Department({ params, searchParams }) {
           <div className="mt-4 flex max-w-xl gap-4">
             <Search placeholder="Search employees&hellip;" />
             <SelectSort values={sortValues} variant="departmentEmployees" />
-            {/* <div>
-              <Select name="sort_by">
-                <option value="name" className="">
-                  Sort by name
-                </option>
-                <option value="date" className="">
-                  Sort by salary
-                </option>
-                <option value="status" className="">
-                  Sort by active
-                </option>
-              </Select>
-            </div> */}
           </div>
         </div>
       </div>

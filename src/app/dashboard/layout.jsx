@@ -1,5 +1,3 @@
-import { getEvents } from '@/data'
-
 import { ApplicationLayout } from './application-layout'
 
 export const metadata = {
@@ -11,7 +9,5 @@ export const metadata = {
 }
 
 export default async function Layout({ children }) {
-  let events = await getEvents()
-
-  return <ApplicationLayout events={events}>{children}</ApplicationLayout>
+  return <ApplicationLayout>{children}</ApplicationLayout>
 }

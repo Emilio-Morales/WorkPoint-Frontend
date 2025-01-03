@@ -16,8 +16,6 @@ export async function fetchUsers(page = 1, limit = 10, query = '', sort = '') {
     },
   })
   const data = await res.json()
-
-  // console.log('data:', data)
   return data
 }
 
@@ -35,8 +33,6 @@ export async function fetchUser(userId) {
     },
   })
   const data = await res.json()
-
-  // console.log('data:', data)
   return data
 }
 
@@ -45,7 +41,6 @@ export async function createUser(data) {
   if (!authToken) {
     return { status: 401, message: 'Unauthorized: No token provided' }
   }
-  console.log('inside create user action: ', data)
 
   const res = await fetch(`${baseUrl}/api/users`, {
     cache: 'no-store', // Ensures fresh data every time
@@ -58,10 +53,9 @@ export async function createUser(data) {
     body: JSON.stringify(data),
   })
 
-  console.log('res from action: ', res)
   const responseData = await res.json()
   const message = responseData.error
-  console.log('checking message: ', message)
+
   const status = res.status
   const result = { status, message }
 
@@ -77,7 +71,7 @@ export async function updateUser(data) {
   if (!authToken) {
     return { status: 401, message: 'Unauthorized: No token provided' }
   }
-  console.log('inside create user action: ', data)
+
   const { userId } = data
   const res = await fetch(`${baseUrl}/api/users/${userId}`, {
     cache: 'no-store', // Ensures fresh data every time

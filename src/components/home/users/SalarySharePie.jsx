@@ -7,7 +7,6 @@ const SalarySharePie = ({ userSalary, departmentTotalSalary, userFirstName, user
   const { theme } = useTheme()
   const isDarkMode = theme === 'dark'
 
-  // Calculate percentages for the pie chart
   const userShare = (userSalary / departmentTotalSalary) * 100
   const restOfBudgetShare = 100 - userShare
 

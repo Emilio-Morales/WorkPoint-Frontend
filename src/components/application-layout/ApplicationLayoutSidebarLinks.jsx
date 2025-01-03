@@ -20,12 +20,6 @@ const ApplicationLayoutSidebarLinks = () => {
         <PresentationChartLineIcon />
         <SidebarLabel>Metrics</SidebarLabel>
       </SidebarItem>
-
-      {/******** To Do ********/}
-      {/* <SidebarItem href="/dashboard/settings" current={pathname.startsWith('/dashboard/settings')}>
-        <Cog6ToothIcon />
-        <SidebarLabel>Settings</SidebarLabel>
-      </SidebarItem> */}
     </SidebarSection>
   )
 }

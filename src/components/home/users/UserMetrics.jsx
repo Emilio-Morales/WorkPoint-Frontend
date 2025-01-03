@@ -5,7 +5,7 @@ import SalaryQuartileChart from './SalaryQuartileChart'
 import SalaryShareChart from './SalaryShareChart'
 import SalarySharePie from './SalarySharePie'
 
-export default function BentoGrid2({
+export default function UserMetrics({
   user,
   minSalary,
   maxSalary,

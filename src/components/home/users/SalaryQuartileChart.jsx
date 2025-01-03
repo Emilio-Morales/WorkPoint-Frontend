@@ -22,8 +22,8 @@ export default function SalaryQuartileChart({ userSalary, minSalary, maxSalary }
       MuiTooltip: {
         styleOverrides: {
           tooltip: {
-            backgroundColor: isDarkMode ? '#18181b !important' : '#f3f4f6', // Tooltip background color
-            color: isDarkMode ? '#d1d5db' : '#374151', // Tooltip text color
+            backgroundColor: isDarkMode ? '#18181b !important' : '#f3f4f6',
+            color: isDarkMode ? '#d1d5db' : '#374151',
           },
         },
       },
@@ -32,13 +32,13 @@ export default function SalaryQuartileChart({ userSalary, minSalary, maxSalary }
           root: {
             backgroundColor: isDarkMode ? '#18181b' : '#f4f4f5',
             '& .MuiChart-tickLabel': {
-              fill: isDarkMode ? '#9ca3af' : '#4b5563', // Tick label color
+              fill: isDarkMode ? '#9ca3af' : '#4b5563',
             },
             '& .MuiChart-axisLabel': {
-              fill: isDarkMode ? '#d1d5db' : '#374151', // Axis label color
+              fill: isDarkMode ? '#d1d5db' : '#374151',
             },
             '& .MuiChartsLegend-series text': {
-              fill: isDarkMode ? '#d1d5db' : '#374151', // Legend label color
+              fill: isDarkMode ? '#d1d5db' : '#374151',
             },
           },
         },
@@ -48,15 +48,12 @@ export default function SalaryQuartileChart({ userSalary, minSalary, maxSalary }
 
   const colorPalette = [isDarkMode ? '#0ea5e9  ' : '#3b82f6  ', isDarkMode ? '#d97706   ' : '#f59e0b   ']
 
-  // Quartile Calculations
   const q1End = minSalary + (maxSalary - minSalary) * 0.25
   const q2End = minSalary + (maxSalary - minSalary) * 0.5
   const q3End = minSalary + (maxSalary - minSalary) * 0.75
 
-  // Identify User's Quartile
   const userQuartile = userSalary <= q1End ? 'Q1' : userSalary <= q2End ? 'Q2' : userSalary <= q3End ? 'Q3' : 'Q4'
 
-  // Create Series Data for the Bar Chart
   const seriesData = [
     {
       data: [q1End],

@@ -15,8 +15,6 @@ export async function getDepartmentsInfo(query = '', sort = '') {
     },
   })
   const data = await res.json()
-
-  // console.log('data:', data)
   return data
 }
 
@@ -34,8 +32,6 @@ export async function getDepartmentInfo(department) {
     },
   })
   const data = await res.json()
-
-  // console.log('data individual department:', data)
   return data
 }
 
@@ -55,6 +51,5 @@ export async function fetchUsersInDepartment(department, page = 1, limit = 10, q
     }
   )
   const data = await res.json()
-  // console.log('data:', data)
   return data
 }

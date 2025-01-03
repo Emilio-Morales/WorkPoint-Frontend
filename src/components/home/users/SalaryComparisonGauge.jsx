@@ -8,7 +8,6 @@ const SalaryComparisonGauge = ({ userSalary, companyAverageSalary }) => {
   const isDarkMode = theme === 'dark'
 
   const percentageOfAverage = (userSalary / companyAverageSalary) * 100
-  // const percentageOfAverage = 120
 
   const muiTheme = createTheme({
     palette: {
@@ -22,28 +21,27 @@ const SalaryComparisonGauge = ({ userSalary, companyAverageSalary }) => {
         <Gauge
           value={percentageOfAverage}
           valueMin={0}
-          valueMax={200} // Still representing up to 200% of average
-          startAngle={0} // Starts at 0 degrees
-          endAngle={360} // Goes all the way around
+          valueMax={200}
+          startAngle={0}
+          endAngle={360}
           innerRadius="70%"
           outerRadius="100%"
           text={`${percentageOfAverage.toFixed(1)}%`}
           sx={{
-            // Define custom styles for different gauge elements using gaugeClasses
             [`& .${gaugeClasses.valueText}`]: {
-              fontSize: 40, // This sets the font size of the <text> element
-              fill: isDarkMode ? '#d1d5db' : '#374151', // Adjust the value text color based on the theme
-              // Target the <tspan> inside the valueText to make sure the style actually applies
+              fontSize: 40,
+              fill: isDarkMode ? '#d1d5db' : '#374151',
+
               '& tspan': {
                 fontSize: 40,
-                fill: isDarkMode ? '#d1d5db' : '#09090b', // Ensure color change applies here
+                fill: isDarkMode ? '#d1d5db' : '#09090b',
               },
             },
             [`& .${gaugeClasses.valueArc}`]: {
-              fill: isDarkMode ? '#78716c  ' : '#a8a29e  ', // The color of the arc displaying the value
+              fill: isDarkMode ? '#78716c  ' : '#a8a29e  ',
             },
             [`& .${gaugeClasses.referenceArc}`]: {
-              fill: isDarkMode ? '#27272a' : '#e4e4e7', // The color of the arc displaying the range
+              fill: isDarkMode ? '#27272a' : '#e4e4e7',
             },
           }}
         />

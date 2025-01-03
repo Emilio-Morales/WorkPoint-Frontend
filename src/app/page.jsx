@@ -88,17 +88,6 @@ export default function HomePage() {
             )}
             <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-                {/* <div className="flex">
-            <div className="relative flex items-center gap-x-4 rounded-full bg-white px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              <span className="font-semibold text-indigo-600">We’re hiring</span>
-              <span aria-hidden="true" className="h-4 w-px bg-gray-900/10" />
-              <a href="#" className="flex items-center gap-x-1">
-                <span aria-hidden="true" className="absolute inset-0" />
-                See open positions
-                <ChevronRightIcon aria-hidden="true" className="-mr-2 size-5 text-gray-400" />
-              </a>
-            </div>
-          </div> */}
                 <h1 className="mt-10 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-white">
                   Your Organization, Simplified
                 </h1>
@@ -136,8 +125,6 @@ export default function HomePage() {
                     clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
                     transform="translate(24 24)"
                   >
-                    {/* <img alt="" src="https://tailwindui.com/plus/img/component-images/mobile-app-screenshot.png" /> */}
-                    {/* <Image alt="" src="/dashboardMobile.png" fill /> */}
                     <img
                       alt="Image of metrics view on dashboard"
                       src={isDarkMode ? '/dashboardMobileLight.png' : '/dashboardMobile.png'}

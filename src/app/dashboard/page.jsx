@@ -13,15 +13,6 @@ import { checkUser } from '../api/auth/actions'
 import { getCompanyInfo } from '../api/company/actions'
 import { fetchUser, fetchUsers } from '../api/users/actions'
 
-// async function fetchUsers(page = 1, limit = 10) {
-//   const res = await fetch(`${baseUrl}/api/users?page=${page}&limit=${limit}`, {
-//     cache: 'no-store', // Ensures fresh data every time
-//   })
-//   const data = await res.json()
-//   console.log('data:', data)
-//   return data
-// }
-
 export function Stat({ title, value, badgeType, formattedRate, subText }) {
   return (
     <div>
@@ -46,9 +37,6 @@ export function Stat({ title, value, badgeType, formattedRate, subText }) {
 }
 
 export default async function Home({ searchParams }) {
-  // let orders = await getRecentOrders()
-  // let users = await getUsersFullDetails()
-  // let firstUsers = users.slice(0, 10)
   const loggedInUserId = await checkUser()
   const loggedInUserArray = await fetchUser(loggedInUserId)
   const loggedInUser = loggedInUserArray[0]
@@ -62,26 +50,8 @@ export default async function Home({ searchParams }) {
     redirect('/login') // Redirect to login if unauthorized
   }
 
-  console.log('usersInfo data: ', usersInfo)
-
   const users = JSON.parse(usersInfo?.arrayUserComplete)
   const totalPages = usersInfo?.totalPages
-  // console.log('userInfo: ', usersInfo)
-  // const users = usersInfo.data
-  // const users = await fetchUsers(page, 10, query)
-  // console.log('users: ', users)
-
-  // Fetch Stats Data
-  const test = await getCompanyInfo()
-
-  console.log('companyInfo: ', test)
-
-  // const [totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers] = await Promise.all([
-  //   getTotalBudget(),
-  //   getTotalUsers(),
-  //   getTotalActiveUsers(),
-  //   getTotalInactiveUsers(),
-  // ])
 
   const { totalBudget, totalUsers, totalActiveUsers, totalInactiveUsers } = await getCompanyInfo()
 
@@ -116,19 +86,6 @@ export default async function Home({ searchParams }) {
           <div className="mt-4 flex max-w-xl gap-4">
             <Search placeholder="Search users&hellip;" />
             <SelectSort values={sortValues} variant="home" />
-            {/* <div>
-              <Select name="sort_by" >
-                <option value="name" className="">
-                  Sort by name
-                </option>
-                <option value="date" className="">
-                  Sort by department
-                </option>
-                <option value="status" className="">
-                  Sort by active
-                </option>
-              </Select>
-            </div> */}
           </div>
         </div>
         <Button href="/dashboard/users/create">Create user</Button>
@@ -136,7 +93,6 @@ export default async function Home({ searchParams }) {
       <Suspense fallback={<div>Loading...</div>}>
         <UsersTable users={users} />
       </Suspense>
-      {/* <Pagination totalPages={usersInfo.totalPages} /> */}
       <Pagination totalPages={totalPages} />
     </>
   )

@@ -1,5 +1,3 @@
-import { getDepartmentInfo as getDepartmentInfoMockApi } from '@/lib/mockApi.js/mockApi'
-
 import { getDepartmentsInfo } from '@/app/api/departments/actions'
 import { fetchUser } from '@/app/api/users/actions'
 import EditUserForm from '@/components/home/users/EditUserForm'
@@ -11,22 +9,9 @@ export const metadata = {
   title: 'Edit User',
 }
 
-// JobTitle: string;
-// Department: string;
-// Salary: string | number;
-// UserId: number;
-// FirstName: string;
-// LastName: string;
-// Email: string;
-// Gender: string;
-// Active: string;
-// DateHired: string;
-// DateExited: string;
 const page = async ({ params }) => {
-  // let user = await getUserFullDetails(params.id)
   let userBackendArray = await fetchUser(params.id)
   let user = userBackendArray[0]
-  const departmentsMockApi = await getDepartmentInfoMockApi()
 
   let departments = await getDepartmentsInfo()
 

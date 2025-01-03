@@ -17,21 +17,13 @@ const ApplicationLayoutHeader = () => {
   return (
     <SidebarHeader>
       <Dropdown>
-        {/******** Button disabled until section is completed  ********/}
         <DropdownButton as={SidebarItem} disabled>
           <Avatar src="/teams/catalyst.svg" />
           <SidebarLabel>WorkPoint</SidebarLabel>
-          {/* <ChevronDownIcon /> */}
         </DropdownButton>
-        {/******** To Do ********/}
         <DropdownMenu className="min-w-80 lg:min-w-64" anchor="bottom start">
-          {/* <DropdownItem> */}
-          {/* <Cog8ToothIcon /> */}
-          {/* <DropdownLabel>Admins</DropdownLabel> */}
-          {/* </DropdownItem> */}
           <DropdownSection>
             <DropdownHeading>Admins</DropdownHeading>
-            {/* <DropdownDivider /> */}
             <DropdownItem href="#">
               <Avatar slot="icon" src="/teams/catalyst.svg" />
               <DropdownLabel>WorkPoint</DropdownLabel>

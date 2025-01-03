@@ -15,7 +15,5 @@ export async function getCompanyInfo() {
     },
   })
   const data = await res.json()
-
-  // console.log('data:', data)
   return data
 }

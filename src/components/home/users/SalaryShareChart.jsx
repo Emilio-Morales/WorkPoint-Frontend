@@ -22,11 +22,11 @@ const SalaryShareChart = ({ userSalary, departmentTotalSalary, userFirstName }) 
           root: {
             height: 10,
             borderRadius: 5,
-            backgroundColor: isDarkMode ? '#1f2937' : '#e5e7eb', // Unfilled part
+            backgroundColor: isDarkMode ? '#1f2937' : '#e5e7eb',
           },
           bar: {
             borderRadius: 5,
-            backgroundColor: isDarkMode ? '#34d399' : '#16a34a', // Filled part
+            backgroundColor: isDarkMode ? '#34d399' : '#16a34a',
           },
         },
       },
@@ -35,11 +35,6 @@ const SalaryShareChart = ({ userSalary, departmentTotalSalary, userFirstName }) 
 
   const userSharePercentage = ((userSalary / departmentTotalSalary) * 100).toFixed(1)
   const visualProgress = userSharePercentage < 10 ? 10 : userSharePercentage
-  console.log('userSalary:', userSalary)
-  console.log('departmentTotalSalary:', departmentTotalSalary)
-  console.log('userSharePercentage:', userSharePercentage)
-
-  //   const testLimit = 66
 
   const [progress, setProgress] = React.useState(0)
 

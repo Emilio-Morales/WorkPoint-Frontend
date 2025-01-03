@@ -21,7 +21,7 @@ import { ChevronUpIcon } from '@heroicons/react/16/solid'
 import { checkUser } from '../api/auth/actions'
 import { fetchUser } from '../api/users/actions'
 
-export async function ApplicationLayout({ events, children }) {
+export async function ApplicationLayout({ children }) {
   const topDepartments = await getTopSalaryAllocatingDepartments()
   const loggedInUserId = await checkUser()
   const loggedInUserArray = await fetchUser(loggedInUserId)
@@ -65,19 +65,7 @@ export async function ApplicationLayout({ events, children }) {
             <SidebarSpacer />
 
             <SidebarSection>
-              {/******** To Do ********/}
-              {/* <SidebarItem href="#">
-                <QuestionMarkCircleIcon />
-                <SidebarLabel>Support</SidebarLabel>
-              </SidebarItem> */}
-              {/* <SidebarItem> */}
               <ThemeToggle />
-              {/* </SidebarItem> */}
-              {/******** To Do ********/}
-              {/* <SidebarItem href="#">
-                <SparklesIcon />
-                <SidebarLabel>Changelog</SidebarLabel>
-              </SidebarItem> */}
             </SidebarSection>
           </SidebarBody>
 
