@@ -126,9 +126,6 @@ The backend for this project is hosted in a separate [https://github.com/Emilio-
 5. Start the backend server:
    ```bash
    dotnet run
-   ```bash
-   git clone https://github.com/yourusername/workpoint-backend.git
-   cd workpoint-backend
    ```
 
 2. Install dependencies:
