@@ -40,7 +40,7 @@ WorkPoint brings clarity to enterprise management. Track budgets, monitor employ
 
 ## Demo Credentials
 
-Experience the application live using the following credentials:
+Experience the application [live](https://dotnet-frontend.vercel.app/) using the following credentials:
 
 ```bash
 Username: johnsmith@example.com
@@ -91,7 +91,7 @@ To run the application locally, follow these steps:
 
 ## Backend Setup
 
-The backend for this project is hosted in a separate [https://github.com/Emilio-Morales/WorkPoint-Backend.git](repository). Follow the steps below to set up the backend:
+The backend for this project is hosted in a separate [repository](https://github.com/Emilio-Morales/WorkPoint-Backend.git). Follow the steps below to set up the backend:
 
 1. Clone the backend repository:
    ```bash
