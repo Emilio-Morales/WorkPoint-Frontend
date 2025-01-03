@@ -55,7 +55,7 @@ export async function ApplicationLayout({ children }) {
               {topDepartments.map((department, index) => (
                 <SidebarItem
                   key={department.Department + index}
-                  href={`dashboard/departments/${department.Department}`}
+                  href={`/dashboard/departments/${department.Department}`}
                 >
                   {department.Department}
                 </SidebarItem>
